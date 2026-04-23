@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Essential — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image Logo HP Pavilion -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-essential-logo.png"
+          alt="HP Essential Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">💻 Ordinateurs portables HP</div>
+        <h1 class="article-title">
+          HP Essential — Le laptop abordable pour bien démarrer
+        </h1>
+        <p class="article-intro">
+          Anciennement déclinée sous les noms HP Stream et HP 15, la gamme HP
+          Essential est l'offre d'entrée de gamme de HP. Elle s'adresse aux
+          personnes qui ont besoin d'un ordinateur portable simple, peu coûteux
+          et prêt à l'emploi, sans exigences particulières en termes de
+          performances ou de design.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION -->
+      <section>
+        <h2>🏠 Présentation de la gamme</h2>
+        <p>
+          Le HP Essential occupe la <strong>base de la gamme HP</strong>. Il se
+          positionne en dessous du Pavilion (milieu de gamme) et représente le
+          point d'entrée le moins cher de la marque sous Windows. C'est le choix
+          par défaut pour qui cherche avant tout un prix bas et une utilisation
+          sans complications.
+        </p>
+        <p>
+          La gamme est principalement disponible en
+          <strong>15,6 pouces</strong>, avec quelques modèles en 14 pouces. Les
+          écrans sont en dalle TN ou IPS selon les versions, en résolution Full
+          HD (1920×1080). Le châssis est entièrement en plastique, sobre, sans
+          coloris fantaisie — généralement gris anthracite ou noir.
+        </p>
+        <p>
+          Ces machines sont équipées de processeurs d'entrée de gamme (Intel
+          Celeron, Pentium Silver ou AMD Athlon / Ryzen 3) et d'un stockage
+          limité (64 Go eMMC sur les anciens modèles HP Stream, SSD 256 Go sur
+          les HP 15 récents). Elles sont pensées pour un usage léger et
+          domestique, branchées à la maison la plupart du temps.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-essential.png"
+          alt="HP Essential"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UTILISATEUR -->
+      <section>
+        <h2>👤 Pour qui est le HP Essential ?</h2>
+        <p>
+          Le HP Essential est conçu pour des usages très simples. Il correspond
+          bien à certains profils et beaucoup moins à d'autres :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Pas idéal si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous cherchez le prix le plus bas possible
+            </div>
+            <div class="profile-cell">
+              Vous utilisez des logiciels gourmands (Photoshop, montage vidéo…)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Navigation web simple et messagerie</div>
+            <div class="profile-cell">
+              Vous avez besoin d'ouvrir beaucoup d'onglets ou d'applications en
+              même temps
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Regarder des vidéos YouTube ou Netflix en Full HD
+            </div>
+            <div class="profile-cell">
+              Vous jouez à des jeux vidéo, même légers
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Utilisation occasionnelle à la maison
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin de stocker beaucoup de fichiers localement
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Premier ordinateur pour un senior ou un enfant
+            </div>
+            <div class="profile-cell">
+              Vous travaillez régulièrement sur des fichiers Word ou Excel
+              lourds
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Visioconférence basique (Teams, Zoom)
+            </div>
+            <div class="profile-cell">
+              Vous souhaitez un laptop qui durera plus de 4 à 5 ans sans
+              ralentir
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : le HP Essential est fait pour les usages
+          <strong>vraiment basiques</strong>. Si vous pensez avoir un jour
+          besoin de plus, mieux vaut investir directement dans un Pavilion —
+          vous éviterez de le trouver trop lent dans 2 ans.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS -->
+      <section>
+        <h2>👍 Avantages &amp; inconvénients</h2>
+        <p>
+          Le HP Essential est pensé pour un
+          <strong>usage domestique léger</strong> — voici ses points forts et
+          ses limites dans ce contexte.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>Prix très bas — le laptop HP le moins cher du marché</li>
+              <li>Prêt à l'emploi dès la boîte avec Windows 11</li>
+              <li>Léger pour son format (environ 1,7 kg)</li>
+              <li>
+                Écran 15,6 pouces Full HD confortable pour regarder des vidéos
+              </li>
+              <li>Autonomie correcte pour un usage à la maison (6 à 8h)</li>
+              <li>
+                Silencieux — ventilateur discret en usage bureautique léger
+              </li>
+              <li>Connectique suffisante : USB-A, USB-C, HDMI, jack audio</li>
+              <li>Idéal comme second ordinateur ou machine de dépannage</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Processeur d'entrée de gamme — lent dès que plusieurs tâches
+                s'accumulent
+              </li>
+              <li>
+                8 Go de RAM seulement — limite rapidement avec un navigateur
+                ouvert
+              </li>
+              <li>Stockage faible sur les anciens modèles (64 Go eMMC)</li>
+              <li>
+                Châssis tout plastique — finition basique, peu résistant aux
+                chocs
+              </li>
+              <li>
+                Dalle TN sur certains modèles — angles de vision médiocres
+              </li>
+              <li>Aucune carte graphique dédiée — pas de gaming possible</li>
+              <li>
+                Webcam 720p uniquement — qualité insuffisante pour la visio pro
+              </li>
+              <li>
+                Risque de ralentissement à long terme sans mise à niveau
+                possible
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Usage domestique :</strong> pour naviguer sur internet,
+          envoyer des e-mails, regarder des séries ou faire des appels vidéo
+          occasionnels, le HP Essential est suffisant. En revanche, il montre
+          ses limites dès qu'on lui demande un peu plus d'effort.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions de la gamme</h2>
+
+        <div class="model-block">
+          <h3>HP Stream (ancienne génération)</h3>
+          <p>
+            Le précurseur de la gamme Essential, lancé en 2014 pour concurrencer
+            les Chromebooks. Très abordable mais limité par son stockage de 32
+            ou 64 Go en eMMC (mémoire flash lente) et ses 4 Go de RAM. Il était
+            livré avec un abonnement Microsoft 365 pour compenser le stockage
+            local réduit. Aujourd'hui remplacé par les modèles HP 15 plus
+            récents.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP 15 / HP Essential 15</h3>
+          <p>
+            La version actuelle de la gamme. Elle propose un vrai SSD de 256 Go
+            (parfois 512 Go), un processeur AMD Ryzen 3 ou Intel Core i3 récent
+            et 8 Go de RAM. Nettement plus utilisable que l'ancien Stream, il
+            reste la solution la plus économique chez HP pour un usage Windows
+            basique à domicile.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Essential 14</h3>
+          <p>
+            Le format 14 pouces, plus compact et légèrement plus léger. Il
+            reprend les mêmes composants que le HP 15, mais dans un châssis plus
+            petit — pratique pour les personnes qui cherchent un ordinateur peu
+            encombrant à poser sur une petite table ou un bureau compact.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            Le HP Essential remplit son rôle : offrir un ordinateur portable
+            fonctionnel au prix le plus bas possible. Il convient parfaitement
+            comme premier ordinateur pour un enfant, une machine de dépannage ou
+            un usage très occasionnel à la maison.
+          </p>
+          <p style="margin-top: 10px">
+            Cependant, si votre budget le permet, nous recommandons de passer
+            directement au <strong>HP Pavilion</strong> : pour une différence de
+            prix souvent modeste, vous obtenez un processeur nettement plus
+            rapide, plus de RAM et une meilleure expérience globale qui durera
+            bien plus longtemps.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

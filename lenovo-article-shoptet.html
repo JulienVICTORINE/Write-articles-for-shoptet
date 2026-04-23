@@ -1,0 +1,1323 @@
+﻿<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      :root {
+        --red: #e2001a;
+        --red-dark: #a50013;
+        --red-light: #fff0f2;
+        --ink: #0a0f1e;
+        --border: #e5e7eb;
+        --white: #ffffff;
+        --radius: 12px;
+        --red-pocitce24: #d1214c;
+        --gris: #ececed;
+        --black: #222;
+      }
+
+      body {
+        color: var(--black);
+        line-height: 1.7;
+      }
+
+      /* ---- HERO ---- */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #1a0005 0%,
+          var(--red-dark) 45%,
+          var(--red) 100%
+        );
+        color: var(--white);
+        padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "LENOVO";
+        position: absolute;
+        right: -48px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 800;
+        font-size: clamp(64px, 14vw, 160px);
+        color: rgba(255, 255, 255, 0.05);
+        letter-spacing: -0.64px;
+        pointer-events: none;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .hero-inner {
+        max-width: 760px;
+        position: relative;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-weight: 800;
+        font-size: clamp(32px, 6vw, 60px);
+        line-height: 1.1;
+        letter-spacing: -0.48px;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .hero p {
+        font-size: clamp(16px, 2vw, 18px);
+        font-weight: 300;
+        opacity: 0.88;
+        max-width: 560px;
+        color: white;
+      }
+
+      /* ---- MAIN LAYOUT ---- */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: clamp(32px, 5vw, 64px) clamp(16px, 4vw, 32px);
+      }
+
+      /* ---- SECTION TITLE ---- */
+      .section-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: var(--red-pocitce24);
+        margin-bottom: 8px;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: clamp(22.4px, 3vw, 32px);
+        letter-spacing: -0.32px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #222;
+        margin-bottom: 16px;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ---- TEXTE JUSTIFI√â ---- */
+      .paragraph-text {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      .produkty-text,
+      .notebooky-text,
+      .desktop-text,
+      .articles-text,
+      .monotory-text {
+        font-size: 16px;
+      }
+
+      /* ---- CARD ---- */
+      .card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        margin-bottom: 24px;
+        font-size: 16px;
+      }
+
+      /* ---- STATS ROW ---- */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+        margin: 40px 0;
+      }
+
+      .stat {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-weight: 800;
+        font-size: 31px;
+        color: var(--red-pocitce24);
+        letter-spacing: -0.48px;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--black);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ---- TIMELINE ---- */
+      .timeline {
+        position: relative;
+        margin: 32px 0;
+        padding-left: 32px;
+        border-left: 2px solid var(--border);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 24px;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -38.4px;
+        top: 9px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--red-pocitce24);
+        border: 2px solid var(--white);
+        box-shadow: 0 0 0 2px var(--red-pocitce24);
+      }
+
+      .timeline-year {
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--red-pocitce24);
+        letter-spacing: 0.8px;
+        margin-bottom: 0.32px;
+      }
+
+      .timeline-text {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+      }
+
+      /* ---- PRODUCT CATEGORIES ---- */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 24px;
+      }
+
+      .product-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 12px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .product-card:hover {
+        border-color: var(--red-pocitce24);
+        box-shadow: 0 4px 24px rgba(226, 0, 26, 0.08);
+      }
+
+      .product-icon {
+        font-size: 29px;
+        margin-bottom: 12px;
+        line-height: 1;
+      }
+
+      .product-card h3 {
+        font-weight: 700;
+        font-size: 17px;
+        margin-bottom: 7px;
+        letter-spacing: -0.16px;
+      }
+
+      .product-card p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+
+      /* ---- ITEM LIST (gammes) ---- */
+      .item-list {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      .item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 22.4px 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        margin-bottom: 12px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .item:hover {
+        border-color: var(--red-pocitce24);
+        box-shadow: 0 4px 20px rgba(226, 0, 26, 0.07);
+      }
+
+      .item-dot {
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--red-pocitce24);
+        margin-top: 8px;
+      }
+
+      .item-emoji {
+        font-size: 22.4px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .item-info {
+        flex: 1;
+      }
+
+      .item-info h4 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 4.8px;
+      }
+
+      .item-info p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+        line-height: 1.55;
+      }
+
+      .item-tag {
+        flex-shrink: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+        align-self: flex-start;
+        margin-top: 4px;
+      }
+
+      .tag-here {
+        background: #f0fdf4;
+        color: #166534;
+      }
+
+      .tag-soon {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+
+      .tag-article {
+        background: var(--red-light);
+        color: var(--red-pocitce24);
+      }
+
+      /* Lien article d√©di√© */
+      .item-link-arrow {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--red-light);
+        color: var(--red-pocitce24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        align-self: center;
+        transition:
+          background 0.2s,
+          color 0.2s;
+        text-decoration: none;
+      }
+
+      a.item:hover .item-link-arrow,
+      .item:hover .item-link-arrow {
+        background: var(--red-pocitce24);
+        color: var(--white);
+      }
+
+      /* ---- SHOPTET-SAFE FIX (Notebooky + Desktop only) ---- */
+      #notebooky .item-list,
+      #desktop .item-list {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      #notebooky .item-list > li > a.item,
+      #desktop .item-list > li > a.item {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        padding: 22.4px 24px !important;
+        border: 1px solid var(--border) !important;
+        border-radius: var(--radius) !important;
+        background: var(--white) !important;
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+
+      #notebooky .item-list > li.item,
+      #desktop .item-list > li.item {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        padding: 22.4px 24px !important;
+        border: 1px solid var(--border) !important;
+        border-radius: var(--radius) !important;
+        background: var(--white) !important;
+        margin-bottom: 12px !important;
+      }
+
+      #notebooky .item-info,
+      #desktop .item-info {
+        flex: 1 1 auto !important;
+        min-width: 0;
+      }
+
+      #notebooky .item-tag,
+      #desktop .item-tag {
+        display: inline-flex !important;
+        width: auto !important;
+        max-width: 100%;
+        align-self: flex-start !important;
+      }
+
+      #notebooky .item-link-arrow,
+      #desktop .item-link-arrow {
+        flex: 0 0 32px !important;
+        align-self: center !important;
+        margin-left: 8px !important;
+      }
+
+      /* ---- DIVIDER ---- */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 48px 0;
+      }
+
+      /* ---- INFO BOX ---- */
+      .info-box {
+        background: var(--red-light);
+        border-left: 4px solid var(--red-pocitce24);
+        border-radius: 0 var(--radius) var(--radius) 0;
+        padding: 20px 24px;
+        margin-top: 24px;
+      }
+
+      .info-box p {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+      }
+
+      /* ---- RELATED ARTICLES LIST ---- */
+      .lv-related-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 24px;
+        font-size: 16px;
+      }
+
+      .lv-related-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        background: var(--white);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .lv-related-card:hover {
+        border-color: var(--red-pocitce24);
+        box-shadow: 0 4px 20px rgba(226, 0, 26, 0.08);
+      }
+
+      .lv-related-card .lv-rc-emoji {
+        font-size: 26px;
+      }
+
+      .lv-related-card .lv-rc-label {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--red-pocitce24);
+      }
+
+      .lv-related-card h4 {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+      }
+
+      .lv-related-card p {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .lv-related-card .lv-rc-arrow {
+        margin-top: auto;
+        font-size: 16px;
+        color: var(--red-pocitce24);
+        font-weight: 600;
+        align-self: flex-end;
+        text-align: right;
+      }
+
+      /* ---- SHOPTET-SAFE FIX (Articles only) ---- */
+      #articles .lv-related-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        margin-top: 24px !important;
+      }
+
+      #articles .lv-related-grid > a.lv-related-card {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+        border: 1px solid var(--border) !important;
+        border-radius: var(--radius) !important;
+        padding: 24px !important;
+        background: var(--white) !important;
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+
+      #articles .lv-related-grid > a.lv-related-card h4,
+      #articles .lv-related-grid > a.lv-related-card p,
+      #articles .lv-related-grid > a.lv-related-card .lv-rc-label,
+      #articles .lv-related-grid > a.lv-related-card .lv-rc-emoji {
+        margin: 0 !important;
+      }
+
+      #articles ul {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      #articles .lv-related-grid > a.lv-related-card .lv-rc-arrow {
+        margin-top: auto !important;
+        align-self: flex-end !important;
+        text-align: right !important;
+      }
+
+      /* ---- RESPONSIVE ---- */
+      @media (max-width: 768px) {
+        nav {
+          gap: 16px;
+        }
+
+        nav a {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero::before {
+          display: none;
+        }
+
+        .item {
+          flex-wrap: wrap;
+        }
+
+        .item-tag {
+          margin-left: 0;
+        }
+
+        .nav-back {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="badge">🌍 Značka pod lupou</div>
+        <h1>Lenovo</h1>
+        <p class="paragraph-text">
+          Od historické akvizice divize osobních počítačů společnosti IBM až po
+          pozici světové jedničky mezi výrobci počítačů — ohlédnutí za
+          mimořádným vzestupem.
+        </p>
+      </div>
+    </div>
+    <!-- MAIN -->
+    <main>
+      <!-- PR√âSENTATION -->
+      <section id="presentation">
+        <div class="section-label">Prezentace</div>
+        <h2>Kdo je Lenovo?</h2>
+        <div class="card">
+          <p class="paragraph-text">
+            Lenovo je čínská nadnárodní společnost specializující se na
+            informační technologie. Byla založena v roce <strong>1984</strong> v
+            Pekingu pod názvem <strong>Legend Holdings</strong> Liou Čchuan-č’ a
+            jedenácti dalšími inženýry z Čínské akademie věd. V roce 2003
+            společnost přijala název <strong>Lenovo</strong> — kombinaci
+            <em>"Le-"</em> (z Legend) a <em>"novo"</em> (latinsky „nový“).
+          </p>
+          <p class="paragraph-text">
+            Klíčovým momentem, který Lenovo vynesl na světovou scénu, bylo
+            převzetí divize osobních počítačů společnosti <strong>IBM</strong> v
+            roce <strong>2005</strong> za 1,75 miliardy dolarů. Díky tomu
+            získalo legendární značky <strong>ThinkPad</strong> a
+            <strong>ThinkCentre</strong>, stejně jako globální distribuční síť a
+            pověst mimořádné spolehlivosti v profesionálním prostředí.
+          </p>
+          <p class="paragraph-text">
+            V roce 2014 Lenovo učinilo další významný krok, když převzalo x86
+            serverovou divizi IBM a společnost
+            <strong>Motorola Mobility</strong> od Googlu, čímž rozšířilo své
+            portfolio o smartphony a datacentrovou infrastrukturu. Dnes je
+            Lenovo
+            <strong>největším výrobcem osobních počítačů na světě</strong> podle
+            objemu, s tržním podílem pravidelně přesahujícím 24 %, před HP a
+            Dell.
+          </p>
+          <p class="paragraph-text">
+            Globální sídlo společnosti se nachází v
+            <strong>Pekingu</strong> (Čína), s druhým provozním sídlem v
+            <strong>Morrisville</strong> (Severní Karolína, USA). Společnost
+            zaměstnává více než <strong>77 000 lidí</strong> po celém světě a
+            své produkty prodává ve více než <strong>180 zemích</strong>.
+          </p>
+        </div>
+        <!-- STATISTIKY -->
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">1984</div>
+            <div class="stat-label">Rok založení</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">🇨🇳</div>
+            <div class="stat-label">Peking, Čína</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">#1</div>
+            <div class="stat-label">Největší výrobce PC na světě</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">24%+</div>
+            <div class="stat-label">Podíl na trhu PC</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">180+</div>
+            <div class="stat-label">Zemí pokrytých</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">77k+</div>
+            <div class="stat-label">Zaměstnanců</div>
+          </div>
+        </div>
+        <!-- ČASOVÁ OSA -->
+        <div class="section-label" style="margin-top: 32px">
+          Klíčová historie 📅
+        </div>
+        <h2>Hlavní milníky Lenovo</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1984</div>
+            <p class="timeline-text paragraph-text">
+              Založení <strong>Legend Holdings</strong> v Pekingu Liu Chuanzhim
+              a jedenácti inženýry s počátečním kapitálem 200 000 jüanů.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1994</div>
+            <p class="timeline-text paragraph-text">
+              Vstup na burzu v Hongkongu. Legend se stává největším výrobcem PC
+              v Číně.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2003</div>
+            <p class="timeline-text paragraph-text">
+              Společnost se přejmenovává na <strong>Lenovo</strong>, kombinaci
+              slov "Legend" a "novo" (latinsky „nový“) pro podporu mezinárodní
+              expanze.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2005</div>
+            <p class="timeline-text paragraph-text">
+              Akvizice <strong>PC divize IBM</strong> za 1,75 miliardy dolarů.
+              Lenovo získává značky ThinkPad, ThinkCentre a globální síť.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2011</div>
+            <p class="timeline-text paragraph-text">
+              Lenovo se stává
+              <strong>druhým největším výrobcem PC na světě</strong> a poprvé
+              překonává Dell.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2013</div>
+            <p class="timeline-text paragraph-text">
+              Lenovo dosahuje
+              <strong>prvního místa na světě ve výrobě PC</strong> a překonává
+              HP.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2014</div>
+            <p class="timeline-text paragraph-text">
+              Dvě strategické akvizice:
+              <strong>x86 serverová divize IBM</strong> (2,1 mld. $) a
+              <strong>Motorola Mobility</strong> od Googlu (2,9 mld. $).
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020–2024</div>
+            <p class="timeline-text paragraph-text">
+              Lenovo posiluje svou globální pozici v oblasti PC a rozšiřuje se
+              do
+              <strong>AI řešení, edge computingu a výkonných serverů</strong>
+              prostřednictvím divize Infrastructure Solutions Group (ISG).
+            </p>
+          </div>
+        </div>
+      </section>
+      <hr class="divider" />
+      <!-- PRODUKTOVÁ ŘADA -->
+      <section id="produkty">
+        <div class="section-label">Produktová řada</div>
+        <h2>Co Lenovo vyrábí</h2>
+        <p class="paragraph-text produkty-text">
+          Lenovo pokrývá velmi široké spektrum produktů, strukturované do čtyř
+          hlavních skupin: <strong>IDG</strong> (Intelligent Devices Group) pro
+          koncové uživatele a profesionály, <strong>ISG</strong> (Infrastructure
+          Solutions Group) pro servery a cloud, <strong>SSG</strong> (Solutions
+          &amp; Services Group) pro spravované služby a
+          <strong>MBG</strong> (Mobile Business Group) pro smartphony Motorola.
+        </p>
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3>Notebooky</h3>
+            <p class="paragraph-text">
+              Od firemních ultrabooků ThinkPad přes herní notebooky Legion až po
+              univerzální řadu IdeaPad — Lenovo pokrývá všechny segmenty.
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3>Stolní počítače</h3>
+            <p class="paragraph-text">
+              ThinkCentre pro firmy, IdeaCentre pro běžné uživatele a pracovní
+              stanice ThinkStation pro kreativní profesionály.
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">🖱️</div>
+            <h3>Monitory</h3>
+            <p class="paragraph-text">
+              Monitory ThinkVision pro profesionály a tvůrce, s rozlišením od
+              Full HD až po 4K a konektivitou USB-C.
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">🗄️</div>
+            <h3>Servery a datová centra</h3>
+            <p class="paragraph-text">
+              Řady ThinkSystem a ThinkAgile pokrývají potřeby podnikových
+              datacenter, od tower serverů až po vysokohustotní racky pro AI.
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">📱</div>
+            <h3>Smartphony — Motorola</h3>
+            <p class="paragraph-text">
+              Od akvizice Motorola Mobility v roce 2014 Lenovo prodává
+              smartphony Moto G, Moto Edge a Motorola Razr po celém světě.
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">📟</div>
+            <h3>Tablety a 2v1</h3>
+            <p class="paragraph-text">
+              Od tabletů řady Tab pro běžné uživatele až po konvertibilní
+              ThinkPad X1 Fold Lenovo pravidelně inovuje hybridní a skládací
+              formáty.
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">🎮</div>
+            <h3>Gaming — Legion</h3>
+            <p class="paragraph-text">
+              Kompletní řada pro hráče: notebooky, stolní počítače, monitory a
+              periférie pod značkou Legion s výkonnými GPU NVIDIA RTX.
+            </p>
+          </div>
+          <div class="product-card">
+            <div class="product-icon">⌨️</div>
+            <h3>Periferie a příslušenství</h3>
+            <p class="paragraph-text">
+              Klávesnice, myši, USB-C dokovací stanice, sluchátka, webkamery a
+              tašky — Lenovo nabízí kompletní ekosystém příslušenství.
+            </p>
+          </div>
+        </div>
+        <div class="info-box">
+          <p class="paragraph-text">
+            📌 V rámci této série článků se zaměřujeme na
+            <strong>notebooky</strong>, <strong>stolní počítače</strong> a
+            <strong>monitory</strong>. Servery, smartphony a tablety budou
+            předmětem samostatného obsahu.
+          </p>
+        </div>
+      </section>
+      <hr class="divider" />
+      <!-- LAPTOPS -->
+      <section id="notebooky">
+        <div class="section-label">Zaměření — Notebooky</div>
+        <h2>Řady notebooků Lenovo</h2>
+        <p class="paragraph-text notebooky-text">
+          Lenovo strukturuje svou nabídku notebooků do několika odlišných řad, z
+          nichž každá cílí na konkrétní typ uživatele. Řady označené šipkou mají
+          vlastní podrobný článek.
+        </p>
+        <ul class="item-list">
+          <li class="item">
+            <div class="item-emoji">🏆</div>
+            <div class="item-info">
+              <h4>ThinkPad</h4>
+              <p class="paragraph-text">
+                Ikonická profesionální řada zděděná od IBM, rozpoznatelná podle
+                matného černého šasi a legendárního červeného TrackPointu.
+                Odolnost vojenské úrovně (certifikace MIL-SPEC), skvělé
+                klávesnice, dlouhá výdrž baterie a pokročilé zabezpečení (čtečka
+                otisků prstů, TPM, krytka webkamery). Dostupná v řadách T
+                (univerzální), X (kompaktní), L (dobrý poměr cena/výkon), E
+                (základní firemní) a X1 Carbon (prémiový ultratenký ultrabook).
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-thinkpad.html">→</a>
+          </li>
+          <li class="item">
+            <div class="item-emoji">💼</div>
+            <div class="item-info">
+              <h4>ThinkBook</h4>
+              <p class="paragraph-text">
+                Ideální kompromis mezi ThinkPad a IdeaPad: moderní a čistý
+                design pro malé a střední podniky a mladé profesionály, solidní
+                výkon, kompletní konektivita a dostupnější cena než ThinkPad.
+                Dostupný ve velikostech 13, 14 a 16 palců s procesory Intel Core
+                nebo AMD Ryzen.
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-thinkbook.html">→</a>
+          </li>
+          <li class="item">
+            <div class="item-emoji">🎒</div>
+            <div class="item-info">
+              <h4>IdeaPad</h4>
+              <p class="paragraph-text">
+                Univerzální spotřebitelská řada Lenovo: studenti, rodiny a
+                uživatelé hledající dobrý poměr ceny a výkonu. Dostupná v
+                několika podřadách (Slim, Flex, Gaming), pokrývá každodenní
+                použití — prohlížení webu, kancelářskou práci a streaming.
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-ideapad.html">→</a>
+          </li>
+          <li class="item">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>Legion</h4>
+              <p class="paragraph-text">
+                Vysoce výkonná herní řada Lenovo. Notebooky Legion disponují
+                nejnovějšími GPU NVIDIA GeForce RTX, displeji s vysokou
+                obnovovací frekvencí (až 240 Hz), pokročilým chlazením
+                (Coldfront) a výrazným designem s RGB podsvícením. Řady 5
+                (střední třída) a 7 (high-end) konkurují Asus ROG a Razer Blade.
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-legion.html">→</a>
+          </li>
+          <li class="item">
+            <div class="item-emoji">🧘</div>
+            <div class="item-info">
+              <h4>Yoga</h4>
+              <p class="paragraph-text">
+                Prémiová řada konvertibilních zařízení a ultrabooků Lenovo. Yoga
+                lze otočit o 360° a používat v režimu notebooku, tabletu nebo
+                prezentace. Nabízí kvalitní dotykové OLED nebo IPS displeje,
+                hliníkové zpracování a vysokou mobilitu. Součástí je i Yoga Slim
+                pro klasický ultratenký formát.
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-yoga.html">→</a>
+          </li>
+          <li class="item">
+            <div class="item-emoji">✨</div>
+            <div class="item-info">
+              <h4>ThinkPad X1 Carbon &amp; X1 Extreme</h4>
+              <p class="paragraph-text">
+                Vlajková loď řady ThinkPad. <strong>X1 Carbon</strong> patří
+                mezi nejlehčí profesionální ultrabooky na světě (méně než 1,1
+                kg) s karbonovým šasi, výdrží až 15 hodin a volitelným OLED
+                displejem. <strong>X1 Extreme</strong> nabízí vyšší výkon s
+                dedikovanou grafikou pro náročnější profesionály.
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-thinkpad-x1.html">→</a>
+          </li>
+        </ul>
+      </section>
+      <hr class="divider" />
+      <!-- STOLNÍ POČÍTAČE -->
+      <section id="desktop">
+        <div class="section-label">Zaměření — Stolní počítače</div>
+        <h2>Řady stolních počítačů Lenovo</h2>
+        <p class="paragraph-text desktop-text">
+          Lenovo nabízí kompletní řadu stolních počítačů, od firemních mini PC
+          až po ultra výkonné pracovní stanice pro kreativní a vědecké
+          profesionály.
+        </p>
+        <ul class="item-list">
+          <li class="item">
+            <div class="item-emoji">🏢</div>
+            <div class="item-info">
+              <h4>ThinkCentre</h4>
+              <p class="paragraph-text">
+                Stolní ekvivalent ThinkPadu: reference pro firemní IT
+                infrastruktury. Dostupný ve formátech tower, mini, micro a
+                all-in-one. ThinkCentre vyniká snadným nasazením, odolností a
+                nástroji pro správu (Lenovo Device Manager, SCCM). Modely Tiny
+                jsou obzvláště oblíbené díky minimálním rozměrům a překvapivému
+                výkonu v kompaktním těle.
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-thinkcentre.html">→</a>
+          </li>
+          <li class="item">
+            <div class="item-emoji">⚙️</div>
+            <div class="item-info">
+              <h4>ThinkStation</h4>
+              <p class="paragraph-text">
+                Pracovní stanice Lenovo pro profesionály s vysokými nároky: CAD
+                inženýři, BIM architekti, 3D umělci, datoví specialisté a
+                výzkumníci. Dostupné ve formátu tower (řady P3, P5, P7) nebo
+                ultra-kompaktním (PX), vybavené procesory Intel Xeon nebo Core
+                i9, certifikovanými GPU NVIDIA RTX Ada nebo AMD Radeon Pro a
+                podporou velkého množství ECC paměti. Certifikované hlavními ISV
+                (Autodesk, Adobe, Dassault).
+              </p>
+            </div>
+            <a class="item-link-arrow" href="/lenovo-thinkstation.html">→</a>
+          </li>
+          <li class="item">
+            <div class="item-emoji">🏠</div>
+            <div class="item-info">
+              <h4>IdeaCentre</h4>
+              <p class="paragraph-text">
+                Spotřebitelská řada stolních počítačů Lenovo. IdeaCentre je
+                dostupný jako kompaktní tower, all-in-one nebo mini PC. Cenově
+                dostupné řešení vhodné pro domácí a školní použití: prohlížení
+                internetu, streaming, základní kancelářská práce a nenáročné
+                hraní. Formát all-in-one je oblíbený díky čistému designu bez
+                velké skříně.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zahrnuto zde</span>
+          </li>
+          <li class="item">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>Legion Tower</h4>
+              <p class="paragraph-text">
+                Stolní verze herní řady Legion. Tyto počítače podporují
+                nejvýkonnější GPU NVIDIA GeForce RTX, mají optimalizované
+                chlazení, snadný přístup ke komponentům pro upgrade a
+                přizpůsobitelné RGB podsvícení. Ideální pro hráče, kteří chtějí
+                maximální výkon bez kompromisů typických pro herní notebooky.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zahrnuto zde</span>
+          </li>
+        </ul>
+      </section>
+      <hr class="divider" />
+      <!-- MONITORY -->
+      <section id="monitory">
+        <div class="section-label">Zaměření — Monitory</div>
+        <h2>Nabídka monitorů Lenovo</h2>
+        <p class="paragraph-text monotory-text">
+          Lenovo prodává své monitory především pod značkou
+          <strong>ThinkVision</strong>, s řadami pokrývajícími profesionální,
+          kreativní i běžné použití. Tato značka je v tomto segmentu méně známá
+          než Dell UltraSharp, ale nabízí kvalitní produkty s moderní
+          konektivitou.
+        </p>
+        <ul class="item-list">
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎨</div>
+            <div class="item-info">
+              <h4>ThinkVision — Řada P (Creator)</h4>
+              <p class="paragraph-text">
+                Prémiové monitory Lenovo určené pro profesionály v oblasti
+                vizuální tvorby. Řada P vyniká širokým barevným gamutem (DCI-P3,
+                Adobe RGB), tovární kalibrací, IPS nebo OLED panely a rozlišením
+                až 4K. Dostupné ve velikostech 27 a 32 palců, s USB-C hubem a
+                napájením až 90 W pro připojení a nabíjení notebooku jedním
+                kabelem.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zahrnuto zde</span>
+          </li>
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🏢</div>
+            <div class="item-info">
+              <h4>ThinkVision — Řada T (Professional)</h4>
+              <p class="paragraph-text">
+                Referenční řada pro firmy a kancelářské prostředí. Nabízí plnou
+                ergonomii (výška, náklon, otočení, pivot), profesionální
+                konektivitu (DisplayPort, HDMI, USB-A, USB-C) a IPS panely s
+                dobrými pozorovacími úhly. Diskrétní a odolné, vhodné pro
+                intenzivní práci v kanceláři. Dostupné ve velikostech 22 až 27
+                palců ve Full HD, QHD a 4K.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zahrnuto zde</span>
+          </li>
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">💡</div>
+            <div class="item-info">
+              <h4>ThinkVision — Řada E (Essential)</h4>
+              <p class="paragraph-text">
+                Základní profesionální řada Lenovo, navržená pro omezené
+                rozpočty bez ztráty klíčových funkcí. Kvalitní IPS panely,
+                základní konektivita (HDMI + VGA nebo DisplayPort) a výškově
+                nastavitelné stojany dle modelu. Ideální pro sekundární pracovní
+                stanice, zasedací místnosti nebo neziskové organizace. Dostupné
+                ve velikostech 21,5 až 24 palců ve Full HD.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zahrnuto zde</span>
+          </li>
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>Legion Display (Gaming)</h4>
+              <p class="paragraph-text">
+                Herní monitory Lenovo pod značkou Legion. Dostupné ve
+                velikostech 24 až 27 palců, s IPS panely s vysokou obnovovací
+                frekvencí (165 Hz až 240 Hz), dobou odezvy 1 ms a podporou AMD
+                FreeSync Premium a NVIDIA G-Sync Compatible. Rozlišení WQHD
+                (2560×1440) nabízí ideální kompromis mezi kvalitou obrazu a
+                plynulostí.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zahrnuto zde</span>
+          </li>
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🌿</div>
+            <div class="item-info">
+              <h4>ThinkVision — Řada S (Stylish / Home)</h4>
+              <p class="paragraph-text">
+                Určeno pro domácí kanceláře a práci na dálku, s důrazem na
+                design za dostupnou cenu. Hliníkové provedení, tenké rámečky,
+                bezblikové podsvícení (Flicker-Free) a filtr modrého světla s
+                certifikací TÜV. Zjednodušená konektivita HDMI + USB-C. Dostupné
+                ve velikostech 23 až 27 palců ve Full HD a 2K.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zahrnuto zde</span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUVISEJÍCÍ ČLÁNKY -->
+      <section id="articles">
+        <div class="section-label">Články série</div>
+        <h2>Všechny články o Lenovo</h2>
+        <p class="paragraph-text articles-text">
+          Prohlédněte si podrobné články o jednotlivých řadách Lenovo. Kliknutím
+          na kartu otevřete kompletní průvodce.
+        </p>
+        <ul>
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              Firemní notebooky
+            </p>
+            <p class="articles-text"><strong>ThinkPad</strong></p>
+            <p class="paragraph-text articles-text">
+              Dědictví IBM, vojenská odolnost a nejlepší klávesnice na trhu.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-thinkpad.html">Číst článek →</a>
+            </p>
+          </li>
+
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              Prémiový ultrabook
+            </p>
+            <p class="articles-text"><strong>ThinkPad X1 Carbon</strong></p>
+            <p class="paragraph-text articles-text">
+              Méně než 1,1 kg, uhlíkové vlákno, OLED — ultimátní profesionální
+              ultrabook.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-thinkpad-x1.html">Číst článek →</a>
+            </p>
+          </li>
+
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              SMB &amp; mladí profesionálové
+            </p>
+            <p class="articles-text"><strong>ThinkBook</strong></p>
+            <p class="paragraph-text articles-text">
+              Ideální rovnováha mezi profesionalitou a moderním designem za
+              dostupnou cenu.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-thinkbook.html">Číst článek →</a>
+            </p>
+          </li>
+
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              Pro běžné uživatele
+            </p>
+            <p class="articles-text"><strong>IdeaPad</strong></p>
+            <p class="paragraph-text articles-text">
+              Univerzální, cenově dostupný a stylový — notebook pro každodenní
+              použití.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-ideapad.html">Číst článek →</a>
+            </p>
+          </li>
+
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              Prémiové konvertibilní zařízení
+            </p>
+            <p class="articles-text"><strong>Yoga</strong></p>
+            <p class="paragraph-text articles-text">
+              OLED dotykový displej, 360° pant, hliníkový design — kreativní
+              notebook.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-yoga.html">Číst článek →</a>
+            </p>
+          </li>
+
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              Herní
+            </p>
+            <p class="articles-text"><strong>Legion</strong></p>
+            <p class="paragraph-text articles-text">
+              RTX grafiky, 240 Hz displeje, chlazení Coldfront — pro náročné
+              hráče.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-legion.html">Číst článek →</a>
+            </p>
+          </li>
+
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              Firemní stolní PC
+            </p>
+            <p class="articles-text"><strong>ThinkCentre</strong></p>
+            <p class="paragraph-text articles-text">
+              Micro, tower nebo all-in-one — standard pro firemní IT prostředí.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-thinkcentre.html">Číst článek →</a>
+            </p>
+          </li>
+
+          <li>
+            <p
+              style="
+                margin: 0 0 8px 0;
+                color: #d1214c;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+                font-size: 16px;
+                font-weight: 600;
+              "
+            >
+              Pracovní stanice
+            </p>
+            <p class="articles-text"><strong>ThinkStation</strong></p>
+            <p class="paragraph-text articles-text">
+              Xeon procesory, certifikované GPU, ECC paměť — pro CAD, 3D a AI.
+            </p>
+            <p class="articles-text">
+              <a href="/lenovo-thinkstation.html">Číst článek →</a>
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <div class="section-label">Shrnutí</div>
+        <h2>Lenovo v několika slovech</h2>
+        <div class="card">
+          <p class="paragraph-text">
+            Za čtyřicet let se Lenovo proměnilo ze startupu založeného v bytě v
+            Pekingu na světovou jedničku v oblasti osobních počítačů. Klíčovým
+            momentem byl nákup PC divize IBM v roce 2005, který firmě okamžitě
+            přinesl prestiž, globální síť a důvěryhodnost potřebnou k prosazení
+            na západních trzích.
+          </p>
+          <p class="paragraph-text">
+            Síla Lenovo spočívá v jasné segmentaci:
+            <strong>ThinkPad</strong> pro profesionály,
+            <strong>Yoga</strong> pro kreativce, <strong>Legion</strong> pro
+            hráče a <strong>IdeaPad</strong> pro běžné uživatele. Každá řada má
+            silnou identitu a přesně definovanou cílovou skupinu, bez zbytečného
+            překrývání.
+          </p>
+          <p class="paragraph-text">
+            Díky orientaci na
+            <strong>řešení s integrovanou umělou inteligencí</strong>,
+            „AI-ready“ počítače (s integrovanými NPU) a rychle rostoucí
+            serverové divizi ISG se Lenovo připravuje na to, aby zůstalo
+            klíčovým hráčem na rychle se měnícím trhu. Další články této série
+            se zaměří na jednotlivé produktové řady a pomohou vám s výběrem.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

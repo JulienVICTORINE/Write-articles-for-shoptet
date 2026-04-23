@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Envy - Prezentace</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP ENVY logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-logo.jpg"
+          alt="HP Envy Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">💻 Notebooky HP</div>
+        <h1 class="article-title">
+          HP Envy — dostupný prémiový notebook pro kreativce a profesionály
+        </h1>
+        <p class="article-intro">
+          HP Envy je prémiová řada notebooků pro širokou veřejnost od
+          společnosti HP. Nachází se mezi řadou Pavilion (střední třída) a
+          Spectre x360 (ultra prémiová třída). Envy je určen pro uživatele,
+          kteří chtějí elegantní, kvalitně zpracovaný a výkonný notebook bez
+          nutnosti platit vysokou cenu. Hliníkové provedení, kvalitní displej a
+          zvuk certifikovaný Bang &amp; Olufsen — Envy je ideální pro ty, kteří
+          nechtějí dělat kompromisy v každodenním používání.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PREZENTACE -->
+      <section>
+        <h2>💎 Představení řady</h2>
+        <p>
+          HP Envy patří do
+          <strong>prémiového segmentu pro širokou veřejnost</strong> v nabídce
+          HP. Okamžitě se odlišuje od řady Pavilion svým
+          <strong>kartáčovaným hliníkovým šasi</strong>, které je odolnější a
+          elegantnější, a také kvalitou displejů — dostupných v provedení OLED
+          nebo 2K podle modelu. Je to notebook HP, který si vyberete, pokud
+          chcete mít na stole něco stylového.
+        </p>
+        <p>
+          Řada Envy je dostupná ve velikostech
+          <strong>13, 14 a 16 palců</strong>, s displeji IPS Full HD, OLED 2.8K
+          nebo 2K podle konfigurace. Nejnovější modely jsou vybaveny procesory
+          Intel Core Ultra nebo AMD Ryzen 7/9 série 8000, s možností dedikované
+          grafické karty NVIDIA GeForce RTX 3050 nebo 4050 u 16palcových verzí.
+        </p>
+        <p>
+          Envy je dostupný také v konvertibilní verzi
+          <strong>Envy x360</strong> s 360° pantem a dotykovým displejem, který
+          umožňuje přepínání mezi režimem notebooku a tabletu. Tato verze je
+          oblíbená zejména mezi kreativci a studenty designu, kteří používají
+          stylus HP.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-x360-laptop.jpg"
+          alt="HP Envy"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho je HP Envy?</h2>
+        <p>
+          Envy je všestranný notebook, ale zaměřený na náročné a kreativní
+          využití. Hodí se zejména pro tyto profily:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Věnujete se úpravě fotografií nebo grafickému designu
+            </div>
+            <div class="profile-cell">
+              Hrajete nejnovější hry na vysoké detaily (zvažte OMEN)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete na kreativních projektech: design, lehký střih videa,
+              ilustrace
+            </div>
+            <div class="profile-cell">
+              Potřebujete odolnost certifikovanou podle MIL-SPEC (zvažte
+              EliteBook)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Chcete kvalitní displej pro sledování obsahu nebo práci
+            </div>
+            <div class="profile-cell">
+              Hledáte co nejlehčí notebook od HP (zvažte Spectre)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Oceňujete propracovaný design a hliníkové provedení
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — vhodnější bude Pavilion
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete z domova s častými videohovory a pokročilou kancelářskou
+              prací
+            </div>
+            <div class="profile-cell">
+              Potřebujete více portů Thunderbolt 4 nebo plnou profesionální
+              konektivitu
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste student designu, architektury nebo komunikace
+            </div>
+            <div class="profile-cell">
+              Potřebujete mobilní pracovní stanici pro CAD nebo 3D (zvažte
+              ZBook)
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: HP Envy představuje
+          <strong>nejlepší rovnováhu v nabídce HP</strong> mezi designem,
+          výkonem a cenou. Hodí se jak pro náročné uživatele pracující z domova,
+          tak pro kreativní studenty, kteří chtějí notebook, na který budou
+          hrdí.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY & NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          HP Envy je určen pro
+          <strong>kreativní a každodenní profesionální použití</strong> — zde
+          jsou jeho silné stránky a omezení.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Kartáčované hliníkové šasi — prémiové, pevné a elegantní
+                provedení
+              </li>
+              <li>
+                Volitelný OLED nebo 2K displej — živé barvy a hluboká černá
+              </li>
+              <li>
+                Certifikovaný zvuk Bang &amp; Olufsen — nadprůměrná kvalita
+                audia
+              </li>
+              <li>
+                Stabilní výkon pro tvorbu obsahu a pokročilou kancelářskou práci
+              </li>
+              <li>Verze x360 s dotykovým displejem a podporou pera HP</li>
+              <li>FHD webkamera s integrovanou fyzickou krytkou</li>
+              <li>Dobrá výdrž baterie: 8 až 12 hodin podle modelu a použití</li>
+              <li>
+                Plná konektivita: USB-C (Thunderbolt), USB-A, HDMI, čtečka SD
+                karet
+              </li>
+              <li>
+                Dedikovaná grafická karta dostupná u 16palcových modelů pro
+                grafické úlohy
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Vyšší cena než Pavilion — platíte za kvalitu</li>
+              <li>
+                Znatelné zahřívání při dlouhé zátěži (render videa,
+                multitasking)
+              </li>
+              <li>
+                Střední hmotnost: 1,4 až 1,8 kg podle modelu — ne nejlehčí
+                ultrabook
+              </li>
+              <li>
+                Omezený výkon GPU — nevhodné pro náročné hry nebo profesionální
+                3D
+              </li>
+              <li>U některých modelů pájená RAM — bez možnosti rozšíření</li>
+              <li>
+                Chybí certifikace odolnosti — menší odolnost vůči nárazům a
+                pádům
+              </li>
+              <li>Hlučnější ventilátory při zátěži — méně tichý než Spectre</li>
+              <li>Chybí nativní RJ45 (Ethernet) port — nutný adaptér</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Kreativní a profesionální použití:</strong> pro úpravu
+          fotografií v Lightroomu, tvorbu prezentací, lehký střih videa nebo
+          práci v kavárně s elegantním notebookem je HP Envy výborná volba. Není
+          určen pro náročné hraní her ani extrémně profesionální pracovní zátěž.
+        </div>
+      </section>
+
+      <!-- Image HP ENVY -->
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-notebooky.jpg"
+          alt="HP Envy"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní verze řady</h2>
+
+        <div class="model-block">
+          <h3>HP Envy 14</h3>
+          <p>
+            Kompaktní verze řady — 14 palců, lehká (cca 1,4 kg) a elegantní.
+            Nabízí IPS nebo OLED 2.8K displej, procesory Intel Core Ultra nebo
+            AMD Ryzen 7 a jednu z nejlepších výdrží baterie v řadě. Ideální pro
+            mobilní kreativce, kteří nechtějí nosit velký notebook.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Envy 16</h3>
+          <p>
+            Větší varianta řady — 16 palců s pohodlnějším poměrem stran 16:10
+            pro práci. Jako jediná v nabídce umožňuje volit dedikovanou
+            grafickou kartu (NVIDIA GeForce RTX 3050 / 4050), což z ní dělá
+            skvělou volbu pro úpravu fotografií, střih videa nebo grafický
+            design. Je o něco těžší (cca 1,9 kg), ale větší displej to plně
+            vyvažuje.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Envy x360 (2v1)</h3>
+          <p>
+            Konvertibilní verze Envy s 360° pantem a dotykovým OLED nebo IPS
+            displejem. Kompatibilní s nabíjecím perem HP pro psaní poznámek nebo
+            kreslení přímo na obrazovce. Dostupná ve velikostech 13,3 a 14
+            palců. O něco tlustší než klasická verze, ale výrazně univerzálnější
+            pro kreativce a studenty.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Envy Move</h3>
+          <p>
+            Netypický model v řadě: přenosný all-in-one počítač s integrovanou
+            baterií a 23,8palcovým displejem. Lze jej přenášet mezi místnostmi
+            bez kabelů a používat jako mobilní desktop. Zajímavé řešení od HP
+            určené pro uživatele, kteří chtějí velký displej bez nutnosti
+            klasického pracovního místa.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš názor</h2>
+        <div class="conclusion">
+          <p>
+            HP Envy je notebook HP, který nabízí nejlepší rovnováhu mezi
+            kvalitou zpracování, výkonem a cenou. Dokonale zaplňuje mezeru mezi
+            příliš plastovým Pavilionem a drahým Spectre — přesně tam, kde se
+            nachází většina náročných uživatelů.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud váháte mezi Envy a Spectre, zeptejte se sami sebe: potřebujete
+            co nejtenčí design a nejvyšší kvalitu displeje? Pokud ano, Spectre
+            se vyplatí. Pokud ne,
+            <strong>Envy 14 nebo 16 s OLED displejem</strong> vám nabídne velmi
+            podobný zážitek za výrazně nižší cenu.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

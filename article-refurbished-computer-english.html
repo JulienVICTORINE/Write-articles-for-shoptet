@@ -1,0 +1,945 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Refurbished vs. New Laptops – Which Is Better?</title>
+    <style>
+      :root {
+        --text: #222;
+        --white: #ffffff;
+        --border: #dde4f0;
+        --red: #d1214c;
+        --gris: #ececed;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      /* ── IMAGE ── */
+      .img-container {
+        margin: 24px auto;
+        max-width: 860px;
+        padding: 0 20px;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Tous les paragraphes */
+      .paragraph-text {
+        text-align: justify;
+        text-justify: inter-word;
+        margin-bottom: 16px;
+      }
+
+      /* ── LAYOUT ── */
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ── INTRO ── */
+      .intro {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 48px 24px;
+      }
+      .intro .container p {
+        font-size: 16px;
+        color: var(--text);
+        max-width: 720px;
+      }
+      .intro .container p a {
+        color: var(--red);
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 2px solid var(--gris);
+        transition: border-color 0.2s;
+      }
+      .intro .container p a:hover {
+        border-color: var(--red);
+      }
+
+      /* ── DEFINITION BOX ── */
+      .definition-box {
+        background: var(--gris);
+        border-left: 4px solid var(--red);
+        border-radius: 0 12px 12px 0;
+        padding: 24px 28px;
+        margin: 36px 0;
+      }
+      .definition-box h3 {
+        font-size: 18px;
+        color: var(--text);
+        margin-bottom: 10px;
+      }
+      .definition-box p {
+        color: var(--text);
+        font-size: 16px;
+      }
+
+      /* ── ARTICLE BODY ── */
+      .article-body {
+        padding: 56px 24px;
+      }
+
+      /* ── SECTION ── */
+      .section {
+        margin-bottom: 64px;
+      }
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+      .section-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--red);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .section-icon .section-icon-glyph {
+        color: var(--white);
+        font-size: 24px;
+        line-height: 1;
+      }
+      .section h2 {
+        font-size: clamp(20px, 3vw, 28px);
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .section p {
+        color: var(--text);
+        margin-bottom: 16px;
+        font-size: 16px;
+      }
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── COMPARISON TABLE ── */
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(21, 101, 192, 0.08);
+        margin: 28px 0;
+        font-size: 16px;
+      }
+      .compare-table thead tr {
+        background: var(--red);
+        color: white;
+      }
+      .compare-table thead th {
+        padding: 14px 18px;
+        font-weight: 600;
+        text-align: left;
+        letter-spacing: 0.3px;
+      }
+      .compare-table thead th:nth-child(1),
+      .compare-table tbody td:nth-child(1) {
+        width: 30%;
+      }
+      .compare-table thead th:nth-child(2),
+      .compare-table tbody td:nth-child(2) {
+        width: 35%;
+      }
+      .compare-table thead th:nth-child(3),
+      .compare-table tbody td:nth-child(3) {
+        width: 35%;
+      }
+      .compare-table tbody tr:nth-child(odd) {
+        background: var(--white);
+      }
+      .compare-table tbody tr:nth-child(even) {
+        background: var(--gris);
+      }
+      .compare-table tbody td {
+        padding: 13px 18px;
+        color: var(--text);
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+        line-height: 1.5;
+      }
+      .compare-table tbody td:first-child {
+        font-weight: 600;
+        color: var(--text);
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .badge-green {
+        background: var(--green-light);
+        color: var(--green);
+      }
+      .badge-blue {
+        background: var(--gris);
+        color: var(--blue-dark);
+      }
+      .badge-gold {
+        background: #fff8e1;
+        color: #e65100;
+      }
+
+      /* ── STAT CARDS ── */
+      .stat-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+        gap: 16px;
+        margin: 28px 0;
+      }
+      .stat-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 22px 18px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      .stat-card .stat-num {
+        font-size: 34px;
+        font-weight: 900;
+        color: var(--red);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .stat-card .stat-label {
+        font-size: 16px;
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      /* ── HIGHLIGHT BOX ── */
+      .highlight-box {
+        background: var(--gris);
+        border-radius: 16px;
+        padding: 28px 32px;
+        color: #222;
+        margin: 28px 0;
+      }
+      .highlight-box h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .highlight-box p {
+        color: rgba(34, 34, 34, 0.88);
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+
+      /* ── CHECKLIST ── */
+      .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .checklist li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+        color: var(--text);
+        font-size: 16px;
+      }
+      .checklist li:last-child {
+        border-bottom: none;
+      }
+      .checklist li::before {
+        content: "✔";
+        width: 22px;
+        height: 22px;
+        background: var(--gris);
+        color: var(--green);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      /* ── ECO BOX ── */
+      .eco-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+        margin: 24px 0;
+      }
+      .eco-card {
+        background: var(--gris);
+        border-radius: 12px;
+        padding: 18px 16px;
+        border-left: 3px solid var(--red);
+      }
+      .eco-card .eco-val {
+        font-size: 22px;
+        color: var(--text);
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .eco-card .eco-desc {
+        font-size: 16px;
+        color: var(--text);
+      }
+
+      /* ── CTA ── */
+      .cta-section {
+        background: var(--gris);
+        padding: 32px 20px 48px;
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .cta-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cta-section h2 {
+        font-size: clamp(22px, 4vw, 34px);
+        color: var(--text);
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .cta-section p {
+        color: rgba(34, 34, 34, 0.8);
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto 24px;
+        text-align: center !important;
+      }
+      .cta-btn {
+        display: inline-block;
+        background: var(--red);
+        color: var(--white);
+        font-weight: 700;
+        font-size: 16px;
+        padding: 14px 34px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        letter-spacing: 0.3px;
+      }
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(249, 168, 37, 0.4);
+      }
+
+      .cta-text {
+        text-align: center !important;
+        color: rgba(34, 34, 34, 0.8) !important;
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        border: none;
+        border-top: 2px solid var(--border);
+        margin: 48px 0;
+      }
+
+      /* ── VERDICT ── */
+      .verdict-card {
+        background: var(--white);
+        border: 2px solid var(--red);
+        border-radius: 16px;
+        padding: 32px;
+        margin-top: 28px;
+      }
+      .verdict-card h3 {
+        font-size: 22px;
+        color: var(--text);
+        margin-bottom: 14px;
+      }
+      .verdict-card p {
+        color: var(--text);
+        font-size: 15px;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .compare-table {
+          font-size: 16px;
+        }
+        .compare-table thead th,
+        .compare-table tbody td {
+          padding: 10px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="container">
+        <p class="paragraph-text">
+          Whether you're equipping a home office, kitting out a growing
+          business, or simply looking to upgrade your personal machine, one
+          question keeps coming up:
+          <strong
+            >should you buy a brand-new laptop or a refurbished one?</strong
+          >
+          This guide cuts through the noise — covering cost, performance,
+          quality, durability, environmental impact and more — so you can make a
+          confident, informed decision. Looking for premium refurbished
+          computers in Czech Republic? Visit
+          <a href="https://pocitace24.cz" target="_blank" rel="noopener"
+            >Počítače24.cz</a
+          >
+          — specialists in high-quality recondititioned laptops and desktop
+          computers.
+        </p>
+
+        <div class="img-container">
+          <img
+            src="https://www.it-parts.cz/user/documents/upload/servis/refurb-laptop.jpg"
+            alt="refurb-laptop"
+          />
+        </div>
+
+        <div class="definition-box">
+          <h3>🔍 What exactly is a refurbished computer?</h3>
+          <p class="paragraph-text">
+            A refurbished computer is a pre-owned device that has been
+            professionally inspected, repaired where necessary, cleaned, tested
+            and certified to work like new. It is <em>not</em> a simple
+            second-hand sale — reputable refurbishers replace worn components,
+            update firmware, wipe data securely and rigorously stress-test every
+            machine before it is sold. The result is a machine that performs
+            reliably, often backed by a multi-year warranty.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <main class="article-body">
+      <div class="container">
+        <!-- ── 1. COST ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">&euro;</span>
+            </div>
+            <h2>Cost: Refurbished Wins — By a Wide Margin</h2>
+          </div>
+
+          <p class="paragraph-text">
+            Cost is the most immediate and measurable difference. Refurbished
+            laptops and desktops consistently cost
+            <strong>30% to 50% less</strong> than equivalent new models — a
+            saving confirmed by International Data Corporation (IDC) research on
+            IT procurement. For businesses managing large fleets of devices,
+            that gap translates directly into budget freed up for other
+            priorities.
+          </p>
+          <p class="paragraph-text">
+            The saving goes further when you factor in performance-per-pound. A
+            refurbished business-class machine (think Dell Latitude, HP
+            EliteBook or Lenovo ThinkPad) with a fast processor, SSD storage and
+            16 GB RAM can be purchased for the price of a low-end new consumer
+            laptop — often a plasticky Acer or entry-level Asus with slower
+            storage and a shorter lifespan. Quality-conscious refurbishers do
+            not stock unrepairable, low-tier models. Every device on the shelf
+            is worth buying.
+          </p>
+
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-num">30–50%</div>
+              <div class="stat-label">
+                Average IT cost savings vs. new (IDC)
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">5 years</div>
+              <div class="stat-label">
+                Warranty available from premium refurbishers
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">0€</div>
+              <div class="stat-label">
+                Performance difference for everyday tasks
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ── 2. LAPTOPS vs DESKTOPS ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true"
+                >&#128187;</span
+              >
+            </div>
+            <h2>Laptops vs. Desktop Computers: Which Should You Choose?</h2>
+          </div>
+
+          <p class="paragraph-text">
+            Before diving deeper into the new-vs-refurbished debate, it helps to
+            settle the laptop-vs-desktop question, since the right form factor
+            shapes everything else.
+          </p>
+
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Factor</th>
+                <th>💻 Laptop</th>
+                <th>🖥️ Desktop</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Portability</td>
+                <td>
+                  <span class="badge badge-green">Excellent</span> — work
+                  anywhere
+                </td>
+                <td>Fixed to one location</td>
+              </tr>
+              <tr>
+                <td>Value for money</td>
+                <td>Good</td>
+                <td>
+                  <span class="badge badge-green">Excellent</span> — more power
+                  per €
+                </td>
+              </tr>
+              <tr>
+                <td>Upgradeability</td>
+                <td>Limited (RAM, SSD on some models)</td>
+                <td>
+                  <span class="badge badge-green">High</span> — CPU, GPU, RAM,
+                  storage
+                </td>
+              </tr>
+              <tr>
+                <td>Screen size</td>
+                <td>13–17" built-in</td>
+                <td>
+                  <span class="badge badge-green">Unlimited</span> — any
+                  external monitor
+                </td>
+              </tr>
+              <tr>
+                <td>Battery life</td>
+                <td><span class="badge badge-green">Built-in</span></td>
+                <td>Requires mains power</td>
+              </tr>
+              <tr>
+                <td>Raw performance</td>
+                <td>Good — ideal for office &amp; creative work</td>
+                <td>
+                  <span class="badge badge-green">Superior</span> for demanding
+                  workloads
+                </td>
+              </tr>
+              <tr>
+                <td>Refurbished value</td>
+                <td><span class="badge badge-green">Excellent</span></td>
+                <td><span class="badge badge-green">Excellent</span></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="paragraph-text">
+            <strong>Verdict:</strong> If you travel, work from different
+            locations or simply value flexibility, a laptop is the clear choice.
+            If your machine stays on a desk and you need maximum performance or
+            plan to run resource-intensive software, a refurbished desktop gives
+            you far more power for the same investment. At
+            <a
+              href="https://pocitace24.cz"
+              target="_blank"
+              rel="noopener"
+              style="color: var(--blue); font-weight: 600"
+              >Počítače24.cz</a
+            >
+            you will find quality options in both categories.
+          </p>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ── 3. QUALITY & PERFORMANCE ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">&#9989;</span>
+            </div>
+            <h2>Quality &amp; Performance: Closer Than You Think</h2>
+          </div>
+
+          <p class="paragraph-text">
+            The persistent myth is that refurbished means "inferior." The
+            reality is more nuanced. A high-end refurbished business laptop —
+            Dell Latitude, HP EliteBook, Lenovo ThinkPad — was originally
+            engineered to
+            <strong>military-grade durability standards</strong>, built to run
+            for 8–10 hours under heavy corporate workloads. Many consumer
+            laptops sold new today are built to lower specifications and with
+            cheaper plastics.
+          </p>
+          <p class="paragraph-text">
+            The key variable is not new vs. refurbished — it is the
+            <strong>quality of the refurbisher</strong> and the
+            <strong>grade of the original device</strong>. Reputable
+            refurbishers only accept business-class models from established
+            brands. They never stock entry-level consumer machines that cannot
+            be meaningfully restored. Every machine undergoes inspection of the
+            chassis, keyboard, screen, ports, battery health and internal
+            components. Failed parts are replaced. The finished machine is then
+            stress-tested before it ships.
+          </p>
+
+          <ul class="checklist">
+            <li>
+              Professional cleaning — inside and out, including fan and heatsink
+            </li>
+            <li>
+              Full hardware diagnostics: CPU, RAM, storage, GPU, ports,
+              wireless, webcam
+            </li>
+            <li>
+              SSD upgrade or replacement — dramatically faster than old HDDs
+            </li>
+            <li>
+              Battery assessment — replaced if below acceptable health threshold
+            </li>
+            <li>Fresh operating system install — secure, clean, up-to-date</li>
+            <li>
+              Multi-hour stress test before the device is approved for sale
+            </li>
+            <li>
+              Cosmetic grading — buyers know exactly what condition to expect
+            </li>
+          </ul>
+
+          <div class="highlight-box">
+            <h4>
+              Why we don't sell Acer, Asus entry-level or similar budget models
+            </h4>
+            <p class="paragraph-text">
+              Low-cost consumer laptops are designed with shorter lifecycles,
+              proprietary connectors and chassis materials that degrade quickly.
+              Many cannot be meaningfully repaired when something fails. At
+              <strong>Počítače24.cz</strong>, quality is non-negotiable — our
+              catalogue focuses exclusively on business-class machines from
+              Dell, HP and Lenovo that are built to last, easy to service and
+              deliver genuine value over years of use.
+            </p>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ── 4. WARRANTY ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true"
+                >&#128737;&#65039;</span
+              >
+            </div>
+            <h2>Warranty: Up to 5 Years — Full Peace of Mind</h2>
+          </div>
+
+          <p class="paragraph-text">
+            One common concern about refurbished computers is warranty coverage.
+            This concern is outdated. The refurbished market has matured
+            significantly: reputable sellers now offer warranties that match or
+            even exceed what you get when buying new from a manufacturer.
+          </p>
+
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Warranty type</th>
+                <th>Typical new laptop</th>
+                <th>Quality refurbished</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Standard coverage</td>
+                <td>1 year</td>
+                <td><span class="badge badge-green">1–3 years</span></td>
+              </tr>
+              <tr>
+                <td>Extended option</td>
+                <td>Up to 3 years (paid extra)</td>
+                <td><span class="badge badge-green">Up to 5 years</span></td>
+              </tr>
+              <tr>
+                <td>Battery warranty</td>
+                <td>6–12 months typically</td>
+                <td><span class="badge badge-green">Included</span></td>
+              </tr>
+              <tr>
+                <td>Claims process</td>
+                <td>Often slow, complex with large OEMs</td>
+                <td>
+                  <span class="badge badge-green">Direct, fast, simple</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="paragraph-text">
+            The advantage of buying from a specialist refurbisher is that
+            warranty claims go directly to the people who know the machine best.
+            No call centre queues, no sending to a manufacturer overseas. Fast
+            replacement or repair, minimal downtime.
+          </p>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ── 5. DURABILITY ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true"
+                >&#128736;&#65039;</span
+              >
+            </div>
+            <h2>Durability: Business-Class Machines Are Built to Last</h2>
+          </div>
+
+          <p class="paragraph-text">
+            This is where refurbished business laptops have a genuine,
+            underappreciated advantage. A Lenovo ThinkPad, Dell Latitude or HP
+            EliteBook was originally designed and tested to endure years of
+            professional use. Many carry military-grade MIL-SPEC 810
+            certification — meaning they have been tested for resistance to
+            drops, vibration, humidity, dust and extreme temperatures.
+          </p>
+          <p class="paragraph-text">
+            By comparison, a cheap new consumer laptop — regardless of brand —
+            is typically built with cost reduction as the primary engineering
+            constraint. Thinner plastic chassis, glued-in batteries,
+            non-upgradeable RAM. After two or three years, the value of that
+            cheap new machine often drops to near zero.
+          </p>
+          <p class="paragraph-text">
+            A refurbished business machine — even one that is four or five years
+            old by model year — retains its engineering quality. The CPU
+            performs just as fast. The keyboard still has the satisfying travel
+            that business users love. The chassis does not flex. With an SSD
+            installed and fresh software, it feels new.
+          </p>
+
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-num">8–10</div>
+              <div class="stat-label">
+                Years typical lifespan of business-class laptops
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">MIL-STD</div>
+              <div class="stat-label">
+                Military durability certification on leading models
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">2–3×</div>
+              <div class="stat-label">
+                Longer lifespan vs. entry-level consumer laptops
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ── 6. ENVIRONMENT ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true"
+                >&#127793;</span
+              >
+            </div>
+            <h2>
+              Environmental Impact: The Refurbished Choice Is the Sustainable
+              Choice
+            </h2>
+          </div>
+
+          <p class="paragraph-text">
+            The environmental cost of manufacturing a new laptop is staggering —
+            and rarely visible to the buyer. Choosing refurbished is one of the
+            most impactful individual or corporate decisions you can make for
+            your carbon footprint.
+          </p>
+
+          <div class="eco-grid">
+            <div class="eco-card">
+              <div class="eco-val">331 kg</div>
+              <div class="eco-desc">
+                CO₂ emitted to manufacture a single new laptop
+              </div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-val">190,000 L</div>
+              <div class="eco-desc">
+                Water consumed during laptop production
+              </div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-val">1,200 kg</div>
+              <div class="eco-desc">Raw materials extracted for one laptop</div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-val">62M tonnes</div>
+              <div class="eco-desc">
+                Global e-waste generated in 2022 — a record high
+              </div>
+            </div>
+          </div>
+
+          <p class="paragraph-text">
+            Refurbishing a laptop avoids the vast majority of that production
+            burden. It also directly addresses the e-waste crisis: while an
+            estimated 70% of laptops could be refurbished and reused, fewer than
+            20% currently are. Choosing refurbished means your purchase actively
+            supports a circular economy rather than a throwaway one.
+          </p>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ── 7. VERDICT ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true"
+                >&#127937;</span
+              >
+            </div>
+            <h2>The Final Verdict</h2>
+          </div>
+
+          <p class="paragraph-text">
+            There is no universal right answer — but the right answer for
+            <em>most</em> people, most of the time, is a high-quality
+            refurbished laptop or desktop from a trusted supplier.
+          </p>
+
+          <div class="verdict-card">
+            <h3>Choose refurbished if you want to…</h3>
+            <ul class="checklist">
+              <li>
+                Save 30–50% without sacrificing build quality or reliability
+              </li>
+              <li>
+                Get a business-class machine (Dell, HP, Lenovo) that would cost
+                far more new
+              </li>
+              <li>
+                Enjoy a warranty of up to 5 years and a fast, direct claims
+                process
+              </li>
+              <li>Reduce your environmental footprint meaningfully</li>
+              <li>
+                Avoid cheap consumer models that fail early and cannot be
+                repaired
+              </li>
+              <li>
+                Get a well-tested, immediately deployable machine with SSD and a
+                fresh OS install
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="verdict-card"
+            style="margin-top: 18px; border-color: var(--border)"
+          >
+            <h3 style="color: var(--text)">Consider new if you need…</h3>
+            <ul class="checklist">
+              <li>
+                The absolute latest generation CPU or GPU (e.g. AI-accelerated
+                tasks, cutting-edge creative work)
+              </li>
+              <li>
+                A specific brand warranty requirement mandated by your
+                organisation's IT policy
+              </li>
+              <li>
+                A particular niche model not yet available on the refurbished
+                market
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- /container -->
+    </main>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to make the smart choice?</h2>
+        <p class="cta-text">
+          Explore premium refurbished laptops and desktop computers — all
+          rigorously tested, backed by a warranty of up to 5 years, and sourced
+          exclusively from leading business-class brands.
+        </p>
+        <a
+          href="https://pocitace24.cz"
+          target="_blank"
+          rel="noopener"
+          class="cta-btn"
+        >
+          Browse computers at Počítače24.cz →
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

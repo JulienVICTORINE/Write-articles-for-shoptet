@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Spectre x360 — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Spectre x360 logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-logo.png"
+          alt="HP Spectre x360 Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- TVRDOHLAVÝ -->
+      <div class="article-header">
+        <div class="article-label">💻 Notebooky HP</div>
+        <h1 class="article-title">
+          HP Spectre x360 — Ultra prémiová vlajková loď HP
+        </h1>
+        <p class="article-intro">
+          HP Spectre x360 je nejvyšší model v celé spotřebitelské řadě HP. Díky
+          zkosenému hliníkovému šasi, dotykovému OLED displeji s rozlišením 2.8K
+          nebo 4K, 360° kloubu a výdrži baterie až 17 hodin představuje to
+          nejlepší, co HP nabízí. Přímý konkurent modelů Dell XPS, MacBook Pro a
+          Lenovo Yoga Slim dosahuje úrovně zpracování, která je ve světě Windows
+          velmi vzácná.
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-14-main.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>✨ Přehled řady</h2>
+        <p>
+          HP Spectre x360 se nachází na <strong>vrcholu nabídky HP</strong>, nad
+          řadami Envy a Pavilion. Je určen uživatelům, kteří chtějí to nejlepší
+          bez kompromisů: nejpreciznější design, nejkvalitnější displej a silný
+          výkon v co nejtenčím těle.
+        </p>
+        <p>
+          K dispozici ve verzích <strong>13,5 a 14 palců</strong> se Spectre
+          x360 vyznačuje <strong>typickými zkosenými hranami</strong> z hliníku,
+          360° pantem umožňujícím režim notebooku, tabletu, stanu nebo
+          prezentace a dotykovým OLED displejem standardně u novějších
+          konfigurací. Dobíjecí pero HP je součástí balení nebo volitelně dle
+          modelu.
+        </p>
+        <p>
+          Nejnovější generace využívají procesory
+          <strong>Intel Core Ultra</strong> s integrovanou NPU jednotkou pro
+          funkce umělé inteligence ve Windows (Copilot+). Kvalita zpracování
+          převyšuje vše, co HP nabízí mimo profesionální řadu EliteBook.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/SphinxInline-removebg.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho je HP Spectre x360 určen?</h2>
+        <p>
+          Spectre x360 je prémiový notebook určený pro velmi specifické
+          uživatelské profily. Není určen pro každého:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Hodí se pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">
+              ❌ Není ideální, pokud…
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Chcete nejlepší notebook HP bez kompromisů v kvalitě
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — existují levnější a výhodnější varianty
+              (Envy, Pavilion)
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Často pracujete na cestách a chcete lehký a elegantní notebook
+            </div>
+            <div class="profile-cell">
+              Hrajete videohry — nemá dedikovanou herní grafickou kartu
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pravidelně používáte stylus pro poznámky, kreslení nebo podpisy
+            </div>
+            <div class="profile-cell">
+              Potřebujete velký displej — dostupný je pouze ve velikosti 13,5 a
+              14 palců
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Důležitá je pro vás kvalita obrazu — 2.8K OLED displej je
+              výjimečný
+            </div>
+            <div class="profile-cell">
+              Hledáte mobilní pracovní stanici pro CAD nebo 3D (zvolte spíše
+              ZBook)
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Manažer, konzultant nebo podnikatel, který se často setkává s
+              klienty
+            </div>
+            <div class="profile-cell">
+              Potřebujete mnoho portů bez adaptérů (omezená konektivita)
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Rádi používáte notebook v režimu tabletu nebo stanu
+            </div>
+            <div class="profile-cell">
+              Preferujete klasický notebook bez dotykové obrazovky a 360° kloubu
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: HP Spectre x360 je určen pro uživatele, kteří vnímají svůj
+          notebook jako
+          <strong>prémiový pracovní nástroj</strong> a jsou ochotni investovat
+          do nejlepšího možného každodenního zážitku.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/00uwiwERhM15aoADGVjjUUy-2_1.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          HP Spectre x360 míří na špičkovou kvalitu — zde jsou jeho silné
+          stránky a také několik omezení, která je dobré znát před koupí.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Výjimečný design — zkosené hliníkové šasi s perfektním
+                zpracováním
+              </li>
+              <li>
+                Dotykový OLED displej 2.8K — špičkové barvy, kontrast a jas
+              </li>
+              <li>
+                Odolný 360° pant — 4 režimy použití (notebook, tablet, stan,
+                prezentace)
+              </li>
+              <li>
+                Stylus HP součástí nebo volitelně — ideální pro poznámky a
+                kreslení
+              </li>
+              <li>Až 17 hodin výdrže baterie — jedna z nejlepších na trhu</li>
+              <li>Nejnovější procesor Intel Core Ultra s AI NPU</li>
+              <li>
+                Vysoce kvalitní zvuk Bang &amp; Olufsen — nejlepší audio v
+                nabídce HP
+              </li>
+              <li>FHD webkamera s fyzickou krytkou a potlačením šumu</li>
+              <li>Lehký na 14palcový notebook — pouze kolem 1,4 kg</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Vysoká cena — nejdražší spotřebitelský notebook HP</li>
+              <li>
+                Bez dedikované grafiky — nevhodné pro hry a náročnou 3D práci
+              </li>
+              <li>
+                Omezená konektivita — 2× Thunderbolt 4 + 1 USB-A, chybí čtečka
+                SD karet
+              </li>
+              <li>Maximálně 14 palců — není k dispozici větší varianta</li>
+              <li>RAM je připájená a nelze ji později rozšířit</li>
+              <li>Mírné zahřívání při dlouhodobé zátěži kvůli tenkému tělu</li>
+              <li>Dotykový OLED displej snadno zachytává otisky prstů</li>
+              <li>Předražený, pokud nevyužijete 360° pant nebo stylus</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Vhodná volba, pokud:</strong> hledáte ultra prémiový
+          Windows notebook pro práci, cestování a univerzální použití se
+          stylusem. Pokud nepotřebujete 360° pant, <strong>HP Envy 14</strong> s
+          OLED displejem nabízí velmi podobný zážitek za výrazně nižší cenu.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní verze Spectre x360</h2>
+
+        <div class="model-block">
+          <h3>HP Spectre x360 13,5 palce</h3>
+          <p>
+            Nejkompaktnější a nejlehčí model v celé řadě — ideální pro časté
+            cestovatele. Displej s poměrem stran 3:2 (vyšší než klasických 16:9)
+            je velmi pohodlný pro čtení dokumentů, prohlížení webu nebo práci s
+            tabulkami. Je o něco méně výkonný než 14palcová verze kvůli tepelným
+            omezením menšího šasi.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Spectre x360 14 palců</h3>
+          <p>
+            Nejoblíbenější a nejdoporučovanější verze. Kombinuje kvalitní 2.8K
+            OLED dotykový displej, nejnovější procesory Intel Core Ultra, výdrž
+            baterie až 17 hodin a hmotnost kolem 1,4 kg. Představuje nejlepší
+            rovnováhu mezi výkonem, výdrží a přenositelností v celé řadě.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Spectre x360 16 palců (předchozí generace)</h3>
+          <p>
+            HP dříve nabízelo 16palcovou verzi Spectre x360 v předchozích
+            generacích s volitelnou dedikovanou grafickou kartou NVIDIA. Tento
+            model již není součástí nabídky pro roky 2024–2025, protože HP se
+            zaměřilo na kompaktnější formáty 13,5 a 14 palců. Uživatelé
+            požadující velký prémiový displej jsou nyní směrováni na model Envy
+            16.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš verdikt</h2>
+        <div class="conclusion">
+          <p>
+            HP Spectre x360 je jednoduše jeden z nejlepších Windows notebooků na
+            trhu. Jeho OLED displej, kvalita zpracování a univerzálnost z něj
+            dělají velmi těžko překonatelnou volbu pro každého, kdo hledá
+            prémiový ultrabook s Windows.
+          </p>
+          <p style="margin-top: 10px">
+            Je však nutné být upřímný: jeho vyšší cena je plně opodstatněná
+            pouze tehdy, pokud skutečně využijete 360° pant a dotykový displej.
+            Pokud používáte notebook pouze klasickým způsobem,
+            <strong>HP Envy 14 s OLED</strong> nabídne přibližně 90 % stejného
+            zážitku za výrazně nižší cenu.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

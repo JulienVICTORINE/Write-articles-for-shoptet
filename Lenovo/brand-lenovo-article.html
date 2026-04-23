@@ -1,0 +1,1217 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo — Présentation de la marque</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      :root {
+        --red: #e2001a;
+        --red-dark: #a50013;
+        --red-light: #fff0f2;
+        --ink: #0a0f1e;
+        --border: #e5e7eb;
+        --white: #ffffff;
+        --radius: 12px;
+        --red-pocitce24: #d1214c;
+        --gris: #ececed;
+        --black: #222;
+      }
+
+      body {
+        color: var(--black);
+        line-height: 1.7;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #1a0005 0%,
+          var(--red-dark) 45%,
+          var(--red) 100%
+        );
+        color: var(--white);
+        padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "LENOVO";
+        position: absolute;
+        right: -48px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 800;
+        font-size: clamp(64px, 14vw, 160px);
+        color: rgba(255, 255, 255, 0.05);
+        letter-spacing: -0.64px;
+        pointer-events: none;
+        line-height: 1;
+        white-space: nowrap;
+      }
+
+      .hero-inner {
+        max-width: 760px;
+        position: relative;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-weight: 800;
+        font-size: clamp(32px, 6vw, 60px);
+        line-height: 1.1;
+        letter-spacing: -0.48px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: clamp(16px, 2vw, 18px);
+        font-weight: 300;
+        opacity: 0.88;
+        max-width: 560px;
+        color: white;
+      }
+
+      /* ── MAIN LAYOUT ── */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: clamp(32px, 5vw, 64px) clamp(16px, 4vw, 32px);
+      }
+
+      /* ── SECTION TITLE ── */
+      .section-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.6px;
+        text-transform: uppercase;
+        color: var(--red-pocitce24);
+        margin-bottom: 8px;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: clamp(22.4px, 3vw, 32px);
+        letter-spacing: -0.32px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #222;
+        margin-bottom: 16px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── TEXTE JUSTIFIÉ ── */
+      .paragraph-text {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      /* ── CARD ── */
+      .card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        margin-bottom: 24px;
+        font-size: 16px;
+      }
+
+      /* ── STATS ROW ── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 16px;
+        margin: 40px 0;
+      }
+
+      .stat {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-weight: 800;
+        font-size: 31px;
+        color: var(--red-pocitce24);
+        letter-spacing: -0.48px;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--black);
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── TIMELINE ── */
+      .timeline {
+        position: relative;
+        margin: 32px 0;
+        padding-left: 32px;
+        border-left: 2px solid var(--border);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 24px;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -38.4px;
+        top: 9px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--red-pocitce24);
+        border: 2px solid var(--white);
+        box-shadow: 0 0 0 2px var(--red-pocitce24);
+      }
+
+      .timeline-year {
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--red-pocitce24);
+        letter-spacing: 0.8px;
+        margin-bottom: 0.32px;
+      }
+
+      .timeline-text {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+      }
+
+      /* ── PRODUCT CATEGORIES ── */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 24px;
+      }
+
+      .product-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 12px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .product-card:hover {
+        border-color: var(--red-pocitce24);
+        box-shadow: 0 4px 24px rgba(226, 0, 26, 0.08);
+      }
+
+      .product-icon {
+        font-size: 29px;
+        margin-bottom: 12px;
+        line-height: 1;
+      }
+
+      .product-card h3 {
+        font-weight: 700;
+        font-size: 17px;
+        margin-bottom: 7px;
+        letter-spacing: -0.16px;
+      }
+
+      .product-card p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+
+      /* ── ITEM LIST (gammes) ── */
+      .item-list {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      .item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 22.4px 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        margin-bottom: 12px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .item:hover {
+        border-color: var(--red-pocitce24);
+        box-shadow: 0 4px 20px rgba(226, 0, 26, 0.07);
+      }
+
+      .item-dot {
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--red-pocitce24);
+        margin-top: 8px;
+      }
+
+      .item-emoji {
+        font-size: 22.4px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .item-info {
+        flex: 1;
+      }
+
+      .item-info h4 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 4.8px;
+      }
+
+      .item-info p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+        line-height: 1.55;
+      }
+
+      .item-tag {
+        flex-shrink: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+        align-self: flex-start;
+        margin-top: 4px;
+      }
+
+      .tag-here {
+        background: #f0fdf4;
+        color: #166534;
+      }
+      .tag-soon {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+      .tag-article {
+        background: var(--red-light);
+        color: var(--red-pocitce24);
+      }
+
+      /* Lien article dédié */
+      .item-link-arrow {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--red-light);
+        color: var(--red-pocitce24);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        align-self: center;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+
+      a.item:hover .item-link-arrow {
+        background: var(--red-pocitce24);
+        color: var(--white);
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 48px 0;
+      }
+
+      /* ── INFO BOX ── */
+      .info-box {
+        background: var(--red-light);
+        border-left: 4px solid var(--red-pocitce24);
+        border-radius: 0 var(--radius) var(--radius) 0;
+        padding: 20px 24px;
+        margin-top: 24px;
+      }
+
+      .info-box p {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+      }
+
+      /* ── RELATED ARTICLES GRID ── */
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .related-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 24px;
+        background: var(--white);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .related-card:hover {
+        border-color: var(--red-pocitce24);
+        box-shadow: 0 4px 20px rgba(226, 0, 26, 0.08);
+      }
+
+      .related-card .rc-emoji {
+        font-size: 26px;
+      }
+
+      .related-card .rc-label {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--red-pocitce24);
+      }
+
+      .related-card h4 {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+      }
+
+      .related-card p {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .related-card .rc-arrow {
+        margin-top: auto;
+        font-size: 16px;
+        color: var(--red-pocitce24);
+        font-weight: 600;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 768px) {
+        nav {
+          gap: 16px;
+        }
+        nav a {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero::before {
+          display: none;
+        }
+        .item {
+          flex-wrap: wrap;
+        }
+        .item-tag {
+          margin-left: 0;
+        }
+        .nav-back {
+          font-size: 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="badge">🌍 Marque à la loupe</div>
+        <h1>Lenovo</h1>
+        <p class="paragraph-text">
+          Du rachat historique de la division PC d'IBM à la première place
+          mondiale des fabricants d'ordinateurs — retour sur une ascension hors
+          du commun.
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <!-- PRÉSENTATION -->
+      <section id="presentation">
+        <div class="section-label">Présentation</div>
+        <h2>Qui est Lenovo ?</h2>
+
+        <div class="card">
+          <p class="paragraph-text">
+            Lenovo est une multinationale chinoise spécialisée dans les
+            technologies de l'information. Fondée en <strong>1984</strong> à
+            Pékin sous le nom de <strong>Legend Holdings</strong> par Liu
+            Chuanzhi et onze autres ingénieurs de l'Académie des sciences de
+            Chine, la société prend le nom de <strong>Lenovo</strong> en 2003 —
+            une contraction de <em>"Le-"</em> (de Legend) et
+            <em>"novo"</em> (latin pour "nouveau").
+          </p>
+          <p class="paragraph-text">
+            L'événement fondateur qui propulse Lenovo sur la scène mondiale est
+            le rachat, en <strong>2005</strong>, de la division PC d'<strong
+              >IBM</strong
+            >
+            pour 1,75 milliard de dollars. Cette acquisition lui permet de
+            récupérer les marques légendaires <strong>ThinkPad</strong> et
+            <strong>ThinkCentre</strong>, ainsi qu'un réseau de distribution
+            mondial et une réputation de fiabilité sans égale dans le monde
+            professionnel.
+          </p>
+          <p class="paragraph-text">
+            En 2014, Lenovo franchit une nouvelle étape en rachetant la division
+            serveurs x86 d'IBM et la <strong>Motorola Mobility</strong> de
+            Google, élargissant ainsi son offre aux smartphones et aux
+            infrastructures datacenter. Aujourd'hui, Lenovo est le
+            <strong>premier fabricant mondial de PC</strong> en volume, avec une
+            part de marché dépassant régulièrement les 24 %, devant HP et Dell.
+          </p>
+          <p class="paragraph-text">
+            Le siège social mondial est établi à <strong>Pékin</strong> (Chine),
+            avec un second siège opérationnel à
+            <strong>Morrisville</strong> (Caroline du Nord, États-Unis).
+            L'entreprise emploie plus de <strong>77 000 personnes</strong> dans
+            le monde et commercialise ses produits dans plus de
+            <strong>180 pays</strong>.
+          </p>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">1984</div>
+            <div class="stat-label">Année de fondation</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">🇨🇳</div>
+            <div class="stat-label">Pékin, Chine</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">#1</div>
+            <div class="stat-label">Fabricant mondial de PC</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">24%+</div>
+            <div class="stat-label">Part de marché PC</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">180+</div>
+            <div class="stat-label">Pays couverts</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">77k+</div>
+            <div class="stat-label">Employés</div>
+          </div>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="section-label" style="margin-top: 32px">
+          Historique clé 📅
+        </div>
+        <h2>Les grandes dates de Lenovo</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1984</div>
+            <p class="timeline-text paragraph-text">
+              Fondation de <strong>Legend Holdings</strong> à Pékin par Liu
+              Chuanzhi et onze ingénieurs, avec un capital initial de 200 000
+              yuans.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1994</div>
+            <p class="timeline-text paragraph-text">
+              Introduction en bourse à la Bourse de Hong Kong. Legend devient le
+              premier fabricant de PC en Chine.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2003</div>
+            <p class="timeline-text paragraph-text">
+              La société se rebaptise <strong>Lenovo</strong>, contraction de
+              "Legend" et "novo" (latin pour nouveau), pour préparer son
+              expansion internationale.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2005</div>
+            <p class="timeline-text paragraph-text">
+              Rachat de la <strong>division PC d'IBM</strong> pour 1,75 milliard
+              de dollars. Lenovo hérite des marques ThinkPad, ThinkCentre et
+              d'un réseau mondial.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2011</div>
+            <p class="timeline-text paragraph-text">
+              Lenovo devient le
+              <strong>deuxième fabricant mondial de PC</strong>, devançant Dell
+              pour la première fois.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2013</div>
+            <p class="timeline-text paragraph-text">
+              Lenovo atteint la <strong>première place mondiale</strong> des
+              fabricants de PC, dépassant HP.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2014</div>
+            <p class="timeline-text paragraph-text">
+              Double acquisition stratégique : la
+              <strong>division serveurs x86 d'IBM</strong> (2,1 Md$) et
+              <strong>Motorola Mobility</strong> auprès de Google (2,9 Md$).
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020–2024</div>
+            <p class="timeline-text paragraph-text">
+              Lenovo consolide son leadership mondial sur le marché PC et
+              diversifie son offre vers les
+              <strong>solutions d'IA, l'edge computing et les serveurs</strong>
+              haute performance avec sa division Infrastructure Solutions Group
+              (ISG).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- GAMME DE PRODUITS -->
+      <section id="produits">
+        <div class="section-label">Gamme de produits</div>
+        <h2>Ce que Lenovo fabrique 🏭</h2>
+        <p class="paragraph-text">
+          Lenovo couvre un spectre très large de produits, structuré en quatre
+          grands groupes d'activités : <strong>IDG</strong> (Intelligent Devices
+          Group) pour le grand public et les professionnels,
+          <strong>ISG</strong> (Infrastructure Solutions Group) pour les
+          serveurs et le cloud, <strong>SSG</strong> (Solutions & Services
+          Group) pour les services managés, et <strong>MBG</strong> (Mobile
+          Business Group) pour les smartphones Motorola.
+        </p>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3>Ordinateurs portables</h3>
+            <p class="paragraph-text">
+              Des ultrabooks d'entreprise ThinkPad aux laptops gaming Legion, en
+              passant par les polyvalents IdeaPad — Lenovo couvre tous les
+              segments.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3>PC de bureau</h3>
+            <p class="paragraph-text">
+              ThinkCentre pour l'entreprise, IdeaCentre pour le grand public, et
+              des stations de travail ThinkStation pour les professionnels
+              créatifs.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖱️</div>
+            <h3>Moniteurs</h3>
+            <p class="paragraph-text">
+              Écrans ThinkVision pour les professionnels et les créatifs, avec
+              des options allant du Full HD au 4K et USB-C en connectique
+              principale.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🗄️</div>
+            <h3>Serveurs & Datacenter</h3>
+            <p class="paragraph-text">
+              La gamme ThinkSystem et ThinkAgile couvre les besoins des
+              datacenters d'entreprise, du serveur tour aux racks haute densité
+              pour l'IA.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">📱</div>
+            <h3>Smartphones — Motorola</h3>
+            <p class="paragraph-text">
+              Depuis le rachat de Motorola Mobility en 2014, Lenovo
+              commercialise des smartphones Moto G, Moto Edge et Motorola Razr
+              dans le monde entier.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">📟</div>
+            <h3>Tablettes & 2-en-1</h3>
+            <p class="paragraph-text">
+              Des tablettes Tab series grand public aux convertibles ThinkPad X1
+              Fold, Lenovo innove régulièrement dans les formats hybrides et
+              pliables.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🎮</div>
+            <h3>Gaming — Legion</h3>
+            <p class="paragraph-text">
+              Toute une gamme dédiée aux joueurs : laptops, tours, écrans et
+              périphériques gaming sous la marque Legion, avec des GPU NVIDIA
+              RTX haut de gamme.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">⌨️</div>
+            <h3>Périphériques & Accessoires</h3>
+            <p class="paragraph-text">
+              Claviers, souris, docks USB-C, casques, webcams et sacs — Lenovo
+              propose un écosystème complet d'accessoires pour compléter ses
+              machines.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <p class="paragraph-text">
+            📌 Dans le cadre de cette série d'articles, nous nous concentrons
+            sur les <strong>ordinateurs portables</strong>, les
+            <strong>PC de bureau</strong> et les <strong>moniteurs</strong>. Les
+            serveurs, smartphones et tablettes feront l'objet de contenus dédiés
+            ultérieurement.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- LAPTOPS -->
+      <section id="laptops">
+        <div class="section-label">Focus — Ordinateurs portables</div>
+        <h2>Les gammes de laptops Lenovo 💻</h2>
+        <p class="paragraph-text">
+          Lenovo structure son offre de portables en plusieurs gammes très
+          distinctes, chacune ciblant un profil précis. Les gammes marquées
+          d'une flèche disposent d'un article complet dédié.
+        </p>
+
+        <ul class="item-list">
+          <li>
+            <a class="item" href="lenovo-thinkpad.html">
+              <div class="item-emoji">🏆</div>
+              <div class="item-info">
+                <h4>ThinkPad</h4>
+                <p class="paragraph-text">
+                  La gamme professionnelle emblématique héritée d'IBM,
+                  reconnaissable à son châssis noir mat et son légendaire
+                  TrackPoint rouge. Robustesse militaire (certification
+                  MIL-SPEC), claviers excellents, autonomie généreuse et
+                  sécurité avancée (lecteur d'empreintes, TPM, webcam avec cache
+                  physique). Déclinée en séries T (polyvalent), X (compact), L
+                  (rapport qualité/prix), E (entrée de gamme entreprise) et X1
+                  Carbon (ultrabook premium ultrafin).
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-thinkbook.html">
+              <div class="item-emoji">💼</div>
+              <div class="item-info">
+                <h4>ThinkBook</h4>
+                <p class="paragraph-text">
+                  Le compromis idéal entre le ThinkPad et l'IdeaPad : design
+                  moderne et épuré pour les PME et les jeunes professionnels,
+                  bonnes performances, connectique complète et tarif plus
+                  accessible que le ThinkPad. Disponible en 13, 14 et 16 pouces,
+                  avec des options Intel Core et AMD Ryzen, et un trackpad
+                  généreux.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-ideapad.html">
+              <div class="item-emoji">🎒</div>
+              <div class="item-info">
+                <h4>IdeaPad</h4>
+                <p class="paragraph-text">
+                  La gamme grand public polyvalente de Lenovo : étudiants,
+                  familles et utilisateurs cherchant un bon rapport
+                  qualité/prix. Disponible en plusieurs sous-séries (Slim, Flex,
+                  Gaming), l'IdeaPad couvre les usages du quotidien —
+                  navigation, bureautique, streaming — avec un design coloré et
+                  accessible.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-legion.html">
+              <div class="item-emoji">🎮</div>
+              <div class="item-info">
+                <h4>Legion</h4>
+                <p class="paragraph-text">
+                  La gamme gaming haut de gamme de Lenovo. Les laptops Legion
+                  embarquent les derniers GPU NVIDIA GeForce RTX, des écrans
+                  haute fréquence (jusqu'à 240 Hz), des systèmes de
+                  refroidissement avancés (Coldfront) et un design agressif avec
+                  rétroéclairage RGB. Déclinés en séries 5 (milieu de gamme) et
+                  7 (haut de gamme), ils rivalisent directement avec les Asus
+                  ROG et Razer Blade.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-yoga.html">
+              <div class="item-emoji">🧘</div>
+              <div class="item-info">
+                <h4>Yoga</h4>
+                <p class="paragraph-text">
+                  La gamme de convertibles et ultrabooks premium de Lenovo. Les
+                  Yoga se plient à 360° pour passer du mode laptop au mode
+                  tablette, tente ou présentation. Dotés d'écrans tactiles OLED
+                  ou IPS de haute qualité, de finitions aluminium soignées et
+                  d'une légèreté exemplaire, ils ciblent les créatifs et les
+                  utilisateurs mobiles exigeants. Inclut le Yoga Slim pour ceux
+                  qui préfèrent un format classique ultrafin.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-thinkpad-x1.html">
+              <div class="item-emoji">✨</div>
+              <div class="item-info">
+                <h4>ThinkPad X1 Carbon & X1 Extreme</h4>
+                <p class="paragraph-text">
+                  Le fer de lance de la gamme ThinkPad. L'<strong
+                    >X1 Carbon</strong
+                  >
+                  est l'un des ultrabooks professionnels les plus légers du
+                  monde (moins de 1,1 kg), avec un châssis en fibre de carbone,
+                  une autonomie jusqu'à 15h et un écran OLED en option.
+                  L'<strong>X1 Extreme</strong> monte en puissance avec une
+                  carte graphique dédiée pour les professionnels nécessitant un
+                  peu plus de muscle graphique.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PC DE BUREAU -->
+      <section id="desktop">
+        <div class="section-label">Focus — PC de bureau</div>
+        <h2>Les gammes de PC de bureau Lenovo 🖥️</h2>
+        <p class="paragraph-text">
+          Lenovo propose une gamme complète de postes fixes, du mini PC
+          d'entreprise à la station de travail ultra-puissante pour les
+          professionnels de la création et de la science.
+        </p>
+
+        <ul class="item-list">
+          <li>
+            <a class="item" href="lenovo-thinkcentre.html">
+              <div class="item-emoji">🏢</div>
+              <div class="item-info">
+                <h4>ThinkCentre</h4>
+                <p class="paragraph-text">
+                  L'équivalent bureau du ThinkPad : la référence pour les parcs
+                  informatiques d'entreprise. Disponible en format tour, mini,
+                  micro et all-in-one, le ThinkCentre brille par sa facilité de
+                  déploiement, sa durabilité et ses outils de gestion (Lenovo
+                  Device Manager, SCCM). Les modèles Tiny sont particulièrement
+                  appréciés pour leur encombrement minimal et leurs performances
+                  surprenantes dans un format de la taille d'un livre de poche.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-thinkstation.html">
+              <div class="item-emoji">⚙️</div>
+              <div class="item-info">
+                <h4>ThinkStation</h4>
+                <p class="paragraph-text">
+                  Les stations de travail de bureau Lenovo pour les
+                  professionnels aux besoins intensifs : ingénieurs CAO,
+                  architectes BIM, artistes 3D, data scientists et chercheurs.
+                  Disponibles en tour (série P3, P5, P7) ou ultra-compacte (PX),
+                  elles embarquent des processeurs Intel Xeon ou Core i9, des
+                  GPU certifiés NVIDIA RTX Ada ou AMD Radeon Pro, et supportent
+                  de grandes quantités de RAM ECC. Certifiées par les grands
+                  éditeurs ISV (Autodesk, Adobe, Dassault).
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-ideacentre.html">
+              <div class="item-emoji">🏠</div>
+              <div class="item-info">
+                <h4>IdeaCentre</h4>
+                <p class="paragraph-text">
+                  La gamme de bureau grand public de Lenovo. Les IdeaCentre sont
+                  disponibles en tour compacte, all-in-one et mini PC.
+                  Accessibles en termes de prix, ils conviennent aux usages
+                  familiaux et éducatifs : navigation web, streaming,
+                  bureautique légère et jeux occasionnels. Le format all-in-one
+                  est particulièrement apprécié pour son design épuré et
+                  l'absence de tour encombrante.
+                </p>
+              </div>
+              <span class="item-tag tag-here">Couvert ici</span>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="lenovo-legion-desktop.html">
+              <div class="item-emoji">🎮</div>
+              <div class="item-info">
+                <h4>Legion Tower</h4>
+                <p class="paragraph-text">
+                  Le pendant desktop de la gamme gaming Legion. Les tours Legion
+                  accueillent les GPU NVIDIA GeForce RTX les plus puissants,
+                  avec une ventilation optimisée, un accès facile aux composants
+                  pour les mises à niveau, et un éclairage RGB personnalisable.
+                  Idéale pour les joueurs PC qui souhaitent les meilleures
+                  performances sans les compromis thermiques d'un laptop gaming.
+                </p>
+              </div>
+              <span class="item-tag tag-here">Couvert ici</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MONITEURS -->
+      <section id="moniteurs">
+        <div class="section-label">Focus — Moniteurs</div>
+        <h2>L'offre moniteurs Lenovo 🖱️</h2>
+        <p class="paragraph-text">
+          Lenovo commercialise ses écrans principalement sous la marque
+          <strong>ThinkVision</strong>, avec des gammes couvrant les usages
+          professionnels, créatifs et grand public. La marque est moins connue
+          que Dell UltraSharp sur ce segment, mais propose des produits de
+          grande qualité avec une connectique moderne.
+        </p>
+
+        <ul class="item-list">
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎨</div>
+            <div class="item-info">
+              <h4>ThinkVision — Série P (Creator)</h4>
+              <p class="paragraph-text">
+                Les écrans haut de gamme de Lenovo, destinés aux professionnels
+                de la création visuelle. La série P se distingue par une
+                couverture colorimétrique étendue (DCI-P3, Adobe RGB), une
+                calibration d'usine, des dalles IPS ou OLED et une résolution
+                allant jusqu'au 4K. Disponibles en 27 et 32 pouces, ils
+                intègrent un hub USB-C avec Power Delivery jusqu'à 90W,
+                permettant de brancher et charger un laptop en un seul câble.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🏢</div>
+            <div class="item-info">
+              <h4>ThinkVision — Série T (Professional)</h4>
+              <p class="paragraph-text">
+                La gamme de référence pour les entreprises et les parcs
+                informatiques. Les écrans T offrent une ergonomie complète
+                (hauteur, inclinaison, rotation, pivot portrait), une
+                connectique professionnelle (DisplayPort, HDMI, USB-A, USB-C) et
+                une dalle IPS pour de bons angles de vision. Discrets et
+                robustes, ils sont conçus pour une utilisation intensive en open
+                space. Disponibles de 22 à 27 pouces en Full HD, QHD et 4K.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">💡</div>
+            <div class="item-info">
+              <h4>ThinkVision — Série E (Essential)</h4>
+              <p class="paragraph-text">
+                La gamme d'entrée de gamme professionnelle de Lenovo, pensée
+                pour les budgets serrés sans sacrifier l'essentiel. Dalle IPS
+                correcte, connectique de base (HDMI + VGA ou DisplayPort), pied
+                réglable en hauteur selon les modèles. Idéale pour les postes
+                bureautiques secondaires, les salles de réunion ou les
+                associations. Disponible en 21,5 à 24 pouces en Full HD.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>Legion Display (Gaming)</h4>
+              <p class="paragraph-text">
+                Les écrans gaming de Lenovo sous la marque Legion. Proposés en
+                24 à 27 pouces, avec des dalles IPS haute fréquence (165 Hz à
+                240 Hz), un temps de réponse de 1 ms, la compatibilité AMD
+                FreeSync Premium et NVIDIA G-Sync Compatible. Leur dalle WQHD
+                (2560×1440) est particulièrement appréciée des joueurs PC
+                souhaitant un excellent équilibre entre résolution et fluidité
+                sans passer au 4K.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🌿</div>
+            <div class="item-info">
+              <h4>ThinkVision — Série S (Stylish / Home)</h4>
+              <p class="paragraph-text">
+                Pensée pour le bureau à domicile et les utilisateurs en
+                télétravail qui cherchent un design soigné à prix abordable.
+                Finitions en aluminium brossé, bordures fines, rétroéclairage
+                sans scintillement (Flicker-Free) et filtre de lumière bleue
+                certifié TÜV. Connectique simplifiée HDMI + USB-C. Disponible de
+                23 à 27 pouces en Full HD et 2K.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ARTICLES LIÉS -->
+      <section id="articles">
+        <div class="section-label">Articles de la série</div>
+        <h2>Tous les articles Lenovo 📚</h2>
+        <p class="paragraph-text">
+          Retrouvez les articles détaillés sur chaque gamme Lenovo. Cliquez sur
+          une carte pour accéder au guide complet.
+        </p>
+
+        <div class="related-grid">
+          <a class="related-card" href="lenovo-thinkpad.html">
+            <div class="rc-emoji">🏆</div>
+            <div class="rc-label">Laptops professionnels</div>
+            <h4>ThinkPad</h4>
+            <p class="paragraph-text">
+              L'héritage IBM, la robustesse militaire et le meilleur clavier du
+              marché.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="lenovo-thinkpad-x1.html">
+            <div class="rc-emoji">✨</div>
+            <div class="rc-label">Ultrabook premium</div>
+            <h4>ThinkPad X1 Carbon</h4>
+            <p class="paragraph-text">
+              Moins d'1,1 kg, fibre de carbone, OLED — l'ultrabook pro ultime.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="lenovo-thinkbook.html">
+            <div class="rc-emoji">💼</div>
+            <div class="rc-label">PME & jeunes pros</div>
+            <h4>ThinkBook</h4>
+            <p class="paragraph-text">
+              Le juste milieu entre professionnalisme et modernité, à prix
+              maîtrisé.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="lenovo-ideapad.html">
+            <div class="rc-emoji">🎒</div>
+            <div class="rc-label">Grand public</div>
+            <h4>IdeaPad</h4>
+            <p class="paragraph-text">
+              Polyvalent, abordable, coloré — le laptop pour la vie de tous les
+              jours.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="lenovo-yoga.html">
+            <div class="rc-emoji">🧘</div>
+            <div class="rc-label">Convertibles premium</div>
+            <h4>Yoga</h4>
+            <p class="paragraph-text">
+              Écran tactile OLED, charnière 360°, design aluminium — le laptop
+              créatif.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="lenovo-legion.html">
+            <div class="rc-emoji">🎮</div>
+            <div class="rc-label">Gaming</div>
+            <h4>Legion</h4>
+            <p class="paragraph-text">
+              GPU RTX, 240 Hz, refroidissement Coldfront — pour les joueurs
+              exigeants.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="lenovo-thinkcentre.html">
+            <div class="rc-emoji">🏢</div>
+            <div class="rc-label">PC de bureau entreprise</div>
+            <h4>ThinkCentre</h4>
+            <p class="paragraph-text">
+              Micro, tour ou all-in-one — la référence des parcs informatiques
+              professionnels.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="lenovo-thinkstation.html">
+            <div class="rc-emoji">⚙️</div>
+            <div class="rc-label">Stations de travail</div>
+            <h4>ThinkStation</h4>
+            <p class="paragraph-text">
+              Xeon, GPU certifié ISV, RAM ECC — pour la CAO, la 3D et l'IA.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <div class="section-label">En résumé</div>
+        <h2>Lenovo en quelques mots 💡</h2>
+        <div class="card">
+          <p class="paragraph-text">
+            En quarante ans, Lenovo est passée d'une start-up pékinoise fondée
+            dans un appartement à l'acteur numéro un mondial de l'informatique
+            personnelle. Son coup de maître reste le rachat de la division PC
+            d'IBM en 2005, qui lui a offert en une seule transaction le
+            prestige, le réseau et la crédibilité mondiale qui lui manquaient
+            pour conquérir les marchés occidentaux.
+          </p>
+          <p class="paragraph-text">
+            La force de Lenovo réside dans la clarté de sa segmentation : le
+            <strong>ThinkPad</strong> pour les professionnels, le
+            <strong>Yoga</strong> pour les créatifs, le
+            <strong>Legion</strong> pour les gamers, l'<strong>IdeaPad</strong>
+            pour le grand public. Chaque gamme a une identité forte et une cible
+            bien définie, évitant les chevauchements inutiles.
+          </p>
+          <p class="paragraph-text">
+            Avec son virage vers les <strong>solutions d'IA embarquée</strong>,
+            les PC "AI-ready" (processeurs NPU intégrés), et une offre serveurs
+            en forte croissance via ISG, Lenovo se positionne pour rester
+            incontournable dans un marché en pleine transformation. Les
+            prochains articles de cette série passeront chaque gamme au
+            microscope pour vous aider à faire le meilleur choix.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

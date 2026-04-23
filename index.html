@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog article - inComputer</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 820px;
+        margin: auto;
+        padding: 40px 20px;
+      }
+
+      .article-meta {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        margin-bottom: 16px;
+        text-align: justify;
+      }
+
+      .article-intro {
+        border-left: 4px solid #d1214c;
+        padding-left: 16px;
+        margin-bottom: 40px;
+      }
+
+      section {
+        margin-bottom: 48px;
+      }
+
+      /* Images */
+      .img-container {
+        margin-bottom: 8px;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+      }
+
+      .img-caption {
+        text-align: center;
+        font-size: 16px;
+        color: #777;
+        margin-bottom: 32px;
+      }
+
+      /* Highlight */
+      .highlight {
+        background: #ececed;
+        border-left: 4px solid #d1214c;
+        padding: 16px;
+        font-weight: 500;
+        margin: 24px 0;
+        color: #222;
+      }
+
+      /* Tables */
+      .table-wrapper {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px; /* évite l’écrasement */
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th {
+        background: #f5f5f5;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .article {
+          padding: 20px 15px;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <article class="article">
+      <p class="article-meta">14 April 2026</p>
+
+      <h1>Computer Parts Explained: Part Numbers, Drives, and Connectors</h1>
+
+      <p class="article-intro">
+        Whether you are upgrading a laptop, building a desktop, or simply trying
+        to order the right replacement part, a little terminology goes a long
+        way. In this article we cover four of the most common questions our
+        customers ask: what a part number is and where to find it, what sets
+        SATA apart from SAS, when to choose an SSD over an HDD, and which SSD
+        format actually fits your machine.
+      </p>
+
+      <!-- SECTION 1 – Text: Part numbers -->
+      <section>
+        <h2>What Is a Part Number, and Where Do I Find It?</h2>
+
+        <p>
+          A part number — sometimes abbreviated P/N — is a unique identifier
+          assigned by the manufacturer to a specific component. Think of it as a
+          product's fingerprint: two parts that look nearly identical on the
+          outside can have completely different part numbers because one
+          supports a higher voltage, fits a slightly different chassis, or uses
+          a different connector pinout.
+        </p>
+
+        <p>
+          You will find the part number printed on the label affixed to the
+          component itself — usually on the back or underside of a hard drive,
+          RAM stick, or battery. On plastic parts (keyboard frames, hinges,
+          bezels), the number is often moulded directly into the plastic rather
+          than printed on a sticker, so look for small raised or recessed digits
+          inside the casing.
+        </p>
+
+        <div class="highlight">
+          Always use the part number — not just the product name — when
+          searching for a replacement. A "HP 14-inch keyboard" can refer to
+          dozens of incompatible models; the part number narrows it down to
+          exactly one.
+        </div>
+
+        <p>
+          If the sticker is worn or the moulded text is hard to read, you can
+          also look up the part number through your device's service manual,
+          which most major manufacturers (Dell, HP, Lenovo) publish for free on
+          their support websites. A serial number lookup on the manufacturer's
+          site will often return a full parts list as well.
+        </p>
+      </section>
+
+      <!-- SECTION 2 – Full-width photo -->
+      <section>
+        <div class="img-container">
+          <img
+            src="./img/dell-laptop-part-number.jpg"
+            alt="Part number label"
+          />
+        </div>
+        <p class="img-caption">
+          The part number is printed on the label or moulded into the plastic —
+          always check before ordering.
+        </p>
+      </section>
+
+      <!-- SECTION 3 – Text: SATA vs SAS -->
+      <section>
+        <h2>What Is the Difference Between SATA and SAS?</h2>
+
+        <p>
+          SATA (Serial ATA) and SAS (Serial Attached SCSI) are two different
+          interface standards for connecting storage drives to a computer. At a
+          glance they can look similar — both use small data and power
+          connectors — but they are designed for very different environments.
+        </p>
+
+        <p>
+          <strong>SATA</strong> is the standard you will find in virtually every
+          consumer laptop and desktop. It is affordable, widely supported, and
+          more than fast enough for everyday tasks. SATA drives — both HDDs and
+          SSDs — top out at around 600 MB/s and are rated for normal office or
+          home use.
+        </p>
+
+        <p>
+          <strong>SAS</strong> is built for servers and enterprise storage
+          systems. SAS drives spin faster, support much longer duty cycles (they
+          are designed to run 24/7 under heavy load), and offer better error
+          recovery. They also carry a higher price tag. Importantly, SAS
+          controllers can read SATA drives, but a SATA controller cannot read
+          SAS drives — compatibility goes one way.
+        </p>
+
+        <div class="highlight">
+          It is technically possible to install a SAS controller card into a
+          regular desktop PC and run SAS drives off it — some enthusiasts do
+          this for home NAS builds or workstations that need extra reliability.
+          However, for the vast majority of home and office users, SATA is the
+          right choice.
+        </div>
+
+        <!-- Comparison table -->
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>SATA</th>
+                <th>SAS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Typical use</strong></td>
+                <td>Consumer PCs, laptops</td>
+                <td>Servers, enterprise storage</td>
+              </tr>
+              <tr>
+                <td><strong>Max speed</strong></td>
+                <td>~600 MB/s</td>
+                <td>Up to 1,200 MB/s (SAS-3)</td>
+              </tr>
+              <tr>
+                <td><strong>Duty cycle</strong></td>
+                <td>8–12 hrs/day typical</td>
+                <td>24/7 continuous</td>
+              </tr>
+              <tr>
+                <td><strong>Price</strong></td>
+                <td>Affordable</td>
+                <td>Significantly higher</td>
+              </tr>
+              <tr>
+                <td><strong>Cross-compatibility</strong></td>
+                <td>Does not support SAS drives</td>
+                <td>Can read SATA drives</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 4 – Photo + Text side by side: SSD vs HDD -->
+      <section>
+        <h2>What Is the Difference Between an SSD and an HDD?</h2>
+
+        <p>
+          An HDD (Hard Disk Drive) stores data on spinning magnetic platters. It
+          is slower but offers a lot of storage for a low price, which makes it
+          ideal for bulk storage and backups. An SSD (Solid State Drive) has no
+          moving parts — it stores data on flash memory chips, which means it
+          reads and writes data several times faster than any HDD.
+        </p>
+
+        <div class="img-container">
+          <img src="./img/HDD-and-SSD.png" alt="SSD vs HDD" />
+        </div>
+
+        <p>
+          In practical terms: if you install Windows on an SSD, your computer
+          will boot in around ten seconds. On an HDD, that same boot can take a
+          minute or more. Applications open faster, files copy faster, and the
+          whole system feels more responsive.
+        </p>
+
+        <p>
+          The best approach for most users is to combine both: use an SSD as
+          your system drive (where Windows and your applications live) and an
+          HDD as a secondary drive for photos, videos, and backups. You get
+          speed where it matters and cheap capacity where you just need space.
+        </p>
+      </section>
+
+      <!-- SECTION 5 – Text: SSD formats -->
+      <section>
+        <h2>
+          SSD Formats: 2.5" SATA, M.2 SATA, and M.2 NVMe — What Is the
+          Difference?
+        </h2>
+
+        <p>
+          Once you have decided to buy an SSD, you face a second choice: which
+          physical format does your machine actually support? There are three
+          common ones, and they are not interchangeable.
+        </p>
+
+        <h3>2.5" SATA SSD</h3>
+        <p>
+          This is the classic laptop-sized SSD. It is the same size and shape as
+          a 2.5-inch laptop hard drive, which means it slots straight into any
+          bay designed for one. It connects via the standard SATA cable and is
+          limited to SATA speeds (~550 MB/s sequential read). If you are
+          upgrading an older laptop or desktop that has a 2.5-inch drive bay and
+          no M.2 slot, this is your option.
+        </p>
+
+        <h3>M.2 SATA SSD</h3>
+        <p>
+          The M.2 form factor is a small stick-shaped module that plugs directly
+          into an M.2 slot on the motherboard — no cable needed. An M.2 SATA
+          drive uses the same SATA protocol as a 2.5-inch drive, so the speed
+          ceiling is identical (~550 MB/s). The advantage is purely physical: it
+          takes up much less space and keeps the inside of the machine tidier.
+          Many budget and mid-range laptops from 2016 onwards include an M.2
+          slot but only support SATA over it.
+        </p>
+
+        <h3>M.2 NVMe SSD</h3>
+        <p>
+          NVMe (Non-Volatile Memory Express) is a protocol designed specifically
+          for flash storage. An M.2 NVMe drive uses the same slot as an M.2 SATA
+          drive, but instead of going through the SATA controller it
+          communicates directly with the CPU via PCIe lanes. The result is
+          dramatically faster transfer speeds — typically 3,000 to 7,000 MB/s on
+          a modern drive, compared to 550 MB/s for SATA. If you are buying a new
+          laptop or building a new desktop today, NVMe is the standard you want.
+        </p>
+
+        <div class="highlight">
+          Before buying an M.2 drive, check your motherboard or laptop
+          specifications carefully. An M.2 slot that only supports SATA will not
+          run an NVMe drive — and vice versa. Some slots support both protocols;
+          the product page or service manual will tell you which.
+        </div>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>2.5" SATA</th>
+                <th>M.2 SATA</th>
+                <th>M.2 NVMe</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Connector</strong></td>
+                <td>SATA cable + power</td>
+                <td>M.2 slot (SATA key)</td>
+                <td>M.2 slot (PCIe key)</td>
+              </tr>
+              <tr>
+                <td><strong>Typical read speed</strong></td>
+                <td>~550 MB/s</td>
+                <td>~550 MB/s</td>
+                <td>3,000–7,000 MB/s</td>
+              </tr>
+              <tr>
+                <td><strong>Size</strong></td>
+                <td>Large (2.5 inch)</td>
+                <td>Compact stick</td>
+                <td>Compact stick</td>
+              </tr>
+              <tr>
+                <td><strong>Best for</strong></td>
+                <td>Older laptops & desktops</td>
+                <td>Mid-range laptops (2016–2020)</td>
+                <td>Modern laptops & desktops</td>
+              </tr>
+              <tr>
+                <td><strong>Price</strong></td>
+                <td>Low</td>
+                <td>Low</td>
+                <td>Moderate</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- SECTION 6 – Full-width photo -->
+      <section>
+        <div class="img-container">
+          <img
+            src="./img/push-down-ssd-m2-socket-flush-standoff-1280x853.jpg"
+            alt="NVMe SSD"
+          />
+        </div>
+        <p class="img-caption">
+          An M.2 NVMe drive plugs directly into the motherboard — no cables, no
+          bay required.
+        </p>
+      </section>
+
+      <!-- SECTION 7 – Closing text -->
+      <section>
+        <h2>Choosing the Right Part: A Quick Checklist</h2>
+
+        <p>
+          Before you order any component, run through these three questions:
+          Does the part number match your specific device model? Does the
+          connector format (SATA cable, M.2 slot) match what is physically
+          available on your motherboard? And does the protocol (SATA, SAS, NVMe)
+          match what your controller supports?
+        </p>
+
+        <p>
+          Getting one of these wrong means the part either will not fit, will
+          not be detected, or will run at a fraction of its rated speed. A
+          two-minute check against your device's service manual or the
+          manufacturer's compatibility page can save you a frustrating return.
+        </p>
+
+        <p>
+          If you are unsure, our support team is happy to help you identify the
+          right part for your machine — just send us the model number or service
+          tag and we will point you in the right direction. All the parts we
+          sell are tested, labelled with accurate specifications, and ship the
+          same day.
+        </p>
+      </section>
+    </article>
+  </body>
+</html>

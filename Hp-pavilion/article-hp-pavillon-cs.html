@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Pavilion — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      /* ── WRAPPER ── */
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES DE SECTION ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        color: #222;
+        margin-bottom: 12px;
+        font-size: 16px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      .profile-yes {
+        color: #222;
+      }
+      .profile-no {
+        color: #222;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE / INFO BOX ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE TABLETTE / MOBILE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Obrázek loga HP Pavilion -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-pavillon-logo.jpg"
+          alt="HP Pavilion Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">💻 Notebooky HP</div>
+        <h1 class="article-title">
+          HP Pavilion — Referenční řada pro širokou veřejnost
+        </h1>
+        <p class="article-intro">
+          Řada HP Pavilion, uvedená na trh v roce 1994, patří mezi nejstarší a
+          nejprodávanější řady notebooků na světě. Během třiceti let na trhu se
+          stala přirozenou volbou pro jednotlivce, studenty i rodiny, kteří
+          hledají spolehlivý, dobře vybavený a cenově dostupný notebook, aniž by
+          se museli orientovat ve složitých technických specifikacích.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🏠 Představení řady</h2>
+        <p>
+          Pavilion se nachází ve <strong>střední třídě</strong> v rámci nabídky
+          HP. Je umístěn nad řadou Essential (základní úroveň) a pod řadou Envy
+          (prémiová spotřebitelská řada). Jde o nejprodávanější notebook HP v
+          maloobchodních kanálech — supermarkety, online prodejci a obchody s
+          elektronikou.
+        </p>
+        <p>
+          Řada Pavilion je dostupná v několika formátech a velikostech displeje.
+          Nejčastější modely mají <strong>14 a 15,6 palce</strong> s Full HD IPS
+          displeji (1920×1080). Některé modely nabízejí také 16palcový formát
+          nebo 2v1 verze (Pavilion x360) s 360° kloubem a dotykovým displejem.
+        </p>
+        <p>
+          Z hlediska designu se Pavilion vyznačuje různými barevnými variantami
+          (stříbrná, tmavě modrá, šalvějově zelená, třešňově červená podle
+          edice) a plastovým šasi solidní kvality. Nemá kartáčovaný hliníkový
+          povrch jako řada Envy, ale jeho vzhled zůstává moderní a elegantní
+          vzhledem k cenové kategorii.
+        </p>
+      </section>
+
+      <!-- Image HP Pavilion -->
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/laptop-hp-pavilion.jpg"
+          alt="HP Pavilion"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- UŽIVATELSKÝ PROFIL -->
+      <section>
+        <h2>👤 Pro koho je HP Pavilion?</h2>
+        <p>
+          Pavilion je navržen pro každodenní použití. Pro některé uživatele je
+          velmi vhodný, pro jiné méně — zde je přehled:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">
+              ❌ Není ideální, pokud…
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell profile-yes">
+              Jste student (střední nebo vysoké školy)
+            </div>
+            <div class="profile-cell profile-no">
+              Provádíte náročnou úpravu fotografií nebo videa
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell profile-yes">
+              Prohlížení webu, sociální sítě, streaming
+            </div>
+            <div class="profile-cell profile-no">
+              Hrajete moderní hry ve vysoké kvalitě
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell profile-yes">
+              Kancelářská práce: Word, Excel, PowerPoint
+            </div>
+            <div class="profile-cell profile-no">
+              Hledáte ultralehký notebook na cestování (~1,7 kg)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell profile-yes">
+              Videokonference: Teams, Zoom, Meet
+            </div>
+            <div class="profile-cell profile-no">
+              Potřebujete více než 10 hodin výdrže při intenzivním používání
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell profile-yes">Sdílené rodinné použití</div>
+            <div class="profile-cell profile-no">
+              Potřebujete odolnost certifikovanou podle normy MIL-SPEC
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell profile-yes">První osobní notebook</div>
+            <div class="profile-cell profile-no">
+              Máte náročné profesionální použití na cestách
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: HP Pavilion je ideální notebook pro
+          <strong>90 % běžného použití</strong>. Pokud nemáte specifické
+          požadavky na grafický výkon nebo extrémní lehkost, splní svou roli
+          perfektně — a to za výrazně nižší cenu než prémiové řady.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          HP Pavilion je navržen pro <strong>domácí použití</strong> — zde jsou
+          jeho silné stránky a omezení v tomto kontextu.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>Dostupná cena — dobrý poměr cena/výkon pro domácnost</li>
+              <li>
+                IPS Full HD displej, příjemný pro streaming a sledování videí
+              </li>
+              <li>Široký výběr barev pro celou rodinu</li>
+              <li>
+                Kompletní konektivita: USB-A, USB-C, HDMI, čtečka SD karet
+              </li>
+              <li>Dostatečný výkon pro kancelářskou práci a web</li>
+              <li>Wi-Fi 6 a Bluetooth 5 u novějších modelů</li>
+              <li>
+                FHD webkamera u nejnovějších generací — ideální pro videohovory
+              </li>
+              <li>
+                Verze x360 je praktická pro sledování filmů v režimu „stan“
+              </li>
+              <li>
+                Windows 11 předinstalovaný — připraven k použití ihned po
+                vybalení
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Plastové šasi — méně prémiové než Envy nebo Spectre</li>
+              <li>
+                Průměrná výdrž baterie: pouze 6 až 9 hodin běžného použití
+              </li>
+              <li>
+                Znatelné zahřívání při zátěži (4K streaming, dlouhé videohovory)
+              </li>
+              <li>Integrovaná grafika — nevhodné pro náročné hry</li>
+              <li>
+                Reproduktory jsou průměrné a bez hloubky bez certifikace B&amp;O
+              </li>
+              <li>
+                8 GB RAM u základních modelů — z dlouhodobého hlediska
+                nedostačující
+              </li>
+              <li>Není určen pro každodenní přenášení (hmotnost ~1,7 kg)</li>
+              <li>Bez certifikace odolnosti MIL-SPEC</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Domácí použití:</strong> pro sledování seriálů, prohlížení
+          internetu, online nakupování, správu rodinných fotografií nebo pomoc
+          dětem s domácími úkoly je HP Pavilion ideální volbou. Není určen pro
+          intenzivní ani vysoce mobilní použití.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní podřady Pavilion</h2>
+
+        <div class="model-block">
+          <h3>Pavilion 14 / 15 / 16</h3>
+          <p>
+            Klasické modely této řady — tradiční konstrukce typu „clamshell“,
+            ideální pro kancelářskou práci a multimédia. Model s úhlopříčkou
+            15,6 palce je nejprodávanější. Verze 16 palců nabízí větší displej s
+            poměrem stran 16:10 u nejnovějších generací, což je pohodlnější pro
+            čtení a práci s dokumenty.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Pavilion x360 (2v1)</h3>
+          <p>
+            Konvertibilní verze s 360° kloubem a dotykovým displejem. Lze ji
+            používat jako tablet, ve režimu „stan“ nebo prezentačním režimu.
+            Ideální pro studenty, kteří si dělají ručně psané poznámky
+            (kompatibilní s volitelným stylusem HP). O něco těžší než klasická
+            verze.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Pavilion Plus</h3>
+          <p>
+            Vyšší verze řady Pavilion, uvedená v roce 2022. Přibližuje se
+            modelům Envy díky volitelnému OLED nebo 2K displeji, lepší kvalitě
+            zpracování a novějším procesorům (Core Ultra / Ryzen 8000). Vyplňuje
+            mezeru mezi standardním Pavilionem a řadou Envy.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš názor</h2>
+        <div class="conclusion">
+          <p>
+            HP Pavilion zůstává jednou z nejlepších voleb na trhu pro ty, kteří
+            hledají univerzální notebook za rozumnou cenu. Nesnaží se ohromit
+            designem ani maximálním výkonem — jeho cílem je spolehlivě plnit
+            každodenní úkoly, což se mu daří již více než třicet let.
+          </p>
+          <p style="margin-top: 10px">
+            Pro kancelářské, školní nebo rodinné použití představuje Pavilion s
+            <strong>úhlopříčkou 15,6 palce, 16 GB RAM a 512 GB SSD</strong>
+            ideální konfiguraci. Pokud potřebujete kvalitnější displej nebo
+            hliníkové provedení, podívejte se na řadu Envy. Pokud je prioritou
+            profesionální odolnost, bude vhodnější řada EliteBook.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

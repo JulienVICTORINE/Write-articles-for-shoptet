@@ -1,0 +1,611 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP ENVY logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-logo.jpg"
+          alt="HP Envy Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">💻 HP Laptops</div>
+        <h1 class="article-title">
+          HP Envy — Affordable premium for creatives and professionals
+        </h1>
+        <p class="article-intro">
+          The HP Envy is HP’s high-end consumer lineup. Positioned between the
+          Pavilion (mid-range) and the Spectre x360 (ultra-premium), the Envy
+          targets users who want a sleek, well-built, and powerful laptop
+          without paying a premium price. Aluminum design, high-quality display,
+          Bang &amp; Olufsen certified sound — the Envy is made for those who
+          don’t want to compromise on everyday experience.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>💎 Line overview</h2>
+        <p>
+          The HP Envy occupies the <strong>premium consumer segment</strong> in
+          HP’s lineup. It immediately stands out from the Pavilion with its
+          <strong>brushed aluminum chassis</strong>, which is more durable and
+          elegant, as well as the quality of its displays — available in OLED or
+          2K options depending on the model. It’s the HP laptop you choose when
+          you want something stylish on your desk.
+        </p>
+        <p>
+          The Envy lineup is available in
+          <strong>13, 14, and 16 inches</strong>, with IPS Full HD, OLED 2.8K,
+          or 2K panels depending on configurations. Recent models feature Intel
+          Core Ultra or AMD Ryzen 7/9 8000 series processors, with optional
+          dedicated NVIDIA GeForce RTX 3050 or 4050 GPUs on 16-inch versions.
+        </p>
+        <p>
+          The Envy is also available in a convertible version, the
+          <strong>Envy x360</strong>, featuring a 360° hinge and a touchscreen,
+          allowing it to switch from laptop mode to tablet mode. This version is
+          particularly popular among creatives and design students who use an HP
+          stylus.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-x360-laptop.jpg"
+          alt="HP Envy"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is the HP Envy for?</h2>
+        <p>
+          The Envy is a versatile laptop but geared toward demanding and
+          creative use cases. It is well suited for the following profiles:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Ideal for you if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You do photo editing or graphic design
+            </div>
+            <div class="profile-cell">
+              You play recent games at high settings (consider the OMEN)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You work on creative projects: design, light video editing,
+              illustration
+            </div>
+            <div class="profile-cell">
+              You need MIL-SPEC certified durability (consider the EliteBook)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You want a high-quality display for streaming or work
+            </div>
+            <div class="profile-cell">
+              You’re looking for the lightest possible HP laptop (consider the
+              Spectre)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You appreciate refined design and aluminum finish
+            </div>
+            <div class="profile-cell">
+              Your budget is tight — the Pavilion will be more suitable
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Remote work with frequent video calls and advanced office tasks
+            </div>
+            <div class="profile-cell">
+              You need multiple Thunderbolt 4 ports or full professional
+              connectivity
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are a student in design, architecture, or communication
+            </div>
+            <div class="profile-cell">
+              You need a mobile workstation for CAD or 3D (consider the ZBook)
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In summary: the HP Envy is the
+          <strong>best balance in HP’s lineup</strong> between design,
+          performance, and price. It suits both demanding remote workers and
+          creative students who want a laptop they can be proud of.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Pros &amp; cons</h2>
+        <p>
+          The HP Envy is designed for
+          <strong>creative and everyday professional use</strong> — here are its
+          strengths and limitations.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Pros</div>
+            <ul class="pros-list">
+              <li>
+                Brushed aluminum chassis — premium, sturdy, and elegant finish
+              </li>
+              <li>Optional OLED or 2K display — vibrant colors, deep blacks</li>
+              <li>
+                Bang &amp; Olufsen certified sound — audio quality above average
+              </li>
+              <li>
+                Solid performance for content creation and advanced productivity
+              </li>
+              <li>x360 version with touchscreen and HP pen compatibility</li>
+              <li>FHD webcam with built-in physical privacy shutter</li>
+              <li>
+                Good battery life: 8 to 12 hours depending on model and usage
+              </li>
+              <li>
+                Full connectivity: USB-C (Thunderbolt), USB-A, HDMI, SD card
+                reader
+              </li>
+              <li>
+                Dedicated GPU available on 16-inch models for graphic workloads
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Cons</div>
+            <ul class="cons-list">
+              <li>Higher price than the Pavilion — you pay for quality</li>
+              <li>
+                Noticeable heat under sustained load (video rendering,
+                multitasking)
+              </li>
+              <li>
+                Medium weight: 1.4 to 1.8 kg depending on model — not the
+                lightest ultrabook
+              </li>
+              <li>
+                Limited dedicated GPU — not suitable for demanding gaming or
+                professional 3D work
+              </li>
+              <li>Soldered RAM on some models — no upgrade after purchase</li>
+              <li>
+                No durability certification — less resistant to shocks or drops
+              </li>
+              <li>
+                Noticeable fan noise under load — less silent than the Spectre
+              </li>
+              <li>No native RJ45 (Ethernet) port — requires an adapter</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Creative and professional use:</strong> for photo editing
+          in Lightroom, creating polished presentations, light video editing, or
+          simply working in a café with a stylish laptop, the HP Envy is an
+          excellent choice. It is not designed for heavy gaming or very
+          demanding professional workloads.
+        </div>
+      </section>
+
+      <!-- Image HP ENVY -->
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-notebooky.jpg"
+          alt="HP Envy"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SUBSERIES -->
+      <section>
+        <h2>📋 Main versions of the lineup</h2>
+
+        <div class="model-block">
+          <h3>HP Envy 14</h3>
+          <p>
+            The compact version of the lineup — 14 inches, lightweight (around
+            1.4 kg) and elegant. It features an IPS or 2.8K OLED display, Intel
+            Core Ultra or AMD Ryzen 7 processors, and one of the best battery
+            lives in the series. Ideal for mobile creatives who don’t want to
+            carry a large laptop.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Envy 16</h3>
+          <p>
+            The large format of the lineup — 16 inches with a more comfortable
+            16:10 aspect ratio for productivity. It is the only model in the
+            range offering an optional dedicated GPU (NVIDIA GeForce RTX 3050 /
+            4050), making it a great choice for photo editing, video editing, or
+            graphic design. Slightly heavier (around 1.9 kg), but the larger
+            screen more than makes up for it.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Envy x360 (2-in-1)</h3>
+          <p>
+            The convertible version of the Envy, featuring a 360° hinge and an
+            OLED or IPS touchscreen. Compatible with the rechargeable HP pen for
+            note-taking or drawing directly on the screen. Available in 13.3 and
+            14-inch sizes. Slightly thicker than the clamshell version, but the
+            added versatility is a real advantage for creatives and students.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Envy Move</h3>
+          <p>
+            An unusual model in the lineup: a portable all-in-one PC with a
+            built-in battery and a 23.8-inch display. It can be moved from room
+            to room without cables and used like a mobile desktop computer. A
+            unique device in HP’s range, designed for users who want a large
+            screen without the constraints of a fixed workstation.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The HP Envy is the HP laptop that offers the best balance between
+            build quality, performance, and price. It perfectly fills the gap
+            between the overly plastic Pavilion and the overpriced Spectre —
+            exactly where most demanding users are.
+          </p>
+          <p style="margin-top: 10px">
+            If you’re hesitating between the Envy and the Spectre, ask yourself:
+            do you need the thinnest possible design and the highest-end display
+            quality? If yes, the Spectre is worth the extra cost. Otherwise, the
+            <strong>Envy 14 or 16 with OLED option</strong> will give you a very
+            similar experience for much less money.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

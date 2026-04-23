@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP — Présentation de la marque</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --blue: #0096d6;
+        --blue-dark: #005f8a;
+        --blue-light: #e6f6fd;
+        --ink: #0a0f1e;
+        --muted: #64748b;
+        --border: #e2eaf2;
+        --bg: #f5f9fc;
+        --white: #ffffff;
+        --radius: 12px;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        background: var(--bg);
+        color: var(--ink);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      /* ── HEADER ── */
+      header {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 0 clamp(1rem, 5vw, 4rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 64px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        font-weight: 800;
+        font-size: 1.1rem;
+        color: var(--ink);
+        letter-spacing: -0.02em;
+      }
+      .logo span {
+        color: var(--blue);
+      }
+
+      nav {
+        display: flex;
+        gap: 1.25rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      nav a {
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--muted);
+        text-decoration: none;
+        transition: color 0.2s;
+        white-space: nowrap;
+      }
+      nav a:hover {
+        color: var(--blue);
+      }
+
+      .nav-back {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--blue);
+        text-decoration: none;
+        border: 1px solid var(--blue);
+        padding: 4px 12px;
+        border-radius: 999px;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .nav-back:hover {
+        background: var(--blue);
+        color: var(--white);
+      }
+
+      /* ── HERO ── */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #002f4b 0%,
+          var(--blue-dark) 45%,
+          var(--blue) 100%
+        );
+        color: var(--white);
+        padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 5vw, 4rem);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "HP";
+        position: absolute;
+        right: -1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 800;
+        font-size: clamp(8rem, 28vw, 18rem);
+        color: rgba(255, 255, 255, 0.05);
+        letter-spacing: -0.05em;
+        pointer-events: none;
+        line-height: 1;
+      }
+
+      .hero-inner {
+        max-width: 760px;
+        position: relative;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+      }
+
+      .hero h1 {
+        font-weight: 800;
+        font-size: clamp(2rem, 6vw, 3.75rem);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 1.25rem;
+      }
+
+      .hero p {
+        font-size: clamp(1rem, 2vw, 1.125rem);
+        font-weight: 300;
+        opacity: 0.88;
+        max-width: 580px;
+      }
+
+      /* ── BREADCRUMB ── */
+      .breadcrumb {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem clamp(1rem, 4vw, 2rem) 0;
+        font-size: 0.8rem;
+        color: var(--muted);
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      .breadcrumb a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+      .breadcrumb a:hover {
+        text-decoration: underline;
+      }
+
+      /* ── MAIN ── */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 4vw, 2rem);
+      }
+
+      /* ── SECTION LABEL ── */
+      .section-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--blue);
+        margin-bottom: 0.5rem;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        letter-spacing: -0.02em;
+        margin-bottom: 1.25rem;
+      }
+
+      p {
+        color: #334155;
+        margin-bottom: 1rem;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CARD ── */
+      .card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      /* ── STATS ── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+        gap: 1rem;
+        margin: 2.5rem 0;
+      }
+
+      .stat {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.4rem;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-weight: 800;
+        font-size: 1.85rem;
+        color: var(--blue);
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+
+      .stat-label {
+        font-size: 0.76rem;
+        font-weight: 500;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* ── TIMELINE ── */
+      .timeline {
+        position: relative;
+        margin: 1.5rem 0 2rem;
+        padding-left: 2rem;
+        border-left: 2px solid var(--border);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 1.5rem;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -2.4rem;
+        top: 6px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--blue);
+        border: 2px solid var(--white);
+        box-shadow: 0 0 0 2px var(--blue);
+      }
+
+      .timeline-year {
+        font-weight: 700;
+        font-size: 0.85rem;
+        color: var(--blue);
+        letter-spacing: 0.05em;
+        margin-bottom: 0.2rem;
+      }
+
+      .timeline-text {
+        font-size: 0.9rem;
+        color: #334155;
+        margin: 0;
+      }
+
+      /* ── PRODUCTS GRID ── */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+      }
+
+      .product-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.75rem;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .product-card:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 24px rgba(0, 150, 214, 0.09);
+      }
+
+      .product-icon {
+        font-size: 1.8rem;
+        margin-bottom: 0.75rem;
+        line-height: 1;
+      }
+
+      .product-card h3 {
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 0.4rem;
+        letter-spacing: -0.01em;
+      }
+
+      .product-card p {
+        font-size: 0.875rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      /* ── ITEM LIST ── */
+      .item-list {
+        list-style: none;
+        margin-top: 1.25rem;
+      }
+
+      .item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 1.4rem 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        margin-bottom: 0.75rem;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .item:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 20px rgba(0, 150, 214, 0.08);
+      }
+
+      .item-emoji {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .item-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .item-info h4 {
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .item-info p {
+        font-size: 0.875rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      .item-tag {
+        flex-shrink: 0;
+        font-size: 0.71rem;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+        align-self: flex-start;
+        margin-top: 4px;
+      }
+
+      .tag-here {
+        background: #f0fdf4;
+        color: #166534;
+      }
+      .tag-soon {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+      .tag-article {
+        background: var(--blue-light);
+        color: var(--blue-dark);
+      }
+
+      .item-link-arrow {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--blue-light);
+        color: var(--blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+        align-self: center;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+
+      a.item:hover .item-link-arrow {
+        background: var(--blue);
+        color: var(--white);
+      }
+
+      /* ── SUB-SECTION TITLE (catégorie dans laptops) ── */
+      .sub-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: -0.01em;
+        margin: 2rem 0 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--ink);
+      }
+
+      .sub-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+        margin-left: 0.5rem;
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 3rem 0;
+      }
+
+      /* ── INFO BOX ── */
+      .info-box {
+        background: var(--blue-light);
+        border-left: 4px solid var(--blue);
+        border-radius: 0 var(--radius) var(--radius) 0;
+        padding: 1.25rem 1.5rem;
+        margin-top: 1.5rem;
+      }
+
+      .info-box p {
+        font-size: 0.9rem;
+        color: #004a70;
+        margin: 0;
+      }
+
+      /* ── RELATED ARTICLES ── */
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .related-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        background: var(--white);
+        text-decoration: none;
+        color: inherit;
+        display: flex;
+        flex-direction: column;
+        gap: 0.45rem;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .related-card:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 20px rgba(0, 150, 214, 0.09);
+      }
+
+      .related-card .rc-emoji {
+        font-size: 1.5rem;
+      }
+      .related-card .rc-label {
+        font-size: 0.68rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--blue);
+      }
+
+      .related-card h4 {
+        font-weight: 700;
+        font-size: 0.95rem;
+        letter-spacing: -0.01em;
+      }
+
+      .related-card p {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      .related-card .rc-arrow {
+        margin-top: auto;
+        font-size: 0.78rem;
+        color: var(--blue);
+        font-weight: 600;
+      }
+
+      /* ── FOOTER ── */
+      footer {
+        border-top: 1px solid var(--border);
+        padding: 2rem clamp(1rem, 5vw, 4rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        background: var(--white);
+      }
+
+      footer p {
+        font-size: 0.8rem;
+        color: var(--muted);
+        margin: 0;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 768px) {
+        nav a:not(.nav-back) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero::before {
+          display: none;
+        }
+        .item {
+          flex-wrap: wrap;
+        }
+        footer {
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="logo">Tech<span>Review</span></div>
+      <nav>
+        <a href="#presentation">Présentation</a>
+        <a href="#produits">Produits</a>
+        <a href="#laptops">Portables</a>
+        <a href="#desktop">PC de bureau</a>
+        <a href="#moniteurs">Moniteurs</a>
+        <a href="index.html" class="nav-back">← Toutes les marques</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="badge">🌍 Marque à la loupe</div>
+        <h1>Hewlett-Packard — HP</h1>
+        <p>
+          Née dans un garage de Palo Alto en 1939, HP est l'une des plus
+          vieilles entreprises technologiques du monde et l'un des plus grands
+          fabricants de PC et d'imprimantes de la planète.
+        </p>
+      </div>
+    </div>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+      <a href="index.html">Accueil</a>
+      <span>›</span>
+      <a href="index.html#marques">Marques</a>
+      <span>›</span>
+      <span>HP</span>
+    </div>
+
+    <main>
+      <!-- PRÉSENTATION -->
+      <section id="presentation">
+        <div class="section-label">Présentation</div>
+        <h2>Qui est HP ? 🏢</h2>
+
+        <div class="card">
+          <p>
+            <strong>Hewlett-Packard</strong> — plus connue sous le sigle
+            <strong>HP</strong> — est une entreprise américaine fondée en
+            <strong>1939</strong> par <strong>Bill Hewlett</strong> et
+            <strong>Dave Packard</strong> dans le célèbre garage de la maison de
+            Packard à <strong>Palo Alto, Californie</strong>. Ce garage est
+            aujourd'hui considéré comme le berceau de la Silicon Valley. Leur
+            premier produit commercialisé est un oscillateur audio (le HP 200A),
+            vendu notamment à Walt Disney Studios pour la post-production de
+            <em>Fantasia</em>.
+          </p>
+          <p>
+            Pendant des décennies, HP s'impose comme un pionnier dans les
+            instruments de mesure, les calculatrices scientifiques, les
+            imprimantes laser et les ordinateurs personnels. En
+            <strong>2002</strong>, HP fusionne avec <strong>Compaq</strong> pour
+            25 milliards de dollars, devenant à l'époque le premier fabricant
+            mondial de PC et renforçant massivement son offre serveurs et
+            services IT.
+          </p>
+          <p>
+            En <strong>2015</strong>, l'entreprise opère une scission historique
+            en deux entités distinctes : <strong>HP Inc.</strong>, qui hérite
+            des PC et des imprimantes, et
+            <strong>Hewlett Packard Enterprise (HPE)</strong>, qui prend en
+            charge les serveurs, le stockage, le réseau et les services
+            d'entreprise. C'est <strong>HP Inc.</strong> qui est au cœur de cet
+            article.
+          </p>
+          <p>
+            Aujourd'hui, HP Inc. est le
+            <strong>deuxième ou troisième fabricant mondial de PC</strong> selon
+            les trimestres, avec une part de marché oscillant entre 20 % et 22
+            %, derrière Lenovo et au coude-à-coude avec Dell. Le siège de HP
+            Inc. est établi à <strong>Palo Alto, Californie</strong>, et la
+            marque est présente dans plus de <strong>170 pays</strong>.
+          </p>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">1939</div>
+            <div class="stat-label">Année de fondation</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">🇺🇸</div>
+            <div class="stat-label">Palo Alto, Californie</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">85 ans</div>
+            <div class="stat-label">Sur le marché</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Top 3</div>
+            <div class="stat-label">Fabricant mondial de PC</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">21%</div>
+            <div class="stat-label">Part de marché PC</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">170+</div>
+            <div class="stat-label">Pays couverts</div>
+          </div>
+        </div>
+
+        <!-- TIMELINE -->
+        <div class="section-label" style="margin-top: 2rem">
+          Historique clé 📅
+        </div>
+        <h2>Les grandes dates de HP</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1939</div>
+            <p class="timeline-text">
+              Bill Hewlett et Dave Packard fondent HP dans un garage de Palo
+              Alto avec 538 $ de capital. Leur premier produit : l'oscillateur
+              audio HP 200A, vendu à Walt Disney.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1972</div>
+            <p class="timeline-text">
+              HP lance la <strong>HP-35</strong>, la première calculatrice
+              scientifique de poche au monde, révolutionnant l'ingénierie et la
+              recherche.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1984</div>
+            <p class="timeline-text">
+              Introduction de la <strong>HP LaserJet</strong>, la première
+              imprimante laser grand public. Elle redéfinit l'impression
+              bureautique et reste un pilier de l'activité HP pendant 40 ans.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1994</div>
+            <p class="timeline-text">
+              Lancement du <strong>HP Pavilion</strong>, la gamme de PC grand
+              public qui deviendra l'une des plus vendues au monde dans les
+              années 90 et 2000.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2002</div>
+            <p class="timeline-text">
+              Fusion avec <strong>Compaq</strong> pour 25 milliards de dollars.
+              HP récupère les gammes iPAQ, Compaq Presario et une position
+              dominante sur le marché des serveurs x86.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2006</div>
+            <p class="timeline-text">
+              HP dépasse Dell et devient le
+              <strong>premier fabricant mondial de PC</strong>, position qu'elle
+              occupera jusqu'en 2013, date à laquelle Lenovo la détrône.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2012</div>
+            <p class="timeline-text">
+              HP rachète <strong>Autonomy</strong> pour 11 milliards de dollars
+              — acquisition qui se soldera par une dépréciation de 8,8 milliards
+              et un scandale comptable retentissant.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <p class="timeline-text">
+              Scission en deux entités indépendantes :
+              <strong>HP Inc.</strong> (PC et imprimantes) et
+              <strong>Hewlett Packard Enterprise</strong> (serveurs, stockage,
+              services). Meg Whitman prend la tête d'HPE, Dion Weisler celle de
+              HP Inc.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <p class="timeline-text">
+              HP Inc. résiste à la pandémie grâce à l'explosion de la demande en
+              PC liée au télétravail et à l'enseignement à distance. La demande
+              de Chromebooks explose dans le secteur éducatif.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023–2024</div>
+            <p class="timeline-text">
+              HP recentre sa stratégie autour des
+              <strong>PC IA</strong> (processeurs NPU intégrés Intel Core Ultra
+              / AMD Ryzen AI), de la cybersécurité matérielle (HP Wolf Security)
+              et des solutions d'impression durable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- GAMME DE PRODUITS -->
+      <section id="produits">
+        <div class="section-label">Gamme de produits</div>
+        <h2>Ce que HP fabrique 🏭</h2>
+        <p>
+          HP Inc. structure son offre autour de deux grands piliers : les
+          <strong>systèmes personnels</strong> (PC portables, PC de bureau,
+          stations de travail, moniteurs) et les
+          <strong>solutions d'impression</strong> (imprimantes jet d'encre,
+          laser, grand format). La marque couvre aussi les accessoires, la
+          sécurité matérielle et les services managés.
+        </p>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3>Ordinateurs portables</h3>
+            <p>
+              Du Chromebook d'entrée de gamme au Spectre x360 premium, en
+              passant par l'EliteBook professionnel et l'OMEN gaming — HP couvre
+              tous les segments avec des gammes clairement positionnées.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3>PC de bureau</h3>
+            <p>
+              Des tours ProDesk et EliteDesk pour les entreprises aux IdeaCentre
+              grand public OmniDesk, en passant par les stations de travail Z
+              Series pour les créatifs et ingénieurs.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖱️</div>
+            <h3>Moniteurs</h3>
+            <p>
+              Écrans E-Series pour la bureautique d'entreprise, Z-Series pour
+              les créatifs et les stations de travail, et OMEN pour le gaming —
+              avec des options de 21 à 40 pouces.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖨️</div>
+            <h3>Imprimantes & Impression</h3>
+            <p>
+              HP est le leader mondial de l'impression. Gammes LaserJet (laser
+              pro), DeskJet et ENVY (jet d'encre grand public), OfficeJet Pro
+              (PME), DesignJet (grand format) et HP Instant Ink (abonnement
+              encre).
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🔒</div>
+            <h3>Sécurité — HP Wolf Security</h3>
+            <p>
+              Suite de cybersécurité matérielle intégrée dans les PC HP
+              professionnels : protection contre les malwares au niveau
+              firmware, isolation des menaces via microvirtualisation, et
+              gestion des risques endpoint.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🗄️</div>
+            <h3>Serveurs — HPE (entité séparée)</h3>
+            <p>
+              Depuis 2015, les serveurs sont gérés par Hewlett Packard
+              Enterprise (HPE), entité indépendante. Les gammes ProLiant,
+              Synergy et Apollo couvrent les besoins datacenter des entreprises.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">⌨️</div>
+            <h3>Périphériques & Accessoires</h3>
+            <p>
+              Claviers, souris, webcams, docks Thunderbolt, casques et sacoches
+              — HP propose un écosystème complet d'accessoires coordonnés avec
+              ses gammes de PC.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🎮</div>
+            <h3>Gaming — OMEN & Victus</h3>
+            <p>
+              Deux marques gaming : <strong>OMEN</strong> pour le haut de gamme
+              (GPU RTX 4090, écrans 240 Hz, hub OMEN) et
+              <strong>Victus</strong> pour le gaming accessible avec de bonnes
+              performances à prix contenu.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <p>
+            📌 Dans le cadre de cette série d'articles, nous nous concentrons
+            sur les <strong>ordinateurs portables</strong>, les
+            <strong>PC de bureau</strong> et les <strong>moniteurs</strong>. Les
+            imprimantes, serveurs HPE et solutions d'impression feront l'objet
+            de contenus dédiés ultérieurement.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- LAPTOPS -->
+      <section id="laptops">
+        <div class="section-label">Focus — Ordinateurs portables</div>
+        <h2>Les gammes de laptops HP 💻</h2>
+        <p>
+          HP propose l'une des gammes de portables les plus larges du marché,
+          couvrant tous les segments : grand public, professionnel, créatif,
+          gaming et éducation. Les gammes sont organisées ici par catégorie
+          d'usage.
+        </p>
+
+        <!-- GRAND PUBLIC -->
+        <div class="sub-title">🧑‍💻 Grand public & polyvalent</div>
+
+        <ul class="item-list">
+          <li>
+            <a class="item" href="hp-pavilion.html">
+              <div class="item-emoji">🏠</div>
+              <div class="item-info">
+                <h4>HP Pavilion</h4>
+                <p>
+                  La gamme historique de HP, lancée en 1995, destinée au grand
+                  public. Le Pavilion couvre les usages du quotidien —
+                  navigation, bureautique, streaming, visioconférence — avec un
+                  bon rapport qualité/prix et des coloris variés. Disponible en
+                  14 et 15,6 pouces, avec des processeurs Intel Core ou AMD
+                  Ryzen, un écran Full HD IPS et une autonomie correcte. Idéal
+                  pour les étudiants et les familles.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-essential.html">
+              <div class="item-emoji">📘</div>
+              <div class="item-info">
+                <h4>HP Essential (anciennement HP Stream / HP 15)</h4>
+                <p>
+                  La gamme d'entrée de gamme abordable de HP, pensée pour les
+                  budgets serrés : collégiens, lycéens, premiers ordinateurs.
+                  Ces laptops proposent des processeurs Intel Celeron ou
+                  Pentium, un écran 15,6 pouces HD, et sont souvent livrés avec
+                  Windows en mode S ou un accès Microsoft 365 inclus. Léger,
+                  simple, économique — il fait l'essentiel sans fioritures.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-envy.html">
+              <div class="item-emoji">💎</div>
+              <div class="item-info">
+                <h4>HP Envy</h4>
+                <p>
+                  Le milieu/haut de gamme grand public de HP. L'Envy se
+                  distingue par son design soigné en aluminium brossé, ses
+                  écrans OLED ou IPS de qualité (2K, 4K), ses haut-parleurs Bang
+                  & Olufsen et ses bonnes performances polyvalentes. Disponible
+                  en version classique (14, 16 pouces) ou en convertible 2-en-1
+                  (Envy x360), il cible les créatifs amateurs et les
+                  professionnels qui souhaitent un laptop élégant sans payer le
+                  prix du Spectre.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-spectre.html">
+              <div class="item-emoji">✨</div>
+              <div class="item-info">
+                <h4>HP Spectre x360</h4>
+                <p>
+                  Le fleuron de la gamme grand public HP — le laptop le plus
+                  premium de la marque. Châssis en aluminium ultra-fin, écran
+                  OLED 2.8K ou 4K tactile, charnière 360° pour une utilisation
+                  en mode tablette, autonomie jusqu'à 17h et haut-parleurs Bang
+                  & Olufsen. Le Spectre x360 rivalise directement avec le Dell
+                  XPS, le MacBook Pro et le Lenovo Yoga Slim — il représente ce
+                  que HP fait de mieux en matière de design et de qualité de
+                  fabrication.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-omnibook.html">
+              <div class="item-emoji">🔮</div>
+              <div class="item-info">
+                <h4>HP OmniBook</h4>
+                <p>
+                  La nouvelle gamme de laptops IA de HP, lancée en 2024, conçue
+                  autour des processeurs à NPU intégré (Intel Core Ultra /
+                  Snapdragon X Elite). L'OmniBook est optimisé pour les
+                  fonctionnalités d'intelligence artificielle embarquée :
+                  transcription en temps réel, effacement de bruit, génération
+                  d'images en local et accélération des workflows créatifs. Il
+                  marque le positionnement de HP dans l'ère des "Copilot+ PC" de
+                  Microsoft.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- PROFESSIONNEL -->
+        <div class="sub-title">👔 Professionnel & Entreprise</div>
+
+        <ul class="item-list">
+          <li>
+            <a class="item" href="hp-elitebook.html">
+              <div class="item-emoji">🏆</div>
+              <div class="item-info">
+                <h4>HP EliteBook</h4>
+                <p>
+                  La gamme professionnelle haut de gamme de HP — l'équivalent du
+                  ThinkPad de Lenovo. Certifié MIL-SPEC 810H (résistance aux
+                  chocs, températures extrêmes, humidité), l'EliteBook intègre
+                  la suite de sécurité HP Wolf Security, un lecteur
+                  d'empreintes, une caméra IR pour Windows Hello, un écran Sure
+                  View (filtre de confidentialité physique) et des outils de
+                  gestion en parc (HP Manageability Integration Kit). Disponible
+                  de 13 à 16 pouces, en versions Core Ultra Intel ou AMD Ryzen
+                  Pro.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-elite-pro.html">
+              <div class="item-emoji">💼</div>
+              <div class="item-info">
+                <h4>
+                  HP Elite — Professionnel (HP Elite x360, HP Elite Dragonfly)
+                </h4>
+                <p>
+                  Les ultrabooks professionnels premium de HP. L'<strong
+                    >Elite x360</strong
+                  >
+                  est un convertible 2-en-1 robuste pour les cadres mobiles,
+                  tandis que l'<strong>Elite Dragonfly</strong> est l'ultrabook
+                  le plus léger de HP (moins de 990 g), en magnésium et carbone,
+                  conçu pour les dirigeants et commerciaux qui voyagent
+                  beaucoup. Les deux modèles intègrent la connectique complète,
+                  la 4G/5G optionnelle et HP Wolf Security.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-essential-pro.html">
+              <div class="item-emoji">🏗️</div>
+              <div class="item-info">
+                <h4>HP Essential Professionnel (ProBook)</h4>
+                <p>
+                  La gamme professionnelle d'entrée et milieu de gamme de HP,
+                  positionnée entre l'IdeaPad et l'EliteBook. Le
+                  <strong>ProBook</strong> offre une bonne durabilité, une
+                  connectique professionnelle complète (USB-A, USB-C, HDMI,
+                  lecteur de carte SD) et des options de sécurité de base, le
+                  tout à un tarif accessible pour les PME et les indépendants.
+                  Disponible en 440, 450 et 455 G-Series en 14 et 15,6 pouces.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-zbook.html">
+              <div class="item-emoji">⚙️</div>
+              <div class="item-info">
+                <h4>HP ZBook — Stations de travail mobiles</h4>
+                <p>
+                  Les stations de travail portables de HP, destinées aux
+                  professionnels aux besoins graphiques et de calcul intensifs.
+                  Les ZBook intègrent des GPU NVIDIA RTX professionnels (série
+                  Ada Lovelace) certifiés ISV (Autodesk, SolidWorks, Adobe), des
+                  processeurs Intel Core Ultra HX ou Xeon, de la RAM ECC et des
+                  dalles 4K DreamColor calibrées d'usine. Disponibles en ZBook
+                  Firefly (compact, léger), ZBook Studio (polyvalent) et ZBook
+                  Fury (puissance maximale).
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- GAMING -->
+        <div class="sub-title">🎮 Gaming</div>
+
+        <ul class="item-list">
+          <li>
+            <a class="item" href="hp-omen.html">
+              <div class="item-emoji">🔥</div>
+              <div class="item-info">
+                <h4>HP OMEN</h4>
+                <p>
+                  La gamme gaming haut de gamme de HP. Les laptops OMEN
+                  embarquent les GPU NVIDIA GeForce RTX les plus puissants
+                  (jusqu'au RTX 4090 Laptop), des écrans haute fréquence
+                  (jusqu'à 240 Hz QHD), un système de refroidissement avancé
+                  (Thermal Grizzly) et le logiciel OMEN Gaming Hub pour
+                  optimiser les performances. L'OMEN Transcend est la version la
+                  plus fine et la plus légère de la gamme, rivalisant avec les
+                  ASUS ROG Zephyrus et Razer Blade.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-victus.html">
+              <div class="item-emoji">🎯</div>
+              <div class="item-info">
+                <h4>HP Victus</h4>
+                <p>
+                  Le laptop gaming accessible de HP, pensé pour les joueurs qui
+                  souhaitent de bonnes performances sans le budget haut de
+                  gamme. Le Victus propose des GPU NVIDIA GeForce RTX 3050 à
+                  4060, des écrans 144 Hz Full HD, un design sobre (sans RGB
+                  excessif) et un tarif compétitif. Il est particulièrement
+                  apprécié des étudiants gamers et de ceux qui veulent un laptop
+                  polyvalent capable de faire tourner les derniers jeux en bons
+                  paramètres.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- CHROMEBOOK -->
+        <div class="sub-title">🎓 Chromebook & Éducation</div>
+
+        <ul class="item-list">
+          <li>
+            <a class="item" href="hp-chromebook.html">
+              <div class="item-emoji">🎓</div>
+              <div class="item-info">
+                <h4>HP Chromebook</h4>
+                <p>
+                  Les Chromebooks de HP fonctionnent sous
+                  <strong>ChromeOS</strong> de Google et sont conçus pour la
+                  simplicité, la sécurité et la légèreté. Incontournables dans
+                  les établissements scolaires (k-12), ils offrent un démarrage
+                  ultra-rapide, une autonomie généreuse, une gestion centralisée
+                  via la Google Admin Console et un accès natif aux applications
+                  Google (Docs, Slides, Meet). Disponibles en versions plastique
+                  abordables pour les classes ou en finitions aluminium (HP
+                  Chromebook Plus) pour les entreprises cherchant une
+                  alternative légère à Windows.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PC DE BUREAU -->
+      <section id="desktop">
+        <div class="section-label">Focus — PC de bureau</div>
+        <h2>Les gammes de PC de bureau HP 🖥️</h2>
+        <p>
+          HP propose une offre de postes fixes complète, allant du mini PC
+          d'entreprise à la station de travail ultra-puissante, en passant par
+          les tours grand public et les all-in-one familiaux.
+        </p>
+
+        <ul class="item-list">
+          <li>
+            <a class="item" href="hp-elitedesk.html">
+              <div class="item-emoji">🏢</div>
+              <div class="item-info">
+                <h4>
+                  HP Elite — Bureau professionnel (EliteDesk / Elite Mini)
+                </h4>
+                <p>
+                  La référence de HP pour les parcs informatiques d'entreprise.
+                  Disponible en format tour, SFF (Small Form Factor), micro et
+                  all-in-one, l'EliteDesk (renommé HP Elite Mini dans les
+                  dernières générations) excelle par sa facilité de gestion (HP
+                  Manageability, SCCM), sa durabilité certifiée MIL-SPEC et sa
+                  sécurité renforcée HP Wolf. L'Elite Mini 800 G9 est
+                  particulièrement apprécié pour sa taille de brique et ses
+                  performances étonnantes.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-essential-pro-desktop.html">
+              <div class="item-emoji">🏗️</div>
+              <div class="item-info">
+                <h4>HP Essential Professionnel — Bureau (ProDesk)</h4>
+                <p>
+                  La gamme de bureau professionnelle d'entrée de gamme de HP. Le
+                  ProDesk offre la fiabilité et la gestion professionnelle à un
+                  tarif accessible pour les PME : démarrage sécurisé,
+                  chiffrement TPM, connectique complète et facilité de mise à
+                  niveau. Disponible en format tour, SFF et micro. Idéal pour
+                  les postes de travail bureautiques qui n'ont pas besoin des
+                  fonctionnalités de sécurité avancées de l'EliteDesk.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-omnidesk.html">
+              <div class="item-emoji">🏠</div>
+              <div class="item-info">
+                <h4>HP OmniDesk</h4>
+                <p>
+                  La nouvelle gamme de PC de bureau grand public de HP, lancée
+                  en 2024 dans le cadre du rebranding de la gamme Omni.
+                  L'OmniDesk est disponible en format tour compact et
+                  all-in-one, avec des processeurs Intel Core ou AMD Ryzen
+                  récents, un design épuré et des fonctionnalités IA intégrées
+                  (HP AI Companion). Il cible les familles et les
+                  télétravailleurs qui veulent un PC de bureau moderne, simple
+                  et performant pour tous les usages du quotidien.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-z-workstation.html">
+              <div class="item-emoji">⚙️</div>
+              <div class="item-info">
+                <h4>Stations de travail HP Z Series</h4>
+                <p>
+                  Les stations de travail desktop de HP, parmi les plus réputées
+                  du marché professionnel. Disponibles en différents formats —
+                  <strong>Z2 Mini</strong> (ultra-compact),
+                  <strong>Z4</strong> et <strong>Z6</strong> (tour polyvalente),
+                  <strong>Z8 Fury</strong> (tour double processeur pour l'IA et
+                  la simulation) — elles embarquent des CPU Intel Xeon W ou Core
+                  i9, des GPU NVIDIA RTX A-Series / Ada certifiés ISV, et
+                  supportent des configurations RAM jusqu'à plusieurs
+                  téraoctets. Certifiées Adobe, Autodesk, Dassault et ANSYS.
+                </p>
+              </div>
+              <span class="item-tag tag-article">📄 Article dédié</span>
+              <div class="item-link-arrow">→</div>
+            </a>
+          </li>
+
+          <li>
+            <a class="item" href="hp-omen-desktop.html">
+              <div class="item-emoji">🎮</div>
+              <div class="item-info">
+                <h4>HP OMEN Desktop & Victus Desktop</h4>
+                <p>
+                  Les tours gaming de HP. L'<strong>OMEN 45L</strong> et
+                  l'<strong>OMEN 35L</strong> sont des tours gaming haut de
+                  gamme avec un système de gestion thermique exemplaire, un
+                  accès facile aux composants et une chambre de refroidissement
+                  séparée pour le GPU. Le
+                  <strong>Victus Desktop</strong> reprend l'approche accessible
+                  de son homologue laptop : bonnes performances gaming avec GPU
+                  NVIDIA RTX 3060/4060, à un prix compétitif.
+                </p>
+              </div>
+              <span class="item-tag tag-here">Couvert ici</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MONITEURS -->
+      <section id="moniteurs">
+        <div class="section-label">Focus — Moniteurs</div>
+        <h2>L'offre moniteurs HP 🖱️</h2>
+        <p>
+          HP propose une gamme d'écrans structurée autour de plusieurs séries
+          ciblant des usages bien distincts : de la bureautique d'entreprise au
+          gaming compétitif, en passant par la création professionnelle. La
+          marque est moins présente que Dell UltraSharp dans le segment créatif
+          haut de gamme, mais propose des produits solides avec une connectique
+          USB-C moderne.
+        </p>
+
+        <ul class="item-list">
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎨</div>
+            <div class="item-info">
+              <h4>HP Z Display — Création professionnelle</h4>
+              <p>
+                Les écrans haut de gamme de HP destinés aux créatifs et aux
+                stations de travail Z. Les modèles Z27k G3 et Z32k G3 proposent
+                des dalles IPS 4K avec une couverture DCI-P3 étendue, une
+                calibration d'usine certifiée, et une connectique complète
+                incluant Thunderbolt 4 avec Power Delivery jusqu'à 100W. Conçus
+                pour fonctionner en parfaite harmonie avec les ZBook et les
+                stations de travail Z Series, ils sont certifiés pour les
+                workflows Adobe et Autodesk.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🏢</div>
+            <div class="item-info">
+              <h4>HP E Series — Bureautique professionnelle</h4>
+              <p>
+                La gamme de référence pour les entreprises et les parcs
+                informatiques. Les écrans E Series offrent une ergonomie
+                complète (réglage en hauteur, pivot portrait, inclinaison,
+                rotation), un hub USB-A intégré, une connexion USB-C avec Power
+                Delivery et une dalle IPS à faible émission de lumière bleue
+                (certifiée TÜV). Particulièrement appréciés des DSI pour leur
+                facilité de déploiement et leur compatibilité avec les solutions
+                de gestion HP. Disponibles de 23,8 à 27 pouces en Full HD, QHD
+                et 4K.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">💡</div>
+            <div class="item-info">
+              <h4>HP P Series — Entrée de gamme pro</h4>
+              <p>
+                La gamme d'écrans professionnels économiques de HP, destinée aux
+                postes bureautiques secondaires, aux salles de réunion et aux
+                associations. Dalle IPS ou VA en Full HD, connectique de base
+                (VGA, HDMI, DisplayPort), pied basique avec inclinaison. Sobre,
+                fiable, sans superflu — il fait le travail dans les
+                environnements qui privilégient le coût total de possession
+                (TCO) maîtrisé.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🏠</div>
+            <div class="item-info">
+              <h4>HP M Series — Домашний bureau & Télétravail</h4>
+              <p>
+                Pensée pour le bureau à domicile et le télétravail, la série M
+                associe un design épuré avec des fonctionnalités pratiques :
+                USB-C avec Power Delivery pour connecter un laptop en un câble,
+                micro intégré, faible émission de lumière bleue et mode Eye
+                Ease. Disponible en 24 et 27 pouces en Full HD ou 4K. Un bon
+                équilibre entre praticité, esthétique et prix pour les
+                télétravailleurs.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>HP OMEN Display & Victus Display — Gaming</h4>
+              <p>
+                HP adresse le gaming avec deux niveaux d'écrans. Les moniteurs
+                <strong>OMEN</strong> proposent des dalles IPS ou OLED QHD/4K
+                avec des fréquences allant jusqu'à 240 Hz, un temps de réponse
+                de 1 ms, la compatibilité NVIDIA G-Sync et AMD FreeSync Premium
+                Pro, et un éclairage RGB Omen Light Studio. Les écrans
+                <strong>Victus</strong> reprennent le positionnement accessible
+                : 165 Hz Full HD, IPS, FreeSync — un excellent point d'entrée
+                dans le gaming à prix contenu.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Couvert ici</span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ARTICLES LIÉS -->
+      <section id="articles">
+        <div class="section-label">Articles de la série</div>
+        <h2>Tous les articles HP 📚</h2>
+        <p>
+          Retrouvez les guides détaillés sur chaque gamme HP. Cliquez sur une
+          carte pour accéder à l'article complet.
+        </p>
+
+        <div class="related-grid">
+          <a class="related-card" href="hp-pavilion.html">
+            <div class="rc-emoji">🏠</div>
+            <div class="rc-label">Grand public</div>
+            <h4>HP Pavilion</h4>
+            <p>
+              La gamme historique de HP — polyvalente, abordable et colorée.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-essential.html">
+            <div class="rc-emoji">📘</div>
+            <div class="rc-label">Entrée de gamme</div>
+            <h4>HP Essential</h4>
+            <p>Simple, économique — le premier laptop pour petits budgets.</p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-envy.html">
+            <div class="rc-emoji">💎</div>
+            <div class="rc-label">Premium grand public</div>
+            <h4>HP Envy</h4>
+            <p>
+              Design aluminium, OLED, Bang & Olufsen — le haut de gamme
+              accessible.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-spectre.html">
+            <div class="rc-emoji">✨</div>
+            <div class="rc-label">Ultrabook premium</div>
+            <h4>HP Spectre x360</h4>
+            <p>
+              Le meilleur de HP — OLED, charnière 360°, châssis aluminium
+              ultrafin.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-omnibook.html">
+            <div class="rc-emoji">🔮</div>
+            <div class="rc-label">PC IA</div>
+            <h4>HP OmniBook</h4>
+            <p>
+              La nouvelle gamme IA de HP — NPU intégré, Copilot+, ARM et x86.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-elitebook.html">
+            <div class="rc-emoji">🏆</div>
+            <div class="rc-label">Pro haut de gamme</div>
+            <h4>HP EliteBook</h4>
+            <p>
+              MIL-SPEC, HP Wolf Security, Sure View — le laptop pro ultime de
+              HP.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-elite-pro.html">
+            <div class="rc-emoji">💼</div>
+            <div class="rc-label">Ultrabook pro</div>
+            <h4>HP Elite Dragonfly & x360</h4>
+            <p>
+              Moins de 990 g, 5G optionnel — pour les cadres mobiles exigeants.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-essential-pro.html">
+            <div class="rc-emoji">🏗️</div>
+            <div class="rc-label">Pro accessible</div>
+            <h4>HP ProBook (Essential Pro)</h4>
+            <p>
+              La robustesse professionnelle à prix PME — la gamme intermédiaire
+              HP.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-zbook.html">
+            <div class="rc-emoji">⚙️</div>
+            <div class="rc-label">Station de travail mobile</div>
+            <h4>HP ZBook</h4>
+            <p>GPU RTX pro certifié ISV, DreamColor — pour la CAO et la 3D.</p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-omen.html">
+            <div class="rc-emoji">🔥</div>
+            <div class="rc-label">Gaming haut de gamme</div>
+            <h4>HP OMEN</h4>
+            <p>RTX 4090, 240 Hz, Thermal Grizzly — le gaming sans compromis.</p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-victus.html">
+            <div class="rc-emoji">🎯</div>
+            <div class="rc-label">Gaming accessible</div>
+            <h4>HP Victus</h4>
+            <p>Bonnes performances gaming à prix contenu — le choix malin.</p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-chromebook.html">
+            <div class="rc-emoji">🎓</div>
+            <div class="rc-label">Éducation & ChromeOS</div>
+            <h4>HP Chromebook</h4>
+            <p>
+              ChromeOS, Google Workspace, gestion centralisée — le choix des
+              écoles.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-z-workstation.html">
+            <div class="rc-emoji">⚙️</div>
+            <div class="rc-label">Station de travail desktop</div>
+            <h4>HP Z Series Workstation</h4>
+            <p>
+              Xeon W, GPU pro, RAM ECC — puissance maximale pour la création et
+              l'IA.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-omnidesk.html">
+            <div class="rc-emoji">🏠</div>
+            <div class="rc-label">PC de bureau grand public</div>
+            <h4>HP OmniDesk</h4>
+            <p>
+              La nouvelle gamme desktop grand public HP — moderne, IA-ready,
+              épuré.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+
+          <a class="related-card" href="hp-elitedesk.html">
+            <div class="rc-emoji">🏢</div>
+            <div class="rc-label">Desktop entreprise</div>
+            <h4>HP Elite Mini / EliteDesk</h4>
+            <p>
+              Tour, SFF ou micro — la référence des parcs informatiques
+              professionnels HP.
+            </p>
+            <div class="rc-arrow">Lire l'article →</div>
+          </a>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <div class="section-label">En résumé</div>
+        <h2>HP en quelques mots 💡</h2>
+        <div class="card">
+          <p>
+            En 85 ans d'existence, HP a traversé toutes les révolutions
+            technologiques : des oscilloscopes aux calculatrices scientifiques,
+            des imprimantes laser aux laptops premium, des serveurs datacenter
+            aux PC IA. Née dans un garage de Palo Alto, l'entreprise est devenue
+            un symbole de l'American tech — et le berceau de ce qu'on appellera
+            plus tard la Silicon Valley.
+          </p>
+          <p>
+            La force de HP Inc. réside dans la clarté et la profondeur de sa
+            segmentation : <strong>Spectre</strong> pour le premium,
+            <strong>Envy</strong> pour le milieu de gamme élégant,
+            <strong>EliteBook</strong> pour le professionnel sécurisé,
+            <strong>OMEN</strong> pour le gaming haut de gamme,
+            <strong>Victus</strong> pour le gaming accessible,
+            <strong>OmniBook</strong> pour l'IA — chaque gamme a une identité
+            lisible et une cible bien définie.
+          </p>
+          <p>
+            Avec son virage vers les <strong>PC Copilot+</strong>, la sécurité
+            matérielle via HP Wolf et l'intégration de l'IA dans ses workflows,
+            HP se positionne pour rester incontournable dans un marché en pleine
+            mutation. Les prochains articles de cette série passeront chaque
+            gamme au microscope pour vous aider à faire le meilleur choix selon
+            votre profil et votre budget.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <p>© 2025 TechReview — Article rédigé à titre informatif</p>
+      <p>Sources : HP Inc., données publiques et rapports annuels</p>
+    </footer>
+  </body>
+</html>

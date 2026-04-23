@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dell Technologies - Presentation</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      :root {
+        --blue: #0076ce;
+        --blue-dark: #004f91;
+        --blue-light: #e8f4ff;
+        --ink: #0a0f1e;
+        --black: #222;
+        --border: #dde6f0;
+        --bg: #f7fafd;
+        --white: #ffffff;
+        --radius: 12px;
+        --red: #d1214c;
+        --gris: #ececed;
+      }
+
+      body {
+        color: var(--ink);
+        line-height: 1.7;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--blue-dark) 0%,
+          var(--blue) 60%,
+          #0098e6 100%
+        );
+        color: var(--white);
+        padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "DELL";
+        position: absolute;
+        right: -32px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 800;
+        font-size: clamp(96px, 20vw, 224px);
+        color: rgba(255, 255, 255, 0.06);
+        letter-spacing: -0.05em;
+        pointer-events: none;
+        line-height: 1;
+      }
+
+      .hero-inner {
+        max-width: 760px;
+        position: relative;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-weight: 800;
+        font-size: clamp(32px, 6vw, 60px);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .hero p {
+        font-size: clamp(16px, 2vw, 18px);
+        font-weight: 300;
+        opacity: 0.88;
+        max-width: 540px;
+        color: var(--white);
+      }
+
+      /* ── MAIN LAYOUT ── */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: clamp(32px, 5vw, 64px) clamp(16px, 4vw, 32px);
+      }
+
+      /* ── SECTION TITLE ── */
+      .section-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: clamp(22px, 3vw, 32px);
+        letter-spacing: -0.32px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #222;
+        margin-bottom: 16px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CARD ── */
+      .card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        margin-bottom: 20px;
+      }
+
+      /* ── STATS ROW ── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 16px;
+        margin: clamp(32px, 5vw, 64px) 0;
+      }
+
+      .stat {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-weight: 800;
+        font-size: 32px;
+        color: var(--blue);
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--black);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* ── PRODUCT CATEGORIES ── */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .product-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: clamp(20px, 5vw, 32px);
+        position: relative;
+        overflow: hidden;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .product-card:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 24px rgba(0, 118, 206, 0.1);
+      }
+
+      .product-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--blue-light);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      .product-icon svg {
+        width: 22px;
+        height: 22px;
+        color: var(--blue);
+      }
+
+      .product-card h3 {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 20px;
+        letter-spacing: -0.01em;
+      }
+
+      .product-card p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+
+      /* ── LAPTOPS SECTION ── */
+      .laptop-list {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      .laptop-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        margin-bottom: 12px;
+        transition: border-color 0.2s;
+      }
+
+      .laptop-item:hover {
+        border-color: var(--blue);
+      }
+
+      .laptop-item::before {
+        content: none !important;
+      }
+
+      .laptop-item {
+        list-style: none !important;
+      }
+
+      .laptop-info h4 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .laptop-info p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+      }
+
+      .laptop-tag {
+        margin-left: auto;
+        flex-shrink: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        background: var(--blue-light);
+        color: var(--blue);
+      }
+
+      .laptop-tag.future {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 48px 0;
+      }
+
+      /* ── INFO BOX ── */
+      .info-box {
+        background: var(--gris);
+        border-left: 4px solid var(--red);
+        border-radius: 0 var(--radius) var(--radius) 0;
+        padding: 20px 20px;
+        margin-top: 20px;
+      }
+
+      .info-box p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── OTHER PRODUCTS ── */
+      .other-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .other-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        background: var(--white);
+        font-size: 16px;
+      }
+
+      .other-card strong {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .other-card span {
+        color: var(--black);
+      }
+
+      /* ── TEXTE JUSTIFIÉ ── */
+      .paragraph-text {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 640px) {
+        nav {
+          display: none;
+        }
+        .hero::before {
+          display: none;
+        }
+        .laptop-item {
+          flex-wrap: wrap;
+        }
+        .laptop-tag {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="badge">Brand under the spotlight</div>
+        <h1>Dell Technologies</h1>
+        <p class="paragraph-text">
+          An essential American multinational company in the field of
+          information technology — from personal computers for the general
+          public to the most demanding enterprise infrastructures.
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <!-- PRESENTATION -->
+      <section id="presentation">
+        <div class="section-label">Introduction</div>
+        <h2>Who is Dell?</h2>
+
+        <div class="card">
+          <p class="paragraph-text">
+            Dell was founded in <strong>1984</strong> in Austin, Texas by
+            <strong>Michael Dell</strong>, then a student at the University of
+            Texas. At the age of 19, he started the company from his dorm room
+            with a simple yet revolutionary concept for its time: selling
+            computers directly to customers without intermediaries. This direct
+            sales model allowed him to offer cheaper and customizable computers.
+          </p>
+          <p class="paragraph-text">
+            In 2016, Dell completed one of the largest acquisitions in the
+            history of information technology by purchasing
+            <strong>EMC Corporation</strong> for $67 billion, leading to the
+            creation of <strong>Dell Technologies</strong>. The company thus
+            became a giant covering both consumer hardware and the most complex
+            professional solutions.
+          </p>
+          <p class="paragraph-text">
+            Today, Dell Technologies operates in more than
+            <strong>180 countries</strong>, employs tens of thousands of people
+            worldwide, and is regularly ranked among the largest companies in
+            the Fortune 500.
+          </p>
+        </div>
+
+        <!-- STATISTICS -->
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">1984</div>
+            <div class="stat-label">Year founded</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Austin</div>
+            <div class="stat-label">Texas, United States</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">180+</div>
+            <div class="stat-label">Countries covered</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">40 years</div>
+            <div class="stat-label">On the market</div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRODUCT RANGE -->
+      <section id="products">
+        <div class="section-label">Product Range</div>
+        <h2>What Dell Produces</h2>
+        <p class="paragraph-text">
+          Dell covers a very wide range of IT products, from consumer hardware
+          to enterprise infrastructure solutions. Here is an overview of the
+          main categories.
+        </p>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3>Laptops</h3>
+            <p class="paragraph-text">
+              From thin ultrabooks to mobile workstations, Dell offers several
+              laptop ranges for all types of use.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3>Desktops</h3>
+            <p>
+              Towers, all-in-one PCs, and mini PCs for individuals and
+              businesses, including the Inspiron, OptiPlex, and XPS lines.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3>Monitors</h3>
+            <p class="paragraph-text">
+              A wide range of displays: from basic office monitors to gaming and
+              professional UltraSharp 4K monitors.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🗄️</div>
+            <h3>Servers & Storage</h3>
+            <p class="paragraph-text">
+              PowerEdge, PowerVault, PowerStore… Dell is a major player in
+              enterprise infrastructure and data centers.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">☁️</div>
+            <h3>Networking & Cloud</h3>
+            <p class="paragraph-text">
+              Networking solutions, hybrid cloud, and managed services through
+              Dell Technologies Services and VMware.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖱️</div>
+            <h3>Peripherals</h3>
+            <p class="paragraph-text">
+              Keyboards, mice, webcams, docking stations, cases, and accessories
+              complete the Dell ecosystem for professionals.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <p class="paragraph-text">
+            📌 In this article series, we focus on
+            <strong>laptops</strong>, <strong>desktops</strong>, and
+            <strong>monitors</strong>. Servers and networking solutions will be
+            covered in separate content.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- LAPTOPS -->
+      <section id="laptops">
+        <div class="section-label">Focus — Laptops</div>
+        <h2>Dell Laptop Series</h2>
+        <p class="paragraph-text">
+          Dell structures its laptop offering into several distinct series, each
+          targeting a specific type of user. Each series will be covered in a
+          dedicated article.
+        </p>
+
+        <ul class="laptop-list">
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>XPS</h4>
+              <p class="paragraph-text">
+                Dell’s premium lineup designed for creators and demanding users
+                looking for elegant design, high performance, and a high-quality
+                display in a compact form factor.
+              </p>
+            </div>
+            <span class="laptop-tag future">Article coming soon</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Latitude</h4>
+              <p class="paragraph-text">
+                Dell’s professional benchmark. Durable, secure, and easy to
+                manage in enterprise environments, Latitude is built for
+                demanding working conditions.
+              </p>
+            </div>
+            <span class="laptop-tag future">Article coming soon</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Precision</h4>
+              <p class="paragraph-text">
+                High-performance mobile workstations with ISV certifications,
+                designed for engineers, architects, and professionals working in
+                3D or CAD.
+              </p>
+            </div>
+            <span class="laptop-tag future">Article coming soon</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Inspiron</h4>
+              <p class="paragraph-text">
+                Entry-level and mid-range consumer lineup, ideal for everyday
+                use: web browsing, office work, and multimedia.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Alienware</h4>
+              <p class="paragraph-text">
+                Dell’s gaming brand, acquired in 2006. Powerful machines with
+                high-end GPUs, high refresh rate displays, and a distinctive
+                futuristic design.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Vostro</h4>
+              <p class="paragraph-text">
+                Designed for small and medium-sized businesses: reliability,
+                good value for money, without the advanced management features
+                typical of the Latitude series.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- DESKTOPS -->
+      <section id="desktop">
+        <div class="section-label">Focus — Desktops</div>
+        <h2>Dell Desktop Series</h2>
+        <p class="paragraph-text">
+          Dell offers a complete portfolio of desktop computers, from business
+          mini PCs to ultra-powerful tower workstations, covering all types of
+          users.
+        </p>
+
+        <ul class="laptop-list">
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>OptiPlex</h4>
+              <p class="paragraph-text">
+                Dell’s flagship business line. Available in tower, mini tower,
+                micro, and all-in-one formats. OptiPlex is designed for
+                professional office use: easy deployment, management, and
+                maintenance within corporate IT infrastructures. It is known for
+                its reliability, long lifespan, and compatibility with
+                management tools (Dell Command | Update, SCCM…).
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Precision (Tower / Rack)</h4>
+              <p class="paragraph-text">
+                Dell desktop workstations designed for professionals with high
+                demands: engineers, architects, 3D artists, or data specialists.
+                Available in tower (T series) or rack (R series) formats,
+                equipped with Xeon or Core Ultra processors, certified GPUs
+                (NVIDIA RTX / AMD Radeon Pro), and support for large amounts of
+                ECC memory for maximum computational reliability.
+              </p>
+            </div>
+            <span class="laptop-tag future">Article coming soon</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Inspiron Desktop</h4>
+              <p class="paragraph-text">
+                The desktop version of the Inspiron consumer line. Compact and
+                affordable, suitable for home or school use: web browsing,
+                streaming, and basic office tasks. Available as a compact tower
+                or slim design.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>XPS Desktop</h4>
+              <p class="paragraph-text">
+                Dell’s premium desktop in a compact and elegant chassis. Offers
+                high performance for creators and demanding users, with support
+                for powerful dedicated GPUs and fast NVMe storage, all in a
+                minimalist design suitable for both office and living spaces.
+              </p>
+            </div>
+            <span class="laptop-tag future">Article coming soon</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Alienware Aurora</h4>
+              <p class="paragraph-text">
+                A gaming tower from Alienware, designed for the most demanding
+                PC gamers. Supports the latest high-end graphics cards, advanced
+                cooling systems, and the brand’s signature design with RGB
+                lighting.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MONITORS -->
+      <section id="monitors">
+        <div class="section-label">Focus — Monitors</div>
+        <h2>Dell Monitor Range</h2>
+        <p class="paragraph-text">
+          Dell is one of the most recognized monitor manufacturers on the
+          market, offering a range that covers office, professional, and gaming
+          use cases.
+        </p>
+
+        <ul class="laptop-list">
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>UltraSharp</h4>
+              <p class="paragraph-text">
+                Dell’s premium lineup designed for graphics and visual
+                professionals. UltraSharp monitors stand out for their excellent
+                color accuracy (sRGB, DCI-P3, and Adobe RGB coverage), high
+                resolutions (4K, 5K, or up to 8K), and factory calibration,
+                making them ideal for photo editing and content creation.
+                Available in sizes from 24 to 40 inches, they are also
+                appreciated for their ergonomics: height, tilt, swivel, and
+                pivot adjustments, as well as VESA mount compatibility.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Gaming — Alienware & G-Series</h4>
+              <p class="paragraph-text">
+                Dell targets the gaming market through two brands:
+                <strong>Alienware</strong> for the high-end segment (QD-OLED,
+                360 Hz, 0.1 ms response time) and
+                <strong>G-Series</strong> offering excellent value for money.
+                These monitors support G-Sync or FreeSync Premium, with refresh
+                rates ranging from 144 Hz to 360 Hz, IPS or OLED panels, and
+                resolutions from Full HD to QHD and up to 4K depending on the
+                model.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>P Series — Professional</h4>
+              <p class="paragraph-text">
+                A versatile professional lineup widely used in businesses. P
+                Series monitors offer full ergonomics (height, tilt, swivel, and
+                pivot adjustments), integrated USB hubs, and connectivity suited
+                to modern workstations (DisplayPort, HDMI, USB-C). IPS panels
+                ensure good viewing angles and solid color performance for
+                intensive office work. Available in sizes from 22 to 27 inches.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>S Series — Stylish</h4>
+              <p class="paragraph-text">
+                The S Series is aimed at everyday users and households looking
+                for a stylish monitor at an affordable price. The design is slim
+                and clean, with thin bezels and a modern stand. Panels range
+                from Full HD to 4K, using IPS or VA technology depending on the
+                model. Compared to the P Series, it offers fewer adjustment
+                options but makes up for it with an attractive design and
+                competitive pricing.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Included here
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <div class="section-label">Summary</div>
+        <h2>Dell in a Few Words</h2>
+        <div class="card">
+          <p class="paragraph-text">
+            From its humble beginnings in a student dorm room in Austin to its
+            current status as a global IT giant, Dell has continuously adapted
+            and innovated. As a pioneer of the direct sales model, it has
+            established itself in both the consumer market and the most
+            demanding enterprise environments.
+          </p>
+          <p class="paragraph-text">
+            Its strength lies in the diversity and consistency of its offering:
+            each product line addresses a specific need — from Alienware gaming
+            laptops to Precision mobile workstations, as well as UltraSharp
+            monitors and PowerEdge servers.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,1755 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      :root {
+        --blue: #0096d6;
+        --blue-dark: #005f8a;
+        --blue-light: #e6f6fd;
+        --ink: #0a0f1e;
+        --muted: #64748b;
+        --border: #e2eaf2;
+        --bg: #f5f9fc;
+        --white: #ffffff;
+        --radius: 12px;
+        --gris: #ececed;
+        --black: #222;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        color: var(--black);
+        line-height: 1.7;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          #002f4b 0%,
+          var(--blue-dark) 45%,
+          var(--blue) 100%
+        );
+        color: var(--white);
+        padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "HP";
+        position: absolute;
+        right: -16px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 800;
+        font-size: clamp(128px, 28vw, 288px);
+        color: rgba(255, 255, 255, 0.05);
+        letter-spacing: 1px;
+        pointer-events: none;
+        line-height: 1;
+      }
+
+      .hero-inner {
+        max-width: 760px;
+        position: relative;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-weight: 800;
+        font-size: clamp(32px, 6vw, 60px);
+        line-height: 1.1;
+        letter-spacing: -0.5px;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .hero p {
+        font-size: clamp(16px, 2vw, 18px);
+        font-weight: 300;
+        opacity: 0.88;
+        max-width: 580px;
+        color: var(--white);
+      }
+
+      /* ── MAIN ── */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: clamp(32px, 5vw, 64px) clamp(16px, 4vw, 32px);
+      }
+
+      /* ── SECTION LABEL ── */
+      .section-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--black);
+        margin-bottom: 8px;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: clamp(23px, 3vw, 32px);
+        letter-spacing: -0.32px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: var(--black);
+        margin-bottom: 16px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CARD ── */
+      .card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        margin-bottom: 24px;
+        font-size: 16px;
+      }
+
+      /* ── STATS ── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+        gap: 16px;
+        margin: 40px 0;
+      }
+
+      .stat {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 23px;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-weight: 800;
+        font-size: 30px;
+        color: var(--black);
+        letter-spacing: -0.5px;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--black);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* ── TIMELINE ── */
+      .timeline {
+        position: relative;
+        margin: 24px 0 32px;
+        padding-left: 32px;
+        border-left: 2px solid var(--border);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 24px;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        left: -39px;
+        top: 9px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--blue);
+        border: 2px solid var(--white);
+        box-shadow: 0 0 0 2px var(--blue);
+      }
+
+      .timeline-year {
+        font-weight: 700;
+        font-size: 16px;
+        color: var(--black);
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+
+      .timeline-text {
+        font-size: 16px;
+        color: #334155;
+        margin: 0;
+      }
+
+      /* ── PRODUCTS GRID ── */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
+        gap: 20px;
+        margin-top: 24px;
+      }
+
+      .product-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 28px 24px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .product-card:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 24px rgba(0, 150, 214, 0.09);
+      }
+
+      .product-icon {
+        font-size: 29px;
+        margin-bottom: 12px;
+        line-height: 1;
+      }
+
+      .product-card h3 {
+        font-weight: 700;
+        font-size: 17px;
+        margin-bottom: 1px;
+        letter-spacing: -0.16px;
+      }
+
+      .product-card p {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      /* ── ITEM LIST ── */
+      .item-list {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      .item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 23px 24px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        margin-bottom: 12px;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Slightly larger CTA blocks in laptop/desktop sections */
+      #laptops .item,
+      #desktop .item {
+        padding-top: 28px;
+        padding-bottom: 28px;
+      }
+
+      .item:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 20px rgba(0, 150, 214, 0.08);
+      }
+
+      .item-emoji {
+        font-size: 23px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .item-info {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .item-info h4 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+
+      .item-info p {
+        font-size: 16px;
+        color: var(--black);
+        margin: 0;
+        line-height: 1.55;
+      }
+
+      .item-tag {
+        flex-shrink: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        white-space: nowrap;
+        align-self: flex-start;
+        margin-top: 4px;
+      }
+
+      .tag-here {
+        background: #f0fdf4;
+        color: #166534;
+      }
+      .tag-soon {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+      .tag-article {
+        background: var(--blue-light);
+        color: var(--black);
+      }
+
+      .item-link-arrow {
+        flex-shrink: 0;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: var(--blue-light);
+        color: var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+        align-self: center;
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+
+      a.item:hover .item-link-arrow {
+        background: var(--blue);
+        color: var(--white);
+      }
+
+      /* ── SUB-SECTION TITLE (catégorie dans laptops) ── */
+      .sub-title {
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        margin: 32px 0 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--ink);
+      }
+
+      .sub-title::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+        margin-left: 8px;
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 48px 0;
+      }
+
+      /* ── INFO BOX ── */
+      .info-box {
+        background: var(--blue-light);
+        border-left: 4px solid var(--blue);
+        border-radius: 0 var(--radius) var(--radius) 0;
+        padding: 20px 24px;
+        margin-top: 24px;
+      }
+
+      .info-box p {
+        font-size: 16px;
+        color: #004a70;
+        margin: 0;
+      }
+
+      /* ---- TEXTE JUSTIFI√â ---- */
+      .paragraph-text {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      #produits,
+      #laptops,
+      #desktop,
+      #moniteurs,
+      #articles {
+        font-size: 16px;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 768px) {
+        nav a:not(.nav-back) {
+          display: none;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero::before {
+          display: none;
+        }
+        .item {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="badge">🌍 Značka pod lupou</div>
+        <h1>Hewlett-Packard — HP</h1>
+        <p>
+          Společnost HP, založená v garáži v Palo Altu v roce 1939, je jednou z
+          nejstarších technologických firem na světě a jedním z největších
+          výrobců počítačů a tiskáren na planetě.
+        </p>
+      </div>
+    </div>
+
+    <main>
+      <!-- PREZENTACE -->
+      <section id="presentation">
+        <div class="section-label">Představení</div>
+        <h2>Kdo je HP? 🏢</h2>
+        <div class="card">
+          <p class="paragraph-text">
+            <strong>Hewlett-Packard</strong> — známá spíše pod zkratkou
+            <strong>HP</strong> — je americká společnost založená v roce
+            <strong>1939</strong> <strong>Billem Hewlettem</strong> a
+            <strong>Davem Packardem</strong> v legendární garáži domu Packarda v
+            <strong>Palo Altu v Kalifornii</strong>. Tato garáž je dnes
+            považována za kolébku Silicon Valley. Jejich prvním produktem byl
+            audio oscilátor (HP 200A), prodávaný mimo jiné studiu Walt Disney
+            pro postprodukci filmu <em>Fantasia</em>.
+          </p>
+          <p class="paragraph-text">
+            Po desetiletí se HP prosadila jako průkopník v oblasti měřicích
+            přístrojů, vědeckých kalkulaček, laserových tiskáren a osobních
+            počítačů. V roce <strong>2002</strong> se HP spojila se společností
+            <strong>Compaq</strong> za 25 miliard dolarů a stala se tehdy
+            největším výrobcem PC na světě.
+          </p>
+          <p class="paragraph-text">
+            V roce <strong>2015</strong> došlo k historickému rozdělení
+            společnosti na dvě samostatné entity:
+            <strong>HP Inc.</strong> (počítače a tiskárny) a
+            <strong>Hewlett Packard Enterprise (HPE)</strong> (servery,
+            úložiště, sítě a podnikové služby).
+          </p>
+          <p class="paragraph-text">
+            Dnes je HP Inc. druhým nebo třetím největším výrobcem PC na světě, s
+            podílem na trhu kolem 20–22 %, působí ve více než
+            <strong>170 zemích</strong> a sídlí v
+            <strong>Palo Altu v Kalifornii</strong>.
+          </p>
+        </div>
+        <!-- STATS -->
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">1939</div>
+            <div class="stat-label">Rok založení</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">🇺🇸</div>
+            <div class="stat-label">Palo Alto, Kalifornie</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">85 let</div>
+            <div class="stat-label">Na trhu</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Top 3</div>
+            <div class="stat-label">Výrobce PC na světě</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">21%</div>
+            <div class="stat-label">Podíl na trhu PC</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">170+</div>
+            <div class="stat-label">Počet zemí</div>
+          </div>
+        </div>
+        <!-- TIMELINE -->
+        <div class="section-label" style="margin-top: 32px">
+          Klíčová historie 📅
+        </div>
+        <h2>Hlavní milníky HP</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1939</div>
+            <p class="timeline-text">
+              Bill Hewlett a Dave Packard zakládají HP v garáži v Palo Altu s
+              kapitálem 538 dolarů.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1972</div>
+            <p class="timeline-text">
+              HP uvádí <strong>HP-35</strong>, první kapesní vědeckou kalkulačku
+              na světě.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1984</div>
+            <p class="timeline-text">
+              Uvedení <strong>HP LaserJet</strong>, první laserové tiskárny pro
+              širokou veřejnost.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1994</div>
+            <p class="timeline-text">
+              Uvedení řady <strong>HP Pavilion</strong>, jedné z
+              nejprodávanějších PC řad.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2002</div>
+            <p class="timeline-text">
+              Fúze se společností <strong>Compaq</strong>.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2006</div>
+            <p class="timeline-text">
+              HP se stává největším výrobcem PC na světě.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2015</div>
+            <p class="timeline-text">
+              Rozdělení na HP Inc. a Hewlett Packard Enterprise.
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020</div>
+            <p class="timeline-text">Růst díky poptávce po práci na dálku.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2023–2024</div>
+            <p class="timeline-text">Zaměření na AI PC a bezpečnost.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRODUKTOVÁ ŘADA -->
+      <section id="produits">
+        <div class="section-label">Produktová řada</div>
+        <h2>Co HP vyrábí 🏭</h2>
+        <p class="paragraph-text">
+          HP Inc. strukturuje svou nabídku kolem dvou hlavních pilířů:
+          <strong>osobní systémy</strong> (notebooky, stolní počítače, pracovní
+          stanice, monitory) a <strong>tisková řešení</strong> (inkoustové,
+          laserové a velkoformátové tiskárny). Značka také nabízí příslušenství,
+          hardwarovou bezpečnost a spravované služby.
+        </p>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3>Notebooky</h3>
+            <p class="paragraph-text">
+              Od základních Chromebooků až po prémiový Spectre x360, včetně
+              profesionálních EliteBooků a herních OMEN — HP pokrývá všechny
+              segmenty trhu.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3 class="product-icon">Stolní počítače</h3>
+            <p class="paragraph-text">
+              Od modelů ProDesk a EliteDesk pro firmy až po spotřebitelské
+              modely OmniDesk, včetně pracovních stanic řady Z pro kreativce a
+              inženýry.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖱️</div>
+            <h3>Monitory</h3>
+            <p class="paragraph-text">
+              Řada E pro kancelářské použití, řada Z pro kreativní práci a
+              pracovní stanice a OMEN pro gaming — velikosti od 21 do 40 palců.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖨️</div>
+            <h3>Tiskárny a tisk</h3>
+            <p class="paragraph-text">
+              HP je světovým lídrem v oblasti tisku. Řady LaserJet
+              (profesionální), DeskJet a ENVY (pro domácnosti), OfficeJet Pro
+              (pro malé firmy), DesignJet (velkoformátový tisk) a HP Instant Ink
+              (předplatné inkoustu).
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🔒</div>
+            <h3>Zabezpečení — HP Wolf Security</h3>
+            <p class="paragraph-text">
+              Hardwarové bezpečnostní řešení integrované v podnikových
+              počítačích HP: ochrana proti malwaru na úrovni firmwaru, izolace
+              hrozeb a správa rizik.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🗄️</div>
+            <h3>Servery — HPE (samostatná entita)</h3>
+            <p class="paragraph-text">
+              Od roku 2015 jsou servery spravovány společností Hewlett Packard
+              Enterprise (HPE). Řady ProLiant, Synergy a Apollo pokrývají
+              potřeby datových center.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">⌨️</div>
+            <h3>Příslušenství</h3>
+            <p class="paragraph-text">
+              Klávesnice, myši, webkamery, Thunderbolt doky, sluchátka a tašky —
+              HP nabízí kompletní ekosystém doplňků ke svým počítačům.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🎮</div>
+            <h3>Gaming — OMEN &amp; Victus</h3>
+            <p class="paragraph-text">
+              Dvě herní značky: <strong>OMEN</strong> pro high-end gaming a
+              <strong>Victus</strong> pro dostupnější hraní s dobrým výkonem.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <p class="paragraph-text">
+            📌 V rámci této série článků se zaměřujeme na
+            <strong>notebooky</strong>, <strong>stolní počítače</strong> a
+            <strong>monitory</strong>. Tiskárny a servery HPE budou pokryty
+            samostatně.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- NOTEBOOKY -->
+      <section id="laptops">
+        <div class="section-label">Zaměření — Notebooky</div>
+        <h2>Řady notebooků HP 💻</h2>
+        <p class="paragraph-text">
+          HP nabízí jednu z nejširších nabídek notebooků na trhu, pokrývající
+          všechny segmenty: běžné uživatele, profesionály, kreativce, gaming i
+          vzdělávání. Řady jsou zde rozděleny podle způsobu použití.
+        </p>
+
+        <!-- BĚŽNÍ UŽIVATELÉ -->
+        <div class="sub-title">🧑‍💻 Běžné použití &amp; univerzální</div>
+        <ul class="item-list">
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">🏠 HP Pavilion</h4>
+              <p class="paragraph-text">
+                Historická řada HP uvedená v roce 1995, určená pro běžné
+                uživatele. Pavilion pokrývá každodenní použití — internet,
+                kancelářskou práci, streaming a videohovory — s dobrým poměrem
+                ceny a výkonu. Dostupný ve velikostech 14 a 15,6 palce, s
+                procesory Intel Core nebo AMD Ryzen, Full HD IPS displejem a
+                solidní výdrží baterie. Ideální pro studenty a rodiny.
+              </p>
+            </div>
+            <a class="item" href="/hp-pavilion.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">
+                📘 HP Essential (dříve HP Stream / HP 15)
+              </h4>
+              <p class="paragraph-text">
+                Základní cenově dostupná řada HP určená pro omezené rozpočty:
+                studenti a první počítače. Tyto notebooky nabízejí procesory
+                Intel Celeron nebo Pentium, 15,6" HD displej a často Windows v
+                režimu S nebo Microsoft 365. Lehký, jednoduchý a cenově dostupný
+                — zaměřený na základní potřeby.
+              </p>
+            </div>
+            <a class="item" href="/hp-essential.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">💎 HP Envy</h4>
+              <p clas="paragraph-text">
+                Vyšší střední třída pro běžné uživatele. Envy vyniká prémiovým
+                designem z broušeného hliníku, kvalitními OLED nebo IPS displeji
+                (2K, 4K), reproduktory Bang &amp; Olufsen a dobrým výkonem.
+                Dostupný v klasické verzi nebo jako 2v1 (Envy x360).
+              </p>
+            </div>
+            <a class="item" href="/hp-envy.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">✨ HP Spectre x360</h4>
+              <p clas="paragraph-text">
+                Vlajková loď HP. Ultra tenké hliníkové tělo, OLED dotykový
+                displej, otočný pant 360°, dlouhá výdrž baterie a prémiové
+                zpracování. Konkuruje modelům Dell XPS, MacBook Pro a Lenovo
+                Yoga.
+              </p>
+            </div>
+            <a class="item" href="/hp-spectre.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">🔮 HP OmniBook</h4>
+              <p clas="paragraph-text">
+                Nová řada AI notebooků představená v roce 2024, postavená na
+                procesorech s NPU. Optimalizovaná pro AI funkce jako přepis,
+                redukce šumu nebo generování obsahu. Symbol nové éry „AI PC“.
+              </p>
+            </div>
+            <a class="item" href="/hp-omnibook.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- PROFESIONÁLNÍ -->
+        <div class="sub-title">👔 Profesionální &amp; firmy</div>
+        <ul class="item-list">
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">🏆 HP EliteBook</h4>
+              <p clas="paragraph-text">
+                Špičková profesionální řada HP — ekvivalent ThinkPad od Lenovo.
+                Certifikace MIL-STD 810H (odolnost proti nárazům, extrémním
+                teplotám a vlhkosti), integrované zabezpečení HP Wolf Security,
+                čtečka otisků prstů, IR kamera pro Windows Hello, displej Sure
+                View (ochrana soukromí) a nástroje pro správu zařízení. Dostupný
+                ve velikostech 13 až 16 palců s procesory Intel Core Ultra nebo
+                AMD Ryzen Pro.
+              </p>
+            </div>
+            <a class="item" href="/hp-elitebook.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">
+                💼 HP Elite — Profesionální (HP Elite x360, HP Elite Dragonfly)
+              </h4>
+              <p clas="paragraph-text">
+                Prémiové firemní ultrabooky HP. <strong>Elite x360</strong> je
+                odolný 2v1 notebook pro mobilní profesionály, zatímco
+                <strong>Elite Dragonfly</strong> je nejlehčí ultrabook HP (méně
+                než 990 g), vyrobený z hořčíku a karbonu, určený pro manažery a
+                časté cestovatele. Oba modely nabízejí kompletní konektivitu,
+                volitelnou 4G/5G a HP Wolf Security.
+              </p>
+            </div>
+            <a class="item" href="/hp-elite-pro.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">
+                🏗️ HP Essential Profesionální (ProBook)
+              </h4>
+              <p clas="paragraph-text">
+                Základní až střední profesionální řada HP, mezi běžnými
+                notebooky a EliteBookem. <strong>ProBook</strong> nabízí dobrou
+                odolnost, kompletní konektivitu (USB-A, USB-C, HDMI, čtečka SD
+                karet) a základní bezpečnostní funkce za dostupnou cenu pro malé
+                firmy a živnostníky. Dostupný v řadách 440, 450 a 455 G-Series.
+              </p>
+            </div>
+            <a class="item" href="/hp-essential-pro.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">⚙️ HP ZBook — Mobilní pracovní stanice</h4>
+              <p clas="paragraph-text">
+                Mobilní pracovní stanice HP určené pro profesionály s vysokými
+                nároky na grafiku a výkon. ZBook obsahuje profesionální GPU
+                NVIDIA RTX, certifikace ISV (Autodesk, SolidWorks, Adobe),
+                procesory Intel Core Ultra HX nebo Xeon, ECC paměť a 4K
+                DreamColor displeje. Dostupné jako Firefly (lehké), Studio
+                (univerzální) a Fury (maximální výkon).
+              </p>
+            </div>
+            <a class="item" href="/hp-zbook.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- GAMING -->
+        <div class="sub-title">🎮 Gaming</div>
+        <ul class="item-list">
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">🔥 HP OMEN</h4>
+              <p clas="paragraph-text">
+                Herní řada HP vyšší třídy. Notebooky OMEN jsou vybaveny
+                výkonnými grafickými kartami NVIDIA GeForce RTX (až RTX 4090
+                Laptop), displeji s vysokou obnovovací frekvencí (až 240 Hz
+                QHD), pokročilým chlazením (Thermal Grizzly) a softwarem OMEN
+                Gaming Hub pro optimalizaci výkonu. OMEN Transcend je nejtenčí a
+                nejlehčí model v řadě a konkuruje ASUS ROG Zephyrus a Razer
+                Blade.
+              </p>
+            </div>
+            <a class="item" href="/hp-omen.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">🎯 HP Victus</h4>
+              <p clas="paragraph-text">
+                Dostupný herní notebook od HP určený pro hráče, kteří chtějí
+                dobrý výkon bez vysoké ceny. Victus nabízí grafické karty NVIDIA
+                GeForce RTX 3050 až 4060, 144 Hz Full HD displeje, střídmý
+                design (bez výrazného RGB) a příznivou cenu. Oblíbený mezi
+                studenty a uživateli hledajícími univerzální notebook pro hraní
+                i práci.
+              </p>
+            </div>
+            <a class="item" href="/hp-victus.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- CHROMEBOOK -->
+        <div class="sub-title">🎓 Chromebook &amp; vzdělávání</div>
+        <ul class="item-list">
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">🎓 HP Chromebook</h4>
+              <p clas="paragraph-text">
+                Chromebooky HP běží na systému <strong>ChromeOS</strong> od
+                Google a jsou navrženy pro jednoduchost, bezpečnost a lehké
+                použití. Jsou velmi rozšířené ve školách, nabízejí rychlé
+                spuštění, dlouhou výdrž baterie, centrální správu přes Google
+                Admin Console a přístup k aplikacím Google (Docs, Slides, Meet).
+                Dostupné v levnějších plastových verzích nebo v prémiovém
+                hliníkovém provedení (HP Chromebook Plus).
+              </p>
+            </div>
+            <a class="item" href="/hp-chromebook.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- STOLNÍ POČÍTAČE -->
+      <section id="desktop">
+        <div class="section-label">Zaměření — Stolní počítače</div>
+        <h2>Řady stolních počítačů HP 🖥️</h2>
+        <p clas="paragraph-text">
+          HP nabízí kompletní portfolio stolních počítačů — od firemních mini PC
+          přes výkonné pracovní stanice až po domácí počítače a all-in-one
+          řešení.
+        </p>
+
+        <ul class="item-list">
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">
+                🏢 HP Elite — Profesionální stolní PC (EliteDesk / Elite Mini)
+              </h4>
+              <p clas="paragraph-text">
+                Referenční řada HP pro firemní IT infrastrukturu. Dostupná ve
+                formátu tower, SFF, micro a all-in-one. EliteDesk (nově HP Elite
+                Mini) vyniká snadnou správou, certifikovanou odolností a
+                pokročilým zabezpečením HP Wolf Security. Model Elite Mini 800
+                G9 je oblíbený díky kompaktní velikosti a vysokému výkonu.
+              </p>
+            </div>
+            <a class="item" href="/hp-elitedesk.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">
+                🏗️ HP Essential Profesionální — Desktop (ProDesk)
+              </h4>
+              <p clas="paragraph-text">
+                Základní profesionální řada stolních počítačů HP. ProDesk nabízí
+                spolehlivost a správu za dostupnou cenu pro malé firmy:
+                zabezpečené spuštění, TPM šifrování, kompletní konektivitu a
+                snadnou rozšiřitelnost. Dostupný ve formátech tower, SFF a
+                micro.
+              </p>
+            </div>
+            <a class="item" href="/hp-essential-pro-desktop.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">🏠 HP OmniDesk</h4>
+              <p clas="paragraph-text">
+                Nová řada stolních počítačů HP pro běžné uživatele, uvedená v
+                roce 2024. Dostupná jako kompaktní tower nebo all-in-one, s
+                moderními procesory Intel Core nebo AMD Ryzen, elegantním
+                designem a integrovanými AI funkcemi. Určena pro domácnosti a
+                práci z domova.
+              </p>
+            </div>
+            <a class="item" href="/hp-omnidesk.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">⚙️ HP Z Series — Pracovní stanice</h4>
+              <p clas="paragraph-text">
+                Profesionální pracovní stanice HP. Dostupné v různých formátech:
+                <strong>Z2 Mini</strong>, <strong>Z4</strong>,
+                <strong>Z6</strong> a <strong>Z8 Fury</strong>. Nabízejí
+                procesory Intel Xeon nebo Core i9, profesionální GPU NVIDIA RTX
+                a podporu velké kapacity RAM.
+              </p>
+            </div>
+            <a class="item" href="/hp-z-workstation.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+
+          <li>
+            <div class="item-info">
+              <h4 class="item-emoji">
+                🎮 HP OMEN Desktop &amp; Victus Desktop
+              </h4>
+              <p clas="paragraph-text">
+                Herní stolní počítače HP. Modely OMEN 45L a 35L nabízejí
+                špičkové chlazení, snadný přístup ke komponentám a vysoký výkon.
+                Victus Desktop nabízí dostupnější řešení s dobrým herním
+                výkonem.
+              </p>
+            </div>
+            <a class="item" href="/hp-omen-desktop.html"
+              ><span class="item-tag tag-article">📄 Číst článek</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MONITORY -->
+      <section id="moniteurs">
+        <div class="section-label">Zaměření — Monitory</div>
+        <h2>Nabídka monitorů HP 🖱️</h2>
+        <p clas="paragraph-text">
+          HP nabízí řadu monitorů rozdělenou do několika sérií podle použití: od
+          kancelářské práce přes gaming až po profesionální tvorbu. Značka je
+          méně dominantní než Dell UltraSharp v high-end segmentu, ale nabízí
+          kvalitní produkty s moderní USB-C konektivitou.
+        </p>
+
+        <ul class="item-list">
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎨</div>
+            <div class="item-info">
+              <h4>HP Z Display — Profesionální tvorba</h4>
+              <p clas="paragraph-text">
+                Prémiové monitory HP pro kreativce a pracovní stanice Z. Modely
+                jako Z27k G3 a Z32k G3 nabízejí 4K IPS panely, široké barevné
+                pokrytí DCI-P3, kalibraci z výroby a Thunderbolt 4 s napájením
+                až 100 W.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zde pokryto</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🏢</div>
+            <div class="item-info">
+              <h4>HP E Series — Kancelář</h4>
+              <p clas="paragraph-text">
+                Referenční řada pro firmy. Nabízí plnou ergonomii, USB hub,
+                USB-C připojení s napájením a IPS panely s nízkým modrým
+                světlem. Oblíbené pro snadnou správu.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zde pokryto</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">💡</div>
+            <div class="item-info">
+              <h4>HP P Series — Základní profesionální</h4>
+              <p clas="paragraph-text">
+                Cenově dostupné monitory pro kanceláře a meetingy. Nabízí Full
+                HD IPS/VA panely, základní konektivitu a jednoduché provedení.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zde pokryto</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🏠</div>
+            <div class="item-info">
+              <h4>HP M Series — Domácí kancelář &amp; Home office</h4>
+              <p clas="paragraph-text">
+                Řada pro práci z domova. Nabízí USB-C připojení, moderní design,
+                ochranu očí a dobrý poměr ceny a výkonu.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zde pokryto</span>
+          </li>
+
+          <li class="item" style="cursor: default">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>HP OMEN &amp; Victus — Gaming</h4>
+              <p clas="paragraph-text">
+                Herní monitory HP. OMEN nabízí vysokou obnovovací frekvenci a
+                špičkové funkce, zatímco Victus představuje dostupnější variantu
+                pro běžné hráče.
+              </p>
+            </div>
+            <span class="item-tag tag-here">Zde pokryto</span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUVISEJÍCÍ ČLÁNKY -->
+      <section id="articles">
+        <p
+          style="
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #222;
+            margin-bottom: 8px;
+          "
+        >
+          Články série
+        </p>
+        <h2
+          style="
+            font-weight: 700;
+            font-size: 28px;
+            color: #222;
+            margin-bottom: 8px;
+          "
+        >
+          Všechny články HP
+        </h2>
+        <p style="font-size: 16px; color: #222; margin-bottom: 28px">
+          Podrobné průvodce ke všem řadám HP. Klikněte na řádek pro otevření
+          článku.
+        </p>
+
+        <table
+          style="
+            width: 100%;
+            border-collapse: collapse;
+            font-family:
+              system-ui,
+              -apple-system,
+              sans-serif;
+            font-size: 16px;
+          "
+        >
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+                width: 200px;
+              "
+            >
+              Spotřebitelská řada
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #222;
+                white-space: nowrap;
+              "
+            >
+              HP Pavilion
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Klasická řada HP — univerzální, cenově dostupná a barevná.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-pavilion.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Základní řada
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Essential
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Jednoduchý a levný notebook pro základní použití.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-essential.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Prémiová spotřebitelská
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Envy
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Hliníkové tělo, OLED, Bang &amp; Olufsen — dostupný prémiový
+              segment.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-envy.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Prémiový ultrabook
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Spectre x360
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              To nejlepší od HP — OLED, 360° pant, ultratenké hliníkové tělo.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-spectre.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              AI počítače
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP OmniBook
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Nová AI řada HP — integrované NPU, Copilot+, ARM i x86.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-omnibook.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Firemní vyšší třída
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP EliteBook
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              MIL-SPEC, HP Wolf Security, Sure View — špičkový firemní notebook.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-elitebook.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Firemní ultrabook
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Elite Dragonfly &amp; x360
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Pod 990 g, volitelná 5G — pro mobilní profesionály.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-elite-pro.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Firemní základ
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP ProBook (Essential Pro)
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Firemní odolnost za cenu pro malé a střední podniky.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-essential-pro.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Mobilní pracovní stanice
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP ZBook
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Certifikované RTX GPU, DreamColor — CAD a 3D práce.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-zbook.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Herní vyšší třída
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP OMEN
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              RTX 4090, 240 Hz, Thermal Grizzly — špičkový gaming.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-omen.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Dostupný gaming
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Victus
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Dobrý herní výkon za rozumnou cenu — chytrá volba.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-victus.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Vzdělávání &amp; ChromeOS
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Chromebook
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              ChromeOS, Google Workspace, centrální správa — ideální do škol.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-chromebook.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Desktop pracovní stanice
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Z Series Workstation
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Xeon W, profesionální GPU, ECC RAM — maximální výkon pro AI a
+              tvorbu.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-z-workstation.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr style="border-bottom: 1px solid #e2eaf2">
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Spotřebitelský desktop
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP OmniDesk
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Nová desktop řada HP — moderní, připravená na AI, čistý design.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-omnidesk.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+          <tr>
+            <td
+              style="
+                padding: 14px 12px;
+                color: #222;
+                font-size: 16px;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                white-space: nowrap;
+              "
+            >
+              Firemní desktop
+            </td>
+            <td
+              style="
+                padding: 14px 12px;
+                font-weight: 700;
+                color: #0a0f1e;
+                white-space: nowrap;
+              "
+            >
+              HP Elite Mini / EliteDesk
+            </td>
+            <td style="padding: 14px 12px; color: #222">
+              Tower, SFF nebo micro — standard firemních IT řešení HP.
+            </td>
+            <td
+              style="padding: 14px 12px; text-align: right; white-space: nowrap"
+            >
+              <a
+                href="/hp-elitedesk.html"
+                style="color: #222; font-weight: 600; text-decoration: none"
+                class="item-tag tag-article"
+                >Číst článek →</a
+              >
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <div class="section-label">Shrnutí</div>
+        <h2>HP v několika slovech</h2>
+        <div class="card">
+          <p clas="paragraph-text">
+            Během 85 let své existence prošla společnost HP všemi zásadními
+            technologickými revolucemi: od osciloskopů a kalkulaček přes
+            laserové tiskárny a prémiové notebooky až po datacentrové servery a
+            AI počítače. Založená v garáži v Palo Altu se stala symbolem
+            americké technologie a kolébkou toho, co se později nazvalo Silicon
+            Valley.
+          </p>
+          <p clas="paragraph-text">
+            Síla HP Inc. spočívá v jasné a přehledné segmentaci:
+            <strong>Spectre</strong> pro prémiový segment,
+            <strong>Envy</strong> pro elegantní střední třídu,
+            <strong>EliteBook</strong> pro zabezpečené firemní použití,
+            <strong>OMEN</strong> pro špičkový gaming,
+            <strong>Victus</strong> pro dostupný gaming,
+            <strong>OmniBook</strong> pro AI — každá řada má jasnou identitu a
+            cílovou skupinu.
+          </p>
+          <p clas="paragraph-text">
+            Díky přechodu na <strong>Copilot+ PC</strong>, hardwarovému
+            zabezpečení HP Wolf a integraci umělé inteligence do pracovních
+            procesů se HP připravuje udržet si silnou pozici na rychle se
+            měnícím trhu. Další články této série se budou detailně věnovat
+            jednotlivým řadám, aby vám pomohly vybrat nejlepší zařízení podle
+            vašich potřeb a rozpočtu.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

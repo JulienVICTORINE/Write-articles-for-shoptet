@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Spectre x360 — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Spectre x360 logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-logo.png"
+          alt="HP Spectre x360 Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">💻 Ordinateurs portables HP</div>
+        <h1 class="article-title">
+          HP Spectre x360 — Le fleuron ultra-premium de HP
+        </h1>
+        <p class="article-intro">
+          Le HP Spectre x360 est le laptop le plus haut de gamme de toute la
+          gamme HP grand public. Châssis en aluminium taillé en biseau, écran
+          OLED 2.8K ou 4K tactile, charnière 360° et autonomie jusqu'à 17 heures
+          — il représente ce que HP sait faire de mieux. Un concurrent direct du
+          Dell XPS, du MacBook Pro et du Lenovo Yoga Slim, à un niveau de
+          finition rarement atteint sous Windows.
+        </p>
+      </div>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-14-main.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION -->
+      <section>
+        <h2>✨ Présentation de la gamme</h2>
+        <p>
+          Le HP Spectre x360 se place au <strong>sommet de la gamme HP</strong>,
+          au-dessus de l'Envy et du Pavilion. Il s'adresse aux utilisateurs qui
+          veulent le meilleur sans concession : le design le plus soigné,
+          l'écran le plus qualitatif et les performances les plus solides dans
+          un châssis aussi fin que possible.
+        </p>
+        <p>
+          Disponible en <strong>13,5 et 14 pouces</strong>, le Spectre x360 se
+          distingue par ses
+          <strong>angles biseautés caractéristiques</strong> en aluminium, sa
+          charnière 360° permettant une utilisation en mode laptop, tablette,
+          tente ou présentation, et son écran tactile OLED en standard sur les
+          configurations récentes. Le stylet HP rechargeable est inclus ou
+          disponible en option selon les modèles.
+        </p>
+        <p>
+          Les dernières générations embarquent les processeurs
+          <strong>Intel Core Ultra</strong> de dernière génération avec NPU
+          intégré pour les fonctionnalités d'intelligence artificielle Windows
+          (Copilot+). La qualité de construction est supérieure à tout ce que HP
+          propose en dehors de la gamme EliteBook professionnelle.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/SphinxInline-removebg.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UTILISATEUR -->
+      <section>
+        <h2>👤 Pour qui est le HP Spectre x360 ?</h2>
+        <p>
+          Le Spectre x360 est un laptop premium qui correspond à des profils
+          bien précis. Il n'est pas fait pour tout le monde :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Pas idéal si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous voulez le meilleur laptop HP sans compromis sur la qualité
+            </div>
+            <div class="profile-cell">
+              Votre budget est limité — il existe de meilleures options moins
+              chères (Envy, Pavilion)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous travaillez beaucoup en déplacement et voulez un laptop léger
+              et élégant
+            </div>
+            <div class="profile-cell">
+              Vous jouez à des jeux vidéo — il n'a pas de GPU dédié gaming
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous utilisez régulièrement un stylet pour annoter, dessiner ou
+              signer
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin d'un grand écran — il n'existe qu'en 13,5 et 14
+              pouces
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous êtes sensible à la qualité d'image — l'OLED 2.8K est
+              exceptionnel
+            </div>
+            <div class="profile-cell">
+              Vous cherchez une station de travail mobile pour la CAO ou la 3D
+              (préférez le ZBook)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Cadre, consultant ou entrepreneur qui reçoit des clients
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin de ports nombreux sans adaptateur (connectique
+              limitée)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous aimez utiliser votre laptop en mode tablette ou tente
+            </div>
+            <div class="profile-cell">
+              Vous préférez un laptop classique sans écran tactile ni charnière
+              360°
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : le HP Spectre x360 est fait pour les utilisateurs qui
+          considèrent leur laptop comme un
+          <strong>outil de travail premium</strong> et qui sont prêts à investir
+          pour avoir la meilleure expérience possible au quotidien.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/00uwiwERhM15aoADGVjjUUy-2_1.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS -->
+      <section>
+        <h2>👍 Avantages &amp; inconvénients</h2>
+        <p>
+          Le HP Spectre x360 vise l'excellence — voici ce qu'il réussit très
+          bien et les quelques limites à connaître avant d'acheter.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                Design exceptionnel — châssis aluminium biseauté, finition
+                irréprochable
+              </li>
+              <li>
+                Écran OLED 2.8K tactile — couleurs, contraste et luminosité au
+                sommet
+              </li>
+              <li>
+                Charnière 360° robuste — 4 modes d'utilisation (laptop,
+                tablette, tente, présentation)
+              </li>
+              <li>
+                Stylet HP inclus ou disponible — idéal pour annoter et dessiner
+              </li>
+              <li>Autonomie jusqu'à 17h — parmi les meilleures du marché</li>
+              <li>Processeur Intel Core Ultra récent avec NPU pour l'IA</li>
+              <li>
+                Son Bang &amp; Olufsen de très haute qualité — le meilleur audio
+                de la gamme HP
+              </li>
+              <li>
+                Webcam FHD avec obturateur physique et suppression de bruit
+              </li>
+              <li>Léger pour un 14 pouces — environ 1,4 kg seulement</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Prix élevé — le laptop HP le plus cher de la gamme grand public
+              </li>
+              <li>
+                Aucun GPU dédié — pas adapté au gaming ou à la 3D intensive
+              </li>
+              <li>
+                Connectique limitée — 2 ports Thunderbolt 4 + 1 USB-A, pas de
+                lecteur SD
+              </li>
+              <li>
+                Écran limité à 14 pouces maximum — pas de grand format
+                disponible
+              </li>
+              <li>RAM soudée et non extensible après achat</li>
+              <li>
+                Chauffe légèrement sous charge soutenue malgré le châssis fin
+              </li>
+              <li>Écran tactile OLED sensible aux traces de doigts</li>
+              <li>
+                Surpayé si vous n'exploitez pas la charnière 360° ou le stylet
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Le bon choix si :</strong> vous cherchez un laptop Windows
+          ultra-premium pour le travail, les déplacements et une utilisation
+          polyvalente avec stylet. Si vous n'avez pas besoin de la charnière
+          360°, l'<strong>HP Envy 14</strong> avec option OLED offre une
+          expérience très proche pour un prix nettement inférieur.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions du Spectre x360</h2>
+
+        <div class="model-block">
+          <h3>HP Spectre x360 13,5 pouces</h3>
+          <p>
+            Le format le plus compact et le plus léger de la gamme — idéal pour
+            les grands voyageurs. Son écran au ratio 3:2 (plus haut que le 16:9
+            classique) est très agréable pour lire des documents, naviguer sur
+            le web ou travailler sur des tableurs. Légèrement moins puissant que
+            le 14 pouces en raison des contraintes thermiques de son châssis
+            plus petit.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Spectre x360 14 pouces</h3>
+          <p>
+            La version la plus vendue et la plus recommandée. Elle combine un
+            écran OLED 2.8K tactile de grande qualité, les derniers processeurs
+            Intel Core Ultra, une autonomie jusqu'à 17 heures et un poids
+            d'environ 1,4 kg. C'est le meilleur équilibre de la gamme entre
+            puissance, autonomie et portabilité.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Spectre x360 16 pouces (ancienne génération)</h3>
+          <p>
+            HP a proposé une version 16 pouces du Spectre x360 dans les
+            générations précédentes, avec un GPU discret NVIDIA en option. Cette
+            version n'est plus au catalogue en 2024-2025, HP ayant recentré la
+            gamme Spectre sur les formats compacts 13,5 et 14 pouces. Les
+            utilisateurs ayant besoin d'un grand écran premium sont désormais
+            orientés vers l'Envy 16.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            Le HP Spectre x360 est tout simplement l'un des meilleurs laptops
+            Windows disponibles sur le marché. Son écran OLED, sa qualité de
+            fabrication et sa polyvalence en font un choix difficile à battre
+            pour qui cherche un ultrabook premium sous Windows.
+          </p>
+          <p style="margin-top: 10px">
+            Il faut cependant être honnête : son prix élevé se justifie
+            pleinement uniquement si vous exploitez réellement la charnière 360°
+            et l'écran tactile. Si vous utilisez votre laptop uniquement en mode
+            classique, l'<strong>HP Envy 14 avec OLED</strong> vous donnera 90 %
+            de l'expérience pour un budget bien plus raisonnable.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

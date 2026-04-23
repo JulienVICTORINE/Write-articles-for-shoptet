@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Prezentace značky Dell</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      :root {
+        --blue: #0076ce;
+        --blue-dark: #004f91;
+        --blue-light: #e8f4ff;
+        --black: #222;
+        --border: #dde6f0;
+        --bg: #f7fafd;
+        --white: #ffffff;
+        --radius: 12px;
+        --red: #d1214c;
+        --gris: #ececed;
+      }
+
+      body {
+        color: var(--black);
+        line-height: 1.7;
+      }
+
+      /* ── HERO ── */
+      .hero {
+        background: linear-gradient(
+          135deg,
+          var(--blue-dark) 0%,
+          var(--blue) 60%,
+          #0098e6 100%
+        );
+        color: var(--white);
+        padding: clamp(48px, 8vw, 96px) clamp(16px, 5vw, 64px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "DELL";
+        position: absolute;
+        right: -32px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 800;
+        font-size: clamp(96px, 20vw, 224px);
+        color: rgba(255, 255, 255, 0.06);
+        letter-spacing: -0.05em;
+        pointer-events: none;
+        line-height: 1;
+      }
+
+      .hero-inner {
+        max-width: 760px;
+        position: relative;
+      }
+
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 4px 14px;
+        border-radius: 999px;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-weight: 800;
+        font-size: clamp(32px, 6vw, 60px);
+        line-height: 1.1;
+        letter-spacing: -0.03em;
+        margin-bottom: 20px;
+        color: var(--white);
+      }
+
+      .hero p {
+        font-size: clamp(16px, 2vw, 18px);
+        font-weight: 300;
+        opacity: 0.88;
+        max-width: 540px;
+        color: var(--white);
+      }
+
+      /* ── MAIN LAYOUT ── */
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: clamp(32px, 5vw, 64px) clamp(16px, 4vw, 32px);
+      }
+
+      /* ── SECTION TITLE ── */
+      .section-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--red);
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-weight: 700;
+        font-size: clamp(22px, 3vw, 32px);
+        letter-spacing: -0.32px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        color: #222;
+        margin-bottom: 16px;
+      }
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CARD ── */
+      .card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 32px;
+        margin-bottom: 20px;
+      }
+
+      /* ── STATS ROW ── */
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 16px;
+        margin: clamp(32px, 5vw, 64px) 0;
+      }
+
+      .stat {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        text-align: center;
+      }
+
+      .stat-value {
+        font-weight: 800;
+        font-size: 32px;
+        color: var(--blue);
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 4px;
+      }
+
+      .stat-label {
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--black);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
+
+      /* ── PRODUCT CATEGORIES ── */
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .product-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: clamp(20px, 5vw, 32px);
+        position: relative;
+        overflow: hidden;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s;
+      }
+
+      .product-card:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 24px rgba(0, 118, 206, 0.1);
+      }
+
+      .product-icon {
+        width: 44px;
+        height: 44px;
+        background: var(--blue-light);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 16px;
+      }
+
+      .product-icon svg {
+        width: 22px;
+        height: 22px;
+        color: var(--blue);
+      }
+
+      .product-card h3 {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 20px;
+        letter-spacing: -0.01em;
+      }
+
+      .product-card p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+        line-height: 1.6;
+      }
+
+      /* ── LAPTOPS SECTION ── */
+      .laptop-list {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      .laptop-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 20px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        background: var(--white);
+        margin-bottom: 12px;
+        transition: border-color 0.2s;
+      }
+
+      .laptop-item:hover {
+        border-color: var(--blue);
+      }
+
+      .laptop-item::before {
+        content: none !important;
+      }
+
+      .laptop-item {
+        list-style: none !important;
+      }
+
+      .laptop-info h4 {
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .laptop-info p {
+        font-size: 16px;
+        color: var(--black);
+        margin-bottom: 0;
+      }
+
+      .laptop-tag {
+        margin-left: auto;
+        flex-shrink: 0;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 3px 10px;
+        border-radius: 999px;
+        background: var(--blue-light);
+        color: var(--blue);
+      }
+
+      .laptop-tag.future {
+        background: #fff7ed;
+        color: #c2410c;
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        border: none;
+        border-top: 1px solid var(--border);
+        margin: 48px 0;
+      }
+
+      /* ── INFO BOX ── */
+      .info-box {
+        background: var(--gris);
+        border-left: 4px solid var(--red);
+        border-radius: 0 var(--radius) var(--radius) 0;
+        padding: 20px 20px;
+        margin-top: 20px;
+      }
+
+      .info-box p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── OTHER PRODUCTS ── */
+      .other-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+        margin-top: 20px;
+      }
+
+      .other-card {
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 20px;
+        background: var(--white);
+        font-size: 16px;
+      }
+
+      .other-card strong {
+        display: block;
+        font-weight: 700;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+
+      .other-card span {
+        color: var(--black);
+      }
+
+      /* ── TEXTE JUSTIFIÉ ── */
+      .paragraph-text {
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 640px) {
+        nav {
+          display: none;
+        }
+        .hero::before {
+          display: none;
+        }
+        .laptop-item {
+          flex-wrap: wrap;
+        }
+        .laptop-tag {
+          margin-left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="badge">Značka pod lupou</div>
+        <h1>Dell Technologies</h1>
+        <p class="paragraph-text">
+          Nepostradatelná americká nadnárodní společnost v oblasti informatiky —
+          od osobních počítačů pro širokou veřejnost až po nejnáročnější
+          podnikové infrastruktury.
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <main>
+      <!-- PŘEDSTAVENÍ -->
+      <section id="presentation">
+        <div class="section-label">Představení</div>
+        <h2>Kdo je Dell?</h2>
+
+        <div class="card">
+          <p class="paragraph-text">
+            Společnost Dell byla založena v roce <strong>1984</strong> v Austinu
+            v Texasu <strong>Michaelem Dellem</strong>, tehdy studentem Texaské
+            univerzity. Ve věku 19 let založil firmu ze svého studentského
+            pokoje s jednoduchým a na svou dobu revolučním konceptem: prodávat
+            počítače přímo zákazníkům bez prostředníků. Tento model přímého
+            prodeje mu umožnil nabízet levnější a na míru konfigurované
+            počítače.
+          </p>
+          <p class="paragraph-text">
+            V roce 2016 Dell uskutečnil jednu z největších akvizic v historii
+            informatiky, když koupil společnost
+            <strong>EMC Corporation</strong> za 67 miliard dolarů, čímž vznikla
+            <strong>Dell Technologies</strong>. Společnost se tak stala gigantem
+            pokrývajícím jak spotřebitelský hardware, tak i nejsložitější
+            profesionální řešení.
+          </p>
+          <p class="paragraph-text">
+            Dnes je Dell Technologies přítomna ve více než
+            <strong>180 zemích</strong>, zaměstnává desítky tisíc lidí po celém
+            světě a pravidelně se řadí mezi největší společnosti v žebříčku
+            Fortune 500.
+          </p>
+        </div>
+
+        <!-- STATISTIKY -->
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">1984</div>
+            <div class="stat-label">Rok založení</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">Austin</div>
+            <div class="stat-label">Texas, Spojené státy</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">180+</div>
+            <div class="stat-label">Pokrytých zemí</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">40 let</div>
+            <div class="stat-label">Na trhu</div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRODUKTOVÁ ŘADA -->
+      <section id="produits">
+        <div class="section-label">Produktová řada</div>
+        <h2>Co Dell vyrábí</h2>
+        <p class="paragraph-text">
+          Dell pokrývá velmi široké spektrum IT produktů, od spotřebitelského
+          hardwaru až po řešení pro podnikovou infrastrukturu. Zde je přehled
+          hlavních kategorií.
+        </p>
+
+        <div class="products-grid">
+          <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3>Notebooky</h3>
+            <p class="paragraph-text">
+              Od tenkých ultrabooků až po mobilní pracovní stanice nabízí Dell
+              několik řad notebooků pro všechny typy použití.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3>Stolní počítače</h3>
+            <p>
+              Věže, all-in-one a mini PC pro jednotlivce i firmy, například řady
+              Inspiron, OptiPlex nebo XPS.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖥️</div>
+            <h3>Monitory</h3>
+            <p class="paragraph-text">
+              Široká škála displejů: od základních kancelářských monitorů až po
+              herní a profesionální monitory UltraSharp ve 4K.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🗄️</div>
+            <h3>Servery a úložiště</h3>
+            <p class="paragraph-text">
+              PowerEdge, PowerVault, PowerStore… Dell je významným hráčem v
+              oblasti podnikové infrastruktury a datových center.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">☁️</div>
+            <h3>Sítě a cloud</h3>
+            <p class="paragraph-text">
+              Síťová řešení, hybridní cloud a spravované služby prostřednictvím
+              divize Dell Technologies Services a VMware.
+            </p>
+          </div>
+
+          <div class="product-card">
+            <div class="product-icon">🖱️</div>
+            <h3>Periferie</h3>
+            <p class="paragraph-text">
+              Klávesnice, myši, webkamery, dokovací stanice, pouzdra a
+              příslušenství doplňují ekosystém Dell pro profesionály.
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <p class="paragraph-text">
+            📌 V rámci této série článků se zaměřujeme na
+            <strong>notebooky</strong>, <strong>stolní počítače</strong> a
+            <strong>monitory</strong>. Serverům a síťovým řešením se budeme
+            věnovat v samostatném obsahu.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- NOTEBOOKY -->
+      <section id="laptops">
+        <div class="section-label">Zaměření — Notebooky</div>
+        <h2>Řady notebooků Dell</h2>
+        <p class="paragraph-text">
+          Dell strukturuje svou nabídku notebooků do několika odlišných řad, z
+          nichž každá cílí na konkrétní typ uživatele. Každá řada bude předmětem
+          samostatného článku.
+        </p>
+
+        <ul class="laptop-list">
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>XPS</h4>
+              <p class="paragraph-text">
+                Prémiová řada Dell určená pro kreativce a náročné uživatele,
+                kteří hledají elegantní design, vysoký výkon a kvalitní displej
+                v kompaktním těle.
+              </p>
+            </div>
+            <span class="laptop-tag future">Článek připravujeme</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Latitude</h4>
+              <p class="paragraph-text">
+                Profesionální reference Dellu. Odolný, bezpečný a snadno
+                spravovatelný v podnikovém prostředí, Latitude je navržen pro
+                náročné pracovní podmínky.
+              </p>
+            </div>
+            <span class="laptop-tag future">Článek připravujeme</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Precision</h4>
+              <p class="paragraph-text">
+                Vysoce výkonné mobilní pracovní stanice certifikované ISV,
+                určené pro inženýry, architekty a profesionály pracující ve 3D
+                nebo CAD.
+              </p>
+            </div>
+            <span class="laptop-tag future">Článek připravujeme</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Inspiron</h4>
+              <p class="paragraph-text">
+                Spotřebitelská řada základní a střední třídy, ideální pro
+                každodenní použití: prohlížení internetu, kancelářskou práci a
+                multimédia.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Alienware</h4>
+              <p class="paragraph-text">
+                Herní značka Dellu, akvizovaná v roce 2006. Výkonné stroje s
+                high-end GPU, displeji s vysokou obnovovací frekvencí a
+                charakteristickým futuristickým designem.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Vostro</h4>
+              <p class="paragraph-text">
+                Navrženo pro malé a střední podniky: spolehlivost, dobrý poměr
+                ceny a výkonu, bez pokročilých funkcí správy typických pro řadu
+                Latitude.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- STOLNÍ POČÍTAČE -->
+      <section id="desktop">
+        <div class="section-label">Zaměření — Stolní počítače</div>
+        <h2>Řady stolních počítačů Dell</h2>
+        <p class="paragraph-text">
+          Dell nabízí kompletní portfolio stolních počítačů, od firemních mini
+          PC až po ultra výkonné pracovní stanice ve formátu tower, a pokrývá
+          tak všechny typy uživatelů.
+        </p>
+
+        <ul class="laptop-list">
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>OptiPlex</h4>
+              <p class="paragraph-text">
+                Vlajková řada Dellu pro firmy. Dostupná ve variantách tower,
+                mini tower, micro i all-in-one. OptiPlex je navržen pro
+                profesionální kancelářské použití: snadné nasazení, správa i
+                údržba v rámci firemní IT infrastruktury. Je známý svou
+                spolehlivostí, dlouhou životností a kompatibilitou s nástroji
+                pro správu (Dell Command | Update, SCCM…).
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Precision (Tower / Rack)</h4>
+              <p class="paragraph-text">
+                Stolní pracovní stanice Dell určené pro profesionály s vysokými
+                nároky: inženýry, architekty, 3D umělce nebo datové specialisty.
+                Dostupné ve formátu tower (řada T) nebo rack (řada R), vybavené
+                procesory Xeon nebo Core Ultra, certifikovanými GPU (NVIDIA RTX
+                / AMD Radeon Pro) a podporou velkého množství ECC paměti pro
+                maximální spolehlivost výpočtů.
+              </p>
+            </div>
+            <span class="laptop-tag future">Článek připravujeme</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Inspiron Desktop</h4>
+              <p class="paragraph-text">
+                Stolní verze spotřebitelské řady Inspiron. Kompaktní a cenově
+                dostupná, vhodná pro domácí nebo školní použití: prohlížení
+                internetu, streaming a základní kancelářskou práci. Dostupná
+                jako kompaktní tower nebo slim provedení.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>XPS Desktop</h4>
+              <p class="paragraph-text">
+                Prémiový stolní počítač Dell v kompaktním a elegantním šasi.
+                Nabízí vysoký výkon pro kreativce a náročné uživatele, s
+                možností výkonných dedikovaných GPU a rychlých NVMe úložišť, to
+                vše v minimalistickém designu vhodném do kanceláře i obývacího
+                prostoru.
+              </p>
+            </div>
+            <span class="laptop-tag future">Článek připravujeme</span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Alienware Aurora</h4>
+              <p class="paragraph-text">
+                Herní tower od Alienware, navržený pro nejnáročnější PC hráče.
+                Podporuje nejnovější high-end grafické karty, pokročilé systémy
+                chlazení a charakteristický design značky s RGB podsvícením.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MONITORY -->
+      <section id="moniteurs">
+        <div class="section-label">Zaměření — Monitory</div>
+        <h2>Nabídka monitorů Dell</h2>
+        <p class="paragraph-text">
+          Dell patří mezi nejuznávanější výrobce monitorů na trhu, s nabídkou,
+          která pokrývá kancelářské, profesionální i herní využití.
+        </p>
+
+        <ul class="laptop-list">
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>UltraSharp</h4>
+              <p class="paragraph-text">
+                Prémiová řada Dell určená pro profesionály v oblasti grafiky a
+                vizuální tvorby. Monitory UltraSharp vynikají vynikající
+                barevnou přesností (pokrytí sRGB, DCI-P3 a Adobe RGB), vysokým
+                rozlišením (4K, 5K nebo až 8K) a kalibrací z výroby, což je činí
+                ideálními pro úpravu fotografií a tvorbu obsahu. Dostupné ve
+                velikostech od 24 do 40 palců, oceňovány jsou také pro svou
+                ergonomii: nastavení výšky, náklonu, otočení i kompatibilita s
+                VESA držáky.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Gaming — Alienware & G-Series</h4>
+              <p class="paragraph-text">
+                Dell cílí na herní trh prostřednictvím dvou značek:
+                <strong>Alienware</strong> pro high-end segment (QD-OLED, 360
+                Hz, odezva 0,1 ms) a <strong>G-Series</strong> s výborným
+                poměrem cena/výkon. Tyto monitory podporují G-Sync nebo FreeSync
+                Premium, s obnovovací frekvencí od 144 Hz do 360 Hz, IPS nebo
+                OLED panely a rozlišením od Full HD přes QHD až po 4K v
+                závislosti na modelu.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Série P — Professional</h4>
+              <p class="paragraph-text">
+                Univerzální profesionální řada Dell, широко využívaná ve
+                firmách. Monitory série P nabízejí kompletní ergonomii
+                (nastavení výšky, náklonu, otočení i pivot), integrované USB
+                huby a konektivitu přizpůsobenou moderním pracovním stanicím
+                (DisplayPort, HDMI, USB-C). IPS panely zajišťují dobré
+                pozorovací úhly a solidní barevné podání pro intenzivní
+                kancelářskou práci. Dostupné ve velikostech od 22 do 27 palců.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+
+          <li class="laptop-item">
+            <div class="laptop-info">
+              <h4>Série S — Stylish</h4>
+              <p class="paragraph-text">
+                Série S je určena pro běžné uživatele a domácnosti, které
+                hledají elegantní monitor za dostupnou cenu. Design je tenký a
+                čistý, s úzkými rámečky a stylovým stojanem. Panely sahají od
+                Full HD až po 4K, s technologiemi IPS nebo VA podle modelu.
+                Oproti sérii P nabízí méně možností nastavení, ale kompenzuje to
+                atraktivním designem a příznivou cenou.
+              </p>
+            </div>
+            <span
+              class="laptop-tag"
+              style="background: #f0fdf4; color: #166534"
+            >
+              Zahrnuto zde
+            </span>
+          </li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <div class="section-label">Shrnutí</div>
+        <h2>Dell několika slovy</h2>
+        <div class="card">
+          <p class="paragraph-text">
+            Od svých skromných začátků ve studentském pokoji v Austinu až po
+            současný status globálního giganta v oblasti IT se Dell dokázal
+            neustále přizpůsobovat a inovovat. Jako průkopník přímého prodeje se
+            prosadil jak na spotřebitelském trhu, tak i v nejnáročnějších
+            podnikovém prostředí.
+          </p>
+          <p class="paragraph-text">
+            Jeho síla spočívá v rozmanitosti a konzistenci nabídky: každá
+            produktová řada odpovídá konkrétní potřebě – od herních notebooků
+            Alienware přes mobilní pracovní stanice Precision až po monitory
+            UltraSharp a servery PowerEdge.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
