@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP OMEN — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #cc0000;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #cc0000;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #cc0000;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fff5f5;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── COMPARATIF OMEN VS VICTUS ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #1a1a1a;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #e8f4fd;
+        color: #004f7c;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fff5f5;
+        border-left: 4px solid #cc0000;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP ZBook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen/HP_Omen_logo.png"
+          alt="HP Omen Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">🎮 Ordinateurs portables HP Gaming</div>
+        <h1 class="article-title">
+          HP OMEN — Le laptop gaming haut de gamme de HP
+        </h1>
+        <p class="article-intro">
+          Le HP OMEN est la gamme gaming premium de HP. Conçu pour les joueurs
+          exigeants qui veulent les meilleures performances sans compromis, il
+          embarque les derniers GPU NVIDIA GeForce RTX, des écrans haute
+          fréquence jusqu'à 240 Hz et un système de refroidissement avancé. Face
+          aux ASUS ROG, Razer Blade et MSI Titan, l'OMEN s'impose comme l'une
+          des références du marché gaming haut de gamme sous Windows.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION -->
+      <section>
+        <h2>🔥 Présentation de la gamme</h2>
+        <p>
+          Le HP OMEN se positionne au
+          <strong>sommet de la gamme gaming HP</strong>, au-dessus du Victus
+          (gaming accessible). Il s'adresse aux joueurs qui veulent faire
+          tourner les derniers jeux en ultra, streamer en haute qualité ou
+          utiliser leur laptop pour de la création de contenu en parallèle du
+          gaming.
+        </p>
+        <p>
+          Les modèles OMEN embarquent des GPU
+          <strong>NVIDIA GeForce RTX 4060, 4070, 4080 ou 4090 Laptop</strong>
+          selon les configurations, des écrans QHD ou Full HD avec des
+          fréquences de rafraîchissement allant jusqu'à
+          <strong>240 Hz</strong> et un temps de réponse de 3 ms. Le système de
+          refroidissement <strong>Thermal Grizzly</strong> — une pâte thermique
+          de haute qualité appliquée directement sur le CPU et le GPU — garantit
+          des températures maîtrisées même en session de jeu prolongée.
+        </p>
+        <p>
+          L'OMEN intègre également le logiciel <strong>OMEN Gaming Hub</strong>,
+          qui permet d'optimiser les performances, de surveiller les
+          températures en temps réel, de personnaliser l'éclairage RGB du
+          clavier et de gérer les profils de ventilation selon l'usage. Un
+          écosystème complet complète la gamme : écrans OMEN, casques, claviers
+          et souris gaming.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen/1486312f-c9b8-4a44-86af-1266ceddfa57.6693f368a3efb737a6c17146f2a5ea1f.png"
+          alt="HP OMEN"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- OMEN VS VICTUS -->
+      <section>
+        <h2>🎯 OMEN ou Victus — quelle différence ?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen/hp-omen-vs-victus-frente-a-frente.png"
+            alt="HP OMEN"
+            style="width: 100%; height: auto"
+          />
+        </div>
+        <p>
+          HP propose deux gammes gaming. Voici l'essentiel pour choisir entre
+          les deux :
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🔥 HP OMEN</div>
+            <div class="compare-body">
+              Haut de gamme gaming — GPU RTX 4060 à 4090, écrans jusqu'à 240 Hz
+              QHD, refroidissement Thermal Grizzly, châssis aluminium premium,
+              RGB personnalisable. Pour les joueurs qui veulent le maximum de
+              performances et qui ne font aucun compromis. Prix plus élevé mais
+              expérience de jeu supérieure.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🎯 HP Victus</div>
+            <div class="compare-body">
+              Gaming accessible — GPU RTX 3050 à 4060, écrans 144 Hz Full HD,
+              design sobre sans RGB excessif, châssis plastique. Pour les
+              joueurs qui veulent de bonnes performances gaming à budget
+              maîtrisé. Moins bruyant que l'OMEN, mais moins performant sous
+              charge maximale.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>En résumé :</strong> choisissez l'<strong>OMEN</strong> si
+          vous jouez à des titres AAA en ultra ou si vous streamez. Choisissez
+          le <strong>Victus</strong> si vous voulez jouer correctement sans
+          dépasser votre budget.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UTILISATEUR -->
+      <section>
+        <h2>👤 Pour qui est le HP OMEN ?</h2>
+        <p>
+          L'OMEN est conçu pour les joueurs exigeants. Voici à qui il correspond
+          vraiment :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Pas idéal si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous jouez à des titres AAA récents en haute qualité (Cyberpunk
+              2077, Alan Wake 2, Black Myth…)
+            </div>
+            <div class="profile-cell">
+              Vous cherchez un laptop léger pour voyager — l'OMEN pèse entre 2
+              et 2,5 kg
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous streamez sur Twitch ou YouTube en direct pendant vos sessions
+              de jeu
+            </div>
+            <div class="profile-cell">
+              Vous faites principalement de la bureautique — l'OMEN est
+              surdimensionné et trop cher
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous jouez en compétitif et avez besoin des 165 Hz ou 240 Hz pour
+              la fluidité maximale
+            </div>
+            <div class="profile-cell">
+              Vous cherchez un laptop discret pour le bureau ou les réunions
+              professionnelles
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous faites de la création de contenu (montage vidéo, rendu 3D) en
+              complément du gaming
+            </div>
+            <div class="profile-cell">
+              L'autonomie est une priorité — l'OMEN tient 3 à 5h hors jeu
+              seulement
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous voulez un laptop gaming avec un bon refroidissement pour les
+              longues sessions
+            </div>
+            <div class="profile-cell">
+              Vous avez un budget limité — le Victus offre un bien meilleur
+              rapport qualité/prix
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous appréciez un design gaming assumé avec rétroéclairage RGB
+              personnalisable
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin d'un GPU professionnel certifié ISV — préférez le
+              ZBook
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : l'HP OMEN est fait pour les
+          <strong>joueurs passionnés et les créateurs de contenu gaming</strong>
+          qui veulent le meilleur laptop HP pour jouer. Si le gaming n'est pas
+          votre usage principal, il existe de meilleures options dans la gamme
+          HP.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS -->
+      <section>
+        <h2>👍 Avantages &amp; inconvénients</h2>
+        <p>
+          L'HP OMEN est optimisé pour les
+          <strong>performances gaming et la création de contenu</strong> — voici
+          ses points forts et ses limites.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                GPU NVIDIA GeForce RTX haut de gamme — de la RTX 4060 à la RTX
+                4090 Laptop
+              </li>
+              <li>
+                Écran jusqu'à 240 Hz QHD — fluidité maximale pour le gaming
+                compétitif
+              </li>
+              <li>
+                Refroidissement Thermal Grizzly — températures maîtrisées en
+                longue session
+              </li>
+              <li>
+                OMEN Gaming Hub — optimisation des performances et monitoring en
+                temps réel
+              </li>
+              <li>
+                Clavier RGB personnalisable par touche — configuration selon ses
+                préférences
+              </li>
+              <li>
+                Connectique gaming complète : USB-A ×3, USB-C, HDMI 2.1, Mini
+                DisplayPort, RJ45
+              </li>
+              <li>
+                Haut-parleurs de bonne qualité — son immersif sans casque pour
+                les jeux casual
+              </li>
+              <li>
+                Compatible NVIDIA G-Sync — élimination du tearing pour une image
+                fluide
+              </li>
+              <li>
+                Options de RAM et SSD upgradables sur la plupart des modèles
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Prix élevé — le laptop gaming HP le plus cher du catalogue
+              </li>
+              <li>Poids important : entre 2 et 2,5 kg + chargeur volumineux</li>
+              <li>
+                Autonomie faible hors jeu : 3 à 5h seulement en usage
+                bureautique
+              </li>
+              <li>
+                Ventilation bruyante sous charge — peu discret en environnement
+                calme
+              </li>
+              <li>
+                Chauffe perceptible sur le dessus du clavier et le dessous en
+                session intensive
+              </li>
+              <li>
+                Design gaming assumé — peu adapté à un environnement
+                professionnel classique
+              </li>
+              <li>
+                Chargeur encombrant (230W ou plus) — à transporter partout avec
+                le laptop
+              </li>
+              <li>
+                Pas de certification MIL-SPEC ni de fonctionnalités de sécurité
+                entreprise
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>À noter :</strong> comme tous les laptops gaming, l'OMEN
+          consomme beaucoup d'énergie sous charge maximale. Pour des
+          performances optimales, il est recommandé de jouer branché au secteur
+          plutôt que sur batterie.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions de la gamme</h2>
+
+        <div class="model-block">
+          <h3>HP OMEN 16 — Le format polyvalent</h3>
+          <p>
+            Le modèle le plus vendu de la gamme OMEN, en 16 pouces. Il propose
+            un excellent équilibre entre taille d'écran, puissance et
+            encombrement. Disponible avec GPU RTX 4060 à RTX 4080 Laptop, écran
+            QHD 165 Hz ou Full HD 144/240 Hz, et jusqu'à 32 Go de RAM DDR5.
+            C'est le OMEN idéal pour jouer à domicile avec la possibilité de le
+            transporter occasionnellement.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP OMEN Transcend 16 — Le OMEN ultra-fin</h3>
+          <p>
+            La version haut de gamme et la plus légère de la gamme OMEN, lancée
+            en 2023. Châssis en aluminium plus fin que l'OMEN classique, écran
+            mini-LED ou OLED en option, poids réduit à environ 1,95 kg. Il
+            rivalise directement avec le Razer Blade 16 et l'ASUS ROG Zephyrus
+            G16 pour les joueurs qui veulent la puissance d'un laptop gaming
+            dans un format plus nomade. GPU RTX 4070 ou 4080 Laptop.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP OMEN Max 16 — La puissance absolue</h3>
+          <p>
+            Le modèle le plus puissant de la gamme OMEN, avec un GPU RTX 4090
+            Laptop et un processeur Intel Core i9 HX. Conçu pour les joueurs qui
+            veulent le maximum sans aucun compromis : jeux en 4K, streaming en
+            4K, rendu vidéo rapide. Lourd et très gourmand en énergie, il reste
+            la référence HP pour les performances gaming brutes.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            Le HP OMEN est l'un des laptops gaming les mieux équilibrés du
+            marché dans sa gamme de prix. Son refroidissement Thermal Grizzly,
+            son écran haute fréquence et la qualité de son OMEN Gaming Hub en
+            font un choix solide pour les joueurs exigeants qui veulent une
+            expérience gaming premium sans passer par les marques spécialisées
+            comme ASUS ROG ou Razer.
+          </p>
+          <p style="margin-top: 10px">
+            Pour une première machine gaming ou un budget plus serré, regardez
+            du côté du <strong>HP Victus</strong> — il offre de bonnes
+            performances pour les jeux courants à un prix bien plus accessible.
+            Si vous voulez le summum sans compromis sur la finesse du châssis,
+            l'<strong>OMEN Transcend 16</strong> est aujourd'hui la meilleure
+            version de la gamme.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

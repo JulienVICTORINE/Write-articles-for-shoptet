@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP ProDesk — Presentation of the range</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── BARRE DE POSITIONNEMENT ── */
+      .range-bar {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0 4px;
+      }
+
+      .range-bar-row {
+        display: table-row;
+      }
+
+      .range-cell {
+        display: table-cell;
+        padding: 10px 12px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        vertical-align: middle;
+        color: #555;
+        background: #f7f9fb;
+        width: 33%;
+        font-size: 15px;
+      }
+
+      .range-cell.active {
+        background: #0096d6;
+        color: #ffffff;
+        font-weight: 700;
+        border-color: #0096d6;
+      }
+
+      .range-cell span {
+        display: block;
+        font-size: 11px;
+        font-weight: 400;
+        margin-top: 3px;
+        opacity: 0.75;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .range-bar,
+        .range-bar-row,
+        .range-cell {
+          display: block;
+          width: 100%;
+          margin-bottom: 4px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Essential logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-essential-logo.png"
+          alt="HP Essential Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">🖥️ HP Desktop PCs</div>
+        <h1 class="article-title">
+          HP ProDesk — The affordable professional desktop PC
+        </h1>
+        <p class="article-intro">
+          The HP ProDesk is HP’s entry-level professional desktop PC lineup.
+          Positioned between the consumer OmniDesk towers and the high-end
+          EliteDesk models, it targets small and medium businesses, freelancers,
+          and departments that need a reliable, well-equipped, and
+          easy-to-maintain desktop — without paying premium EliteDesk prices.
+          Simple, durable, and efficient for office work, the ProDesk gets the
+          job done quietly.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- OVERVIEW -->
+      <section>
+        <h2>🏗️ Product overview</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://cdn.myshoptet.com/usr/www.pocitace24.cz/user/shop/big/70829_repasovany-pocitac-hp-prodesk-405-g6-sff-pocitace24-cz.jpg?6934735c"
+            alt="HP ProDesk"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The HP ProDesk sits in the
+          <strong>accessible business segment</strong> of HP desktop PCs. It
+          includes essential business features — full connectivity, basic
+          security options, and easy management and maintenance — at a much
+          lower cost than EliteDesk, making it a logical choice for
+          organizations looking to standardize their IT infrastructure without
+          overspending.
+        </p>
+        <p>
+          The ProDesk lineup is available in multiple form factors:
+          <strong>Small Form Factor (SFF)</strong>, <strong>micro</strong>, and
+          <strong>standard tower</strong>. SFF and micro formats are especially
+          popular in open offices and reception areas where space is limited.
+          Components are easy to access and replace, simplifying maintenance and
+          upgrades for IT teams.
+        </p>
+        <p>
+          All ProDesk models include <strong>TPM 2.0</strong> for data
+          encryption, secure boot, and compatibility with HP management tools
+          (HP Manageability Integration Kit, SCCM). They are powered by Intel
+          Core or AMD Ryzen Pro processors depending on configuration, with RAM
+          options from 8 to 32 GB and NVMe SSD storage from 256 GB up to 1 TB.
+        </p>
+
+        <p
+          style="
+            margin-top: 14px;
+            font-weight: 600;
+            color: #0a0f1e;
+            margin-bottom: 6px;
+          "
+        >
+          Positioning in HP professional desktop range:
+        </p>
+        <div class="range-bar">
+          <div class="range-bar-row">
+            <div class="range-cell">
+              OmniDesk
+              <span>Consumer</span>
+            </div>
+            <div class="range-cell active">
+              ProDesk ✓
+              <span>You are here</span>
+            </div>
+            <div class="range-cell">
+              EliteDesk / Elite Mini
+              <span>Premium business</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is the HP ProDesk for?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/2211296.png"
+            alt="HP ProDesk"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The ProDesk is designed for professional environments that need
+          reliability at a controlled cost. Here are the ideal use cases:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Good fit if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are an SMB or organization looking to standardize your IT
+              fleet
+            </div>
+            <div class="profile-cell">
+              You need MIL-SPEC certification and advanced HP Wolf Security
+              (choose EliteDesk)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your team handles office work, management, and data processing
+            </div>
+            <div class="profile-cell">
+              You do heavy graphics, 3D rendering, or simulation (choose Z
+              Series)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You need a reliable desktop for reception, POS, or meeting rooms
+            </div>
+            <div class="profile-cell">
+              You want a home multimedia PC (choose OmniDesk or Pavilion)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your IT department manages multiple devices and needs easy
+              deployment
+            </div>
+            <div class="profile-cell">
+              You play video games — no dedicated gaming GPU available
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You need TPM 2.0 encryption for basic data security
+            </div>
+            <div class="profile-cell">
+              You want an all-in-one setup — requires a separate monitor
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Accounting, HR, administration, customer service, education
+            </div>
+            <div class="profile-cell">
+              You need highly specialized or extensive connectivity
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In short: the HP ProDesk is the
+          <strong>smart choice for SMBs and administrative teams</strong>
+          that need a reliable, easy-to-manage desktop at a reasonable price. It
+          delivers everything needed for daily office work without the advanced
+          security features that most small businesses don’t require.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Advantages &amp; drawbacks</h2>
+        <p>
+          The HP ProDesk is optimized for
+          <strong>everyday professional office use</strong>
+          — here are its strengths and limitations.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>Excellent value for money for a professional desktop PC</li>
+              <li>
+                Available in SFF, Micro, and Tower formats — fits any workspace
+              </li>
+              <li>
+                Full connectivity: at least 4× USB-A, USB-C, DisplayPort, HDMI,
+                RJ45
+              </li>
+              <li>Built-in TPM 2.0 — data encryption and secure boot</li>
+              <li>
+                Easy access to internal components — RAM and SSD upgradeable
+                tool-free on some models
+              </li>
+              <li>
+                Compatible with HP Manageability and SCCM — simplified IT fleet
+                management
+              </li>
+              <li>
+                Intel Core or AMD Ryzen Pro processors — solid office
+                performance
+              </li>
+              <li>Quiet in everyday use — discreet cooling system</li>
+              <li>Durable design — built for long-term professional use</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>
+                No MIL-SPEC certification — less rugged than EliteDesk under
+                rough handling
+              </li>
+              <li>
+                Limited HP Wolf Security — less advanced protection than Elite
+                range
+              </li>
+              <li>
+                Integrated graphics only — not suitable for gaming or heavy
+                creative work
+              </li>
+              <li>Very simple design — no particular aesthetic appeal</li>
+              <li>
+                Not available as an all-in-one — requires separate monitor,
+                keyboard, and mouse
+              </li>
+              <li>
+                Limited USB ports on Micro models — may require an external hub
+              </li>
+              <li>
+                No built-in Wi-Fi on all models — wired connection by default
+              </li>
+              <li>
+                Insufficient performance for creative, scientific, or heavy
+                computing tasks
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>SMB use case:</strong> for accounting, invoicing, report
+          writing, ERP/CRM usage, reception desks, or training rooms, the HP
+          ProDesk is perfectly sized. It remains discreet, quiet, and reliable
+          year after year.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELS -->
+      <section>
+        <h2>📋 Main versions in the lineup</h2>
+
+        <div class="model-block">
+          <h3>HP ProDesk 400 G — Compact SFF tower</h3>
+          <p>
+            Entry-level ProDesk model in Small Form Factor (SFF). Compact,
+            quiet, and easy to place under a desk or behind a monitor using a
+            VESA mount. Powered by Intel Core i3 or i5, 8 or 16 GB RAM, and 256
+            or 512 GB NVMe SSD. Ideal for reception desks, POS systems, meeting
+            rooms, and basic office tasks. Despite its size, it offers full
+            front and rear connectivity.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ProDesk 600 G — SFF or Micro</h3>
+          <p>
+            Mid-range ProDesk version available in SFF and Micro formats (even
+            more compact). The Micro version is about the size of a book and can
+            be mounted behind a monitor. Features latest-gen Intel Core i5 or
+            i7, up to 32 GB RAM, and fast NVMe SSD options. The best balance for
+            permanent workstations in open office environments.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ProDesk 800 G — Standard tower</h3>
+          <p>
+            The most complete ProDesk model in a standard tower format. Offers
+            more internal space for future upgrades: entry-level GPU, additional
+            SSD, or extra storage bays. Powered by Intel Core i5, i7, or i9.
+            Recommended for workstations that may evolve over time or require
+            many peripherals.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The HP ProDesk is the most sensible HP professional desktop for the
+            majority of small businesses, organizations, and administrative
+            teams. It delivers the essentials — basic security, full
+            connectivity, solid office performance, and easy maintenance — at a
+            price that fits typical IT budgets.
+          </p>
+          <p style="margin-top: 10px">
+            If your needs include advanced security, extended fleet management,
+            or certified durability, consider the
+            <strong>HP EliteDesk or Elite Mini</strong>. But for 90% of office
+            workstations, a
+            <strong>ProDesk 600 G SFF with 16 GB RAM and 512 GB SSD</strong>
+            will be more than enough — and should last 5 to 7 years easily.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

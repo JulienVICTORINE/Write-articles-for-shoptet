@@ -1,0 +1,696 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP ProDesk — Prezentace řady</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── BARRE DE POSITIONNEMENT ── */
+      .range-bar {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0 4px;
+      }
+
+      .range-bar-row {
+        display: table-row;
+      }
+
+      .range-cell {
+        display: table-cell;
+        padding: 10px 12px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        vertical-align: middle;
+        color: #555;
+        background: #f7f9fb;
+        width: 33%;
+        font-size: 15px;
+      }
+
+      .range-cell.active {
+        background: #0096d6;
+        color: #ffffff;
+        font-weight: 700;
+        border-color: #0096d6;
+      }
+
+      .range-cell span {
+        display: block;
+        font-size: 11px;
+        font-weight: 400;
+        margin-top: 3px;
+        opacity: 0.75;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .range-bar,
+        .range-bar-row,
+        .range-cell {
+          display: block;
+          width: 100%;
+          margin-bottom: 4px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Essential logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-essential-logo.png"
+          alt="HP Essential Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🖥️ Stolní počítače HP</div>
+        <h1 class="article-title">
+          HP ProDesk — Dostupný profesionální stolní počítač
+        </h1>
+        <p class="article-intro">
+          HP ProDesk je řada základních profesionálních stolních počítačů od HP.
+          Nachází se mezi běžnými modely OmniDesk a špičkovými EliteDesk a je
+          určen pro malé a střední firmy, živnostníky a oddělení, která
+          potřebují spolehlivý, dobře vybavený a snadno udržovatelný počítač —
+          bez nutnosti platit vysokou cenu za řadu EliteDesk. Jednoduchý, odolný
+          a výkonný pro kancelářskou práci — ProDesk odvádí svou práci
+          nenápadně.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🏗️ Představení řady</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://cdn.myshoptet.com/usr/www.pocitace24.cz/user/shop/big/70829_repasovany-pocitac-hp-prodesk-405-g6-sff-pocitace24-cz.jpg?6934735c"
+            alt="HP ProDesk"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          HP ProDesk patří do
+          <strong>dostupného profesionálního segmentu</strong>
+          stolních počítačů HP. Nabízí základní vlastnosti business PC —
+          kompletní konektivitu, základní bezpečnostní funkce a snadnou správu a
+          údržbu — za výrazně nižší cenu než EliteDesk, což z něj dělá logickou
+          volbu pro organizace, které chtějí standardizovat svůj IT park bez
+          vysokých nákladů.
+        </p>
+        <p>
+          Řada ProDesk je dostupná v několika formátech:
+          <strong>mini tower (SFF — Small Form Factor)</strong>,
+          <strong>micro</strong> a <strong>klasická tower</strong>. Formáty SFF
+          a micro jsou oblíbené zejména v open space kancelářích a na recepcích,
+          kde je důležitá úspora místa. Komponenty jsou snadno přístupné a
+          vyměnitelné, což usnadňuje údržbu i upgrady IT oddělením.
+        </p>
+        <p>
+          Všechny modely ProDesk obsahují <strong>TPM 2.0</strong> pro šifrování
+          dat, bezpečné spuštění systému a jsou kompatibilní s nástroji správy
+          HP (HP Manageability Integration Kit, SCCM). Jsou vybaveny procesory
+          Intel Core nebo AMD Ryzen Pro podle konfigurace, s možností paměti RAM
+          od 8 do 32 GB a SSD NVMe od 256 GB do 1 TB.
+        </p>
+
+        <p
+          style="
+            margin-top: 14px;
+            font-weight: 600;
+            color: #0a0f1e;
+            margin-bottom: 6px;
+          "
+        >
+          Pozice v profesionální řadě stolních PC HP:
+        </p>
+        <div class="range-bar">
+          <div class="range-bar-row">
+            <div class="range-cell">
+              OmniDesk
+              <span>Spotřebitelská řada</span>
+            </div>
+            <div class="range-cell active">
+              ProDesk ✓
+              <span>Nacházíte se zde</span>
+            </div>
+            <div class="range-cell">
+              EliteDesk / Elite Mini
+              <span>Špičková profesionální řada</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- UŽIVATELSKÝ PROFIL -->
+      <section>
+        <h2>👤 Pro koho je HP ProDesk?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/2211296.png"
+            alt="HP ProDesk"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ProDesk je určen pro profesionální prostředí, která potřebují
+          spolehlivost za rozumnou cenu. Zde jsou typické profily uživatelů:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás pokud…
+            </div>
+            <div class="profile-cell profile-header">
+              ❌ Není ideální pokud…
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste malá nebo střední firma či organizace, která chce
+              standardizovat IT vybavení
+            </div>
+            <div class="profile-cell">
+              Potřebujete certifikaci MIL-SPEC a pokročilé zabezpečení HP Wolf
+              (zvolte EliteDesk)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vaši zaměstnanci pracují s kancelářskými aplikacemi a daty
+            </div>
+            <div class="profile-cell">
+              Věnujete se náročné grafice, 3D nebo simulacím (zvolte Z Series)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Hledáte spolehlivý PC pro recepci, pokladnu nebo zasedací místnost
+            </div>
+            <div class="profile-cell">
+              Hledáte domácí multimediální počítač (zvolte OmniDesk nebo
+              Pavilion)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              IT oddělení spravuje více zařízení a potřebuje jednoduché nasazení
+            </div>
+            <div class="profile-cell">
+              Hrajete hry — není zde dedikovaná GPU
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete šifrování TPM 2.0 pro základní zabezpečení dat
+            </div>
+            <div class="profile-cell">
+              Hledáte all-in-one řešení — je potřeba samostatný monitor
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Účetnictví, HR, administrativa, zákaznický servis, školství
+            </div>
+            <div class="profile-cell">
+              Potřebujete velmi specifickou nebo rozsáhlou konektivitu
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: HP ProDesk je
+          <strong>racionální volba pro firmy a administrativu</strong>, které
+          chtějí spolehlivý stolní počítač za rozumnou cenu. Nabízí vše potřebné
+          pro kancelářskou práci bez pokročilých bezpečnostních funkcí
+          EliteDesk.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY & NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          HP ProDesk je optimalizován pro
+          <strong>kancelářské profesionální použití ve firmách</strong>
+          — zde jsou jeho silné stránky a omezení.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>Velmi dobrý poměr cena/výkon pro profesionální stolní PC</li>
+              <li>
+                Dostupný ve formátech SFF, Micro a Tower — přizpůsobí se každému
+                pracovnímu prostoru
+              </li>
+              <li>
+                Kompletní konektivita: minimálně 4× USB-A, USB-C, DisplayPort,
+                HDMI, RJ45
+              </li>
+              <li>Integrovaný TPM 2.0 — šifrování dat a bezpečné spuštění</li>
+              <li>
+                Snadný přístup k interním komponentům — RAM a SSD lze u
+                některých modelů vyměnit bez nářadí
+              </li>
+              <li>
+                Kompatibilita s HP Manageability a SCCM — zjednodušená správa IT
+                zařízení
+              </li>
+              <li>
+                Procesory Intel Core nebo AMD Ryzen Pro — solidní kancelářský
+                výkon
+              </li>
+              <li>
+                Tichý při běžném kancelářském použití — nenápadné chlazení
+              </li>
+              <li>
+                Odolná konstrukce — navržen pro dlouhodobé profesionální využití
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Bez certifikace MIL-SPEC — méně odolný než EliteDesk při hrubším
+                zacházení
+              </li>
+              <li>
+                Omezený HP Wolf Security — méně pokročilé zabezpečení než u řady
+                Elite
+              </li>
+              <li>
+                Pouze integrovaná grafika — nevhodné pro gaming nebo náročnou
+                grafiku
+              </li>
+              <li>Velmi jednoduchý design — bez výrazných estetických prvků</li>
+              <li>
+                Není k dispozici jako all-in-one — vyžaduje samostatný monitor,
+                klávesnici a myš
+              </li>
+              <li>
+                Omezený počet USB portů u Micro verzí — může být potřeba externí
+                hub
+              </li>
+              <li>
+                Ne všechny modely mají integrované Wi-Fi — standardně kabelové
+                připojení
+              </li>
+              <li>
+                Nedostatečný výkon pro kreativní, vědecké nebo výpočetně náročné
+                úlohy
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Profesionální použití v SME:</strong> pro vedení
+          účetnictví, zpracování faktur, psaní reportů, práci v ERP nebo CRM,
+          obsluhu recepce nebo školení je HP ProDesk ideálně dimenzovaný.
+          Zůstává nenápadný, tichý a spolehlivý po mnoho let.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELY -->
+      <section>
+        <h2>📋 Hlavní verze řady</h2>
+
+        <div class="model-block">
+          <h3>HP ProDesk 400 G — kompaktní SFF tower</h3>
+          <p>
+            Základní model řady ProDesk ve formátu SFF (Small Form Factor).
+            Kompaktní, tichý a snadno umístitelný pod stůl nebo za monitor na
+            VESA držák. Procesor Intel Core i3 nebo i5, 8 nebo 16 GB RAM, SSD
+            NVMe 256 nebo 512 GB. Ideální pro recepce, pokladny, zasedací
+            místnosti a základní kancelářskou práci. Navzdory malým rozměrům
+            nabízí plnou konektivitu vpředu i vzadu.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ProDesk 600 G — SFF nebo Micro</h3>
+          <p>
+            Střední třída řady ProDesk, dostupná ve formátu SFF i Micro (ještě
+            kompaktnější). Micro verze má velikost knihy a lze ji připevnit za
+            monitor pomocí VESA držáku. Procesor Intel Core i5 nebo i7 poslední
+            generace, až 32 GB RAM, rychlá NVMe SSD. Nejlepší kompromis pro
+            pracovní stanice v open space kancelářích.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ProDesk 800 G — klasická tower</h3>
+          <p>
+            Nejvybavenější model řady ProDesk ve standardním tower formátu.
+            Nabízí více prostoru pro budoucí rozšíření: přidání grafické karty,
+            další SSD nebo diskové jednotky. Procesory Intel Core i5, i7 nebo
+            i9. Doporučeno pro pracovní stanice s možností upgradu nebo s mnoha
+            periferiemi.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            HP ProDesk je nejrozumnější profesionální stolní počítač HP pro
+            většinu malých a středních firem, organizací a administrativních
+            týmů. Nabízí vše podstatné — základní zabezpečení, kompletní
+            konektivitu, solidní výkon a snadnou údržbu — za rozumnou cenu.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud potřebujete pokročilé zabezpečení, robustnost nebo rozšířenou
+            správu, zvažte <strong>HP EliteDesk nebo Elite Mini</strong>. Pro 90
+            % kancelářských pracovních míst ale bude
+            <strong>ProDesk 600 G SFF s 16 GB RAM a 512 GB SSD</strong>
+            naprosto dostačující — a vydrží bez problémů 5 až 7 let.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

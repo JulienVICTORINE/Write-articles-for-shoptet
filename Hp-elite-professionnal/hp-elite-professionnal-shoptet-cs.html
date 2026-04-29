@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Elite Dragonfly & Elite x360 — Prezentace řady</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── COMPARATIF DEUX MODÈLES ── */
+      .compare-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-row {
+        display: table-row;
+      }
+
+      .compare-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 14px 18px;
+        border: 1px solid #e0e0e0;
+        font-size: 15px;
+        color: #222;
+        line-height: 1.6;
+      }
+
+      .compare-cell:first-child {
+        border-right: none;
+      }
+
+      .compare-header {
+        background: #f0f8fd;
+        font-weight: 700;
+        font-size: 15px;
+        color: #0096d6;
+        text-align: center;
+        padding: 10px 14px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell,
+        .compare-grid,
+        .compare-row,
+        .compare-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child,
+        .compare-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Elite DragonFly logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/logo-elite-dragonFly.png"
+          alt="HP Elite DragonFly Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">💻 Notebooky HP</div>
+        <h1 class="article-title">
+          HP Elite Dragonfly &amp; Elite x360 — ultralehké profesionální
+          ultrabooky HP
+        </h1>
+        <p class="article-intro">
+          HP Elite Dragonfly a HP Elite x360 jsou dva nejtenčí a nejlehčí
+          profesionální ultrabooky v nabídce HP. Jsou navrženy pro manažery,
+          konzultanty a obchodníky, kteří jsou neustále na cestách. Kombinují
+          extrémní mobilitu, podnikové zabezpečení a špičkovou konektivitu — to
+          vše v prémiovém šasi, které konkuruje nejlepším notebookům na trhu.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PREZENTACE -->
+      <section>
+        <h2>💼 Přehled řady</h2>
+        <p>
+          <strong>HP Elite Dragonfly</strong> a
+          <strong>HP Elite x360</strong> patří do rodiny EliteBook, ale vynikají
+          ještě prémiovějším zaměřením. Zatímco EliteBook 840 je univerzální
+          standard firmy, Dragonfly a Elite x360 jsou určeny pro uživatele,
+          kteří kladou důraz především na <strong>lehkost a mobilitu</strong>.
+        </p>
+        <p>
+          <strong>Dragonfly</strong> je nejlehčí notebook z profesionální řady
+          HP — některé modely váží méně než <strong>990 gramů</strong>. Jeho
+          šasi je vyrobeno z
+          <strong>hořčíkové slitiny a uhlíkových vláken</strong>, materiálů
+          používaných v letectví pro jejich pevnost a nízkou hmotnost. I přes
+          nízkou hmotnost splňuje certifikace MIL-SPEC a obsahuje zabezpečení HP
+          Wolf Security.
+        </p>
+        <p>
+          <strong>Elite x360</strong> je konvertibilní 2v1 verze: jeho 360° pant
+          umožňuje použití v režimu notebook, tablet, stan nebo prezentace. Má
+          dotykový displej a podporuje stylus HP pro digitální podpisy a
+          poznámky. Oba modely mohou být vybaveny
+          <strong>integrovaným připojením 4G nebo 5G</strong> pro práci
+          odkudkoli bez Wi-Fi.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-elite-dragonfly_92e9e9b8-b098-4b0a-bfbf-50282b719cc4_1024x.jpg"
+          alt="HP Elite Dragonfly"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- POROVNÁNÍ -->
+      <section>
+        <h2>🔍 Dragonfly nebo Elite x360 — jaký je rozdíl?</h2>
+        <p>
+          Tyto dva modely sdílejí stejnou filozofii, ale cílí na mírně odlišné
+          použití:
+        </p>
+
+        <div class="compare-grid">
+          <div class="compare-row">
+            <div class="compare-cell compare-header">🦋 HP Elite Dragonfly</div>
+            <div class="compare-cell compare-header">🔄 HP Elite x360</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">
+              Klasický notebook (bez otočného displeje)
+            </div>
+            <div class="compare-cell">
+              360° pant — režim tablet, stan nebo prezentace
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">Nejlehčí — některé modely pod 990 g</div>
+            <div class="compare-cell">
+              O něco těžší kvůli pantu a dotykovému displeji
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">
+              Nedotykový displej standardně (dotyk volitelný)
+            </div>
+            <div class="compare-cell">
+              Dotykový displej standardně — podpora stylusu HP
+            </div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">
+              Ideální pro manažery, kteří chtějí co nejlehčí notebook
+            </div>
+            <div class="compare-cell">Ideální pro konzultanty a školitele</div>
+          </div>
+          <div class="compare-row">
+            <div class="compare-cell">
+              Dostupné ve velikostech 13,5 a 14 palců
+            </div>
+            <div class="compare-cell">
+              Dostupné ve velikostech 13,3 a 14 palců
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Pokud nikdy nepoužíváte režim tabletu nebo ruční poznámky, zvolte
+          <strong>Dragonfly</strong> pro maximální lehkost. Pokud je pro vás
+          důležitá všestrannost a stylus, <strong>Elite x360</strong> je lepší
+          volba.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-dragon-fly_2.png"
+          alt="HP Elite Dragonfly"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho jsou tyto notebooky?</h2>
+        <p>
+          Tyto dva modely jsou určeny pro velmi specifický profil mobilních
+          profesionálů:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Cestujete několik dní v týdnu</div>
+            <div class="profile-cell">
+              Hledáte notebook pouze do kanceláře — příliš prémiový pro statické
+              použití
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Každý gram ve vašem batohu se počítá — cestujete nalehko
+            </div>
+            <div class="profile-cell">
+              Děláte video editing nebo 3D — chybí výkonná dedikovaná grafika
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete na veřejných místech a záleží vám na soukromí (Sure
+              View)
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — patří mezi nejdražší firemní notebooky HP
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vaše firma potřebuje nástroje pro vzdálenou správu a nasazení
+            </div>
+            <div class="profile-cell">
+              Potřebujete velký displej — dostupné pouze 13" a 14"
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete 4G/5G pro práci bez Wi-Fi
+            </div>
+            <div class="profile-cell">
+              Hrajete hry nebo používáte náročné grafické aplikace
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Setkáváte se s klienty a design notebooku je součástí vaší image
+            </div>
+            <div class="profile-cell">
+              Preferujete notebook s mnoha porty bez nutnosti adaptérů
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: Dragonfly a Elite x360 jsou určeny pro
+          <strong>vysoce mobilní manažery a profesionály</strong>, kteří vnímají
+          notebook jako pracovní nástroj i reprezentativní prvek. Jsou to
+          notebooky HP, které nejvíce zapůsobí při jednání s klienty.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY & NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          Tyto dva ultrabooky sdílejí stejné silné stránky i omezení — zde je
+          jejich společný přehled.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Extrémně nízká hmotnost — Dragonfly pod 990 g, x360 kolem 1,2 kg
+              </li>
+              <li>Konstrukce z hořčíku / karbonu — pevná, lehká a prémiová</li>
+              <li>
+                Certifikace MIL-SPEC 810H — odolnost vůči nárazům a extrémním
+                podmínkám
+              </li>
+              <li>
+                HP Wolf Security integrovaný v hardwaru — pokročilá ochrana
+                proti hrozbám
+              </li>
+              <li>Volitelný Sure View — ochrana soukromí na veřejnosti</li>
+              <li>Integrovaná 4G / 5G — připojení odkudkoliv</li>
+              <li>Výdrž až 16 hodin — celý pracovní den bez nabíječky</li>
+              <li>Full HD webkamera s krytkou a AI potlačením šumu</li>
+              <li>Elegantní prémiový design — profesionální vzhled</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Velmi vysoká cena — jedny z nejdražších notebooků HP</li>
+              <li>Omezená konektivita — často nutný Thunderbolt adaptér</li>
+              <li>
+                Bez dedikované grafiky — pouze integrovaná Intel Iris Xe / Arc
+              </li>
+              <li>Maximálně 14" displej — žádná větší varianta</li>
+              <li>Pájená RAM — nelze upgradovat</li>
+              <li>Nákladné opravy — specifické komponenty</li>
+              <li>Mírné zahřívání při vyšší zátěži</li>
+              <li>Zbytečně drahé, pokud pracujete převážně u stolu</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intenzivní mobilní použití:</strong> pro profesionály,
+          kteří jsou neustále na cestách, jsou tyto notebooky ideální. Nízká
+          hmotnost a výdrž baterie výrazně zlepšují každodenní práci — návrat k
+          těžším notebookům je pak obtížný.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/EFh54Wh7FgTCvAcgctWM4g.jpg"
+          alt="HP Elite Dragonfly"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní verze</h2>
+
+        <div class="model-block">
+          <h3>HP Elite Dragonfly G4 / G5 — 13,5 palce</h3>
+          <p>
+            Nejkompaktnější a nejlehčí verze — u některých konfigurací pod 990
+            g. Displej s poměrem stran 3:2 je obzvlášť vhodný pro čtení
+            dokumentů a práci s tabulkami. Procesor Intel Core Ultra, výdrž až
+            16 hodin a volitelná integrovaná 5G konektivita. Ideální volba pro
+            manažery, kteří létají několikrát týdně.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Elite Dragonfly G4 / G5 — 14 palců</h3>
+          <p>
+            14palcový formát nabízí o něco větší displej při zachování velmi
+            nízké hmotnosti (cca 1,1 kg). Obvykle poskytuje o něco lepší
+            konektivitu než 13,5palcová verze a lepší chlazení. Ideální pro ty,
+            kteří chtějí pohodlí většího displeje bez ztráty mobility.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Elite x360 13,3 palce</h3>
+          <p>
+            Kompaktní konvertibilní model s 360° pantem a dotykovým displejem
+            (OLED nebo IPS). Kompatibilní s dobíjecím stylusem HP pro psaní
+            poznámek, anotace a elektronické podpisy. Velmi oblíbený mezi
+            konzultanty a školiteli, kteří často prezentují v režimu stan nebo
+            tablet. O něco těžší než Dragonfly kvůli konstrukci pantu.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Elite x360 14 palců</h3>
+          <p>
+            14palcová verze konvertibilního modelu, která nabízí nejlepší
+            rovnováhu mezi velikostí displeje a přenositelností v řadě Elite
+            x360. Dostupná s volitelným OLED displejem 2.8K pro ty, kteří
+            potřebují vyšší kvalitu obrazu při prezentacích klientům. Doporučená
+            konfigurace pro většinu mobilních profesionálů, kteří chtějí
+            konvertibilní zařízení.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš názor</h2>
+        <div class="conclusion">
+          <p>
+            HP Elite Dragonfly a Elite x360 jsou jednoduše nejlepší
+            profesionální notebooky HP z hlediska lehkosti a mobility. Jejich
+            kvalita zpracování, integrované zabezpečení a výdrž baterie z nich
+            dělají výjimečné pracovní nástroje pro velmi mobilní profesionály.
+          </p>
+          <p style="margin-top: 10px">
+            Výběr mezi nimi závisí na jednoduché otázce: potřebujete dotykový
+            displej a 360° pant? Pokud ano,
+            <strong>Elite x360 14 palců</strong> je nejlepší volba. Pokud ne,
+            <strong>Dragonfly 14 palců</strong> nabídne o něco nižší hmotnost a
+            mírně lepší výdrž baterie při velmi podobném každodenním použití.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

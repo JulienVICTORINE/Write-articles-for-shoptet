@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP ZBook — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── CERTIFICATIONS ── */
+      .cert-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 8px;
+        margin-top: 4px;
+      }
+
+      .cert-cell {
+        display: table-cell;
+        vertical-align: top;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 12px 14px;
+        background: #f7f9fb;
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+        width: 33%;
+        text-align: center;
+      }
+
+      .cert-cell strong {
+        display: block;
+        font-size: 15px;
+        color: #0096d6;
+        margin-bottom: 4px;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .cert-row,
+        .cert-cell {
+          display: block;
+          width: 100%;
+          margin-bottom: 8px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP ZBook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-zbook/hp-zbook-logo.png"
+          alt="HP ZBook Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">💻 Ordinateurs portables HP</div>
+        <h1 class="article-title">
+          HP ZBook — La station de travail mobile pour les professionnels
+          exigeants
+        </h1>
+        <p class="article-intro">
+          Le HP ZBook est la gamme de stations de travail mobiles de HP. Conçu
+          pour les ingénieurs, architectes, designers 3D, développeurs de
+          logiciels et scientifiques, il embarque des composants de niveau
+          professionnel — GPU certifié ISV, processeur haute performance, écran
+          calibré d'usine — dans un châssis portable. Quand un laptop ordinaire
+          ne suffit plus, le ZBook prend le relais.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION -->
+      <section>
+        <h2>⚙️ Présentation de la gamme</h2>
+        <p>
+          Le HP ZBook se place <strong>au-delà de l'EliteBook</strong> dans la
+          hiérarchie HP. Il ne s'adresse pas aux utilisateurs bureautiques mais
+          aux professionnels dont le travail dépend de la puissance de calcul
+          graphique : modélisation 3D, simulation d'ingénierie, rendu
+          architectural, post-production vidéo, analyse de données volumineuses
+          ou développement de logiciels complexes.
+        </p>
+        <p>
+          La différence fondamentale avec un laptop gaming comme l'OMEN réside
+          dans les
+          <strong>GPU professionnels certifiés ISV</strong> (Independent
+          Software Vendor). Ces cartes graphiques — NVIDIA RTX série A ou Ada
+          Lovelace — sont spécifiquement optimisées et certifiées pour
+          fonctionner de façon fiable avec les logiciels professionnels comme
+          <strong>AutoCAD, SolidWorks, CATIA, Revit, Adobe Premiere Pro</strong>
+          et DaVinci Resolve. Un GPU gaming peut faire tourner ces logiciels,
+          mais sans la stabilité ni les optimisations d'un GPU pro certifié.
+        </p>
+        <p>
+          Les ZBook intègrent également des écrans
+          <strong>HP DreamColor</strong> sur les modèles haut de gamme — des
+          dalles calibrées d'usine avec une couverture colorimétrique étendue
+          (DCI-P3, Adobe RGB) indispensables pour les métiers de la couleur.
+          Tous les modèles sont certifiés MIL-SPEC 810H et intègrent HP Wolf
+          Security.
+        </p>
+
+        <!-- CERTIFICATIONS -->
+        <div class="cert-row" style="margin-top: 20px">
+          <div class="cert-cell">
+            <strong>🎨 HP DreamColor</strong>
+            Écran calibré d'usine — couverture DCI-P3 et Adobe RGB pour les
+            métiers de la couleur
+          </div>
+          <div class="cert-cell">
+            <strong>✅ Certifié ISV</strong>
+            GPU validé par AutoCAD, SolidWorks, CATIA, Revit, Adobe, DaVinci
+            Resolve
+          </div>
+          <div class="cert-cell">
+            <strong>🛡️ MIL-SPEC 810H</strong>
+            Résistance aux chocs, vibrations, températures extrêmes et humidité
+            certifiée
+          </div>
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-zbook/hp-zbook.png"
+          alt="HP ZBook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UTILISATEUR -->
+      <section>
+        <h2>👤 Pour qui est le HP ZBook ?</h2>
+        <p>
+          Le ZBook s'adresse à des métiers très précis qui nécessitent une
+          puissance de calcul graphique professionnelle. Il n'est pas fait pour
+          tout le monde :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Pas idéal si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous travaillez sur AutoCAD, SolidWorks, CATIA, Revit ou un
+              logiciel CAO/BIM
+            </div>
+            <div class="profile-cell">
+              Vous faites de la bureautique classique — un EliteBook ou ProBook
+              suffit largement
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous faites de la modélisation 3D, du rendu architectural ou de la
+              simulation
+            </div>
+            <div class="profile-cell">
+              Vous jouez à des jeux vidéo — préférez l'OMEN pour le gaming
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous travaillez en post-production vidéo (Premiere Pro, DaVinci
+              Resolve, After Effects)
+            </div>
+            <div class="profile-cell">
+              Vous cherchez un laptop léger pour voyager — le ZBook est lourd et
+              encombrant
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              La précision des couleurs est critique dans votre travail
+              (infographiste, directeur artistique)
+            </div>
+            <div class="profile-cell">
+              Votre budget est limité — c'est la gamme HP la plus chère
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous êtes ingénieur, architecte, designer industriel ou
+              scientifique
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin d'un laptop fin et discret pour des réunions
+              clients
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vos logiciels exigent une certification GPU ISV pour fonctionner
+              de façon fiable
+            </div>
+            <div class="profile-cell">
+              Vous n'utilisez pas de logiciels professionnels exigeants — le
+              ZBook serait sous-exploité
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : le HP ZBook est un outil de travail professionnel
+          spécialisé, pas un laptop polyvalent. Si votre logiciel métier exige
+          un <strong>GPU certifié ISV</strong> ou si vous avez besoin d'un
+          <strong>écran calibré DreamColor</strong>, le ZBook est fait pour
+          vous. Sinon, un EliteBook sera plus adapté et bien moins cher.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-zbook/Zbook_Firefly_Machu.png"
+          alt="HP ZBook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS -->
+      <section>
+        <h2>👍 Avantages &amp; inconvénients</h2>
+        <p>
+          Le HP ZBook est taillé pour les
+          <strong>workflows professionnels intensifs</strong> — voici ses forces
+          considérables et les limites à connaître avant d'investir.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                GPU professionnel certifié ISV — stabilité garantie avec les
+                logiciels métier
+              </li>
+              <li>
+                Écran HP DreamColor calibré d'usine — précision colorimétrique
+                exceptionnelle
+              </li>
+              <li>
+                Processeur haute performance Intel Core Ultra HX ou Xeon —
+                puissance de calcul maximale
+              </li>
+              <li>
+                Grande capacité RAM (jusqu'à 128 Go) — essentielle pour les
+                grosses simulations
+              </li>
+              <li>
+                Stockage SSD NVMe ultra-rapide — rendu et exportation de
+                fichiers volumineux accélérés
+              </li>
+              <li>
+                Certification MIL-SPEC 810H — robustesse validée pour le terrain
+                et les déplacements
+              </li>
+              <li>
+                HP Wolf Security intégré — protection avancée des données
+                sensibles
+              </li>
+              <li>
+                Connectique professionnelle complète — Thunderbolt 4, USB-A,
+                HDMI, SD, RJ45
+              </li>
+              <li>
+                Garantie et support HP professionnels — remplacement rapide en
+                cas de panne
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Prix très élevé — le laptop HP le plus cher, réservé aux budgets
+                professionnels
+              </li>
+              <li>
+                Poids important : entre 1,8 et 2,5 kg selon les modèles — peu
+                nomade
+              </li>
+              <li>
+                Autonomie réduite sous charge pleine — 4 à 6h en usage intensif
+              </li>
+              <li>
+                Chauffe significative — ventilation active et bruyante en charge
+                soutenue
+              </li>
+              <li>
+                Design fonctionnel et sobre — aucun atout esthétique particulier
+              </li>
+              <li>
+                Surdimensionné pour la bureautique ou les usages non créatifs
+              </li>
+              <li>
+                Épaisseur supérieure aux laptops grand public — encombrant dans
+                un sac standard
+              </li>
+              <li>
+                Mise à jour des drivers GPU plus complexe que sur un laptop
+                grand public
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Usage professionnel spécialisé :</strong> en bureau
+          d'études, en studio de création, sur un chantier ou en laboratoire, le
+          ZBook est dans son élément. Il remplace une station de travail fixe
+          tout en offrant la portabilité nécessaire pour travailler directement
+          sur site.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions de la gamme</h2>
+
+        <div class="model-block">
+          <h3>HP ZBook Firefly — Le ZBook ultraléger</h3>
+          <p>
+            Le modèle le plus compact et le plus léger de la gamme ZBook —
+            environ 1,8 kg en 14 pouces. Il embarque un GPU NVIDIA RTX
+            professionnel d'entrée de gamme (RTX 500 ou RTX A500 Ada) et
+            s'adresse aux professionnels créatifs mobiles qui ont besoin de la
+            certification ISV sans porter une machine de 2,5 kg. Idéal pour les
+            architectes et designers qui se déplacent chez les clients. Certifié
+            MIL-SPEC et compatible HP Wolf Security.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ZBook Studio — Le ZBook polyvalent premium</h3>
+          <p>
+            Le modèle équilibré de la gamme, disponible en 16 pouces. Il combine
+            un écran OLED ou HP DreamColor 4K, un processeur Intel Core Ultra HX
+            et un GPU NVIDIA RTX 2000 ou 3000 Ada professionnel. C'est le choix
+            des infographistes, directeurs artistiques, monteurs vidéo et
+            ingénieurs qui veulent une machine puissante avec un écran de
+            qualité exceptionnelle. Son rapport puissance/poids est le meilleur
+            de la gamme ZBook.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ZBook Fury — La puissance maximale</h3>
+          <p>
+            Le modèle le plus puissant de la gamme, disponible en 16 pouces. Il
+            embarque les GPU professionnels NVIDIA RTX les plus performants
+            (jusqu'à la RTX 5000 Ada), un processeur Intel Core Ultra 9 HX ou
+            Xeon, jusqu'à 128 Go de RAM ECC et plusieurs SSD NVMe en RAID.
+            Destiné aux ingénieurs en simulation, aux studios VFX et aux
+            scientifiques qui ont besoin d'une station de travail mobile sans
+            compromis. Lourd (environ 2,5 kg) mais imbattable en puissance
+            brute.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            Le HP ZBook est dans une catégorie à part. Ce n'est pas un laptop
+            qu'on achète parce qu'il est beau ou parce qu'il a de bonnes
+            performances en général — on l'achète parce que son métier l'exige.
+            Pour les ingénieurs, architectes, créatifs 3D et scientifiques dont
+            le logiciel demande un GPU certifié ISV, il n'y a pas d'alternative
+            sérieuse à ce niveau de prix.
+          </p>
+          <p style="margin-top: 10px">
+            Si vous hésitez entre un ZBook et un laptop gaming comme l'OMEN,
+            posez-vous cette question : votre logiciel métier exige-t-il une
+            certification GPU ISV ? Si oui, le <strong>ZBook Studio</strong> est
+            le meilleur point d'entrée de la gamme. Si non, un EliteBook haut de
+            gamme ou même un OMEN suffira — et vous économiserez plusieurs
+            centaines d'euros.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

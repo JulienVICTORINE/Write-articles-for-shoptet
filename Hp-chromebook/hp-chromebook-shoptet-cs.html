@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Chromebook — Prezentace gamy</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #1a73e8;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #1a73e8;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1a73e8;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CHROMEOS VS WINDOWS ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #1a73e8;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #e8f0fe;
+        color: #1a3c6b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #e8f0fe;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #e8f0fe;
+        border-left: 4px solid #1a73e8;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Chromebook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/Chromebook-logo.png"
+          alt="HP Chromebook Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">💻 Notebooky HP</div>
+        <h1 class="article-title">
+          HP Chromebook — Jednoduchý, rychlý a bezpečný s ChromeOS
+        </h1>
+        <p class="article-intro">
+          HP Chromebook běží na systému <strong>ChromeOS</strong>, operačním
+          systému od Google — nikoli na Windows. Je navržen pro jednoduchost,
+          rychlost a bezpečnost a je velmi rozšířený ve školách, neziskových
+          organizacích a mezi uživateli, kteří pracují převážně ve webovém
+          prohlížeči a aplikacích Google. Spuštění během několika sekund,
+          automatické aktualizace, téměř žádné viry — Chromebook mění způsob,
+          jakým používáme počítač.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🎓 Představení řady</h2>
+        <p>
+          HP Chromebook je samostatná kategorie v nabídce HP: nejde o odlehčený
+          Windows laptop, ale o zařízení postavené na <strong>ChromeOS</strong>,
+          lehkém, rychlém systému zaměřeném na web a cloud. Všechny aplikace
+          Google jsou dostupné nativně — Gmail, Google Docs, Sheets, Slides,
+          Meet, Drive — a Google Play Store umožňuje instalaci Android aplikací
+          na většině novějších modelů.
+        </p>
+        <p>
+          HP je jedním z největších výrobců Chromebooků na světě, zejména díky
+          spolupráci se školami. Nabídka sahá od velmi dostupných plastových
+          modelů pro výuku až po <strong>HP Chromebook Plus</strong> s
+          hliníkovým šasi a kvalitními Full HD displeji, určené firmám a
+          uživatelům pracujícím z domova, kteří hledají lehkou alternativu k
+          Windows.
+        </p>
+        <p>
+          Chromebooky HP jsou dostupné ve velikostech
+          <strong>11,6, 14 a 15,6 palce</strong>, včetně 2-v-1 verzí (Chromebook
+          x360) s 360° pantem. Procesory zahrnují Intel Celeron, Intel Core
+          i3/i5 nebo MediaTek podle modelu — dostačující pro web a cloud
+          kancelář, ale ne pro náročné lokální úlohy.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/7130KpHS2wL.png"
+          alt="HP Chromebook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- CHROMEOS VS WINDOWS -->
+      <section>
+        <h2>🔍 ChromeOS nebo Windows — jaký je rozdíl?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/YMdedpHPE7F4ooURZyktS.png"
+            alt="HP Chromebook"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Před koupí Chromebooku je důležité pochopit rozdíl oproti klasickému
+          Windows laptopu:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🎓 ChromeOS (Chromebook)</div>
+            <div class="compare-body">
+              Lehký systém zaměřený na web a cloud. Start za 8 sekund, tiché
+              automatické aktualizace, vysoká bezpečnost, téměř žádné viry.
+              Ideální pro Google Workspace, web a Android aplikace. Nepodporuje
+              Windows programy (.exe) — žádný Word, Excel, Photoshop ani
+              klasické PC hry.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🪟 Windows (klasický laptop)</div>
+            <div class="compare-body">
+              Plnohodnotný systém kompatibilní se všemi profesionálními
+              programy. Nezbytný pro specializovaný software, CAD, účetnictví,
+              gaming a firemní aplikace. Náročnější, časem se může zpomalovat a
+              vyžaduje antivirus. Dražší při stejném hardwaru.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Klíčová otázka:</strong> potřebujete konkrétní Windows
+          software? Pokud ano, zvolte Windows laptop. Pokud pracujete hlavně na
+          webu a v Google aplikacích, Chromebook bude rychlejší, jednodušší a
+          levnější.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho je HP Chromebook?</h2>
+        <p>
+          Chromebook je ideální pro určité typy uživatelů — ale ne pro všechny:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Používáte hlavně Google Docs, Sheets, Slides a Gmail
+            </div>
+            <div class="profile-cell">
+              Potřebujete specifické Windows programy (ERP, CAD…)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste student nebo učitel v prostředí Google Workspace
+            </div>
+            <div class="profile-cell">
+              Pracujete s pokročilou grafikou — Photoshop není dostupný
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Chcete jednoduchý počítač pro celou rodinu
+            </div>
+            <div class="profile-cell">
+              Hrajete klasické PC hry — Steam není dostupný
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Prioritou je bezpečnost a jednoduchá údržba
+            </div>
+            <div class="profile-cell">
+              Pracujete často offline — ChromeOS je cloudový systém
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Hledáte levný a odolný laptop</div>
+            <div class="profile-cell">
+              Potřebujete hodně lokálního úložiště — je omezené
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: HP Chromebook je ideální pro
+          <strong>webové, školní a domácí použití</strong>. Pokud si nejste
+          jisti kompatibilitou softwaru, raději si to předem ověřte.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/616PpcGimnL.png"
+          alt="HP Chromebook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY & NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          HP Chromebook je navržen pro
+          <strong
+            >jednoduchost, rychlost a bezpečnost při každodenním
+            používání</strong
+          >
+          — zde jsou jeho hlavní výhody a důležité limity.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Velmi rychlé spuštění — méně než 10 sekund od zapnutí po plochu
+              </li>
+              <li>Velmi dostupná cena — nejlevnější typ laptopu HP na trhu</li>
+              <li>
+                Vysoká bezpečnost — žádné viry, tiché automatické aktualizace
+              </li>
+              <li>
+                Výborná výdrž baterie — až 12 až 14 hodin u novějších modelů
+              </li>
+              <li>
+                Lehký a kompaktní — ideální do školní tašky i na každodenní
+                přenášení
+              </li>
+              <li>
+                Integrovaný Google Workspace — Docs, Sheets, Slides, Meet, Drive
+                ihned po zapnutí
+              </li>
+              <li>Přístup k Android aplikacím přes Google Play Store</li>
+              <li>
+                Minimální údržba — žádné zpomalování v čase ani nutnost čištění
+                systému
+              </li>
+              <li>
+                Jednoduchá centrální správa přes Google Admin Console — ideální
+                pro školy
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Nekompatibilní s Windows aplikacemi (.exe) — žádné výjimky
+              </li>
+              <li>Omezené interní úložiště: 32 až 128 GB podle modelu</li>
+              <li>Závislost na cloudu a internetu pro většinu funkcí</li>
+              <li>Žádné klasické PC hraní — ani Steam, ani AAA hry</li>
+              <li>
+                Omezená doba podpory ChromeOS — každý model má datum ukončení
+                aktualizací (AUE)
+              </li>
+              <li>
+                Android aplikace nejsou vždy dobře optimalizované pro větší
+                obrazovky
+              </li>
+              <li>
+                Základní procesory — zpomalení při velkém množství otevřených
+                karet
+              </li>
+              <li>Žádný plnohodnotný Microsoft Office — pouze webové verze</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Důležité — datum AUE:</strong> každý Chromebook má datum
+          ukončení aktualizací ChromeOS (Auto Update Expiration). Po tomto datu
+          již nedostává bezpečnostní aktualizace. Před nákupem vždy ověřte AUE —
+          některé modely jsou podporovány až do roku 2030 nebo déle.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELY -->
+      <section>
+        <h2>📋 Hlavní verze řady</h2>
+
+        <div class="model-block">
+          <h3>HP Chromebook 11 — školní formát</h3>
+          <p>
+            Nejkompaktnější a nejlevnější model řady HP Chromebook, s
+            úhlopříčkou 11,6". Navržen pro žáky základních a středních škol — je
+            odolný, lehký (méně než 1 kg), zvládne drobné pády a snadno se
+            spravuje přes Google Admin Console. Procesor MediaTek nebo Intel
+            Celeron, 4 GB RAM, 32 nebo 64 GB eMMC úložiště. Ideální pro
+            poznámky, Google Classroom a online výuku.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Chromebook 14 — univerzální formát</h3>
+          <p>
+            Nejprodávanější model řady, s úhlopříčkou 14". Dobrá rovnováha mezi
+            velikostí, přenositelností a cenou. Dostupný s procesory Intel
+            Celeron nebo Intel Core i3, 4 nebo 8 GB RAM a Full HD IPS displejem
+            u novějších verzí. Ideální pro studenty, rodiny a práci z domova.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Chromebook x360 — konvertibilní verze</h3>
+          <p>
+            2v1 verze s 360° pantem a dotykovým displejem. Dostupná ve
+            velikostech 11,6" a 14". Lze ji používat jako tablet, pro kreslení
+            stylusem nebo sledování videí. Velmi oblíbená ve školách díky své
+            flexibilitě.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Chromebook Plus — prémiová verze</h3>
+          <p>
+            Prémiová řada Chromebooků HP uvedená v roce 2023 ve spolupráci s
+            Googlem. Splňuje standardy „Chromebook Plus“: minimálně Full HD
+            displej, 8 GB RAM, 128 GB SSD, procesor Intel Core i3 nebo vyšší,
+            FHD webkamera a AI funkce Google. Některé modely mají hliníkové
+            provedení. Ideální pro práci na dálku a profesionály.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš názor</h2>
+        <div class="conclusion">
+          <p>
+            HP Chromebook je skvělá volba, pokud odpovídá vašemu způsobu
+            použití. Pokud pracujete v Google Workspace, prohlížíte web,
+            sledujete videa a používáte videohovory, nabízí rychlejší,
+            jednodušší a bezpečnější zážitek než srovnatelný levný Windows
+            laptop — často za nižší cenu.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud však potřebujete specifické Windows aplikace, větší lokální
+            úložiště nebo profesionální software, zvolte raději
+            <strong>HP Essential</strong> nebo <strong>HP Pavilion</strong> s
+            Windows. Chromebook není univerzální zařízení — je to specializovaný
+            nástroj, který vyniká ve své oblasti.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

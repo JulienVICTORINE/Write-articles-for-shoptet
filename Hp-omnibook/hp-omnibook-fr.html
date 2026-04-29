@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniBook</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP OmniBook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omnibook-logo.jpg"
+          alt="HP OmniBook Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">💻 Ordinateurs portables HP</div>
+        <h1 class="article-title">
+          HP OmniBook — Le laptop HP taillé pour l'ère de l'IA
+        </h1>
+        <p class="article-intro">
+          Lancée en 2024, la gamme HP OmniBook marque le grand retour d'un nom
+          historique chez HP — et surtout l'arrivée d'une nouvelle génération de
+          laptops conçus autour de l'intelligence artificielle embarquée.
+          Processeurs à NPU intégré, compatibilité Copilot+ de Microsoft, ARM ou
+          x86 selon les modèles : l'OmniBook est le pari de HP sur ce que sera
+          l'ordinateur portable de demain.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION -->
+      <section>
+        <h2>🔮 Présentation de la gamme</h2>
+        <p>
+          Le HP OmniBook est une gamme entièrement nouvelle, lancée par HP pour
+          répondre à l'émergence des <strong>PC Copilot+</strong> imposée par
+          Microsoft en 2024. Ces machines intègrent un
+          <strong>NPU (Neural Processing Unit)</strong> — une puce dédiée au
+          traitement de l'intelligence artificielle en local, directement sur
+          l'appareil, sans passer par le cloud.
+        </p>
+        <p>
+          La gamme OmniBook est disponible en deux architectures distinctes :
+          les modèles basés sur les puces
+          <strong>Snapdragon X Elite / X Plus</strong> de Qualcomm (architecture
+          ARM, très bonne autonomie) et les modèles équipés de processeurs
+          <strong>Intel Core Ultra 200</strong> (architecture x86, meilleure
+          compatibilité logicielle). Les deux offrent une accélération IA locale
+          bien supérieure aux générations précédentes.
+        </p>
+        <p>
+          En pratique, l'OmniBook permet des fonctionnalités comme la
+          <strong>transcription en temps réel</strong>, l'<strong
+            >effacement de bruit avancé</strong
+          >, la <strong>génération d'images en local</strong> via Windows Studio
+          Effects, et des performances accrues dans les applications compatibles
+          IA (Adobe, DaVinci Resolve, Microsoft 365). Il est disponible en
+          <strong>14 et 16 pouces</strong>, avec des finitions aluminium
+          soignées.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/con-nb-regis-24c2-omnibook-ultra-14-fh0000-product-image.jpg"
+          alt="HP OmniBook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UTILISATEUR -->
+      <section>
+        <h2>👤 Pour qui est le HP OmniBook ?</h2>
+        <p>
+          L'OmniBook est une gamme récente avec un positionnement très précis
+          autour de l'IA. Voici à qui il s'adresse réellement :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Pas idéal si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous voulez profiter des dernières fonctionnalités IA de Windows
+              (Copilot+, Live Captions…)
+            </div>
+            <div class="profile-cell">
+              Vous utilisez des logiciels anciens non compatibles ARM (sur les
+              modèles Snapdragon)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous êtes en télétravail et utilisez beaucoup la visio et la
+              transcription automatique
+            </div>
+            <div class="profile-cell">
+              Vous jouez à des jeux vidéo — pas de GPU dédié gaming sur cette
+              gamme
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous cherchez une autonomie maximale (jusqu'à 20h sur les modèles
+              Snapdragon)
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin de logiciels professionnels lourds non optimisés
+              pour l'IA (CAO, 3D…)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous travaillez avec des outils Microsoft 365 au quotidien
+            </div>
+            <div class="profile-cell">
+              Vous préférez attendre que l'écosystème IA soit plus mature avant
+              d'investir
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous êtes sensible aux innovations technologiques et aux
+              nouveautés
+            </div>
+            <div class="profile-cell">
+              Vous cherchez le meilleur rapport qualité/prix — l'Envy reste plus
+              compétitif
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous utilisez des outils créatifs compatibles IA (Adobe Firefly,
+              DaVinci Resolve…)
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin d'une connectique complète sans adaptateur
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : l'HP OmniBook est le bon choix pour les
+          <strong>professionnels curieux et les early adopters</strong> qui
+          veulent tirer parti de l'IA dès aujourd'hui. Si l'IA ne fait pas
+          partie de vos priorités, l'Envy ou le Spectre restent des choix plus
+          éprouvés.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS -->
+      <section>
+        <h2>👍 Avantages &amp; inconvénients</h2>
+        <p>
+          L'HP OmniBook est une gamme jeune et innovante — voici ses forces et
+          ses limites actuelles.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                NPU intégré — accélération IA locale sans dépendre du cloud
+              </li>
+              <li>
+                Compatible Copilot+ — accès aux fonctionnalités IA avancées de
+                Windows 11
+              </li>
+              <li>
+                Autonomie exceptionnelle sur les modèles Snapdragon (jusqu'à
+                20h)
+              </li>
+              <li>Démarrage quasi-instantané et reprise de veille immédiate</li>
+              <li>Finition aluminium soignée — design moderne et léger</li>
+              <li>
+                Transcription en temps réel et effacement de bruit avancé
+                intégrés
+              </li>
+              <li>
+                Traitement IA en local — données non envoyées sur internet
+              </li>
+              <li>Écran IPS ou OLED selon les configurations</li>
+              <li>Charge rapide USB-C — pratique en déplacement</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Gamme très récente — peu de recul sur la fiabilité long terme
+              </li>
+              <li>
+                Modèles Snapdragon : compatibilité limitée avec certains
+                logiciels x86 anciens
+              </li>
+              <li>
+                Fonctionnalités IA encore en développement — certaines promesses
+                pas entièrement tenues
+              </li>
+              <li>Prix élevé pour une gamme sans historique établi</li>
+              <li>
+                Pas de GPU dédié — inutilisable pour le gaming ou la 3D
+                intensive
+              </li>
+              <li>
+                Connectique réduite — peu de ports, adaptateur souvent
+                nécessaire
+              </li>
+              <li>
+                RAM soudée et non extensible sur la plupart des configurations
+              </li>
+              <li>
+                L'écosystème applicatif IA est encore limité en dehors de
+                Microsoft 365
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>À noter :</strong> les fonctionnalités IA de Copilot+ comme
+          <em>Recall</em> (historique visuel de votre activité) font l'objet de
+          débats sur la vie privée. Il est conseillé de vérifier quelles
+          fonctions sont actives et de configurer vos préférences de
+          confidentialité après achat.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/group_12317_2x.jpg"
+          alt="HP OmniBook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions de la gamme</h2>
+
+        <div class="model-block">
+          <h3>HP OmniBook X 14 — Snapdragon X Elite / X Plus</h3>
+          <p>
+            Le modèle phare de la gamme, basé sur la puce Snapdragon X Elite de
+            Qualcomm. Architecture ARM, autonomie jusqu'à 20 heures, démarrage
+            instantané et connectivité 5G optionnelle. Idéal pour les
+            professionnels nomades qui veulent le maximum d'autonomie avec des
+            fonctionnalités IA intégrées. Vérifiez la compatibilité de vos
+            logiciels avant d'acheter.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP OmniBook Ultra 14 — Intel Core Ultra 200</h3>
+          <p>
+            La version x86 de l'OmniBook, avec un processeur Intel Core Ultra
+            200 Series. Meilleure compatibilité logicielle que la version
+            Snapdragon, tout en bénéficiant du NPU Intel pour les
+            fonctionnalités Copilot+. Légèrement moins autonome (12 à 15h
+            annoncées), mais plus polyvalent pour les utilisateurs qui dépendent
+            de logiciels Windows classiques.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP OmniBook 16 — Grand format IA</h3>
+          <p>
+            La version 16 pouces de la gamme, pour les utilisateurs qui
+            préfèrent un grand écran. Elle reprend les mêmes technologies IA que
+            les modèles 14 pouces, avec un écran plus grand et une meilleure
+            dissipation thermique. Plus lourd et moins nomade que le 14 pouces,
+            mais offre un espace de travail plus confortable pour la bureautique
+            intensive et les réunions en visio.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            Le HP OmniBook est un pari audacieux de HP sur l'avenir du PC. Il
+            incarne une vraie rupture technologique avec l'intégration du NPU et
+            les fonctionnalités Copilot+, et il le fait dans un châssis soigné
+            avec une autonomie impressionnante sur les modèles Snapdragon.
+          </p>
+          <p style="margin-top: 10px">
+            Cependant, la gamme est encore très jeune et l'écosystème IA de
+            Windows est en train de se construire. Si vous n'êtes pas pressé,
+            attendre la deuxième génération permettra de profiter de
+            fonctionnalités plus abouties. Si vous voulez être à la pointe dès
+            maintenant, l'<strong>OmniBook Ultra 14 en Intel</strong> est le
+            choix le plus prudent pour sa compatibilité logicielle supérieure.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

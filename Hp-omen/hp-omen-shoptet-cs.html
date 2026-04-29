@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP OMEN — Prezentace řady</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #cc0000;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #cc0000;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #cc0000;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fff5f5;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── COMPARATIF OMEN VS VICTUS ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #1a1a1a;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #e8f4fd;
+        color: #004f7c;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fff5f5;
+        border-left: 4px solid #cc0000;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP ZBook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen/HP_Omen_logo.png"
+          alt="HP Omen Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🎮 Herní notebooky HP</div>
+        <h1 class="article-title">HP OMEN — Prémiový herní notebook od HP</h1>
+        <p class="article-intro">
+          HP OMEN je prémiová herní řada společnosti HP. Je navržena pro náročné
+          hráče, kteří chtějí maximální výkon bez kompromisů. Nabízí nejnovější
+          grafické karty NVIDIA GeForce RTX, displeje s vysokou obnovovací
+          frekvencí až 240 Hz a pokročilý systém chlazení. Vedle ASUS ROG, Razer
+          Blade a MSI Titan patří OMEN mezi špičku high-end herních notebooků s
+          Windows.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🔥 Přehled řady</h2>
+        <p>
+          HP OMEN se nachází na <strong>vrcholu herní nabídky HP</strong>, nad
+          řadou Victus (dostupné herní modely). Je určen hráčům, kteří chtějí
+          hrát nejnovější hry na ultra detaily, streamovat ve vysoké kvalitě
+          nebo kombinovat gaming s tvorbou obsahu.
+        </p>
+        <p>
+          Modely OMEN obsahují grafické karty
+          <strong>NVIDIA GeForce RTX 4060, 4070, 4080 nebo 4090 Laptop</strong>,
+          v závislosti na konfiguraci, a displeje QHD nebo Full HD s obnovovací
+          frekvencí až <strong>240 Hz</strong> a odezvou 3 ms. Chlazení
+          <strong>Thermal Grizzly</strong> — kvalitní teplovodivá pasta
+          aplikovaná přímo na CPU a GPU — zajišťuje stabilní teploty i při
+          dlouhém hraní.
+        </p>
+        <p>
+          OMEN také obsahuje software <strong>OMEN Gaming Hub</strong>, který
+          umožňuje optimalizaci výkonu, sledování teplot v reálném čase,
+          přizpůsobení RGB podsvícení klávesnice a správu ventilátorů podle
+          použití. Řadu doplňuje kompletní ekosystém: monitory OMEN, sluchátka,
+          klávesnice a herní myši.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen/1486312f-c9b8-4a44-86af-1266ceddfa57.6693f368a3efb737a6c17146f2a5ea1f.png"
+          alt="HP OMEN"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- OMEN VS VICTUS -->
+      <section>
+        <h2>🎯 OMEN nebo Victus — jaký je rozdíl?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen/hp-omen-vs-victus-frente-a-frente.png"
+            alt="HP OMEN"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>HP nabízí dvě herní řady. Zde je to nejdůležitější pro výběr:</p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🔥 HP OMEN</div>
+            <div class="compare-body">
+              High-end gaming — GPU RTX 4060 až 4090, QHD displeje až 240 Hz,
+              chlazení Thermal Grizzly, prémiové hliníkové šasi, přizpůsobitelné
+              RGB. Pro hráče, kteří chtějí maximální výkon bez kompromisů.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🎯 HP Victus</div>
+            <div class="compare-body">
+              Dostupný gaming — GPU RTX 3050 až 4060, 144 Hz Full HD displeje,
+              jednoduchý design bez výrazného RGB, plastové šasi. Pro hráče s
+              omezeným rozpočtem.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Shrnutí:</strong> zvolte <strong>OMEN</strong> pro hraní
+          AAA her na ultra nebo streamování. Zvolte <strong>Victus</strong> pro
+          dobrý výkon za rozumnou cenu.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho je HP OMEN?</h2>
+        <p>OMEN je určen pro náročné hráče. Zde je ideální profil:</p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Vhodné pro…</div>
+            <div class="profile-cell profile-header">❌ Nevhodné pro…</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Hrajete moderní AAA hry na vysoké detaily
+            </div>
+            <div class="profile-cell">
+              Potřebujete lehký notebook na cestování
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">Streamujete na Twitchi nebo YouTube</div>
+            <div class="profile-cell">
+              Používáte notebook hlavně na kancelářskou práci
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Hrajete kompetitivně a potřebujete 165 Hz nebo 240 Hz
+            </div>
+            <div class="profile-cell">
+              Potřebujete nenápadný notebook do kanceláře
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vytváříte obsah (video, 3D) kromě hraní
+            </div>
+            <div class="profile-cell">Potřebujete dlouhou výdrž baterie</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Chcete výkonné chlazení pro dlouhé hraní
+            </div>
+            <div class="profile-cell">Máte omezený rozpočet</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Líbí se vám výrazný herní design s RGB
+            </div>
+            <div class="profile-cell">
+              Potřebujete profesionální GPU s ISV certifikací
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: HP OMEN je ideální pro
+          <strong>vášnivé hráče a tvůrce obsahu</strong>, kteří chtějí nejlepší
+          herní notebook HP.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          HP OMEN je optimalizován pro
+          <strong>herní výkon a tvorbu obsahu</strong> — zde jsou jeho hlavní
+          silné stránky a omezení.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Výkonné GPU NVIDIA GeForce RTX — od RTX 4060 až po RTX 4090
+                Laptop
+              </li>
+              <li>
+                Displej až 240 Hz QHD — maximální plynulost pro kompetitivní
+                hraní
+              </li>
+              <li>
+                Chlazení Thermal Grizzly — stabilní teploty při dlouhých herních
+                sezeních
+              </li>
+              <li>
+                OMEN Gaming Hub — optimalizace výkonu a monitoring v reálném
+                čase
+              </li>
+              <li>
+                RGB klávesnice s individuálním podsvícením — přizpůsobení podle
+                preferencí
+              </li>
+              <li>
+                Kompletní konektivita: USB-A ×3, USB-C, HDMI 2.1, Mini
+                DisplayPort, RJ45
+              </li>
+              <li>Kvalitní reproduktory — pohlcující zvuk i bez sluchátek</li>
+              <li>Kompatibilita s NVIDIA G-Sync — plynulý obraz bez trhání</li>
+              <li>Možnost upgradu RAM a SSD u většiny modelů</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Vysoká cena — nejdražší herní notebook HP</li>
+              <li>Vyšší hmotnost: 2 až 2,5 kg + velký adaptér</li>
+              <li>Nízká výdrž baterie: 3 až 5 hodin při běžném použití</li>
+              <li>
+                Hlučné chlazení při zátěži — nevhodné do tichého prostředí
+              </li>
+              <li>
+                Zahřívání klávesnice a spodní části při intenzivním používání
+              </li>
+              <li>
+                Výrazný herní design — méně vhodný do pracovního prostředí
+              </li>
+              <li>Velký napájecí adaptér (230 W+) — nutné nosit s sebou</li>
+              <li>
+                Bez certifikace MIL-SPEC a pokročilého firemního zabezpečení
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Poznámka:</strong> jako všechny herní notebooky, i OMEN má
+          vysokou spotřebu při maximální zátěži. Pro nejlepší výkon se
+          doporučuje hrát při připojení k napájení.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELY -->
+      <section>
+        <h2>📋 Hlavní verze řady</h2>
+
+        <div class="model-block">
+          <h3>HP OMEN 16 — Univerzální formát</h3>
+          <p>
+            Nejprodávanější model řady OMEN s 16" displejem. Nabízí ideální
+            rovnováhu mezi velikostí, výkonem a mobilitou. Dostupný s GPU RTX
+            4060 až RTX 4080 Laptop, displejem QHD 165 Hz nebo Full HD 144/240
+            Hz a až 32 GB DDR5 RAM. Ideální pro hraní doma s možností občasného
+            přenášení.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP OMEN Transcend 16 — Tenký OMEN</h3>
+          <p>
+            Nejtenčí a nejlehčí verze řady OMEN, uvedená v roce 2023. Hliníkové
+            šasi, volitelný mini-LED nebo OLED displej, hmotnost kolem 1,95 kg.
+            Konkuruje modelům Razer Blade 16 a ASUS ROG Zephyrus G16. Vybaven
+            GPU RTX 4070 nebo 4080 Laptop.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP OMEN Max 16 — Maximální výkon</h3>
+          <p>
+            Nejvýkonnější model řady OMEN s GPU RTX 4090 Laptop a procesorem
+            Intel Core i9 HX. Určen pro hráče, kteří chtějí absolutní výkon bez
+            kompromisů: 4K hraní, streaming a rychlý rendering. Těžký a
+            energeticky náročný, ale nepřekonatelný výkonem.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš názor</h2>
+        <div class="conclusion">
+          <p>
+            HP OMEN patří mezi nejvyváženější herní notebooky ve své cenové
+            kategorii. Díky chlazení Thermal Grizzly, rychlému displeji a
+            softwaru OMEN Gaming Hub je skvělou volbou pro náročné hráče.
+          </p>
+          <p style="margin-top: 10px">
+            Pro nižší rozpočet zvažte <strong>HP Victus</strong>. Pokud chcete
+            maximální výkon v tenkém těle, nejlepší volbou je
+            <strong>OMEN Transcend 16</strong>.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

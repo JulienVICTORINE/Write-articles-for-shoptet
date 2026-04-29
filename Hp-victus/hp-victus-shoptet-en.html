@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Victus — Product Presentation</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0a5c96;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0a5c96;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0a5c96;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #eef4fb;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── COMPARATIF VICTUS VS OMEN ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #0a5c96;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #2a2a2a;
+        color: #ffffff;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #eef4fb;
+        border-left: 4px solid #0a5c96;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP ZBook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-victus/Victus-logo.png"
+          alt="HP Omen Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">🎮 HP Gaming Laptops</div>
+        <h1 class="article-title">
+          HP Victus — The affordable gaming laptop from HP
+        </h1>
+        <p class="article-intro">
+          Launched in 2021, the HP Victus is HP’s entry-level and mid-range
+          gaming lineup. Positioned below the OMEN series, it targets gamers who
+          want to enjoy the latest games without breaking their budget. Clean
+          design, solid performance, and competitive pricing — Victus is the
+          smart choice for getting into PC gaming without sacrificing the
+          essentials.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>🎯 Overview of the lineup</h2>
+        <p>
+          The HP Victus positions itself as the
+          <strong>affordable gaming laptop from HP</strong>, sitting between the
+          consumer Pavilion (without a dedicated GPU) and the high-end OMEN
+          series. It targets student gamers, casual players, and users who want
+          a single laptop for both work and gaming without compromise.
+        </p>
+        <p>
+          The Victus lineup is available in
+          <strong>15.6 and 16.1 inches</strong>, featuring NVIDIA GeForce RTX
+          GPUs ranging from RTX 3050 to RTX 4060, as well as AMD Radeon options
+          depending on the configuration. Displays typically offer a
+          <strong>144 Hz Full HD refresh rate</strong>, which is sufficient for
+          smooth gaming in most titles. Unlike OMEN, Victus adopts a clean and
+          understated design, without aggressive RGB or flashy gaming
+          aesthetics.
+        </p>
+        <p>
+          Its main strength is its <strong>value for money</strong>: it delivers
+          real gaming performance at a much more accessible price than direct
+          competitors. It is also quieter and cooler than OMEN outside of
+          intensive gaming sessions, making it a good all-around laptop for
+          mixed work and gaming use.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-victus/con-nb-opihr-23c2-hp-victus-15-fb1000-image.png"
+          alt="HP Victus"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- VICTUS VS OMEN -->
+      <section>
+        <h2>🔍 Victus or OMEN — what’s the difference?</h2>
+        <p>
+          These two HP gaming lines are often compared. Here’s what you need to
+          know:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🎯 HP Victus</div>
+            <div class="compare-body">
+              Accessible gaming — RTX 3050 to 4060 GPUs, 144 Hz Full HD
+              displays, clean and discreet design, lightweight plastic chassis.
+              For gamers who want solid performance on a budget. Quieter and
+              more versatile than OMEN for mixed work + gaming usage.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🔥 HP OMEN</div>
+            <div class="compare-body">
+              High-end gaming — RTX 4060 to 4090 GPUs, up to 240 Hz QHD
+              displays, Thermal Grizzly cooling, aluminum chassis, customizable
+              RGB. For demanding gamers who want maximum performance. Heavier,
+              more expensive, and noisier under load.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Summary:</strong> choose the <strong>Victus</strong> if you
+          play occasionally or have a limited budget. Choose
+          <strong>OMEN</strong> if you play intensively, stream, or want to run
+          the latest games at ultra settings.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-victus/CHOOSE YOUR PARTNER@2x.png"
+          alt="HP Victus"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is the HP Victus for?</h2>
+        <p>
+          Victus is designed for gamers who want essential gaming features
+          without the premium price. Here’s the ideal user profile:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Good fit if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You play popular games: Fortnite, Valorant, FIFA, GTA V, Minecraft
+            </div>
+            <div class="profile-cell">
+              You want to play the latest AAA titles on ultra settings — the GPU
+              may be limiting
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are a student looking for a versatile laptop for work and
+              gaming
+            </div>
+            <div class="profile-cell">
+              You stream live — not enough power for gaming and encoding
+              simultaneously in high quality
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You want a discreet gaming laptop you can take to school or the
+              office
+            </div>
+            <div class="profile-cell">
+              You want 200+ Hz for competitive gaming — display is limited to
+              144 Hz
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You have a limited budget and want the best value for money
+            </div>
+            <div class="profile-cell">
+              Design and premium finish matter to you — Victus uses plastic
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You play in the evenings or on weekends, not in long continuous
+              sessions
+            </div>
+            <div class="profile-cell">
+              You want an ultra-light laptop — Victus weighs between 2.2 and 2.5
+              kg
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You do office work during the day and gaming at night on the same
+              machine
+            </div>
+            <div class="profile-cell">
+              You need long battery life on the go — only 4 to 6 hours outside
+              gaming
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Summary: the HP Victus is the
+          <strong>ideal gaming laptop for beginners or casual gamers</strong>
+          who also want a good everyday laptop. It does both reasonably well
+          without excelling in either — and that’s exactly its strength.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ADVANTAGES & DRAWBACKS -->
+      <section>
+        <h2>👍 Advantages &amp; drawbacks</h2>
+        <p>
+          The HP Victus is designed for
+          <strong>accessible gaming and everyday mixed use</strong> — here are
+          its strengths and honest limitations.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>
+                Excellent value for money — the best HP gaming laptop for tight
+                budgets
+              </li>
+              <li>
+                Dedicated NVIDIA GeForce RTX GPU — real gaming performance in
+                most popular titles
+              </li>
+              <li>
+                144 Hz Full HD display — much smoother than a standard laptop
+                for gaming
+              </li>
+              <li>
+                Clean and discreet design — suitable for school, office, or
+                travel without drawing attention
+              </li>
+              <li>
+                Versatile: office work by day, gaming at night on the same
+                machine
+              </li>
+              <li>
+                Quieter than the OMEN outside of intensive gaming sessions
+              </li>
+              <li>Upgradeable RAM and SSD — easy upgrades after purchase</li>
+              <li>
+                AMD FreeSync compatible — reduces tearing for smoother visuals
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>Fully plastic chassis — less premium finish than OMEN</li>
+              <li>
+                Limited performance on the latest AAA games at high settings
+              </li>
+              <li>Only 144 Hz Full HD display — no QHD or 240 Hz options</li>
+              <li>No customizable RGB — white keyboard backlight only</li>
+              <li>
+                Limited battery life: 4–6 hours for office use, 2–3 hours gaming
+              </li>
+              <li>Heavy for mobility: 2.2 to 2.5 kg + charger</li>
+              <li>
+                Less efficient cooling than OMEN — runs hotter under sustained
+                load
+              </li>
+              <li>
+                No OMEN Gaming Hub — less advanced performance management
+                software
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Good to know:</strong> like all gaming laptops, performance
+          is optimal when plugged in. On battery, the GPU automatically reduces
+          performance to save power — which can impact the gaming experience.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-victus/BE YOU, GO VICTUS@2x.png"
+          alt="HP Victus"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SUB-SERIES -->
+      <section>
+        <h2>📋 Main versions of the lineup</h2>
+
+        <div class="model-block">
+          <h3>HP Victus 15 — The classic format</h3>
+          <p>
+            The entry-level model in the Victus lineup, with a 15.6-inch
+            display. Available with NVIDIA GeForce RTX 3050 to RTX 4060 GPUs or
+            AMD Radeon RX 6500M / 7600M depending on configurations. Powered by
+            Intel Core i5/i7 or AMD Ryzen 5/7 processors. It is the most
+            affordable and best-selling Victus — ideal for student gamers and
+            casual players looking for their first gaming laptop.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Victus 16 — The larger format</h3>
+          <p>
+            The 16.1-inch version of the Victus, offering a slightly larger
+            display and more space for cooling. It generally features more
+            powerful GPU configurations than the 15-inch model (RTX 4060 or RTX
+            4070 on higher-end versions), better thermal performance, and a
+            keyboard with a numeric keypad. Recommended for users who mostly
+            play at home and prefer a larger screen.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Victus — AMD Ryzen versions</h3>
+          <p>
+            Some Victus models are equipped with AMD Ryzen 5 or Ryzen 7
+            processors paired with AMD Radeon RX GPUs. These configurations
+            often provide better performance/value than Intel + NVIDIA versions
+            for AMD-optimized games, and benefit from AMD FreeSync technology
+            for smoother visuals. A good option if your budget is limited and
+            you mainly play non-AAA titles.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The HP Victus perfectly fulfills its role: delivering a real and
+            accessible gaming experience in a versatile laptop that can also
+            remain discreet in the office or classroom. For Fortnite, Valorant,
+            FIFA, indie games, and less demanding titles, it is more than
+            sufficient — at a much lower price than the OMEN.
+          </p>
+          <p style="margin-top: 10px">
+            If your budget allows and you play recent AAA games at high
+            settings, consider upgrading to the <strong>HP OMEN 16</strong> —
+            the performance difference is worth it. But for a first gaming
+            laptop or mixed work/gaming usage, the
+            <strong>Victus 15 or 16 with RTX 4060</strong> is currently one of
+            the best choices on the market in its price range.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

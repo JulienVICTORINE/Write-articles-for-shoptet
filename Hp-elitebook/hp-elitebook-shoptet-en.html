@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP EliteBook</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP EliteBook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-elitebook-logo.jpg"
+          alt="HP EliteBook Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">💻 HP Laptops</div>
+        <h1 class="article-title">
+          HP EliteBook — HP’s secure professional laptop
+        </h1>
+        <p class="article-intro">
+          The HP EliteBook is HP’s premium professional lineup. Robust, secure,
+          and designed for the most demanding business environments, it stands
+          as HP’s reference choice for executives, IT departments, and frequent
+          travelers. MIL-SPEC certification, HP Wolf Security suite, Sure View
+          privacy screen — the EliteBook leaves nothing to chance.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>🏆 Lineup overview</h2>
+        <p>
+          The HP EliteBook sits at the
+          <strong>top of HP’s professional range</strong>, above the ProBook
+          (entry-level business) and below the ZBook (mobile workstation). It is
+          aimed at companies and professionals with high demands in terms of
+          <strong>security, reliability, and remote management</strong>
+          of their IT infrastructure.
+        </p>
+        <p>
+          All EliteBook models are certified
+          <strong>MIL-SPEC 810H</strong>, meaning they have been tested under
+          extreme conditions: drops, vibrations, high and low temperatures,
+          humidity, dust, and altitude. This certification ensures significantly
+          greater durability than a standard consumer laptop.
+        </p>
+        <p>
+          The EliteBook also integrates the
+          <strong>HP Wolf Security</strong> cybersecurity suite directly into
+          the hardware: malware protection at the firmware level, threat
+          isolation via micro-virtualization, and physical intrusion detection.
+          An optional <strong>Sure View</strong> screen (built-in privacy
+          filter) is available on some models, allowing you to work in public
+          spaces without being overlooked.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/541cfb6d-e19e-4be4-a9b3-29da92a3f372.jpg"
+          alt="HP EliteBook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is the HP EliteBook for?</h2>
+        <p>
+          The EliteBook is designed for intensive professional use. It fits very
+          specific profiles:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Great for you if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are an executive, consultant, or salesperson who travels
+              frequently
+            </div>
+            <div class="profile-cell">
+              You are looking for a personal or family laptop — too expensive
+              and too minimalist
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your company manages an IT fleet and needs deployment tools
+            </div>
+            <div class="profile-cell">
+              You do intensive graphic design or video editing (consider a
+              ZBook)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Data security is a top priority in your work
+            </div>
+            <div class="profile-cell">
+              You play video games — no dedicated gaming GPU in this lineup
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You often work in public places (trains, airports, cafés)
+            </div>
+            <div class="profile-cell">
+              Your budget is limited — the ProBook is more affordable for SMEs
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your laptop must withstand harsh conditions (fieldwork,
+              construction, travel)
+            </div>
+            <div class="profile-cell">
+              You need a very large screen — few models exceed 16 inches
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You need built-in 4G/5G connectivity to work anywhere
+            </div>
+            <div class="profile-cell">
+              You prefer colorful and modern designs — the EliteBook is discreet
+              and understated
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In short: the HP EliteBook is the natural choice for
+          <strong>
+            professionals and companies that cannot afford downtime, data
+            breaches, or device failure </strong
+          >. Its robustness and security fully justify its higher price in a
+          professional context.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Pros &amp; Cons</h2>
+        <p>
+          The HP EliteBook is optimized for
+          <strong>professional business use</strong>
+          — here’s what it does very well and its few limitations.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Pros</div>
+            <ul class="pros-list">
+              <li>
+                MIL-SPEC 810H certification — proven resistance to shocks,
+                drops, and extreme conditions
+              </li>
+              <li>
+                HP Wolf Security integrated into hardware — advanced protection
+                against cyber threats
+              </li>
+              <li>
+                Optional Sure View display — built-in physical privacy filter
+                for public spaces
+              </li>
+              <li>
+                Fingerprint reader + IR camera (Windows Hello) — fast and secure
+                login
+              </li>
+              <li>
+                Built-in 4G/5G option — internet access anywhere without relying
+                on Wi-Fi
+              </li>
+              <li>
+                Enterprise management tools (HP Manageability, SCCM, remote
+                BIOS)
+              </li>
+              <li>
+                Full professional connectivity: Thunderbolt 4, USB-A, HDMI, RJ45
+                on some models
+              </li>
+              <li>Solid battery life: 12 to 16 hours on recent models</li>
+              <li>Lightweight aluminum chassis — some models under 1.3 kg</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Cons</div>
+            <ul class="cons-list">
+              <li>
+                High price — significantly more expensive than a consumer laptop
+                with similar power
+              </li>
+              <li>
+                Conservative and uniform design — limited visual customization
+                options
+              </li>
+              <li>
+                No dedicated gaming GPU — only integrated or light professional
+                GPUs
+              </li>
+              <li>Soldered RAM on some recent models — no upgrade possible</li>
+              <li>
+                Good but rarely outstanding display — no OLED option on all
+                models
+              </li>
+              <li>
+                Variable weight depending on series — 16-inch models exceed 1.8
+                kg
+              </li>
+              <li>
+                HP bloatware pre-installed — cleanup often needed on first use
+              </li>
+              <li>Less suited for intensive creative or multimedia work</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Professional use:</strong> for meetings on the go, handling
+          sensitive data, field work, or demanding environments, the EliteBook
+          truly shines. Its balance of robustness, security, and reliability is
+          unmatched within the HP lineup.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SUB-SERIES -->
+      <section>
+        <h2>📋 Main versions of the lineup</h2>
+
+        <div class="model-block">
+          <h3>HP EliteBook 630 / 640 / 650 — G Series</h3>
+          <p>
+            Entry-level models of the EliteBook lineup, available in 13, 14, and
+            15.6 inches. They offer essential HP business features (Wolf
+            Security, MIL-SPEC, fleet management) at a more accessible price
+            than the 800 and 1000 series. Ideal for employees in intensive
+            office use who need reliability without premium features.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP EliteBook 830 / 840 / 860 — G Series</h3>
+          <p>
+            The core of the EliteBook lineup — the most widely used models in
+            companies. Available in 13, 14, and 16 inches, they combine a
+            lightweight aluminum chassis, full connectivity, Sure View option,
+            and optional 4G/5G. The 840 (14-inch) is the benchmark choice for
+            executives and mobile professionals seeking the best balance between
+            portability and business features.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP EliteBook 1040 — Ultra-premium</h3>
+          <p>
+            The absolute high-end of the EliteBook family. 14-inch format,
+            ultra-light magnesium alloy chassis (under 1.2 kg), optional OLED or
+            2.8K display, latest-generation Intel Core Ultra processor, and up
+            to 16 hours of battery life. It competes directly with the ThinkPad
+            X1 Carbon and Dell Latitude 9000 for the title of best professional
+            ultrabook.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP EliteBook x360 — Professional convertible</h3>
+          <p>
+            The 2-in-1 version of the EliteBook, featuring a 360° hinge and
+            touchscreen. Available in 13.3 and 14 inches, it retains all the
+            security and durability certifications of the lineup while adding
+            versatility. Compatible with HP stylus for note-taking and digital
+            signatures. Popular among consultants and trainers who often present
+            in tablet or tent mode.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The HP EliteBook is one of the best-built professional laptops on
+            the market. Its combination of certified durability, advanced
+            hardware security, and enterprise management tools makes it a top
+            choice for IT departments and managers.
+          </p>
+          <p style="margin-top: 10px">
+            For individuals or freelancers who don’t need fleet management or HP
+            Wolf Security, the <strong>HP Envy</strong> or
+            <strong>HP Spectre x360</strong>
+            offer a better multimedia experience for a similar budget. But for
+            companies investing in durability and security, the
+            <strong>EliteBook 840</strong> remains the benchmark of the lineup.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

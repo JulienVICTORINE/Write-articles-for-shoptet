@@ -1,0 +1,726 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP ProBook — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── POSITIONNEMENT DANS LA GAMME ── */
+      .range-bar {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0 4px;
+        font-size: 14px;
+      }
+
+      .range-bar-row {
+        display: table-row;
+      }
+
+      .range-cell {
+        display: table-cell;
+        padding: 10px 12px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        vertical-align: middle;
+        color: #555;
+        background: #f7f9fb;
+        width: 25%;
+      }
+
+      .range-cell.active {
+        background: #0096d6;
+        color: #ffffff;
+        font-weight: 700;
+        border-color: #0096d6;
+      }
+
+      .range-cell span {
+        display: block;
+        font-size: 11px;
+        font-weight: 400;
+        margin-top: 3px;
+        opacity: 0.75;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .range-bar,
+        .range-bar-row,
+        .range-cell {
+          display: block;
+          width: 100%;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Essential Professionnal (ProBook) logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-logo-black-png-medium-size.png"
+          alt="HP Essential Professionnal (ProBook) Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">💻 Ordinateurs portables HP</div>
+        <h1 class="article-title">
+          HP ProBook — L'essentiel professionnel à prix maîtrisé
+        </h1>
+        <p class="article-intro">
+          Le HP ProBook est la gamme professionnelle d'entrée et de milieu de
+          gamme de HP. Positionné entre le Pavilion grand public et l'EliteBook
+          haut de gamme, il s'adresse aux PME, aux indépendants et aux
+          professionnels qui ont besoin d'un laptop fiable et bien équipé pour
+          le travail, sans payer le prix fort des gammes premium. Sobre, robuste
+          et facile à gérer — le ProBook fait le travail sans se faire
+          remarquer.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION -->
+      <section>
+        <h2>🏗️ Présentation de la gamme</h2>
+        <p>
+          Le HP ProBook occupe le
+          <strong>segment professionnel accessible</strong> dans la hiérarchie
+          HP. Il se positionne clairement au-dessus du Pavilion par ses
+          fonctionnalités orientées entreprise — connectique complète, options
+          de sécurité de base, facilité de maintenance — tout en restant bien en
+          dessous du prix de l'EliteBook.
+        </p>
+        <p>
+          La gamme ProBook est disponible en
+          <strong>14 et 15,6 pouces</strong> principalement, avec des
+          processeurs Intel Core ou AMD Ryzen Pro selon les configurations. Son
+          châssis est en plastique renforcé ou en aluminium brossé sur les
+          versions supérieures, avec un design sobre et neutre pensé pour
+          l'environnement de bureau et les réunions professionnelles.
+        </p>
+        <p>
+          Contrairement à l'EliteBook, le ProBook ne dispose pas de la
+          certification MIL-SPEC complète ni de HP Wolf Security avancé, mais il
+          intègre les fonctionnalités essentielles pour une utilisation
+          professionnelle sérieuse : lecteur d'empreintes, TPM 2.0 pour le
+          chiffrement des données, et des options de gestion en parc via HP
+          Manageability.
+        </p>
+
+        <p
+          style="
+            margin-top: 14px;
+            font-weight: 600;
+            color: #0a0f1e;
+            margin-bottom: 6px;
+          "
+        >
+          Positionnement dans la gamme HP professionnelle :
+        </p>
+        <div class="range-bar">
+          <div class="range-bar-row">
+            <div class="range-cell">
+              ProBook
+              <span>Entrée pro</span>
+            </div>
+            <div class="range-cell active">
+              ProBook ✓
+              <span>Vous êtes ici</span>
+            </div>
+            <div class="range-cell">
+              EliteBook
+              <span>Pro haut de gamme</span>
+            </div>
+            <div class="range-cell">
+              ZBook
+              <span>Station de travail</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/62042_repasovany-notebook-hp-probook-640-g8-pocitace24-cz.jpg"
+          alt="HP ProBook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UTILISATEUR -->
+      <section>
+        <h2>👤 Pour qui est le HP ProBook ?</h2>
+        <p>
+          Le ProBook est le laptop HP idéal pour les professionnels qui veulent
+          la fiabilité d'une machine business sans le budget EliteBook :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Pas idéal si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous êtes indépendant ou en PME avec un budget informatique limité
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin de la certification MIL-SPEC et de HP Wolf
+              Security complet (préférez l'EliteBook)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous faites de la bureautique intensive : Word, Excel, PowerPoint,
+              ERP, CRM
+            </div>
+            <div class="profile-cell">
+              Vous cherchez un laptop léger pour voyager très fréquemment (il
+              pèse ~1,7 kg)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous avez besoin d'une connectique complète sans adaptateur
+            </div>
+            <div class="profile-cell">
+              Vous faites de la création graphique, du montage vidéo ou de la 3D
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Votre entreprise gère plusieurs postes et a besoin d'un outil
+              standardisé
+            </div>
+            <div class="profile-cell">
+              Vous jouez à des jeux vidéo — pas de GPU dédié gaming
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous travaillez sur des données sensibles et avez besoin du
+              chiffrement TPM 2.0
+            </div>
+            <div class="profile-cell">
+              Vous voulez un design élégant en aluminium — le ProBook est sobre
+              et fonctionnel
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Comptabilité, RH, administration, services clients, enseignement
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin de l'option 4G/5G intégrée — non disponible sur
+              cette gamme
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : le HP ProBook est le
+          <strong
+            >choix rationnel pour les professionnels sérieux qui veulent faire
+            les choses bien sans se ruiner</strong
+          >. Il fait tout ce qu'un EliteBook fait pour la bureautique
+          quotidienne, à un prix sensiblement inférieur.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS -->
+      <section>
+        <h2>👍 Avantages &amp; inconvénients</h2>
+        <p>
+          Le HP ProBook est optimisé pour l'<strong
+            >usage professionnel du quotidien en entreprise ou en
+            indépendant</strong
+          >
+          — voici ses atouts et ses limites.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                Excellent rapport qualité/prix pour un usage professionnel
+              </li>
+              <li>
+                Connectique complète : USB-A, USB-C, HDMI, RJ45, lecteur SD —
+                tout sans adaptateur
+              </li>
+              <li>
+                Lecteur d'empreintes digitales intégré — connexion rapide et
+                sécurisée
+              </li>
+              <li>
+                TPM 2.0 intégré — chiffrement des données et sécurité de base
+                garantis
+              </li>
+              <li>
+                Écran IPS Full HD mat — confortable pour de longues sessions de
+                travail
+              </li>
+              <li>
+                Clavier confortable et bien dimensionné — agréable pour la
+                frappe intensive
+              </li>
+              <li>
+                Batterie extensible sur certains modèles — jusqu'à 10h
+                d'autonomie
+              </li>
+              <li>
+                Accès facile aux composants — RAM et SSD remplaçables sur la
+                plupart des modèles
+              </li>
+              <li>
+                Compatible avec les outils de gestion HP Manageability en parc
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Pas de certification MIL-SPEC complète — moins robuste qu'un
+                EliteBook
+              </li>
+              <li>
+                Châssis plastique sur les modèles d'entrée — finition moins
+                premium
+              </li>
+              <li>
+                Design très sobre — pas de coloris, pas de finition haut de
+                gamme
+              </li>
+              <li>
+                Poids moyen : entre 1,6 et 1,9 kg selon les modèles — pas le
+                plus nomade
+              </li>
+              <li>
+                Pas d'option 4G/5G — dépendant du Wi-Fi ou d'un partage de
+                connexion
+              </li>
+              <li>
+                Pas de GPU dédié — inadapté aux usages graphiques ou au gaming
+              </li>
+              <li>
+                Pas d'écran OLED disponible — qualité d'affichage correcte mais
+                sans plus
+              </li>
+              <li>
+                HP Wolf Security limité par rapport à l'EliteBook — protection
+                moins avancée
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Usage professionnel PME :</strong> pour gérer une
+          comptabilité, rédiger des rapports, traiter des mails, participer à
+          des réunions en visio ou utiliser un ERP métier, le HP ProBook est
+          parfaitement dimensionné. Il offre la fiabilité d'un laptop business
+          sans la facture d'un EliteBook.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/62042-9_repasovany-notebook-hp-probook-640-g8-pocitace24-cz.jpg"
+          alt="HP ProBook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions de la gamme</h2>
+
+        <div class="model-block">
+          <h3>HP ProBook 440 G — 14 pouces</h3>
+          <p>
+            Le modèle compact de la gamme, en 14 pouces. Léger pour un ProBook
+            (environ 1,6 kg), il convient aux professionnels qui se déplacent
+            occasionnellement entre le bureau et la maison. Disponible avec
+            processeur Intel Core i5/i7 ou AMD Ryzen 5/7 Pro, 16 Go de RAM et
+            SSD NVMe 512 Go en configuration standard. Son écran IPS Full HD mat
+            est confortable pour une utilisation prolongée.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ProBook 450 G — 15,6 pouces</h3>
+          <p>
+            Le modèle le plus vendu de la gamme ProBook. Son grand écran 15,6
+            pouces et son clavier avec pavé numérique intégré en font la
+            référence pour les comptables, gestionnaires et administratifs qui
+            passent leurs journées sur des tableaux et des formulaires.
+            Connectique très complète, autonomie jusqu'à 9h et prix accessible
+            pour les PME.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ProBook 455 G — AMD Ryzen Pro (15,6 pouces)</h3>
+          <p>
+            La version AMD de la gamme ProBook 15,6 pouces, équipée de
+            processeurs AMD Ryzen Pro. Offre généralement un meilleur rapport
+            performances/prix que la version Intel pour les tâches de
+            bureautique intensive et le multitâche. Les GPU AMD Radeon intégrés
+            sont légèrement plus performants pour les tâches graphiques légères
+            comme la retouche photo basique.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP ProBook 460 G — 16 pouces</h3>
+          <p>
+            Le grand format de la gamme ProBook, avec un écran 16 pouces au
+            ratio 16:10 — plus haut que le 15,6 pouces classique, ce qui offre
+            davantage de place verticale pour les documents et les feuilles de
+            calcul. Idéal pour les utilisateurs qui restent principalement au
+            bureau et qui préfèrent un grand espace de travail à la portabilité.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            Le HP ProBook est le laptop professionnel HP le plus sensé pour la
+            majorité des PME et des travailleurs indépendants. Il offre
+            l'essentiel des fonctionnalités business — connectique complète,
+            sécurité de base, fiabilité, facilité de maintenance — à un tarif
+            qui ne met pas à mal le budget informatique.
+          </p>
+          <p style="margin-top: 10px">
+            Si votre activité implique des données sensibles, des déplacements
+            fréquents ou des exigences de robustesse élevées, l'<strong
+              >EliteBook 840</strong
+            >
+            vaut l'investissement supplémentaire. Mais pour 90 % des usages
+            professionnels courants en PME, le
+            <strong>ProBook 450 ou 440</strong> en 16 Go de RAM avec SSD 512 Go
+            sera parfaitement suffisant — et ce, pour plusieurs années.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

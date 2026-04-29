@@ -1,0 +1,718 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Chromebook — Presentation of the range</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #1a73e8;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #1a73e8;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #1a73e8;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CHROMEOS VS WINDOWS ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #1a73e8;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #e8f0fe;
+        color: #1a3c6b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #e8f0fe;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #e8f0fe;
+        border-left: 4px solid #1a73e8;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Chromebook logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/Chromebook-logo.png"
+          alt="HP Chromebook Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">💻 HP Laptops</div>
+        <h1 class="article-title">
+          HP Chromebook — Simple, fast and secure with ChromeOS
+        </h1>
+        <p class="article-intro">
+          The HP Chromebook runs on <strong>ChromeOS</strong>, Google's
+          operating system — not Windows. Designed for simplicity, speed, and
+          security, it is widely used in schools, non-profits, and by users who
+          mainly work in a web browser and Google apps. Boots in seconds,
+          automatic updates, almost no viruses — Chromebook changes how you use
+          a computer.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>🎓 Product overview</h2>
+        <p>
+          The HP Chromebook is a unique category in HP’s lineup: it’s not a
+          lightweight Windows laptop, but a device built around
+          <strong>ChromeOS</strong>, a fast, lightweight system focused on the
+          web and cloud. All Google apps are available natively — Gmail, Docs,
+          Sheets, Slides, Meet, Drive — and the Google Play Store allows Android
+          apps on most recent models.
+        </p>
+        <p>
+          HP is one of the largest Chromebook manufacturers worldwide,
+          especially thanks to education partnerships. Models range from
+          affordable plastic devices for classrooms to
+          <strong>HP Chromebook Plus</strong> models with aluminum chassis and
+          high-quality Full HD displays for businesses and remote workers.
+        </p>
+        <p>
+          HP Chromebooks come in <strong>11.6, 14, and 15.6 inches</strong>,
+          including 2-in-1 versions (Chromebook x360). They use Intel Celeron,
+          Intel Core i3/i5, or MediaTek processors depending on configuration —
+          enough for web and cloud productivity, but not for heavy local
+          workloads.
+        </p>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/7130KpHS2wL.png"
+          alt="HP Chromebook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- CHROMEOS VS WINDOWS -->
+      <section>
+        <h2>🔍 ChromeOS vs Windows — what's the difference?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/YMdedpHPE7F4ooURZyktS.png"
+            alt="HP Chromebook"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Before buying a Chromebook, it's essential to understand how it
+          differs from a traditional Windows laptop:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🎓 ChromeOS (Chromebook)</div>
+            <div class="compare-body">
+              Lightweight system focused on web and cloud. Boots in 8 seconds,
+              silent automatic updates, strong security, almost no viruses.
+              Ideal for Google Workspace, web browsing, and Android apps. Cannot
+              run Windows software (.exe) — no Word, Excel, Photoshop, or
+              classic PC games.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🪟 Windows (Traditional laptop)</div>
+            <div class="compare-body">
+              Full-featured system compatible with all professional software.
+              Required for specialized tools, CAD, accounting, PC gaming, and
+              enterprise apps. Heavier, can slow down over time, and requires
+              antivirus. More expensive for equivalent hardware.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>The key question:</strong> do you need specific Windows
+          software? If yes, choose a Windows laptop. If you mainly use web apps
+          and Google Workspace, a Chromebook will be faster, simpler, and
+          cheaper.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is the HP Chromebook for?</h2>
+        <p>
+          Chromebooks are perfect for some users — and not suitable for others:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Good fit if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You mainly use Google Docs, Sheets, Slides, and Gmail
+            </div>
+            <div class="profile-cell">
+              You need specific Windows software (ERP, CAD…)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are a student or teacher using Google Workspace
+            </div>
+            <div class="profile-cell">
+              You do advanced photo editing — Photoshop is not available
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You want a simple computer for the whole family
+            </div>
+            <div class="profile-cell">
+              You play PC games — Steam is not supported
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Security and easy maintenance matter most
+            </div>
+            <div class="profile-cell">
+              You often work offline — ChromeOS is cloud-based
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You want an affordable and durable laptop
+            </div>
+            <div class="profile-cell">
+              You need a lot of local storage — it's limited
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In summary: the HP Chromebook is ideal for
+          <strong>web, education, and everyday family use</strong>. If you're
+          unsure about software compatibility, check before buying.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-chromebook/616PpcGimnL.png"
+          alt="HP Chromebook"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Advantages & Drawbacks -->
+      <section>
+        <h2>👍 Advantages &amp; Drawbacks</h2>
+        <p>
+          The HP Chromebook is designed for
+          <strong>simplicity, speed, and everyday security</strong> — here are
+          its real strengths and important limitations.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>
+                Ultra-fast boot — under 10 seconds from power button to home
+                screen
+              </li>
+              <li>
+                Very affordable — the cheapest HP laptop category available
+              </li>
+              <li>Strong security — no viruses, silent automatic updates</li>
+              <li>
+                Excellent battery life — up to 12–14 hours on recent models
+              </li>
+              <li>
+                Lightweight and compact — perfect for school bags and daily
+                travel
+              </li>
+              <li>
+                Built-in Google Workspace — Docs, Sheets, Slides, Meet, Drive
+                ready instantly
+              </li>
+              <li>Access to Android apps via the Google Play Store</li>
+              <li>
+                Almost no maintenance — no slowdown over time, no system cleanup
+                needed
+              </li>
+              <li>
+                Easy centralized management via Google Admin Console — ideal for
+                schools
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>
+                Not compatible with Windows software (.exe) — no exceptions
+              </li>
+              <li>
+                Limited internal storage: 32 to 128 GB depending on the model
+              </li>
+              <li>Heavy reliance on cloud and internet for most features</li>
+              <li>No traditional PC gaming — no Steam or AAA titles</li>
+              <li>
+                Limited ChromeOS support lifespan — each model has an AUE (Auto
+                Update Expiration) date
+              </li>
+              <li>
+                Android apps are sometimes poorly optimized for laptop screens
+              </li>
+              <li>Entry-level processors — slowdowns with many tabs open</li>
+              <li>No full Microsoft Office — web versions only</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Important — AUE date:</strong> every Chromebook has an Auto
+          Update Expiration date. After this, it no longer receives security
+          updates. Always check the AUE before buying — some recent models are
+          supported until 2030 or beyond.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELS -->
+      <section>
+        <h2>📋 Main versions of the lineup</h2>
+
+        <div class="model-block">
+          <h3>HP Chromebook 11 — The education format</h3>
+          <p>
+            The most compact and affordable HP Chromebook, with an 11.6-inch
+            display. Designed for students, it’s durable, lightweight (under 1
+            kg), resistant to minor drops, and easy to manage via Google Admin
+            Console. MediaTek or Intel Celeron processor, 4 GB RAM, 32 or 64 GB
+            eMMC storage. Ideal for note-taking, Google Classroom, and video
+            calls.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Chromebook 14 — The versatile option</h3>
+          <p>
+            The best-selling model in the range, with a 14-inch display. A good
+            balance between screen size, portability, and price. Available with
+            Intel Celeron or Intel Core i3 processors, 4 or 8 GB RAM, and Full
+            HD IPS displays on newer versions. Ideal for students, families, and
+            remote workers.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Chromebook x360 — The convertible version</h3>
+          <p>
+            The 2-in-1 Chromebook with a 360° hinge and touchscreen. Available
+            in 11.6 and 14 inches, it can be used as a tablet, for drawing with
+            a stylus, or for watching videos in tent mode. Very popular in
+            education for its flexibility.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Chromebook Plus — The premium version</h3>
+          <p>
+            HP’s premium Chromebook lineup launched in 2023 with Google. Meets
+            Chromebook Plus requirements: Full HD display minimum, 8 GB RAM, 128
+            GB SSD, Intel Core i3 or higher, FHD webcam, and Google AI features.
+            Some models feature aluminum builds. Ideal for remote work and
+            professionals.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The HP Chromebook is an excellent device if it matches your usage.
+            If you live in Google Workspace, browse the web, stream content, and
+            make video calls, it delivers a faster, simpler, and more secure
+            experience than an equivalent entry-level Windows laptop — often at
+            a lower price.
+          </p>
+          <p style="margin-top: 10px">
+            However, if you need specific Windows software, large local storage,
+            or professional applications, go for an
+            <strong>HP Essential</strong> or <strong>HP Pavilion</strong> with
+            Windows. The Chromebook is not a versatile laptop — it’s a
+            specialized tool that excels in its domain.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
