@@ -1,0 +1,873 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP OMEN Desktop & Victus Desktop — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #cc0000;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #cc0000;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #cc0000;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── COMPARATIF OMEN VS VICTUS ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #1a1a1a;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #0a5c96;
+        color: #ffffff;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fff5f5;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS — OMEN ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── TITRE DE SOUS-SECTION ── */
+      .sub-section-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0a0f1e;
+        margin: 8px 0 14px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      .sub-section-title.omen {
+        border-color: #cc0000;
+        color: #cc0000;
+      }
+      .sub-section-title.victus {
+        border-color: #0a5c96;
+        color: #0a5c96;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fff5f5;
+        border-left: 4px solid #cc0000;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      .note.blue {
+        background: #eef4fb;
+        border-left-color: #0a5c96;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Omen & Victus Desktop logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen-&-victus-desktop/hp-omen-&-victus-logo.png"
+          alt="HP Omen & Victus Desktop Logo"
+          style="max-width: 500px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">🎮 PC de bureau HP Gaming</div>
+        <h1 class="article-title">
+          HP OMEN Desktop &amp; Victus Desktop — Les tours gaming de HP
+        </h1>
+        <p class="article-intro">
+          HP propose deux gammes de PC de bureau gaming : l'<strong
+            >OMEN Desktop</strong
+          >
+          pour les joueurs exigeants qui veulent la puissance maximale dans un
+          châssis soigné, et le <strong>Victus Desktop</strong> pour les joueurs
+          qui cherchent de bonnes performances gaming à budget maîtrisé. Deux
+          approches différentes, deux profils d'utilisateurs distincts — voici
+          tout ce qu'il faut savoir pour choisir.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION GÉNÉRALE -->
+      <section>
+        <h2>🎯 Présentation des deux gammes</h2>
+
+        <p>
+          Contrairement aux laptops gaming qui impliquent des compromis
+          thermiques, les tours desktop gaming offrent une
+          <strong
+            >liberté totale en termes de composants et de
+            refroidissement</strong
+          >. Pas de contraintes de taille ni de batterie — le GPU peut
+          fonctionner à pleine puissance en permanence, sans throttling
+          thermique. C'est là que les PC de bureau gaming prennent tout leur
+          sens pour les joueurs qui restent majoritairement à domicile.
+        </p>
+        <p>
+          L'<strong>OMEN Desktop</strong> embarque les GPU NVIDIA GeForce RTX
+          les plus puissants — RTX 4070, 4080 ou 4090 — dans un châssis avec une
+          gestion thermique avancée, un éclairage RGB personnalisable via OMEN
+          Gaming Hub et une conception facilitant les évolutions futures (ajout
+          de RAM, remplacement du GPU, stockage supplémentaire).
+        </p>
+
+        <!-- Image HP Omen Desktop -->
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen-&-victus-desktop/hp-omen-desktop.png"
+            alt="HP Omen Desktop Logo"
+            style="max-width: 500px; width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Le <strong>Victus Desktop</strong> reprend la philosophie du Victus
+          laptop : performances gaming solides avec GPU RTX 3060 à RTX 4060 à un
+          tarif nettement plus accessible.
+        </p>
+
+        <!-- Image HP Victus Desktop logo -->
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen-&-victus-desktop/hp-launches-first-victus-desktop-pc-for-gamers-on-a-budget_bycy.png"
+            alt="HP Victus Desktop Logo"
+            style="max-width: 500px; width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="compare-row" style="margin-top: 16px">
+          <div class="compare-col">
+            <div class="compare-header">🔥 OMEN Desktop</div>
+            <div class="compare-body">
+              Haut de gamme gaming — GPU RTX 4070 à 4090, châssis aluminium avec
+              RGB personnalisable, refroidissement optimisé pour les sessions
+              longues, OMEN Gaming Hub, conçu pour être upgradé. Pour les
+              joueurs qui veulent le maximum sans compromis et qui jouent en 4K
+              ou en 1440p haute fréquence.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🎯 Victus Desktop</div>
+            <div class="compare-body">
+              Gaming accessible — GPU RTX 3060 à RTX 4060, châssis sobre sans
+              RGB excessif, tarif compétitif. Pour les joueurs qui veulent jouer
+              correctement en Full HD ou 1440p sans dépenser une fortune. Bon
+              rapport qualité/prix et facilité d'évolution pour progresser dans
+              le temps.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Avantage du desktop vs laptop gaming :</strong> à budget
+          égal, un PC de bureau gaming est toujours plus puissant qu'un laptop
+          gaming. Le GPU peut fonctionner à 100 % de ses capacités sans bride
+          thermique, le refroidissement est bien plus efficace et les composants
+          sont remplaçables à la pièce.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UTILISATEUR -->
+      <section>
+        <h2>👤 Pour qui sont ces PC gaming ?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-omen-&-victus-desktop/NWnqVHmgA3BFiXLcHVYQne-1200-80.png"
+            alt="HP OMEN Desktop et Victus Desktop"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Ces deux gammes s'adressent à des joueurs qui jouent principalement à
+          domicile et qui veulent tirer le meilleur de leur configuration gaming
+          :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Pas idéal si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous jouez principalement à domicile sur un écran fixe
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin d'un PC portable — regardez le OMEN ou Victus
+              laptop à la place
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous voulez plus de puissance qu'un laptop gaming à budget
+              équivalent
+            </div>
+            <div class="profile-cell">
+              Vous cherchez un PC discret et silencieux pour un bureau
+              professionnel
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous jouez à des jeux AAA récents et voulez le maximum de fluidité
+            </div>
+            <div class="profile-cell">
+              Vous n'avez pas la place pour une tour — l'Elite Mini ou le
+              ProDesk Micro seront plus compacts
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous streamez ou créez du contenu gaming (montage vidéo,
+              enregistrement)
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin d'un GPU professionnel certifié ISV — préférez la
+              Z Series
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous voulez pouvoir upgrader votre GPU ou ajouter de la RAM dans 2
+              ou 3 ans
+            </div>
+            <div class="profile-cell">
+              Votre budget ne permet pas une tour + un écran gaming +
+              périphériques
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous jouez en 4K (OMEN) ou en 1440p/Full HD (Victus) avec un écran
+              haute fréquence
+            </div>
+            <div class="profile-cell">
+              Vous cherchez un PC tout-en-un — ces tours nécessitent un écran
+              séparé
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : un PC de bureau gaming est le meilleur choix pour les
+          <strong
+            >joueurs sédentaires qui veulent maximiser leurs
+            performances</strong
+          >. Si vous jouez exclusivement à domicile, une tour gaming sera
+          toujours plus puissante et plus évolutive qu'un laptop au même prix.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS OMEN -->
+      <section>
+        <h2>🔥 HP OMEN Desktop — Avantages &amp; inconvénients</h2>
+        <p class="sub-section-title omen">
+          OMEN Desktop — Haut de gamme gaming
+        </p>
+        <p>
+          L'OMEN Desktop est optimisé pour les
+          <strong
+            >joueurs exigeants qui veulent la meilleure expérience
+            possible</strong
+          >
+          à domicile.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                GPU NVIDIA GeForce RTX 4070 à 4090 — puissance pour jouer en 4K
+                ultra ou 1440p 165+ Hz
+              </li>
+              <li>
+                Performances sans bride thermique — le GPU fonctionne à 100 % en
+                permanence
+              </li>
+              <li>
+                Châssis bien aéré avec panneau vitré — design gaming assumé et
+                refroidissement efficace
+              </li>
+              <li>
+                RGB personnalisable via OMEN Gaming Hub — ambiance lumineuse
+                selon ses préférences
+              </li>
+              <li>
+                Facilement upgradable — GPU, RAM et stockage remplaçables à la
+                pièce
+              </li>
+              <li>
+                Connectique gaming complète : USB-A ×4, USB-C, HDMI 2.1,
+                DisplayPort, RJ45
+              </li>
+              <li>
+                OMEN Gaming Hub — monitoring en temps réel, optimisation des
+                performances et réseau
+              </li>
+              <li>
+                Silencieux au repos — ventilation active uniquement sous charge
+                gaming
+              </li>
+              <li>
+                Compatible multi-écrans — jusqu'à 3 écrans simultanément selon
+                le GPU
+              </li>
+            </ul>
+          </div>
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Prix élevé — la configuration haut de gamme RTX 4090 dépasse
+                facilement 2 500 €
+              </li>
+              <li>
+                Encombrant — une tour gaming de cette taille nécessite de la
+                place sur ou sous le bureau
+              </li>
+              <li>
+                Consommation électrique importante — 500W à 850W selon la
+                configuration
+              </li>
+              <li>
+                Bruyant sous charge gaming maximale — ventilation active audible
+              </li>
+              <li>
+                Design gaming très prononcé — peu discret dans un salon ou un
+                bureau classique
+              </li>
+              <li>
+                Nécessite un écran, un clavier et une souris séparés — budget
+                supplémentaire à prévoir
+              </li>
+              <li>
+                Pas de certification MIL-SPEC ni de fonctionnalités de sécurité
+                entreprise
+              </li>
+              <li>
+                Surpayé si vous jouez principalement à des titres peu exigeants
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>L'OMEN Desktop en résumé :</strong> pour jouer en 4K à
+          Cyberpunk 2077, Alan Wake 2 ou Black Myth Wukong en ultra, streamer en
+          qualité HD tout en jouant, ou simplement avoir la meilleure
+          configuration gaming fixe possible — l'OMEN Desktop est
+          l'investissement qui en vaut la peine sur la durée.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS VICTUS -->
+      <section>
+        <h2>🎯 HP Victus Desktop — Avantages &amp; inconvénients</h2>
+        <p class="sub-section-title victus">
+          Victus Desktop — Gaming accessible
+        </p>
+        <p>
+          Le Victus Desktop est pensé pour les
+          <strong
+            >joueurs qui veulent l'essentiel du gaming à prix maîtrisé</strong
+          >, avec la possibilité d'évoluer dans le temps.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                Excellent rapport qualité/prix — le meilleur desktop gaming HP
+                pour les budgets serrés
+              </li>
+              <li>
+                GPU NVIDIA GeForce RTX 3060 à RTX 4060 — gaming fluide en Full
+                HD et 1440p
+              </li>
+              <li>Performances supérieures à un laptop gaming au même prix</li>
+              <li>
+                Design sobre et discret — peut trouver sa place dans un salon
+                sans choquer
+              </li>
+              <li>
+                Upgradable : GPU, RAM et SSD remplaçables facilement pour
+                progresser dans le temps
+              </li>
+              <li>
+                Consommation électrique modérée — moins gourmand que l'OMEN
+              </li>
+              <li>
+                Compatible AMD FreeSync — image fluide sans tearing sur les
+                écrans compatibles
+              </li>
+              <li>Silencieux en dehors des sessions de jeu intensives</li>
+            </ul>
+          </div>
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>GPU limité pour les derniers AAA en ultra ou en 4K</li>
+              <li>
+                Pas de RGB intégré — design sobre mais sans personnalisation
+                lumineuse
+              </li>
+              <li>Châssis plastique — finition moins premium que l'OMEN</li>
+              <li>
+                Pas de OMEN Gaming Hub — logiciel de gestion des performances
+                moins complet
+              </li>
+              <li>Connectique moins fournie que l'OMEN en façade</li>
+              <li>
+                Encombrant malgré tout — nécessite de la place sur ou sous le
+                bureau
+              </li>
+              <li>
+                Nécessite un écran, clavier et souris séparés — budget
+                supplémentaire à prévoir
+              </li>
+              <li>
+                Pas adapté au streaming en haute qualité simultané avec le
+                gaming
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note blue">
+          💡 <strong>Le Victus Desktop en résumé :</strong> pour jouer à
+          Fortnite, Valorant, FIFA, GTA V ou des jeux indie en Full HD 144 Hz
+          avec un budget raisonnable, le Victus Desktop est un excellent point
+          d'entrée dans le gaming PC fixe. Son GPU RTX 4060 tiendra facilement 2
+          à 3 ans avant de nécessiter une mise à niveau.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions</h2>
+
+        <div class="model-block">
+          <h3>HP OMEN 45L — La tour gaming haut de gamme</h3>
+          <p>
+            Le modèle phare de la gamme OMEN Desktop. Son grand châssis spacieux
+            intègre un système de gestion thermique breveté qui sépare
+            physiquement la chambre GPU de la chambre CPU, assurant un
+            refroidissement optimal même en session de jeu de plusieurs heures.
+            Compatible GPU RTX 4080 et 4090, il prend en charge jusqu'à 64 Go de
+            RAM DDR5 et plusieurs SSD NVMe. Son panneau vitré latéral et son RGB
+            OMEN en font l'une des tours gaming les plus impressionnantes
+            visuellement de la gamme HP.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP OMEN 35L — La tour gaming compacte</h3>
+          <p>
+            La version plus compacte de l'OMEN Desktop, légèrement moins
+            encombrante que le 45L. Elle offre les mêmes fonctionnalités gaming
+            — GPU RTX 4070 ou 4080, RGB personnalisable, OMEN Gaming Hub — dans
+            un format un peu plus discret. Recommandée pour les joueurs qui
+            veulent la puissance OMEN sans la tour XXL du 45L. Quelques
+            compromis sur le nombre d'emplacements de stockage supplémentaires.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Victus Desktop TG01 — La tour gaming accessible</h3>
+          <p>
+            La tour gaming d'entrée de gamme de HP. Format compact, châssis
+            sobre avec quelques touches de RGB discret, GPU NVIDIA GeForce RTX
+            3060 à RTX 4060 selon les configurations, processeur Intel Core i5
+            ou i7. Son point fort : un excellent rapport qualité/prix pour un
+            premier PC de bureau gaming, avec la possibilité d'upgrader le GPU
+            ou la RAM facilement. Idéal pour les joueurs qui veulent passer du
+            laptop gaming au desktop sans se ruiner.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            Que vous optiez pour l'OMEN ou le Victus Desktop, vous faites le
+            choix d'une expérience gaming plus puissante et plus évolutive qu'un
+            laptop au même budget. Un PC de bureau gaming est toujours la
+            meilleure option pour les joueurs sédentaires — à configuration
+            équivalente, il sera plus performant, plus silencieux sous charge et
+            durera plus longtemps.
+          </p>
+          <p style="margin-top: 10px">
+            Choisissez l'<strong>OMEN 35L ou 45L</strong> si vous voulez jouer
+            en 4K ou en 1440p avec les derniers GPU et que vous prévoyez
+            d'utiliser votre PC plusieurs années sans le changer. Choisissez le
+            <strong>Victus Desktop TG01</strong> si vous débutez dans le gaming
+            PC fixe ou si votre budget est limité — vous pourrez upgrader le GPU
+            dans 2 ou 3 ans pour suivre l'évolution des jeux sans changer toute
+            la machine.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
