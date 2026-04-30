@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Z Series Workstation — Overview of the Range</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CERTIFICATIONS ── */
+      .cert-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 8px;
+        margin-top: 4px;
+      }
+
+      .cert-cell {
+        display: table-cell;
+        vertical-align: top;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 14px;
+        background: #f7f9fb;
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+        width: 33%;
+        text-align: center;
+      }
+
+      .cert-cell strong {
+        display: block;
+        font-size: 15px;
+        color: #0096d6;
+        margin-bottom: 4px;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .cert-row,
+        .cert-cell {
+          display: block;
+          width: 100%;
+          margin-bottom: 8px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Z Series Workstation logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-zbook/hp-zbook-logo.png"
+          alt="HP Z Series Workstation Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">🖥️ HP Workstations</div>
+        <h1 class="article-title">
+          HP Z Series Workstation — Ultimate power for professionals
+        </h1>
+        <p class="article-intro">
+          HP Z Series workstations are the most powerful and specialized desktop
+          PCs in the entire HP lineup. Designed for engineers, architects, 3D
+          designers, researchers and scientists, they feature professional-grade
+          components: Xeon or Core Ultra processors, ISV-certified GPUs, ECC RAM
+          up to several hundred gigabytes, and ultra-fast NVMe storage. When a
+          standard desktop PC reaches its limits, the Z Series takes over.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- OVERVIEW -->
+      <section>
+        <h2>⚙️ Product overview</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-z-series-workstation/workstations@2x.png"
+            alt="HP Z Series Workstation"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          HP Z Series Workstations are positioned
+          <strong>above the EliteDesk</strong> in HP’s hierarchy. They are not
+          intended for office users but for professionals whose work depends on
+          extreme graphical and computational power: 3D modeling, engineering
+          simulation, architectural rendering, large-scale data analysis,
+          artificial intelligence, 4K/8K video post-production, or complex
+          software development.
+        </p>
+        <p>
+          The fundamental difference from a standard desktop PC lies in
+          <strong>ISV-certified professional GPUs</strong> (Independent Software
+          Vendor). NVIDIA RTX professional series graphics cards — RTX 4000,
+          5000, 6000 Ada Lovelace — are specifically optimized and certified to
+          run reliably with demanding professional software such as
+          <strong>
+            AutoCAD, SolidWorks, CATIA, Revit, Maya, 3ds Max, Adobe Premiere Pro
+          </strong>
+          and DaVinci Resolve. A gaming GPU can run these applications, but
+          without the stability, optimized drivers, or certifications of a
+          professional GPU.
+        </p>
+        <p>
+          All Z Series models also include
+          <strong>Intel Core Ultra or Xeon W processors</strong> with ECC RAM
+          support (Error-Correcting Code) — memory that automatically detects
+          and corrects calculation errors, essential for scientific simulations
+          and critical computations where a single error can invalidate weeks of
+          work.
+        </p>
+
+        <!-- CERTIFICATIONS -->
+        <div class="cert-row" style="margin-top: 20px">
+          <div class="cert-cell">
+            <strong>✅ ISV Certified</strong>
+            GPU validated by AutoCAD, SolidWorks, CATIA, Revit, Maya, Adobe,
+            DaVinci Resolve and more than 100 other vendors
+          </div>
+          <div class="cert-cell">
+            <strong>🔒 ECC RAM</strong>
+            Error-correcting memory — essential for scientific calculations and
+            critical simulations
+          </div>
+          <div class="cert-cell">
+            <strong>🛡️ HP Wolf Security</strong>
+            Advanced hardware-level protection — sensitive data and intellectual
+            property secured
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is the HP Z Series for?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-z-series-workstation/165875c7-e061.png"
+            alt="HP Z Series Workstation"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The Z Series is designed for very specific professions that require
+          professional-level graphical and computational power. It is not for
+          everyone:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Right for you if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You work daily with AutoCAD, SolidWorks, CATIA, Revit or CAD/BIM
+              software
+            </div>
+            <div class="profile-cell">
+              You do basic office work — an EliteDesk or ProDesk is more than
+              enough
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You do 3D modeling, engineering simulation or architectural
+              rendering
+            </div>
+            <div class="profile-cell">
+              You play video games — a gaming PC will be more suitable and
+              cheaper
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You work in 4K/8K video post-production (Premiere Pro, DaVinci
+              Resolve, After Effects)
+            </div>
+            <div class="profile-cell">
+              Your budget is limited — this is HP’s most expensive desktop range
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You need large amounts of RAM (64 GB, 128 GB, 256 GB or more)
+            </div>
+            <div class="profile-cell">
+              You don’t need ISV-certified GPUs — an EliteDesk with a consumer
+              GPU is sufficient
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are an engineer, architect, scientist, researcher or 3D/VFX
+              artist
+            </div>
+            <div class="profile-cell">
+              You need portability — consider an HP ZBook instead
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your software requires ISV-certified GPUs for stability
+            </div>
+            <div class="profile-cell">
+              You want a compact form factor — Z Series are large tower systems
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In summary: the HP Z Series is a highly specialized professional
+          tool. If your software requires an
+          <strong>ISV-certified GPU</strong> or if you need
+          <strong>ECC RAM and Xeon processors</strong> for critical
+          computations, the Z Series is the right choice. Otherwise, an
+          EliteDesk will be more suitable and significantly more affordable.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ADVANTAGES & DRAWBACKS -->
+      <section>
+        <h2>👍 Advantages &amp; drawbacks</h2>
+        <p>
+          The HP Z Series is designed for the
+          <strong>most intensive professional workflows</strong> — here are its
+          major strengths and limitations to consider before investing.
+        </p>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-z-series-workstation/art_hpdw-pro_20a40nget_1.png"
+            alt="HP Z Series Workstation"
+            style="max-width: 500px; width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>
+                ISV-certified professional GPU — guaranteed stability and
+                performance with professional software
+              </li>
+              <li>
+                Built-in ECC RAM — automatic detection and correction of
+                calculation errors
+              </li>
+              <li>
+                Exceptional RAM capacity — up to 256 GB on Z6 and Z8 models for
+                heavy simulations
+              </li>
+              <li>
+                Intel Xeon W or Core Ultra HX processors — maximum computing
+                power available
+              </li>
+              <li>
+                Multiple GPU slots — ability to install two professional GPUs
+                simultaneously
+              </li>
+              <li>
+                Ultra-fast NVMe storage — significantly faster rendering and
+                file exports
+              </li>
+              <li>
+                Integrated HP Wolf Security — protection for sensitive data and
+                intellectual property
+              </li>
+              <li>
+                Certified by major ISV vendors (Autodesk, Adobe, Dassault
+                Systèmes, ANSYS, Siemens)
+              </li>
+              <li>
+                Easy component access — simplified maintenance and upgrades by
+                IT teams
+              </li>
+              <li>
+                Professional HP warranty and support — fast replacement in case
+                of failure
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>
+                Very high price — the most expensive HP desktop PC, aimed at
+                professional budgets
+              </li>
+              <li>
+                Large form factor — Z4, Z6, and Z8 towers are bulky and heavy
+              </li>
+              <li>
+                High power consumption — requires dedicated power supply and
+                proper cooling
+              </li>
+              <li>
+                Complex initial setup — professional GPU driver optimization
+                recommended
+              </li>
+              <li>
+                Noisy under full load — powerful and audible cooling system
+              </li>
+              <li>Overkill for office work or non-specialized usage</li>
+              <li>GPU driver updates are more complex than on consumer PCs</li>
+              <li>
+                Not portable — designed for fixed use in offices or studios
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Specialized professional use:</strong> in engineering
+          offices, 3D studios, research labs or post-production environments,
+          the Z Series truly excels. It effectively replaces legacy proprietary
+          workstations and delivers performance that significantly reduces
+          rendering and simulation times.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SUB-RANGES -->
+      <section>
+        <h2>📋 Main models in the lineup</h2>
+
+        <div class="model-block">
+          <h3>HP Z2 Mini G9 — The ultra-compact workstation</h3>
+          <p>
+            The smallest and most surprising Z Series model — ultra-compact
+            format comparable to the Elite Mini but with an ISV-certified NVIDIA
+            RTX A2000 or RTX 4000 Ada professional GPU. It fits in your hand,
+            can be mounted behind a VESA display, and consumes very little
+            power. Ideal for architects and designers who need ISV certification
+            without a bulky tower. Intel Core i7 or i9 processor, up to 64 GB of
+            ECC RAM.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Z4 G5 — Entry-level Z Series tower</h3>
+          <p>
+            The entry-level tower in the professional Z Series range. Intel Core
+            i7/i9 or Xeon W processor, NVIDIA RTX 4000 or 5000 Ada professional
+            GPU, up to 128 GB of ECC DDR5 RAM. Its spacious chassis makes future
+            upgrades easy — adding a second GPU, extra storage, or a video
+            capture card. Recommended for CAD engineers, BIM architects, and
+            graphic designers who need a certified GPU without the cost of
+            dual-processor systems.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Z6 G5 — Mid-range dual-processor tower</h3>
+          <p>
+            The mid-range version of the Z Series, supporting two Intel Xeon W
+            processors simultaneously and up to 256 GB of ECC RAM. It supports
+            two professional GPUs for workflows that leverage multi-GPU
+            rendering (Blender, DaVinci Resolve, AI computing). Designed for VFX
+            studios, simulation labs, and scientific research teams that require
+            shared computing power through virtualization architectures.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Z8 Fury G5 — Ultimate performance</h3>
+          <p>
+            The most powerful model in the entire HP lineup — dual
+            latest-generation Intel Xeon W processors, up to 4 TB of ECC DDR5
+            RAM, eight NVMe storage slots, and the ability to install multiple
+            NVIDIA RTX 6000 Ada professional GPUs. Designed for the most extreme
+            workloads: crash simulations, CGI film rendering, AI model training,
+            genomic computing, or climate simulations. A machine built for
+            top-tier studios and research centers.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The HP Z Series is in a class of its own. This is not a machine you
+            buy just because it is powerful — you buy it because your work
+            demands it. For engineers, architects, 3D artists, scientists, and
+            video producers whose software requires ISV-certified GPUs and ECC
+            RAM, there is no real alternative in this price range.
+          </p>
+          <p style="margin-top: 10px">
+            If you are hesitating between a Z Series and a standard desktop PC
+            with a good gaming GPU, ask yourself this: does your professional
+            software require ISV GPU certification? If yes, start with the
+            <strong>HP Z4 G5</strong> — it is the best entry point for most
+            professional workflows. If not, an
+            <strong>HP EliteDesk with a discrete GPU</strong> or even a high-end
+            consumer PC will be sufficient — and you will save several thousand
+            euros.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

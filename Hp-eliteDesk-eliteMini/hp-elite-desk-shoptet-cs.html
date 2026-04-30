@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP EliteDesk / Elite Mini — Prezentace série</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── BARRE DE POSITIONNEMENT ── */
+      .range-bar {
+        display: table;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0 4px;
+      }
+
+      .range-bar-row {
+        display: table-row;
+      }
+
+      .range-cell {
+        display: table-cell;
+        padding: 10px 12px;
+        border: 1px solid #e0e0e0;
+        text-align: center;
+        vertical-align: middle;
+        color: #555;
+        background: #f7f9fb;
+        width: 33%;
+        font-size: 15px;
+      }
+
+      .range-cell.active {
+        background: #0096d6;
+        color: #ffffff;
+        font-weight: 700;
+        border-color: #0096d6;
+      }
+
+      .range-cell span {
+        display: block;
+        font-size: 11px;
+        font-weight: 400;
+        margin-top: 3px;
+        opacity: 0.75;
+      }
+
+      /* ── COMPARATIF ELITEDESK VS ELITE MINI ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #0096d6;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #e8f4fd;
+        color: #004f7c;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .range-bar,
+        .range-bar-row,
+        .range-cell {
+          display: block;
+          width: 100%;
+          margin-bottom: 4px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP EliteDesk / Elite Mini logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-elitebook-logo.jpg"
+          alt="HP EliteDesk / Elite Mini Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🖥️ Stolní počítače HP</div>
+        <h1 class="article-title">
+          HP EliteDesk & Elite Mini — Profesionální stolní počítače vyšší třídy
+        </h1>
+        <p class="article-intro">
+          HP EliteDesk a HP Elite Mini jsou prémiové profesionální stolní
+          počítače HP. Jsou navrženy pro firmy s vysokými nároky na bezpečnost,
+          spolehlivost a správu IT. Představují referenční řešení HP pro pevné
+          pracovní stanice v náročném profesionálním prostředí. Integrované HP
+          Wolf Security, certifikace MIL-SPEC, centralizované nasazení — nic
+          není ponecháno náhodě.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🏢 Přehled řady</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/Hp-EliteDesk-&-Elite-Mini.png"
+            alt="HP EliteDesk a Elite Mini"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          HP EliteDesk a HP Elite Mini stojí na
+          <strong>vrcholu profesionální řady stolních PC HP</strong>, nad modely
+          ProDesk. Jsou určeny pro firmy, státní správu a organizace, které mají
+          přísné požadavky na IT bezpečnost, centralizovanou správu zařízení a
+          dlouhou životnost hardwaru.
+        </p>
+        <p>
+          Řada je dostupná v několika formátech, aby vyhověla různým pracovním
+          prostředím. <strong>EliteDesk SFF</strong> (Small Form Factor) je
+          klasická kompaktní skříň, zatímco <strong>Elite Mini</strong> — dříve
+          EliteDesk Micro — je zařízení velikosti knihy, které lze připevnit za
+          monitor pomocí VESA držáku, čímž zcela uvolní pracovní stůl. Oba
+          formáty nabízejí stejné profesionální funkce v různých velikostech.
+        </p>
+        <p>
+          Všechny modely obsahují bezpečnostní řešení
+          <strong>HP Wolf Security</strong> přímo v hardwaru: ochranu proti
+          malwaru na úrovni firmwaru, detekci fyzického narušení, pokročilé
+          šifrování a bezpečnou vzdálenou správu. Jsou kompatibilní s nástroji
+          pro nasazení ve firmách (HP Manageability, Microsoft SCCM, Intune) a
+          certifikovány pro nejnáročnější prostředí.
+        </p>
+
+        <p
+          style="
+            margin-top: 14px;
+            font-weight: 600;
+            color: #0a0f1e;
+            margin-bottom: 6px;
+          "
+        >
+          Zařazení v rámci profesionální řady HP:
+        </p>
+        <div class="range-bar">
+          <div class="range-bar-row">
+            <div class="range-cell">
+              ProDesk
+              <span>Dostupné pro firmy</span>
+            </div>
+            <div class="range-cell active">
+              EliteDesk / Elite Mini ✓
+              <span>Nacházíte se zde</span>
+            </div>
+            <div class="range-cell">
+              Z Series Workstation
+              <span>Pracovní stanice</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- POROVNÁNÍ -->
+      <section>
+        <h2>🔍 EliteDesk SFF nebo Elite Mini — jaký je rozdíl?</h2>
+        <p>
+          Tyto dva modely mají stejné profesionální funkce, liší se však
+          formátem:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🖥️ HP EliteDesk SFF</div>
+            <div class="compare-body">
+              Kompaktní SFF skříň — větší než Mini, ale nabízí více portů, lepší
+              chlazení a možnost přidání grafické karty základní úrovně. Ideální
+              pro pevná pracoviště s mnoha periferiemi.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">📦 HP Elite Mini</div>
+            <div class="compare-body">
+              Ultra kompaktní formát — velikost knihy. Montáž za monitor pomocí
+              VESA, čímž zcela zmizí ze stolu. Ideální pro open space a recepce.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: zvolte <strong>EliteDesk SFF</strong> pro více periferií,
+          <strong>Elite Mini</strong> pro úsporu místa.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          HP EliteDesk a Elite Mini jsou optimalizovány pro
+          <strong>špičkové profesionální firemní využití</strong>
+          — zde jsou jejich hlavní silné stránky a omezení.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                HP Wolf Security integrované v hardwaru — pokročilá ochrana
+                proti kybernetickým hrozbám na úrovni firmwaru
+              </li>
+              <li>
+                Kompletní vzdálená správa — aktualizace, nasazení a monitoring
+                přes HP Manageability a SCCM
+              </li>
+              <li>
+                Elite Mini: ultra-kompaktní formát připevnitelný za monitor —
+                zcela uvolňuje pracovní prostor
+              </li>
+              <li>
+                Kompletní profesionální konektivita: Thunderbolt 4, USB-A ×4,
+                DisplayPort, HDMI, RJ45
+              </li>
+              <li>
+                Bezpečné spuštění UEFI a pokročilé šifrování TPM 2.0 — data
+                chráněna i v případě krádeže
+              </li>
+              <li>
+                Detekce fyzického narušení — upozornění při neoprávněném
+                otevření skříně
+              </li>
+              <li>
+                Moderní procesory Intel Core Ultra nebo AMD Ryzen Pro —
+                vynikající kancelářský výkon
+              </li>
+              <li>Velmi tichý provoz — optimalizované a nenápadné chlazení</li>
+              <li>
+                Dlouhá životnost a profesionální podpora HP — záruka a dostupné
+                náhradní díly po mnoho let
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Vyšší cena než ProDesk — pokročilé bezpečnostní funkce mají svou
+                cenu
+              </li>
+              <li>
+                Pouze integrovaná grafika — nevhodné pro náročnou grafiku nebo
+                gaming
+              </li>
+              <li>
+                Jednoduchý a uniformní design — bez výrazného estetického prvku
+              </li>
+              <li>
+                Elite Mini: málo portů na přední straně — může být potřeba USB
+                hub
+              </li>
+              <li>
+                Elite Mini: bez slotu pro dedikovanou grafickou kartu — příliš
+                kompaktní
+              </li>
+              <li>
+                Není all-in-one — vyžaduje samostatný monitor, klávesnici a myš
+              </li>
+              <li>
+                Obtížně obhajitelná investice pro běžnou kancelářskou práci bez
+                bezpečnostních požadavků
+              </li>
+              <li>
+                Složitější počáteční konfigurace pro plné využití funkcí Wolf
+                Security
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Špičkové profesionální využití:</strong> pro účetní
+          oddělení pracující s citlivými finančními daty, lékařské zařízení
+          spravující pacientské záznamy, veřejnou správu s požadavky na
+          compliance nebo open space s 50 stanicemi spravovanými na dálku —
+          EliteDesk nebo Elite Mini je absolutní referencí HP.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní verze řady</h2>
+
+        <div class="model-block">
+          <h3>HP EliteDesk 800 G9 SFF — Referenční kompaktní tower</h3>
+          <p>
+            Vlajkový model řady EliteDesk ve formátu SFF. Procesory Intel Core
+            i5, i7 nebo i9 (12. nebo 13. generace), až 64 GB DDR5 RAM a NVMe
+            PCIe Gen 4 SSD až 2 TB. Nabízí nejkompletnější konektivitu v řadě:
+            více portů USB-A a USB-C vpředu, DisplayPort, HDMI a Thunderbolt 4
+            dle konfigurace. Konstrukce umožňuje snadnou údržbu — přístup ke
+            komponentům během několika sekund bez nářadí.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Elite Mini 800 G9 — Ultra-kompaktní desktop</h3>
+          <p>
+            Model o velikosti malé knihy — přibližně 18 × 18 × 3,4 cm. Lze jej
+            připevnit za VESA kompatibilní monitor a zcela zmizí z pracovního
+            prostoru. Navzdory velikosti obsahuje moderní procesor Intel Core i5
+            nebo i7, až 32 GB RAM a rychlý NVMe SSD. Ideální pro open space,
+            recepce, zasedací místnosti a prostředí, kde záleží na estetice a
+            prostoru.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP EliteDesk 805 G9 — Verze AMD Ryzen Pro</h3>
+          <p>
+            AMD verze řady EliteDesk s procesory AMD Ryzen Pro 6000 nebo 7000.
+            Obvykle nabízí lepší poměr výkon/cena než Intel verze pro náročnou
+            kancelářskou práci a multitasking. Integrované GPU AMD Radeon Pro
+            jsou o něco výkonnější pro lehké grafické úlohy. Dostupné pouze ve
+            formátu SFF.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Elite Mini Conference G9 — Verze pro zasedací místnosti</h3>
+          <p>
+            Verze navržená speciálně pro zasedací a konferenční místnosti.
+            Obsahuje porty optimalizované pro zobrazovací a videokonferenční
+            řešení, tiché chlazení, které neruší jednání, a nativní
+            kompatibilitu s Microsoft Teams Room a Zoom Room. Kompletní řešení
+            pro modernizaci zasedacích místností bez nepořádku.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            HP EliteDesk a Elite Mini jsou nejbezpečnější a nejlépe spravované
+            profesionální desktopové počítače v nabídce HP. Pro IT oddělení a
+            organizace s požadavky na compliance představují nejracionálnější
+            dlouhodobou investici: méně poruch, méně bezpečnostních rizik a méně
+            manuálních zásahů díky vzdálené správě.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud pokročilá bezpečnost a správa zařízení nejsou prioritou,
+            <strong>HP ProDesk</strong> nabízí podobný výkon za výrazně nižší
+            cenu. Pro náročná prostředí — zdravotnictví, finance, státní správa,
+            právo — je však <strong>Elite Mini 800 G9</strong> nejlepší volbou:
+            výkonný, nenápadný a maximálně zabezpečený.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

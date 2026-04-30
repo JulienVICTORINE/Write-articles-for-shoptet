@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HP Z Series Workstation — Přehled řady</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0096d6;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0096d6;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0096d6;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── CERTIFICATIONS ── */
+      .cert-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 8px;
+        margin-top: 4px;
+      }
+
+      .cert-cell {
+        display: table-cell;
+        vertical-align: top;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 14px;
+        background: #f7f9fb;
+        font-size: 14px;
+        color: #333;
+        line-height: 1.5;
+        width: 33%;
+        text-align: center;
+      }
+
+      .cert-cell strong {
+        display: block;
+        font-size: 15px;
+        color: #0096d6;
+        margin-bottom: 4px;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f0f8fd;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #f0f8fd;
+        border-left: 4px solid #0096d6;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .cert-row,
+        .cert-cell {
+          display: block;
+          width: 100%;
+          margin-bottom: 8px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Z Series Workstation logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-zbook/hp-zbook-logo.png"
+          alt="HP Z Series Workstation Logo"
+          style="max-width: 240px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🖥️ Pracovní stanice HP</div>
+        <h1 class="article-title">
+          HP Z Series Workstation — Maximální výkon pro profesionály
+        </h1>
+        <p class="article-intro">
+          Pracovní stanice HP Z Series jsou nejvýkonnější a nejvíce
+          specializované stolní počítače v celé nabídce HP. Jsou navrženy pro
+          inženýry, architekty, 3D designéry, výzkumníky a vědce a obsahují
+          profesionální komponenty: procesory Xeon nebo Core Ultra, GPU s
+          certifikací ISV, ECC RAM až do stovek gigabajtů a ultra rychlé NVMe
+          úložiště. Když běžný stolní počítač narazí na své limity, Z Series
+          přebírá štafetu.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>⚙️ Přehled řady</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-z-series-workstation/workstations@2x.png"
+            alt="HP Z Series Workstation"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Pracovní stanice HP Z Series se nacházejí
+          <strong>nad řadou EliteDesk</strong> v hierarchii HP. Nejsou určeny
+          pro kancelářské uživatele, ale pro profesionály, jejichž práce závisí
+          na extrémním grafickém a výpočetním výkonu: 3D modelování, inženýrské
+          simulace, architektonické renderování, analýza velkých dat, umělá
+          inteligence, postprodukce videa ve 4K/8K nebo vývoj komplexního
+          softwaru.
+        </p>
+        <p>
+          Zásadní rozdíl oproti běžnému stolnímu počítači spočívá v
+          <strong>profesionálních GPU s certifikací ISV</strong> (Independent
+          Software Vendor). Grafické karty NVIDIA RTX profesionální řady — RTX
+          4000, 5000, 6000 Ada Lovelace — jsou speciálně optimalizovány a
+          certifikovány pro stabilní provoz s náročným profesionálním softwarem
+          jako
+          <strong>
+            AutoCAD, SolidWorks, CATIA, Revit, Maya, 3ds Max, Adobe Premiere Pro
+          </strong>
+          a DaVinci Resolve. Herní GPU mohou tyto programy spustit, ale bez
+          stejné stability, optimalizovaných ovladačů a certifikací.
+        </p>
+        <p>
+          Všechny modely Z Series také obsahují
+          <strong>procesory Intel Core Ultra nebo Xeon W</strong> s podporou ECC
+          RAM (Error-Correcting Code) — paměti, která automaticky detekuje a
+          opravuje chyby výpočtů, což je nezbytné pro vědecké simulace a
+          kritické výpočty, kde jediná chyba může znehodnotit týdny práce.
+        </p>
+
+        <!-- CERTIFIKACE -->
+        <div class="cert-row" style="margin-top: 20px">
+          <div class="cert-cell">
+            <strong>✅ Certifikace ISV</strong>
+            GPU ověřené pro AutoCAD, SolidWorks, CATIA, Revit, Maya, Adobe,
+            DaVinci Resolve a více než 100 dalších výrobců
+          </div>
+          <div class="cert-cell">
+            <strong>🔒 ECC RAM</strong>
+            Paměť s automatickou opravou chyb — nezbytná pro vědecké výpočty a
+            kritické simulace
+          </div>
+          <div class="cert-cell">
+            <strong>🛡️ HP Wolf Security</strong>
+            Pokročilá ochrana na úrovni hardwaru — zabezpečení citlivých dat a
+            duševního vlastnictví
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho je HP Z Series určena?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-z-series-workstation/165875c7-e061.png"
+            alt="HP Z Series Workstation"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Řada Z Series je určena pro velmi specifické profese, které vyžadují
+          profesionální grafický a výpočetní výkon. Není vhodná pro každého:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete denně s AutoCAD, SolidWorks, CATIA, Revit nebo CAD/BIM
+              softwarem
+            </div>
+            <div class="profile-cell">
+              Používáte počítač na běžnou kancelářskou práci — EliteDesk nebo
+              ProDesk stačí
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Zabýváte se 3D modelováním, simulacemi nebo architektonickým
+              renderováním
+            </div>
+            <div class="profile-cell">
+              Hrajete videohry — herní PC bude vhodnější a levnější
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete s postprodukcí videa ve 4K/8K
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — jde o nejdražší řadu HP
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">Potřebujete velké množství RAM</div>
+            <div class="profile-cell">Nepotřebujete ISV certifikované GPU</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">Jste inženýr, architekt nebo vědec</div>
+            <div class="profile-cell">
+              Potřebujete přenosné zařízení — zvažte HP ZBook
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Váš software vyžaduje ISV certifikaci GPU
+            </div>
+            <div class="profile-cell">
+              Chcete kompaktní zařízení — Z Series jsou velké tower stanice
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: HP Z Series je vysoce specializovaný profesionální
+          nástroj. Pokud váš software vyžaduje
+          <strong>GPU s certifikací ISV</strong> nebo potřebujete
+          <strong>ECC RAM a procesory Xeon</strong> pro kritické výpočty, je Z
+          Series ideální volbou. Jinak bude EliteDesk vhodnější a výrazně
+          levnější.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+        <p>
+          Řada HP Z Series je navržena pro
+          <strong>nejnáročnější profesionální workflow</strong> — zde jsou její
+          hlavní silné stránky a omezení, která je dobré znát před investicí.
+        </p>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/hp-z-series-workstation/art_hpdw-pro_20a40nget_1.png"
+            alt="HP Z Series Workstation"
+            style="max-width: 500px; width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Profesionální GPU s certifikací ISV — stabilita a výkon pro
+                profesionální software
+              </li>
+              <li>Integrovaná ECC RAM — automatická detekce a oprava chyb</li>
+              <li>Vysoká kapacita RAM — až 256 GB u modelů Z6 a Z8</li>
+              <li>
+                Procesory Intel Xeon W nebo Core Ultra HX — maximální výpočetní
+                výkon
+              </li>
+              <li>
+                Více GPU slotů — možnost instalace dvou profesionálních grafik
+                současně
+              </li>
+              <li>
+                Ultra rychlé NVMe úložiště — rychlejší renderování a export dat
+              </li>
+              <li>HP Wolf Security — ochrana citlivých dat</li>
+              <li>Certifikace od hlavních ISV výrobců</li>
+              <li>Snadný přístup ke komponentám — jednoduchá údržba</li>
+              <li>Profesionální podpora HP</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Velmi vysoká cena — určeno pro profesionální rozpočty</li>
+              <li>Velké rozměry — modely Z4, Z6 a Z8 jsou robustní</li>
+              <li>Vysoká spotřeba energie</li>
+              <li>Složitější počáteční konfigurace</li>
+              <li>Hlučnost při plném zatížení</li>
+              <li>Nevhodné pro běžnou kancelářskou práci</li>
+              <li>Složitější aktualizace GPU ovladačů</li>
+              <li>Není přenosné zařízení</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Profesionální použití:</strong> v inženýrských kancelářích,
+          3D studiích nebo výzkumných laboratořích Z Series exceluje a výrazně
+          zkracuje dobu výpočtů a renderování.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELY -->
+      <section>
+        <h2>📋 Hlavní modely řady</h2>
+
+        <div class="model-block">
+          <h3>HP Z2 Mini G9 — Kompaktní pracovní stanice</h3>
+          <p>
+            Nejmenší model řady Z Series s profesionálním GPU a nízkou
+            spotřebou.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Z4 G5 — Základní tower</h3>
+          <p>Vstupní model pro profesionální použití s možností rozšíření.</p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Z6 G5 — Střední třída</h3>
+          <p>Podpora dvou procesorů a vysoký výkon pro náročné výpočty.</p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Z8 Fury G5 — Maximální výkon</h3>
+          <p>Nejvýkonnější stanice pro extrémní workloady a vědecké výpočty.</p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            HP Z Series je unikátní profesionální řešení pro nejnáročnější
+            uživatele.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud nepotřebujete ISV certifikaci, zvažte levnější alternativu
+            jako EliteDesk.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
