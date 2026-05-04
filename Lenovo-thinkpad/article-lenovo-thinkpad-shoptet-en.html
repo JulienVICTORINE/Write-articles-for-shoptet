@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo ThinkPad — Presentation of the range</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e2001a;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e2001a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2001a;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── HÉRITAGE IBM ── */
+      .heritage-box {
+        background: #1a1a1a;
+        border-radius: 6px;
+        padding: 18px 22px;
+        margin-top: 16px;
+        display: table;
+        width: 100%;
+      }
+
+      .heritage-box p {
+        color: #e0e0e0;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .heritage-box strong {
+        color: #ffffff;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fdf0f0;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fdf0f0;
+        border-left: 4px solid #e2001a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+
+        .heritage-box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Essential logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/Lenovo-ThinkPad-logo.png"
+          alt="HP Essential Logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">💻 Lenovo Laptops</div>
+        <h1 class="article-title">
+          Lenovo ThinkPad — The ultimate reference for professional laptops
+        </h1>
+        <p class="article-intro">
+          The ThinkPad is one of the most legendary professional laptop ranges
+          in computing history. Born at IBM in 1992 and acquired by Lenovo in
+          2005, it remains today an essential benchmark for businesses, IT
+          departments, and demanding professionals who refuse to compromise on
+          reliability, security, and durability.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>🏆 Product Overview</h2>
+        <p>
+          The ThinkPad stands out immediately thanks to its
+          <strong>iconic matte black design</strong> — simple, discreet, and
+          instantly recognizable. No flashy colors, no RGB, no unnecessary
+          extras: the ThinkPad is built for work, period. This minimalist design
+          hides carefully selected components and a build quality that has
+          defined the brand for over 30 years.
+        </p>
+        <p>
+          Three key elements define the ThinkPad identity and set it apart from
+          all competitors. First, the <strong>red TrackPoint</strong> — the
+          small red nub in the center of the keyboard that allows cursor control
+          without leaving the keyboard, loved by professionals for decades.
+          Second, the <strong>keyboard</strong>, widely recognized as the best
+          laptop keyboard on the market in terms of typing comfort, key travel,
+          and precision. Finally, <strong>MIL-SPEC durability</strong> — all
+          ThinkPads are tested and certified according to U.S. military
+          standards to withstand extreme conditions.
+        </p>
+
+        <div class="heritage-box">
+          <p>
+            <strong>📜 IBM Heritage:</strong> the ThinkPad was created in 1992
+            by IBM engineers inspired by Japanese bento boxes. The name "Think"
+            was IBM’s slogan. When Lenovo acquired IBM’s PC division in 2005 for
+            $1.75 billion, it inherited this legendary brand — and has kept its
+            promise to maintain the quality standards that built ThinkPad’s
+            reputation for over 30 years.
+          </p>
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/71060_repasovany-notebook-lenovo-thinkpad-x1-carbon-6th-gen-pocitace24-cz.png"
+          alt="Lenovo ThinkPad"
+          style="width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <section>
+        <h2>👤 Who is the ThinkPad for?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/slide1.png"
+            alt="Lenovo ThinkPad"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The ThinkPad is designed for professionals with high expectations.
+          Here are the profiles that match it best:
+        </p>
+
+        <div class="profil-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ A good fit if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You type a lot and want the best laptop keyboard available
+            </div>
+            <div class="profile-cell">
+              You want a slim, stylish laptop with a premium finish — ThinkPad
+              is functional and understated
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are an executive, consultant, engineer, or entrepreneur who
+              travels frequently
+            </div>
+            <div class="profile-cell">
+              You do heavy graphic design or video editing (consider ThinkPad X1
+              Extreme or ThinkStation)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Data security is a top priority in your work
+            </div>
+            <div class="profile-cell">
+              You play video games — no dedicated gaming GPU in standard models
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your company manages IT fleets and needs standardized deployment
+            </div>
+            <div class="profile-cell">
+              You are on a tight budget — ThinkBook or IdeaPad are more
+              affordable
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You want a laptop that lasts 5 to 7 years without degrading
+            </div>
+            <div class="profile-cell">
+              You prefer large screens — few models exceed 16 inches
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You work in high-constraint sectors: finance, healthcare, defense,
+              administration
+            </div>
+            <div class="profile-cell">
+              You are looking for the best price-performance ratio — other
+              ranges offer more for less
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In summary: the ThinkPad is built for
+          <strong
+            >professionals who see their laptop as a critical work tool</strong
+          >
+          and are willing to pay the right price for top-tier keyboard quality,
+          reliability, and security.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Advantages &amp; Drawbacks</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/lenovo-laptop-thinkpad-3.png"
+            alt="Lenovo ThinkPad"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The ThinkPad is optimized for
+          <strong>intensive daily professional use</strong>
+          — here are its legendary strengths and the limitations to be aware of.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>
+                Best laptop keyboard on the market — key travel, typing comfort,
+                and backlighting are outstanding
+              </li>
+              <li>
+                MIL-SPEC 810H certification — proven resistance to drops,
+                vibrations, extreme temperatures, and humidity
+              </li>
+              <li>
+                Iconic red TrackPoint — precise navigation without leaving the
+                keyboard
+              </li>
+              <li>
+                Advanced security: fingerprint reader, IR webcam (Windows
+                Hello), TPM 2.0, physical privacy shutter
+              </li>
+              <li>
+                Exceptional battery life — up to 15 hours on X1 Carbon models in
+                office use
+              </li>
+              <li>
+                Integrated 4G/5G options — internet access anywhere, independent
+                of Wi-Fi
+              </li>
+              <li>
+                Easy deployment and fleet management via Lenovo Device Manager
+                and SCCM
+              </li>
+              <li>
+                Professional Lenovo warranty and support — on-site replacement
+                available
+              </li>
+              <li>
+                Replaceable RAM and SSD on most models — long-term upgradability
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>
+                Austere and uniform design — matte black, minimalistic and not
+                visually striking
+              </li>
+              <li>
+                Higher price than consumer laptops — quality comes at a cost
+              </li>
+              <li>
+                Variable weight — some T and L models exceed 1.8 kg, less ideal
+                for heavy mobility
+              </li>
+              <li>No dedicated gaming GPU on standard T, L, and E series</li>
+              <li>
+                Display is often good but rarely exceptional — no OLED option on
+                all models
+              </li>
+              <li>
+                TrackPoint may feel unusual for new users — requires some
+                adaptation
+              </li>
+              <li>
+                Pre-installed Lenovo bloatware — cleanup recommended on first
+                use
+              </li>
+              <li>
+                Less competitive price-performance ratio compared to ThinkBook
+                or ProBook for basic office tasks
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intensive professional use:</strong> whether writing
+          reports, developing software, handling sensitive data, presenting to
+          clients, or working on a train for 8 hours — the ThinkPad excels in
+          its domain. Its legendary reliability and exceptional keyboard make it
+          hard to replace once adopted.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SUB-SERIES -->
+      <section>
+        <h2>📋 Main series in the lineup</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/lenovo-thinkpad-e14-gen-7.png"
+            alt="Lenovo ThinkPad"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad T Series — The versatile benchmark</h3>
+          <p>
+            The best-selling ThinkPad series, available in T14, T14s, and T16.
+            Aluminum or magnesium chassis, Intel Core Ultra or AMD Ryzen Pro
+            processors, up to 32 GB of RAM and fast NVMe SSD storage. It offers
+            the best balance between performance, battery life, and portability
+            for professionals who need a reliable laptop for everyday business
+            use. The T14s is particularly popular for its lightweight design
+            (around 1.3 kg) without sacrificing connectivity.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad X Series — Ultra-compact format</h3>
+          <p>
+            The lightest and most compact series — available in X13 (13.3
+            inches) and X13s (ARM Snapdragon version). Under 1.2 kg for the X13,
+            magnesium construction, battery life up to 15 hours. Ideal for
+            frequent travelers who want a ThinkPad capable of handling
+            everything in the smallest possible form factor. The
+            Snapdragon-based X13s is especially appreciated for its record
+            battery life and silent operation (no active cooling fan).
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad L Series — Affordable professional option</h3>
+          <p>
+            Entry-level professional ThinkPad series, available in L13, L14, and
+            L15. It retains the ThinkPad essentials — excellent keyboard, solid
+            durability, and basic security — at a more accessible price than the
+            T series. Reinforced plastic chassis, Intel Core or AMD Ryzen
+            processors, full connectivity including RJ45. Recommended for small
+            and medium businesses that want ThinkPads without the budget of T
+            and X series.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad E Series — Entry into the ThinkPad world</h3>
+          <p>
+            The most affordable ThinkPad series, available in E14 and E16.
+            Designed for small businesses, organizations, and freelancers who
+            want ThinkPad keyboard quality and Lenovo reliability without the
+            cost of higher-end models. Slightly more consumer-oriented design,
+            plastic chassis, fewer durability certifications — but typing
+            quality remains clearly superior to competitors.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad P Series — Mobile workstation</h3>
+          <p>
+            The P series represents the mobile workstation lineup within
+            ThinkPad. It targets engineers, architects, 3D designers, and
+            scientists who need certified professional GPUs in a laptop. Models
+            such as P14s, P16s, and P16 feature NVIDIA RTX professional graphics
+            (Ada Lovelace series), certified for AutoCAD, SolidWorks, CATIA,
+            Revit, and Maya, ensuring optimized performance and stability for
+            demanding software. Some configurations include ECC RAM, Intel Core
+            Ultra HX or AMD Ryzen Pro processors, while maintaining MIL-SPEC
+            certification and ThinkPad security features. The P series fills the
+            gap between versatile T-series laptops and desktop ThinkStations —
+            making it the natural choice for technical and creative
+            professionals on the move.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad X1 Carbon — Premium professional ultrabook</h3>
+          <p>
+            The flagship of the ThinkPad lineup and one of the best professional
+            ultrabooks available. Weighing under 1.1 kg thanks to its carbon
+            fiber chassis, with optional OLED or 2K IPS display,
+            latest-generation Intel Core Ultra processors, up to 15 hours of
+            battery life, and full ThinkPad security features. It competes
+            directly with the HP Elite Dragonfly and Dell Latitude 9000 for the
+            title of best business ultrabook. Covered in a dedicated article.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The ThinkPad fully deserves its legendary reputation. In over 30
+            years, no other laptop lineup has managed to surpass it in the
+            professional segment in terms of keyboard quality, reliability, and
+            security. It is the go-to recommendation for professionals who type
+            extensively, travel frequently, and cannot afford downtime.
+          </p>
+          <p style="margin-top: 10px">
+            If your budget is limited, the
+            <strong>ThinkPad L14 or E14</strong> provides the essential ThinkPad
+            experience at a reasonable price. If you want the very best without
+            compromise, the <strong>ThinkPad X1 Carbon</strong> stands in a
+            class of its own — the most rational investment for demanding mobile
+            professionals.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

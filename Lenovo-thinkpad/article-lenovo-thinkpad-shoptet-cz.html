@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo ThinkPad — Presentation of the range</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e2001a;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e2001a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2001a;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── HÉRITAGE IBM ── */
+      .heritage-box {
+        background: #1a1a1a;
+        border-radius: 6px;
+        padding: 18px 22px;
+        margin-top: 16px;
+        display: table;
+        width: 100%;
+      }
+
+      .heritage-box p {
+        color: #e0e0e0;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .heritage-box strong {
+        color: #ffffff;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fdf0f0;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fdf0f0;
+        border-left: 4px solid #e2001a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+
+        .heritage-box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Image HP Essential logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/Lenovo-ThinkPad-logo.png"
+          alt="HP Essential Logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">💻 Notebooky Lenovo</div>
+        <h1 class="article-title">
+          Lenovo ThinkPad — Absolutní reference mezi profesionálními notebooky
+        </h1>
+        <p class="article-intro">
+          ThinkPad je jednou z nejlegendárnějších řad profesionálních notebooků
+          v historii IT. Vznikl v IBM v roce 1992 a byl odkoupen společností
+          Lenovo v roce 2005. Dodnes představuje klíčový standard pro firmy, IT
+          oddělení a náročné profesionály, kteří nechtějí dělat kompromisy v
+          oblasti spolehlivosti, bezpečnosti a odolnosti.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PREZENTACE -->
+      <section>
+        <h2>🏆 Představení řady</h2>
+        <p>
+          ThinkPad se okamžitě odlišuje svým
+          <strong>ikonickým matně černým designem</strong> — jednoduchým,
+          nenápadným a snadno rozpoznatelným. Žádné křiklavé barvy, žádné RGB,
+          žádné zbytečnosti: ThinkPad je navržen pro práci, tečka. Tento
+          minimalistický design skrývá pečlivě vybrané komponenty a kvalitu
+          zpracování, která definuje tuto řadu již více než 30 let.
+        </p>
+        <p>
+          Tři klíčové prvky definují identitu ThinkPadu a odlišují jej od
+          konkurence. Za prvé <strong>červený TrackPoint</strong> — malé červené
+          tlačítko uprostřed klávesnice, které umožňuje ovládání kurzoru bez
+          nutnosti opustit klávesnici. Za druhé <strong>klávesnice</strong>,
+          která je považována za nejlepší mezi notebooky z hlediska komfortu
+          psaní, zdvihu kláves a přesnosti. A nakonec
+          <strong>odolnost MIL-SPEC</strong> — všechny ThinkPady jsou testovány
+          podle amerických vojenských standardů, aby odolaly extrémním
+          podmínkám.
+        </p>
+
+        <div class="heritage-box">
+          <p>
+            <strong>📜 Dědictví IBM:</strong> ThinkPad byl vytvořen v roce 1992
+            inženýry IBM inspirovanými japonskými bento krabičkami. Název
+            "Think" byl sloganem IBM. Když Lenovo v roce 2005 koupilo PC divizi
+            IBM za 1,75 miliardy dolarů, získalo tuto legendární značku — a
+            dodrželo svůj slib zachovat vysoké standardy kvality, které definují
+            ThinkPad již více než 30 let.
+          </p>
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/71060_repasovany-notebook-lenovo-thinkpad-x1-carbon-6th-gen-pocitace24-cz.png"
+          alt="Lenovo ThinkPad"
+          style="width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <section>
+        <h2>👤 Pro koho je ThinkPad?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/slide1.png"
+            alt="Lenovo ThinkPad"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkPad je určen pro profesionály s vysokými nároky. Zde jsou typické
+          profily:
+        </p>
+
+        <div class="profil-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Hodně píšete a chcete nejlepší klávesnici na trhu
+            </div>
+            <div class="profile-cell">
+              Hledáte tenký a elegantní notebook — ThinkPad je spíše funkční než
+              stylový
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste manažer, konzultant, inženýr nebo podnikatel často na cestách
+            </div>
+            <div class="profile-cell">
+              Děláte náročnou grafiku nebo video editing
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Bezpečnost dat je pro vás klíčová</div>
+            <div class="profile-cell">
+              Hrajete videohry — standardní modely nemají herní GPU
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vaše firma spravuje IT zařízení ve velkém měřítku
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — ThinkBook nebo IdeaPad jsou levnější
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Chcete notebook, který vydrží 5 až 7 let
+            </div>
+            <div class="profile-cell">
+              Preferujete velké displeje — málo modelů přesahuje 16 palců
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete v náročných odvětvích: finance, zdravotnictví, obrana
+            </div>
+            <div class="profile-cell">Hledáte nejlepší poměr cena/výkon</div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: ThinkPad je ideální pro
+          <strong
+            >profesionály, kteří považují notebook za klíčový pracovní
+            nástroj</strong
+          >
+          a jsou ochotni zaplatit za maximální kvalitu, spolehlivost a
+          bezpečnost.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/lenovo-laptop-thinkpad-3.png"
+            alt="Lenovo ThinkPad"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkPad je optimalizován pro
+          <strong>intenzivní každodenní profesionální použití</strong>
+          — zde jsou jeho hlavní výhody a omezení, která je dobré znát.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Nejlepší klávesnice mezi notebooky — zdvih kláves, komfort psaní
+                a podsvícení na špičkové úrovni
+              </li>
+              <li>
+                Certifikace MIL-SPEC 810H — odolnost vůči pádům, vibracím,
+                teplotám a vlhkosti
+              </li>
+              <li>
+                Ikonický červený TrackPoint — přesné ovládání bez opuštění
+                klávesnice
+              </li>
+              <li>
+                Pokročilé zabezpečení: čtečka otisků prstů, IR kamera (Windows
+                Hello), TPM 2.0, fyzická krytka kamery
+              </li>
+              <li>
+                Vynikající výdrž baterie — až 15 hodin u modelů X1 Carbon při
+                kancelářské práci
+              </li>
+              <li>
+                Integrované 4G/5G — připojení k internetu kdekoliv bez Wi-Fi
+              </li>
+              <li>Snadná správa zařízení díky Lenovo Device Manager a SCCM</li>
+              <li>
+                Profesionální záruka a podpora Lenovo — možnost opravy na místě
+              </li>
+              <li>
+                Vyměnitelná RAM a SSD u většiny modelů — dlouhodobá
+                rozšiřitelnost
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Strohý a jednotný design — matná černá bez výrazných prvků
+              </li>
+              <li>Vyšší cena než u běžných notebooků — kvalita něco stojí</li>
+              <li>
+                Vyšší hmotnost u některých modelů — řady T a L mohou přesáhnout
+                1,8 kg
+              </li>
+              <li>
+                Žádná dedikovaná grafická karta pro gaming u standardních modelů
+              </li>
+              <li>
+                Displej bývá dobrý, ale ne výjimečný — ne všechny modely mají
+                OLED
+              </li>
+              <li>
+                TrackPoint může být pro začátečníky nezvyklý — vyžaduje zvyk
+              </li>
+              <li>
+                Předinstalovaný Lenovo software — doporučeno vyčistit při prvním
+                spuštění
+              </li>
+              <li>
+                Horší poměr cena/výkon než ThinkBook nebo ProBook pro běžnou
+                kancelářskou práci
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intenzivní profesionální použití:</strong> psaní reportů,
+          vývoj software, práce s citlivými daty, prezentace u klientů nebo
+          práce ve vlaku po dobu 8 hodin — zde ThinkPad exceluje. Díky své
+          spolehlivosti a špičkové klávesnici je pro uživatele obtížné jej
+          nahradit.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ŘADY MODELU -->
+      <section>
+        <h2>📋 Hlavní řady v nabídce</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkpad/lenovo-thinkpad-e14-gen-7.png"
+            alt="Lenovo ThinkPad"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad T Series — Univerzální standard</h3>
+          <p>
+            Nejprodávanější řada ThinkPad, dostupná ve variantách T14, T14s a
+            T16. Hliníkové nebo hořčíkové šasi, procesory Intel Core Ultra nebo
+            AMD Ryzen Pro, až 32 GB RAM a rychlé NVMe SSD. Nabízí ideální
+            rovnováhu mezi výkonem, výdrží baterie a mobilitou pro profesionály,
+            kteří potřebují spolehlivý notebook pro každodenní práci. Model T14s
+            je oblíbený díky své nízké hmotnosti (cca 1,3 kg) bez omezení
+            konektivity.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad X Series — Ultra-kompaktní formát</h3>
+          <p>
+            Nejlehčí a nejkompaktnější řada — dostupná jako X13 (13,3 palce) a
+            X13s (verze s ARM Snapdragon). Hmotnost pod 1,2 kg, konstrukce z
+            hořčíku, výdrž až 15 hodin. Ideální pro časté cestovatele, kteří
+            chtějí maximální výkon v co nejmenším zařízení. Verze X13s se
+            Snapdragonem je oblíbená pro extrémní výdrž baterie a tichý provoz
+            bez ventilátoru.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad L Series — Dostupný profesionální notebook</h3>
+          <p>
+            Základní profesionální řada ThinkPad, dostupná jako L13, L14 a L15.
+            Zachovává klíčové vlastnosti ThinkPad — kvalitní klávesnici, solidní
+            odolnost a základní zabezpečení — za nižší cenu než série T.
+            Plastové zesílené šasi, procesory Intel Core nebo AMD Ryzen, plná
+            konektivita včetně RJ45. Doporučeno pro malé a střední firmy.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad E Series — Vstup do světa ThinkPad</h3>
+          <p>
+            Nejlevnější řada ThinkPad, dostupná jako E14 a E16. Určená pro malé
+            firmy, organizace a freelancery, kteří chtějí kvalitu ThinkPad za
+            nižší cenu. Více „consumer“ design, plastové šasi, méně certifikací
+            odolnosti — ale klávesnice zůstává nadprůměrná.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad P Series — Mobilní pracovní stanice</h3>
+          <p>
+            Řada P představuje mobilní pracovní stanice ThinkPad. Je určena pro
+            inženýry, architekty, 3D designéry a vědce, kteří potřebují
+            profesionální grafické karty. Modely P14s, P16s a P16 obsahují
+            NVIDIA RTX (Ada Lovelace), certifikované pro AutoCAD, SolidWorks,
+            CATIA, Revit a Maya. Některé konfigurace mají ECC RAM a výkonné
+            procesory. Série P spojuje mobilitu a výkon pracovní stanice.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkPad X1 Carbon — Prémiový ultrabook</h3>
+          <p>
+            Vlajková loď ThinkPad. Hmotnost pod 1,1 kg díky karbonovému šasi,
+            OLED nebo 2K displej, nejnovější procesory Intel Core Ultra, výdrž
+            až 15 hodin a kompletní zabezpečení. Patří mezi nejlepší
+            profesionální ultrabooky na trhu.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            ThinkPad si svou legendární pověst plně zaslouží. Již více než 30
+            let dominuje v oblasti profesionálních notebooků díky své
+            spolehlivosti, bezpečnosti a kvalitě klávesnice.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud máte omezený rozpočet,
+            <strong>ThinkPad L14 nebo E14</strong> nabízí skvělý základ. Pokud
+            chcete to nejlepší bez kompromisů,
+            <strong>ThinkPad X1 Carbon</strong> je ideální volba.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

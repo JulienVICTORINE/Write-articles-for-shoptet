@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo ThinkBook — Article</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e2001a;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e2001a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2001a;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── ENCADRÉ CONTEXTE ── */
+      .heritage-box {
+        background: #1a1a1a;
+        border-radius: 6px;
+        padding: 18px 22px;
+        margin-top: 16px;
+        display: table;
+        width: 100%;
+      }
+
+      .heritage-box p {
+        color: #e0e0e0;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .heritage-box strong {
+        color: #ffffff;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fdf0f0;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fdf0f0;
+        border-left: 4px solid #e2001a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+
+        .heritage-box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/Lenovo-ThinkBook-logo.png"
+          alt="Lenovo ThinkBook Logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">💻 Lenovo Laptops</div>
+        <h1 class="article-title">
+          Lenovo ThinkBook — The accessible professional, without compromising
+          on essentials
+        </h1>
+        <p class="article-intro">
+          The ThinkBook is the professional laptop range from Lenovo designed
+          for SMEs, freelancers, and professionals who want the reliability and
+          seriousness of a ThinkPad without paying a premium price. Launched in
+          2019, it quickly established itself as a rational and popular choice
+          for those who refuse to sacrifice quality for affordability.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>🏆 Product Overview</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/420519-15-to-16-inch-laptops-lenovo-thinkbook-16-gen-9-intel-10052578.png"
+            alt="Lenovo ThinkBook Logo"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The ThinkBook holds a strategic position in Lenovo's catalog: above
+          the consumer IdeaPad range, and below the premium business ThinkPad
+          line. It inherits the professional DNA of the Think family —
+          durability, high-quality keyboard, and generous connectivity — while
+          offering a more modern design and significantly more affordable
+          pricing.
+        </p>
+        <p>
+          Recognizable by its
+          <strong>light gray brushed aluminum chassis</strong>, the ThinkBook
+          stands out from the austere matte black ThinkPads. It features a clean
+          yet refined look, suitable for both corporate offices and coworking
+          spaces. The range mainly includes
+          <strong>14 and 16-inch displays</strong>, with configurations based on
+          Intel Core Ultra, AMD Ryzen, or Qualcomm Snapdragon depending on the
+          model, and a strong focus on
+          <strong>battery life, connectivity, and scalability</strong>
+          (replaceable RAM and SSD on most models).
+        </p>
+
+        <div class="heritage-box">
+          <p>
+            <strong>📜 ThinkBook positioning:</strong> launched in 2019 to fill
+            the gap between consumer IdeaPad and premium professional ThinkPad,
+            the ThinkBook addresses a clear market demand. SMEs and freelancers
+            wanted Think quality without the extra costs associated with
+            military certifications and enterprise fleet management features.
+            Lenovo designed the ThinkBook precisely for them.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- TARGET -->
+      <section>
+        <h2>👤 Who is the ThinkBook for?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/tnz9jjq7orbn5ftnivnkm77digb3ma290159.png"
+            alt="Lenovo ThinkBook"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The ThinkBook is aimed at professionals and advanced users who need a
+          reliable, well-built daily tool, without requiring a gaming machine or
+          a mobile workstation. Here are the profiles that best match:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Right for you if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are a freelancer, independent worker, or SME owner looking for
+              a reliable daily machine
+            </div>
+            <div class="profile-cell">
+              You need MIL-SPEC certifications and extreme durability — consider
+              a ThinkPad
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You type a lot and want a keyboard above market average quality
+            </div>
+            <div class="profile-cell">
+              You do intensive graphic design or heavy video editing — display
+              lacks color accuracy
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are looking for strong value for money compared to competitors
+              like Dell Vostro or HP ProBook
+            </div>
+            <div class="profile-cell">
+              You play video games — no dedicated gaming GPU in the standard
+              range
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You need excellent battery life for long workdays without charging
+            </div>
+            <div class="profile-cell">
+              You need built-in 4G/5G connectivity — not available on ThinkBook
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your IT budget is reasonable and you want to avoid paying for
+              unnecessary enterprise features
+            </div>
+            <div class="profile-cell">
+              You manage a corporate IT fleet and need advanced deployment tools
+              (SCCM, MDM)
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are a graduate student or young professional looking for a
+              durable 4–5 year investment
+            </div>
+            <div class="profile-cell">
+              You want a very premium or flashy design — ThinkBook remains
+              simple and functional
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In short: the ThinkBook is designed for
+          <strong
+            >professionals and demanding users who want Think quality at an
+            affordable price</strong
+          >
+          — without paying for unnecessary enterprise features.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Pros &amp; Cons</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/Lenovo-ThinkBook-14-2-in-1-Gen-4-6.png"
+            alt="Lenovo ThinkBook"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The ThinkBook is optimized for
+          <strong>everyday office productivity</strong>
+          — here are its well-known strengths and the limitations to consider
+          before buying.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Pros</div>
+            <ul class="pros-list">
+              <li>
+                Excellent keyboard with integrated numeric keypad — typing
+                comfort clearly above typical consumer laptops
+              </li>
+              <li>
+                Solid aluminum chassis — durable build quality designed to last
+              </li>
+              <li>
+                Outstanding battery life — up to 20 hours on 16" models
+                depending on configuration
+              </li>
+              <li>
+                Large 16" display with 16:10 aspect ratio — more vertical
+                workspace, ideal for productivity
+              </li>
+              <li>
+                Strong value for money compared to Dell Vostro, HP ProBook, or
+                ASUS ExpertBook
+              </li>
+              <li>
+                Full connectivity: USB-A, USB-C, HDMI, SD card reader, audio
+                jack — nothing missing
+              </li>
+              <li>
+                Replaceable RAM and SSD on most models — long-term upgradability
+              </li>
+              <li>
+                Quiet fan and efficient thermal management — comfortable during
+                extended use
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Cons</div>
+            <ul class="cons-list">
+              <li>
+                Display with limited color accuracy — not recommended for
+                graphic design, photo editing, or video work
+              </li>
+              <li>
+                Screen brightness could be better — under 300 nits, difficult to
+                use in bright outdoor conditions
+              </li>
+              <li>
+                Slightly heavy for a 16" laptop — around 1.85 kg, not ideal for
+                intensive daily mobility
+              </li>
+              <li>
+                Lid difficult to open with one hand — inconvenient when on the
+                move
+              </li>
+              <li>
+                No MIL-SPEC certification — decent durability but below ThinkPad
+                standards
+              </li>
+              <li>No built-in 4G/5G option — relies on Wi-Fi or tethering</li>
+              <li>
+                Pre-installed software (bloatware) can be intrusive — cleanup
+                recommended on first use
+              </li>
+              <li>
+                Simple design without originality — not ideal for users wanting
+                a bold-looking laptop
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intensive office use:</strong> for writing reports,
+          managing spreadsheets, attending video calls, or occasional remote
+          work — the ThinkBook performs perfectly. Its reliability and keyboard
+          make it a serious work tool at a justified price.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SUB-SERIES -->
+      <section>
+        <h2>📋 Main series in the lineup</h2>
+
+        <div class="model-block">
+          <h3>ThinkBook 14 — The versatile compact</h3>
+          <p>
+            The 14-inch format is the entry point into the ThinkBook range.
+            Lightweight (around 1.4 kg) and easy to carry, it offers an
+            excellent balance between portability and performance for everyday
+            office use. Available with Intel Core Ultra or AMD Ryzen
+            configurations, with up to 32 GB of RAM and fast NVMe SSD. Ideal for
+            professionals who travel frequently and don’t want to compromise on
+            keyboard quality and build.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkBook 16 — Maximum productivity</h3>
+          <p>
+            The 16-inch model is the best-selling ThinkBook. Its large 16:10
+            display provides generous workspace, especially appreciated for
+            spreadsheets, multitasking, and working with multiple windows
+            simultaneously. It includes a full numeric keypad, extensive
+            connectivity, and record-breaking battery life that can exceed 20
+            hours. The natural choice for those who mainly work at a desk or
+            travel occasionally.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkBook 14 2-in-1 — Flexibility first</h3>
+          <p>
+            The convertible version of the ThinkBook lineup, featuring a 360°
+            hinge that allows the laptop to be used in tablet, tent, or
+            presentation mode. Touchscreen display, optional stylus support, and
+            a hybrid design tailored for creative professionals, trainers, and
+            salespeople who need flexibility for presentations and note-taking.
+            Slightly heavier than the standard version, but much more versatile
+            in daily use.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkBook Plus — Innovation for advanced users</h3>
+          <p>
+            The Plus series explores innovative concepts within the ThinkBook
+            lineup. Some models feature a secondary E-Ink display on the lid,
+            usable for note-taking, calendar display, or reading without turning
+            on the main screen. Other versions offer dual-screen setups with an
+            additional display above the keyboard. These models are designed for
+            advanced users who want to push their productivity further with
+            unique tools.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The ThinkBook perfectly delivers on its promise: offering the
+            essentials of the Lenovo professional experience at an accessible
+            price. Its keyboard, durability, battery life, and connectivity make
+            it a serious work tool that can be confidently recommended for
+            everyday office use.
+          </p>
+          <p style="margin-top: 10px">
+            If you're hesitating between ThinkBook and ThinkPad: choose the
+            <strong>ThinkBook</strong> if you're a freelancer, SME, or advanced
+            student looking for the best value for money. Go for the
+            <strong>ThinkPad</strong>
+            if you have high security requirements, need MIL-SPEC
+            certifications, or manage an enterprise IT fleet. In any case,
+            you'll get a well-built laptop that will serve you efficiently for
+            several years.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

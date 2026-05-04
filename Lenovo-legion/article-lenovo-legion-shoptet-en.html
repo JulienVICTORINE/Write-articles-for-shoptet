@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo Legion — Article</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e2001a;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e2001a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2001a;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── ENCADRÉ CONTEXTE ── */
+      .heritage-box {
+        background: #1a1a1a;
+        border-radius: 6px;
+        padding: 18px 22px;
+        margin-top: 16px;
+        display: table;
+        width: 100%;
+      }
+
+      .heritage-box p {
+        color: #e0e0e0;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .heritage-box strong {
+        color: #ffffff;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fdf0f0;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fdf0f0;
+        border-left: 4px solid #e2001a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+
+        .heritage-box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/lenovo-legion-logo.png"
+          alt="Lenovo Legion"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">🎮 Lenovo Laptops</div>
+        <h1 class="article-title">
+          Lenovo Legion — The gaming benchmark, with no compromise on
+          performance
+        </h1>
+        <p class="article-intro">
+          The Legion range is Lenovo’s high-end gaming lineup. Designed for
+          demanding players, it includes laptops, desktops, monitors, and
+          accessories built to deliver a complete and consistent gaming
+          experience — without compromising on power, cooling, or display
+          quality.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>🏆 Overview of the lineup</h2>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/61FB7Dj92ZL._AC_UF894,1000_QL80_.png"
+            alt="Lenovo Legion"
+            style="max-width: 500px; width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The Legion lineup holds a unique place in Lenovo’s catalog: it is the
+          family dedicated exclusively to gaming and intensive workloads. It
+          benefits from serious engineering — advanced cooling, powerful
+          components, high refresh rate displays — while offering a more
+          competitive price-to-performance ratio than some premium competitors
+          like Razer or ASUS ROG.
+        </p>
+        <p>
+          Recognizable by its
+          <strong>
+            bulky chassis, large ventilation grills, and backlit Y logo </strong
+          >, the Legion clearly shows its purpose. The lineup includes
+          <strong>15 to 17-inch</strong> laptops, with Intel Core HX or AMD
+          Ryzen HX configurations depending on the model, with a strong focus on
+          <strong>cooling, display refresh rate, and GPU performance</strong>.
+        </p>
+        <p>
+          The range goes from mid-range (Legion 5) to the most powerful
+          configurations (Legion 7 and Legion Pro), allowing users to choose
+          based on budget and needs without leaving the Legion ecosystem.
+        </p>
+
+        <div class="heritage-box">
+          <p>
+            <strong>🧊 Legion Coldfront system:</strong> Lenovo has developed a
+            proprietary cooling system combining multiple heat pipes, vapor
+            chambers, and dual ball-bearing fans. The goal is to keep
+            temperatures under control even during long gaming sessions, where
+            many gaming laptops tend to reduce performance (thermal throttling).
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- TARGET AUDIENCE -->
+      <section>
+        <h2>👤 Who is Legion for?</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/01.png"
+            alt="Lenovo Legion"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The Legion lineup is not for everyone. It targets a specific type of
+          user looking primarily for power and reliability under heavy
+          workloads. Here are the profiles that fit best:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Right for you if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You regularly play demanding games (AAA, competitive FPS, open
+              world) and want stable FPS without graphical compromises
+            </div>
+            <div class="profile-cell">
+              You’re looking for a lightweight and portable laptop — Legion
+              models are bulky and heavy (2.4 to 3 kg)
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You do streaming, video editing, or 3D work and need a powerful
+              GPU to speed up rendering
+            </div>
+            <div class="profile-cell">
+              You need long battery life on the go — it rarely exceeds 3–4 hours
+              under heavy use
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are a semi-pro or competitive gamer and need a high refresh
+              rate display (144Hz, 165Hz, or 240Hz)
+            </div>
+            <div class="profile-cell">
+              You want a subtle, professional-looking laptop — the gaming design
+              may stand out too much
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You are a computer science student or developer needing to run
+              heavy environments (VMs, compilation, local AI)
+            </div>
+            <div class="profile-cell">
+              You are sensitive to noise — fans are clearly audible under full
+              load
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You want a good value for money compared to competitors like Razer
+              Blade, ASUS ROG, or MSI
+            </div>
+            <div class="profile-cell">
+              Your usage is mainly office work — other Lenovo ranges (ThinkBook,
+              IdeaPad) are much more suitable
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In short: Legion is designed for
+          <strong>
+            passionate gamers, content creators, and power users who want
+            maximum performance
+          </strong>
+          — without worrying about weight or battery life.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Pros &amp; Cons</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/9-1.png"
+            alt="Lenovo Legion"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The Legion is optimized for
+          <strong>gaming performance and intensive workloads</strong> — here are
+          its key strengths and limitations to consider before buying.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Pros</div>
+            <ul class="pros-list">
+              <li>
+                Excellent gaming performance, consistent over time thanks to
+                efficient cooling
+              </li>
+              <li>
+                High-quality displays: high refresh rates (up to 240Hz), good
+                contrast and low latency
+              </li>
+              <li>
+                Competitive price-to-performance ratio compared to premium
+                gaming competitors
+              </li>
+              <li>Comfortable RGB backlit keyboard with good key feedback</li>
+              <li>
+                Full connectivity: USB-A, USB-C, HDMI 2.1, DisplayPort, RJ-45
+              </li>
+              <li>
+                Upgradeable RAM and SSD on most models — long-term scalability
+              </li>
+              <li>
+                Wide range of configurations: from mid-range (Legion 5) to
+                extreme models (Legion 9i)
+              </li>
+              <li>
+                Intuitive Lenovo Vantage software to adjust performance modes
+                and RGB
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Cons</div>
+            <ul class="cons-list">
+              <li>
+                Bulky and heavy (2.4 to 3 kg depending on the model) — not ideal
+                for daily mobility
+              </li>
+              <li>
+                Limited battery life under heavy use: 3 to 4 hours max, plug-in
+                use recommended
+              </li>
+              <li>
+                Loud fans under full load — can be disturbing in quiet
+                environments
+              </li>
+              <li>
+                Strong gaming-oriented design — not very discreet in
+                professional or academic settings
+              </li>
+              <li>
+                Noticeable heat on the upper keyboard area during long sessions
+              </li>
+              <li>Large and heavy power adapter to carry with the laptop</li>
+              <li>
+                No MIL-SPEC certification — decent durability but not built for
+                extreme conditions
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intensive gaming and creative use:</strong> for playing
+          demanding titles, streaming, video editing, or running AI models — the
+          Legion is in its element. Its thermal management and high-end
+          components make it a reliable long-term tool.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- OUR OPINION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The Lenovo Legion lineup fully delivers on its promise: offering
+            serious gaming performance at a more reasonable price than premium
+            competitors. Its efficient cooling, high refresh rate displays, and
+            extensive connectivity make it a reliable choice that we can
+            confidently recommend for intensive gaming or creative use.
+          </p>
+          <p style="margin-top: 10px">
+            If you're hesitating between Legion and another Lenovo lineup:
+            choose <strong>Legion</strong> if you are primarily a gamer or
+            content creator and performance is your top priority. Go for
+            <strong>ThinkBook</strong> if your usage is mainly office and
+            professional, or <strong>IdeaPad</strong> if you are on a tighter
+            budget. In any case, the Legion is a well-built machine that will
+            serve you well for several years — as long as you accept its bulky
+            design and keep a power outlet nearby.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

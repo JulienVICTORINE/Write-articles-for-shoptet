@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo ThinkBook — Article</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e2001a;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e2001a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2001a;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── ENCADRÉ CONTEXTE ── */
+      .heritage-box {
+        background: #1a1a1a;
+        border-radius: 6px;
+        padding: 18px 22px;
+        margin-top: 16px;
+        display: table;
+        width: 100%;
+      }
+
+      .heritage-box p {
+        color: #e0e0e0;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .heritage-box strong {
+        color: #ffffff;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fdf0f0;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fdf0f0;
+        border-left: 4px solid #e2001a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+
+        .heritage-box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/Lenovo-ThinkBook-logo.png"
+          alt="Lenovo ThinkBook Logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">💻 Notebooky Lenovo</div>
+        <h1 class="article-title">
+          Lenovo ThinkBook — dostupný profesionál bez kompromisů v tom
+          podstatném
+        </h1>
+        <p class="article-intro">
+          ThinkBook je řada profesionálních notebooků od Lenovo navržená pro
+          malé a střední podniky, freelancery a profesionály, kteří chtějí
+          spolehlivost a kvalitu ThinkPad, ale bez vysoké ceny. Uvedena na trh v
+          roce 2019, rychle se stala racionální a oblíbenou volbou pro ty, kteří
+          nechtějí obětovat kvalitu kvůli ceně.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PREZENTACE -->
+      <section>
+        <h2>🏆 Představení řady</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/420519-15-to-16-inch-laptops-lenovo-thinkbook-16-gen-9-intel-10052578.png"
+            alt="Lenovo ThinkBook Logo"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkBook zaujímá strategickou pozici v portfoliu Lenovo: nad
+          spotřebitelskou řadou IdeaPad a pod prémiovou business řadou ThinkPad.
+          Dědí profesionální DNA rodiny Think — odolnost, kvalitní klávesnici a
+          bohatou konektivitu — a zároveň nabízí modernější design a výrazně
+          dostupnější cenu.
+        </p>
+        <p>
+          Rozpoznatelný díky
+          <strong>světle šedému broušenému hliníkovému šasi</strong>, ThinkBook
+          se odlišuje od strohého černého designu ThinkPad. Nabízí jednoduchý,
+          ale elegantní vzhled vhodný jak do kanceláří, tak do coworkingových
+          prostor. Řada zahrnuje především <strong>14" a 16" displeje</strong> s
+          konfiguracemi Intel Core Ultra, AMD Ryzen nebo Qualcomm Snapdragon
+          podle modelu, s důrazem na
+          <strong>výdrž baterie, konektivitu a rozšiřitelnost</strong>
+          (výměnná RAM a SSD u většiny modelů).
+        </p>
+
+        <div class="heritage-box">
+          <p>
+            <strong>📜 Pozice ThinkBook:</strong> uveden v roce 2019, aby
+            zaplnil mezeru mezi IdeaPad a ThinkPad. Reaguje na jasnou poptávku
+            trhu: malé firmy a freelanceři chtěli kvalitu Think bez nákladů na
+            vojenské certifikace a enterprise funkce. Lenovo vytvořilo ThinkBook
+            přesně pro ně.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRO KOHO -->
+      <section>
+        <h2>👤 Pro koho je ThinkBook?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/tnz9jjq7orbn5ftnivnkm77digb3ma290159.png"
+            alt="Lenovo ThinkBook"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkBook je určen pro profesionály a pokročilé uživatele, kteří
+          potřebují spolehlivý a kvalitně zpracovaný pracovní nástroj, ale
+          nepotřebují herní notebook nebo mobilní pracovní stanici. Nejvhodnější
+          profily:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste freelancer nebo majitel malé firmy a hledáte spolehlivý
+              notebook
+            </div>
+            <div class="profile-cell">
+              Potřebujete MIL-SPEC certifikace a extrémní odolnost — zvolte
+              ThinkPad
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Hodně píšete a chcete kvalitní klávesnici
+            </div>
+            <div class="profile-cell">
+              Děláte náročnou grafiku nebo video — displej není dostatečně
+              přesný
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Hledáte dobrý poměr cena/výkon oproti konkurenci
+            </div>
+            <div class="profile-cell">
+              Hrajete hry — chybí dedikovaná grafická karta
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Potřebujete dlouhou výdrž baterie</div>
+            <div class="profile-cell">Potřebujete 4G/5G — není dostupné</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Máte omezený IT rozpočet</div>
+            <div class="profile-cell">
+              Spravujete firemní IT infrastrukturu s pokročilými nástroji
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste student nebo mladý profesionál hledající dlouhodobou
+              investici
+            </div>
+            <div class="profile-cell">
+              Chcete luxusní design — ThinkBook je spíše funkční
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: ThinkBook je ideální pro
+          <strong
+            >náročné uživatele, kteří chtějí kvalitu Think za dostupnou
+            cenu</strong
+          >
+          — bez zbytečných enterprise funkcí.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY & NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkbook/Lenovo-ThinkBook-14-2-in-1-Gen-4-6.png"
+            alt="Lenovo ThinkBook"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkBook je optimalizován pro
+          <strong>každodenní kancelářskou produktivitu</strong>
+          — zde jsou jeho hlavní přednosti a omezení, která je dobré znát před
+          nákupem.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Výborná klávesnice s numerickým blokem — výrazně lepší komfort
+                psaní než u běžných notebooků
+              </li>
+              <li>
+                Pevné hliníkové šasi — kvalitní konstrukce s dlouhou životností
+              </li>
+              <li>
+                Vynikající výdrž baterie — až 20 hodin u 16" modelů podle
+                konfigurace
+              </li>
+              <li>
+                Velký 16" displej s poměrem stran 16:10 — více vertikální
+                pracovní plochy, ideální pro produktivitu
+              </li>
+              <li>
+                Výborný poměr cena/výkon oproti konkurenci (Dell Vostro, HP
+                ProBook, ASUS ExpertBook)
+              </li>
+              <li>
+                Kompletní konektivita: USB-A, USB-C, HDMI, čtečka SD karet,
+                audio jack — nic nechybí
+              </li>
+              <li>
+                Vyměnitelná RAM a SSD u většiny modelů — možnost rozšíření do
+                budoucna
+              </li>
+              <li>
+                Tichý ventilátor a efektivní chlazení — pohodlné při dlouhodobém
+                používání
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Displej s omezeným barevným rozsahem — nevhodný pro grafiku,
+                úpravu fotografií nebo video
+              </li>
+              <li>
+                Nižší jas displeje — pod 300 nitů, horší čitelnost na přímém
+                světle
+              </li>
+              <li>
+                Mírně vyšší hmotnost pro 16" notebook — cca 1,85 kg, méně vhodný
+                pro časté přenášení
+              </li>
+              <li>
+                Víko se obtížně otevírá jednou rukou — nepraktické na cestách
+              </li>
+              <li>
+                Bez certifikace MIL-SPEC — odolnost je dobrá, ale nižší než u
+                ThinkPad
+              </li>
+              <li>
+                Chybí integrované 4G/5G — závislost na Wi-Fi nebo hotspotu
+              </li>
+              <li>
+                Předinstalovaný software (bloatware) může být rušivý —
+                doporučeno odstranit při prvním spuštění
+              </li>
+              <li>
+                Jednoduchý design bez originality — nevhodný pro ty, kteří
+                chtějí výrazný vzhled
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intenzivní kancelářské využití:</strong> pro psaní
+          dokumentů, práci s tabulkami, videohovory nebo občasnou práci na
+          cestách — ThinkBook je ideální volba. Jeho spolehlivost a klávesnice z
+          něj dělají seriózní pracovní nástroj za rozumnou cenu.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní série v nabídce</h2>
+
+        <div class="model-block">
+          <h3>ThinkBook 14 — Kompaktní univerzál</h3>
+          <p>
+            Formát 14 palců je vstupní model řady ThinkBook. Lehký (cca 1,4 kg)
+            a snadno přenosný, nabízí skvělou rovnováhu mezi mobilitou a výkonem
+            pro každodenní kancelářskou práci. Dostupný s procesory Intel Core
+            Ultra nebo AMD Ryzen, až s 32 GB RAM a rychlým NVMe SSD. Ideální pro
+            profesionály na cestách, kteří nechtějí dělat kompromisy v kvalitě
+            klávesnice a konstrukce.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkBook 16 — Maximální produktivita</h3>
+          <p>
+            16palcový model je nejprodávanější v řadě ThinkBook. Jeho velký
+            displej s poměrem stran 16:10 poskytuje dostatek pracovního
+            prostoru, ideální pro tabulky, multitasking a práci s více okny
+            současně. Nabízí plnohodnotnou numerickou klávesnici, širokou
+            konektivitu a rekordní výdrž baterie, která může přesáhnout 20
+            hodin. Přirozená volba pro ty, kteří pracují převážně v kanceláři
+            nebo jen občas cestují.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkBook 14 2-v-1 — Maximální flexibilita</h3>
+          <p>
+            Konvertibilní verze řady ThinkBook s 360° otočným kloubem, který
+            umožňuje použití jako tablet, ve stanu nebo prezentačním režimu.
+            Dotykový displej, podpora stylusu (volitelně) a hybridní design
+            určený pro kreativní profesionály, školitele a obchodníky, kteří
+            potřebují flexibilitu při prezentacích a poznámkách. O něco těžší
+            než standardní verze, ale výrazně univerzálnější.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkBook Plus — Inovace pro pokročilé uživatele</h3>
+          <p>
+            Série Plus přináší inovativní koncepty v rámci řady ThinkBook.
+            Některé modely mají sekundární E-Ink displej na víku, který lze
+            využít pro poznámky, kalendář nebo čtení bez zapnutí hlavního
+            displeje. Jiné verze nabízejí konfiguraci se dvěma obrazovkami,
+            včetně sekundárního displeje nad klávesnicí. Tyto modely jsou určeny
+            pokročilým uživatelům, kteří chtějí posunout svou produktivitu díky
+            unikátním nástrojům.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            ThinkBook plní svůj slib: nabízí to nejdůležitější z profesionální
+            zkušenosti Lenovo za dostupnou cenu. Jeho klávesnice, odolnost,
+            výdrž baterie a konektivita z něj dělají spolehlivý pracovní
+            nástroj, který lze bez váhání doporučit pro každodenní kancelářské
+            použití.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud váháte mezi ThinkBook a ThinkPad: zvolte
+            <strong>ThinkBook</strong>, pokud jste freelancer, malá firma nebo
+            pokročilý student hledající nejlepší poměr cena/výkon. Zvolte
+            <strong>ThinkPad</strong>, pokud potřebujete vysoké zabezpečení,
+            certifikace MIL-SPEC nebo spravujete firemní IT infrastrukturu. V
+            každém případě získáte kvalitní notebook, který vám bude spolehlivě
+            sloužit několik let.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

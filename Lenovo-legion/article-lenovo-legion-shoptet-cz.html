@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo Legion — Article</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e2001a;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e2001a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2001a;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── ENCADRÉ CONTEXTE ── */
+      .heritage-box {
+        background: #1a1a1a;
+        border-radius: 6px;
+        padding: 18px 22px;
+        margin-top: 16px;
+        display: table;
+        width: 100%;
+      }
+
+      .heritage-box p {
+        color: #e0e0e0;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .heritage-box strong {
+        color: #ffffff;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fdf0f0;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fdf0f0;
+        border-left: 4px solid #e2001a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+
+        .heritage-box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/lenovo-legion-logo.png"
+          alt="Lenovo Legion"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🎮 Notebooky Lenovo</div>
+        <h1 class="article-title">
+          Lenovo Legion — herní reference bez kompromisů ve výkonu
+        </h1>
+        <p class="article-intro">
+          Řada Legion je prémiová herní řada společnosti Lenovo. Je navržena pro
+          náročné hráče a zahrnuje notebooky, stolní počítače, monitory i
+          příslušenství, které poskytují kompletní a konzistentní herní zážitek
+          — bez kompromisů ve výkonu, chlazení nebo kvalitě obrazu.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🏆 Představení řady</h2>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/61FB7Dj92ZL._AC_UF894,1000_QL80_.png"
+            alt="Lenovo Legion"
+            style="max-width: 500px; width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Řada Legion zaujímá v katalogu Lenovo specifické místo: jde o rodinu
+          určenou výhradně pro hraní her a náročné použití. Využívá pokročilé
+          inženýrství — efektivní chlazení, výkonné komponenty a displeje s
+          vysokou obnovovací frekvencí — a přitom nabízí lepší poměr ceny a
+          výkonu než někteří prémioví konkurenti jako Razer nebo ASUS ROG.
+        </p>
+        <p>
+          Typická je
+          <strong>
+            robustní konstrukce, velké ventilační mřížky a podsvícené logo Y </strong
+          >. Řada Legion zahrnuje notebooky o velikosti
+          <strong>15 až 17 palců</strong>, s procesory Intel Core HX nebo AMD
+          Ryzen HX v závislosti na modelu, a klade důraz na
+          <strong>chlazení, obnovovací frekvenci a výkon GPU</strong>.
+        </p>
+        <p>
+          Řada sahá od střední třídy (Legion 5) až po nejvýkonnější konfigurace
+          (Legion 7 a Legion Pro), což umožňuje výběr podle rozpočtu i potřeb
+          bez nutnosti opustit ekosystém Legion.
+        </p>
+
+        <div class="heritage-box">
+          <p>
+            <strong>🧊 Systém Legion Coldfront:</strong> Lenovo vyvinulo vlastní
+            chladicí systém kombinující několik heatpipe trubic, vapor chamber a
+            ventilátory s dvojitými ložisky. Cílem je udržet teploty pod
+            kontrolou i během dlouhých herních relací, kdy mnoho herních
+            notebooků začne snižovat výkon (thermal throttling).
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRO KOHO -->
+      <section>
+        <h2>👤 Pro koho je Legion?</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/01.png"
+            alt="Lenovo Legion"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Řada Legion není určena pro každého. Je zaměřena na konkrétní typ
+          uživatelů, kteří hledají především výkon a spolehlivost při náročném
+          použití. Zde jsou nejvhodnější profily:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pravidelně hrajete náročné hry (AAA, kompetitivní FPS, open world)
+              a chcete stabilní FPS bez kompromisů v grafice
+            </div>
+            <div class="profile-cell">
+              Hledáte lehký a snadno přenosný notebook — Legion je těžký a
+              robustní (2,4 až 3 kg)
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Věnujete se streamování, střihu videa nebo 3D a potřebujete
+              výkonnou GPU pro rychlejší renderování
+            </div>
+            <div class="profile-cell">
+              Potřebujete dlouhou výdrž baterie na cestách — při zátěži vydrží
+              jen 3–4 hodiny
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste poloprofesionální nebo kompetitivní hráč a potřebujete
+              displej s vysokou obnovovací frekvencí (144 Hz, 165 Hz nebo 240
+              Hz)
+            </div>
+            <div class="profile-cell">
+              Hledáte nenápadný notebook pro pracovní prostředí — herní design
+              může působit rušivě
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Jste student informatiky nebo vývojář a potřebujete spouštět
+              náročná prostředí (virtuální stroje, kompilace, lokální AI)
+            </div>
+            <div class="profile-cell">
+              Vadí vám hluk — ventilátory jsou při plné zátěži výrazně
+              slyšitelné
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Hledáte dobrý poměr cena/výkon oproti konkurenci jako Razer Blade,
+              ASUS ROG nebo MSI
+            </div>
+            <div class="profile-cell">
+              Používáte notebook hlavně na kancelářskou práci — jiné řady Lenovo
+              (ThinkBook, IdeaPad) jsou vhodnější
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: Legion je ideální pro
+          <strong>
+            vášnivé hráče, tvůrce obsahu a náročné uživatele, kteří chtějí
+            maximální výkon
+          </strong>
+          — bez ohledu na hmotnost nebo výdrž baterie.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/9-1.png"
+            alt="Lenovo Legion"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Řada Legion je optimalizována pro
+          <strong>herní výkon a náročné použití</strong> — zde jsou její hlavní
+          výhody a omezení, která je dobré znát před nákupem.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Vynikající herní výkon, dlouhodobě stabilní díky efektivnímu
+                chlazení
+              </li>
+              <li>
+                Kvalitní displeje: vysoká obnovovací frekvence (až 240 Hz),
+                dobrý kontrast a nízká latence
+              </li>
+              <li>
+                Výborný poměr cena/výkon ve srovnání s prémiovou herní
+                konkurencí
+              </li>
+              <li>
+                Pohodlná RGB podsvícená klávesnice s dobrým zdvihem kláves
+              </li>
+              <li>
+                Kompletní konektivita: USB-A, USB-C, HDMI 2.1, DisplayPort,
+                RJ-45
+              </li>
+              <li>
+                Možnost upgradu RAM a SSD u většiny modelů — dlouhodobá
+                rozšiřitelnost
+              </li>
+              <li>
+                Široká nabídka konfigurací: od střední třídy (Legion 5) až po
+                extrémní modely (Legion 9i)
+              </li>
+              <li>
+                Intuitivní software Lenovo Vantage pro nastavení výkonu a RGB
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Robustní a těžký (2,4 až 3 kg podle modelu) — nevhodný pro
+                každodenní přenášení
+              </li>
+              <li>
+                Omezená výdrž baterie při zátěži: maximálně 3–4 hodiny,
+                doporučeno používat připojený k síti
+              </li>
+              <li>
+                Hlučné ventilátory při maximální zátěži — rušivé v tichém
+                prostředí
+              </li>
+              <li>
+                Výrazně herní design — málo nenápadný v pracovním nebo školním
+                prostředí
+              </li>
+              <li>
+                Citelně vyšší teplota v oblasti horní části klávesnice při
+                delším používání
+              </li>
+              <li>Velký a těžký napájecí adaptér k přenášení</li>
+              <li>
+                Bez certifikace MIL-SPEC — solidní odolnost, ale není určen do
+                extrémních podmínek
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intenzivní herní a kreativní využití:</strong> pro hraní
+          náročných her, streamování, střih videa nebo práci s AI modely —
+          Legion je ideální volbou. Díky kvalitnímu chlazení a výkonným
+          komponentům jde o spolehlivé zařízení pro dlouhodobé použití.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- NAŠE HODNOCENÍ -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            Řada Lenovo Legion plně plní svůj slib: nabízí vysoký herní výkon za
+            dostupnější cenu než prémiová konkurence. Efektivní chlazení,
+            displeje s vysokou obnovovací frekvencí a bohatá konektivita z ní
+            dělají spolehlivý nástroj, který lze bez váhání doporučit pro
+            náročné herní i kreativní využití.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud váháte mezi Legion a jinou řadou Lenovo: zvolte
+            <strong>Legion</strong>, pokud jste primárně hráč nebo tvůrce obsahu
+            a výkon je pro vás prioritou. Vyberte <strong>ThinkBook</strong> pro
+            kancelářské a profesionální využití nebo <strong>IdeaPad</strong>,
+            pokud máte omezenější rozpočet. V každém případě je Legion kvalitně
+            zpracovaný notebook, který vám bude sloužit několik let — pokud
+            přijmete jeho větší rozměry a nutnost mít vždy po ruce zásuvku.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
