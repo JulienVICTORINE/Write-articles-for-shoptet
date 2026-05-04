@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo ThinkStation — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e2001a;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e2001a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e2001a;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── BOX SOMBRE ── */
+      .heritage-box {
+        background: #1a1a1a;
+        border-radius: 6px;
+        padding: 18px 22px;
+        margin-top: 16px;
+        display: table;
+        width: 100%;
+      }
+
+      .heritage-box p {
+        color: #e0e0e0;
+        font-size: 15px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      .heritage-box strong {
+        color: #ffffff;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fdf0f0;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fdf0f0;
+        border-left: 4px solid #e2001a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+
+        .heritage-box {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkstation/logo-lenovo-thinkstation.png"
+          alt="Lenovo ThinkStation Logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🖥️ Pracovní stanice Lenovo</div>
+        <h1 class="article-title">
+          Lenovo ThinkStation — Referenční pracovní stanice pro náročné
+          profesionály
+        </h1>
+        <p class="article-intro">
+          ThinkStation je řada stolních a ultra-kompaktních pracovních stanic od
+          společnosti Lenovo, navržená pro profesionální prostředí, kde jsou
+          hrubý výkon, absolutní spolehlivost a dlouhodobá stabilita nezbytné.
+          Vychází z DNA ThinkPad a již desítky let je využívána v kreativních
+          studiích, inženýrských firmách, laboratořích a firemních IT
+          odděleních.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🏆 Přehled produktové řady</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkstation/ThinkStation_P330_Tower_Manufacturing-1080x640.png"
+            alt="Logo Lenovo ThinkStation"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkStation se odlišuje zásadně jiným přístupem než běžné
+          spotřebitelské počítače: vše je navrženo pro
+          <strong>dlouhodobý výkon, odolnost a snadnou údržbu</strong>. Skříně
+          jsou konstruovány pro snadný přístup ke komponentům, díly jsou
+          standardizované a vyměnitelné a každá konfigurace je testována pro
+          nepřetržitý provoz, často 24/7.
+        </p>
+        <p>
+          Řada sahá od ultra-kompaktních modelů, jako je
+          <strong>ThinkStation P3 Tiny</strong> — sotva větší než kniha — až po
+          plnohodnotné věže jako <strong>P7 nebo P8</strong>, které dokážou
+          pojmout více profesionálních GPU současně a několik terabajtů
+          úložiště. Mezi tím jsou dostupné i střední formáty (Small Form Factor,
+          standardní věž), které pokrývají všechny potřeby z hlediska velikosti
+          i výkonu.
+        </p>
+        <p>
+          Celá řada je postavena na komponentách certifikovaných pro
+          nejnáročnější profesionální aplikace: procesory Intel Xeon nebo Intel
+          Core Ultra, paměť ECC RAM pro eliminaci chyb při výpočtech a grafické
+          karty NVIDIA RTX řady Ada nebo AMD Radeon Pro certifikované pro
+          profesionální software.
+        </p>
+
+        <div class="heritage-box">
+          <p>
+            <strong>🔧 ISV certifikace:</strong> ThinkStation jsou certifikovány
+            výrobci profesionálního softwaru (Autodesk, Dassault Systèmes,
+            Adobe, Siemens…). To znamená, že každá hardwarová konfigurace je
+            testována a ověřena pro zajištění optimálního výkonu a maximální
+            stability s aplikacemi jako AutoCAD, SolidWorks, CATIA, Revit, Maya
+            nebo DaVinci Resolve — kde běžný herní počítač může vykazovat
+            nestabilitu nebo nesprávné výsledky.
+          </p>
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkstation/lenovo-thinkstation-p520c-1667894397.png"
+          alt="Lenovo ThinkStation en situation professionnelle"
+          style="max-width: 500px; width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRO KOHO JE URČENA -->
+      <section>
+        <h2>👤 Pro koho je ThinkStation určena?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkstation/PX4.png"
+            alt="Lenovo ThinkStation v profesionálním prostředí"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkStation je určena pro profesionály a organizace, jejichž práce
+          přímo závisí na výkonu a spolehlivosti jejich pracovní stanice. Zde
+          jsou profily, pro které je nejvhodnější:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">
+              ❌ Není ideální, pokud…
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete s CAD, BIM, 3D modelováním nebo simulačním softwarem
+            </div>
+            <div class="profile-cell">
+              Používáte počítač jen pro kancelářskou práci — běžné PC bude
+              dostačující a levnější
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Zabýváte se střihem videa, 3D renderingem nebo profesionální
+              postprodukcí
+            </div>
+            <div class="profile-cell">
+              Hrajete videohry — herní PC nabídne lepší grafický výkon pro tento
+              účel
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vaše zařízení musí běžet nepřetržitě, někdy 24/7
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — řady IdeaCentre nebo ThinkCentre jsou
+              dostupnější
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Spravujete firemní park pracovních stanic a potřebujete
+              standardizaci
+            </div>
+            <div class="profile-cell">
+              Potřebujete mobilitu — ThinkStation je stolní počítač, zvažte
+              ThinkPad P Series
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete v oblasti inženýrství, architektury, zdravotnictví,
+              financí nebo vědeckého výzkumu
+            </div>
+            <div class="profile-cell">
+              Hledáte nejlepší poměr cena/výkon pro gaming nebo běžné
+              multimediální použití
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Stabilita certifikovaného profesionálního softwaru je pro vás
+              absolutní prioritou
+            </div>
+            <div class="profile-cell">
+              Máte omezený prostor — i když existují kompaktní varianty,
+              notebook je úspornější
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: ThinkStation je určena pro
+          <strong
+            >profesionály, pro které je počítač klíčovým pracovním
+            nástrojem</strong
+          >
+          — tedy pro ty, u nichž výpadek nebo softwarová nestabilita znamená
+          přímou ztrátu času, dat nebo peněz.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkstation/P8.png"
+            alt="Vnitřek Lenovo ThinkStation"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkStation je optimalizována pro
+          <strong>intenzivní profesionální každodenní použití</strong>
+          — zde jsou její hlavní výhody a omezení, která je dobré znát před
+          investicí.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Ověřená spolehlivost a odolnost — navrženo pro 5 až 7 let
+                intenzivního provozu
+              </li>
+              <li>
+                ISV certifikace pro profesionální software (AutoCAD, SolidWorks,
+                Maya, Revit…)
+              </li>
+              <li>Dostupná ECC RAM — eliminuje chyby při výpočtech</li>
+              <li>
+                Vysoká rozšiřitelnost — GPU, RAM a úložiště lze snadno
+                upgradovat
+              </li>
+              <li>
+                Snadný přístup ke komponentům — beznástrojové otevírání u
+                většiny modelů
+              </li>
+              <li>
+                Firemní podpora a rozšířené záruky s možností zásahu na místě
+              </li>
+              <li>Snadná správa zařízení díky Lenovo Device Manageru</li>
+              <li>
+                Různé formáty: Tiny, SFF, Tower — přizpůsobí se každému
+                pracovnímu prostředí
+              </li>
+              <li>Tichý provoz díky optimalizovanému chlazení</li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Vysoká cena ve srovnání s kancelářskými nebo herními počítači
+              </li>
+              <li>Žádná mobilita — pouze stolní řešení</li>
+              <li>Velké rozměry tower modelů — nevhodné do malých prostor</li>
+              <li>
+                Složitá nabídka s mnoha variantami — konfigurace může být
+                nepřehledná
+              </li>
+              <li>
+                Nižší výkon ve hrách navzdory výkonným GPU (profesionální
+                ovladače)
+              </li>
+              <li>
+                Předinstalovaný Lenovo software — doporučeno vyčistit po prvním
+                spuštění
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Intenzivní profesionální použití:</strong> pro 3D
+          rendering, simulace, 4K střih nebo práci s velkými databázemi —
+          ThinkStation zde exceluje. Její stabilita a dlouhá životnost z ní činí
+          ideální investici pro profesionály, kteří si nemohou dovolit výpadky.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní řady produktové nabídky</h2>
+
+        <div class="model-block">
+          <h3>ThinkStation P3 Tiny — Ultra kompaktní pracovní stanice</h3>
+          <p>
+            Nejkompaktnější model v řadě, sotva větší než kniha. Nabízí
+            nejnovější procesory Intel Core a podporuje až 64 GB paměti DDR5.
+            Ideální pro kanceláře s omezeným prostorem, lze ji připevnit za
+            monitor (VESA) nebo pod stůl. I přes malé rozměry poskytuje
+            dostatečný výkon pro pokročilou kancelářskou práci, lehkou 2D CAD a
+            vývoj softwaru. Perfektní pro vybavení open space kanceláří.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkStation P3 — Dostupná univerzální volba</h3>
+          <p>
+            Dostupná ve formátu Tower nebo Small Form Factor (SFF), P3
+            představuje vstupní model řady ThinkStation. Podporuje profesionální
+            grafické karty NVIDIA RTX nebo AMD Radeon Pro střední třídy. Ideální
+            volba pro architekty, designéry a inženýry, kteří potřebují
+            spolehlivou stanici pro CAD, BIM a lehký rendering bez rozpočtu na
+            špičkové Xeon konfigurace.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkStation P5 — Vysoce výkonná univerzální stanice</h3>
+          <p>
+            P5 přináší vyšší výkon díky procesorům Intel Xeon W
+            (jednoprocesorová konfigurace) a až 256 GB ECC DDR5 RAM. Podporuje
+            více profesionálních GPU z řady NVIDIA RTX Ada Lovelace. Jde o střed
+            nabídky ThinkStation, běžně používaný v kreativních studiích,
+            projekčních kancelářích a simulačních prostředích. Nabízí ideální
+            rovnováhu mezi výkonem, rozšiřitelností a velikostí.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkStation P7 — Výkonná tower stanice</h3>
+          <p>
+            P7 je navržena pro nejnáročnější pracovní úlohy: komplexní 3D
+            rendering, vědecké simulace a zpracování velkých dat. Obsahuje
+            špičkové procesory Intel Xeon W, až 2 TB ECC RAM a podporuje až
+            čtyři profesionální GPU. Prostorná skříň usnadňuje údržbu a upgrady.
+            Doporučeno pro studia vizuálních efektů, výzkumné laboratoře a
+            prostředí s vysokými výpočetními nároky.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkStation P8 — Vlajková loď</h3>
+          <p>
+            Vrchol nabídky ThinkStation. Podporuje dva procesory Intel Xeon W v
+            dvouprocesorové konfiguraci, až 4 TB ECC RAM a několik GPU NVIDIA
+            RTX Pro. Určeno pro prostředí, kde není prostor pro kompromisy:
+            vědecká centra, filmová produkce, umělá inteligence a deep learning,
+            pokročilé inženýrství. Významná investice, která se plně vyplatí v
+            nejnáročnějších scénářích.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            ThinkStation si plně zaslouží své místo mezi hlavními referencemi v
+            oblasti profesionálních pracovních stanic. Lenovo si vybudovalo
+            silnou reputaci díky odolnosti, ISV certifikaci a stabilnímu výkonu
+            — a současná řada tuto tradici potvrzuje moderními konfiguracemi pro
+            nejnáročnější použití.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud máte omezený rozpočet, modely
+            <strong>ThinkStation P3 Tiny nebo P3</strong> nabízejí základní
+            zkušenost ThinkStation za rozumnou cenu pro běžné profesionální
+            použití. Pokud potřebujete maximální výkon bez kompromisů, pak
+            <strong>ThinkStation P7 nebo P8</strong> představují špičku —
+            nejrozumnější investici pro týmy pracující na projektech s vysokou
+            hodnotou, kde si nemohou dovolit výpadky.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
