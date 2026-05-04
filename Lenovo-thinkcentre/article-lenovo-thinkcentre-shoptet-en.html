@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo ThinkCentre – Article</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        color: #222;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      .article {
+        max-width: 780px;
+        margin: 0 auto;
+      }
+
+      /* En-tête */
+      .article-header {
+        border-bottom: 3px solid #e8131a;
+        padding-bottom: 20px;
+        margin-bottom: 36px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* Sections */
+      .section {
+        margin-bottom: 36px;
+      }
+
+      .section-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 12px;
+        padding-left: 12px;
+        border-left: 4px solid #e8131a;
+      }
+
+      .section p {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.75;
+        margin-bottom: 10px;
+      }
+
+      /* Cibles (Pour qui) */
+      .targets {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .target-tag {
+        background: #f3f4f6;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        padding: 8px 14px;
+        font-size: 16px;
+        color: #222;
+        font-weight: 600;
+      }
+
+      /* Avantages / Inconvénients */
+      .pros-cons {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .pros,
+      .cons {
+        flex: 1;
+        min-width: 220px;
+        border-radius: 6px;
+        padding: 18px 20px;
+      }
+
+      .pros {
+        background: #f0faf2;
+        border: 1px solid #b7dfc0;
+      }
+
+      .cons {
+        background: #fff5f5;
+        border: 1px solid #f5c0c0;
+      }
+
+      .pros-title,
+      .cons-title {
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin-bottom: 12px;
+      }
+
+      .pros-title {
+        color: #2a7a3b;
+      }
+      .cons-title {
+        color: #c0392b;
+      }
+
+      .pros ul,
+      .cons ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .pros ul li,
+      .cons ul li {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.6;
+        padding: 5px 0;
+        padding-left: 22px;
+        position: relative;
+      }
+
+      .pros ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #2a7a3b;
+        font-weight: 700;
+      }
+
+      .cons ul li::before {
+        content: "✕";
+        position: absolute;
+        left: 0;
+        color: #c0392b;
+        font-weight: 700;
+      }
+
+      /* Notre avis */
+      .verdict {
+        background: #f9f9f9;
+        border: 1px solid #e5e5e5;
+        border-radius: 6px;
+        padding: 22px 24px;
+      }
+
+      .verdict p {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.75;
+        margin-bottom: 10px;
+      }
+
+      .verdict p:last-child {
+        margin-bottom: 0;
+      }
+
+      .verdict-score {
+        display: inline-block;
+        background: #e8131a;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 6px 14px;
+        border-radius: 4px;
+        margin-top: 14px;
+      }
+
+      /* Séparateur */
+      hr.divider {
+        border: none;
+        border-top: 1px solid #eee;
+        margin: 36px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkcentre/Logo-Lenovo-ThinkCentre.png"
+          alt="Lenovo ThinkCentre logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- Header -->
+      <div class="article-header">
+        <p class="article-intro">
+          The ThinkCentre range is Lenovo's benchmark for professional desktop
+          computers. Reliable, compact, and built to last, these PCs are
+          primarily aimed at businesses and demanding users who need a stable
+          machine for everyday use.
+        </p>
+      </div>
+
+      <!-- Range overview -->
+      <div class="section">
+        <h2 class="section-title">Range overview</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkcentre/lenovo-thinkcentre.png"
+            alt="Lenovo ThinkCentre"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The ThinkCentre range includes several desktop PC lines, each designed
+          for specific needs. It features the <strong>M</strong> series (the
+          most widespread, available in tower, compact, or tiny formats), the
+          <strong>Neo</strong> series (more focused on design and modernity), as
+          well as the all-in-one <strong>AIO</strong> series.
+        </p>
+        <p>
+          Form factors are one of the range’s strengths: from classic large
+          towers to ultra-compact <em>Tiny</em> models (barely larger than a
+          paperback book), there is something for every workspace and use case.
+          Tiny models can even be mounted directly behind a VESA-compatible
+          monitor.
+        </p>
+        <p>
+          In terms of configurations, Lenovo offers Intel Core or AMD Ryzen
+          processors, with expandable RAM and storage options. The vast majority
+          of models are designed to be easily maintained and upgraded by a
+          technician.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Target audience -->
+      <div class="section">
+        <h2 class="section-title">Who is ThinkCentre for?</h2>
+
+        <div style="text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkcentre/lenovo-thinkcentre-m710-tw-gallery1.png"
+            alt="Lenovo ThinkCentre"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          ThinkCentre is not a consumer PC. It clearly targets professional
+          environments and users who prioritize reliability and durability over
+          aesthetics or price. Here are the profiles it is best suited for:
+        </p>
+        <div class="targets">
+          <span class="target-tag">🏢 Small & Medium Businesses</span>
+          <span class="target-tag">🖥️ Fixed workstations</span>
+          <span class="target-tag">🏫 Educational institutions</span>
+          <span class="target-tag">🏥 Medical & public sector</span>
+          <span class="target-tag">🔧 IT professionals & CIOs</span>
+          <span class="target-tag">📊 Intensive office work</span>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Pros and cons -->
+      <div class="section">
+        <h2 class="section-title">Advantages and disadvantages</h2>
+        <div class="pros-cons">
+          <div class="pros">
+            <div class="pros-title">Strengths</div>
+            <ul>
+              <li>Proven durability and reliability</li>
+              <li>Wide variety of form factors (tower, compact, tiny, AIO)</li>
+              <li>Easily upgradeable (RAM, storage)</li>
+              <li>Excellent remote management (vPro available)</li>
+              <li>MIL-SPEC military certifications on some models</li>
+              <li>Professional Lenovo support and warranty</li>
+              <li>Low power consumption on Tiny models</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <div class="cons-title">Weaknesses</div>
+            <ul>
+              <li>Simple, not very appealing design</li>
+              <li>No dedicated graphics card by default</li>
+              <li>More expensive than consumer PCs</li>
+              <li>Less suitable for creative or gaming use</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Our opinion -->
+      <div class="section">
+        <h2 class="section-title">Our opinion</h2>
+        <div class="verdict">
+          <p>
+            ThinkCentre fully delivers on its promise as a professional desktop
+            PC. It may not be the most spectacular machine on the market, but it
+            is one of the most reliable. Lenovo has built a strong reputation
+            with this range, and for good reason: the machines last, are easy to
+            maintain, and integrate seamlessly into corporate IT environments.
+          </p>
+          <p>
+            Compact and Tiny formats are particularly interesting for small
+            workspaces or large-scale deployments. For everyday office tasks —
+            browsing, email, Office tools, ERP — they perform effortlessly and
+            quietly.
+          </p>
+          <p>
+            However, if you need graphical rendering, video creation, or gaming,
+            you should look elsewhere. ThinkCentre is not designed for that.
+          </p>
+          <span class="verdict-score"> Recommended for professional use </span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
