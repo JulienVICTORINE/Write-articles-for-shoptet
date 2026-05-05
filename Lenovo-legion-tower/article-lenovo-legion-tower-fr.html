@@ -1,0 +1,802 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo Legion Tower — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #e00;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e00;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0a0a;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #e00;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0a0a;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── COMPARAISON Tower 5 vs Tower 7 ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #cc0000;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #1a1a1a;
+        color: #ffffff;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #f5e6e6;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f7f7;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fff3f3;
+        border-left: 4px solid #e00;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f7f7;
+        border: 1px solid #e0d0d0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo Legion -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion/lenovo-legion-logo.png"
+          alt="Lenovo Legion Logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- EN-TÊTE -->
+      <div class="article-header">
+        <div class="article-label">🖥️ PC de bureau gaming Lenovo</div>
+        <h1 class="article-title">
+          Lenovo Legion Tower — La tour gaming prête à l'emploi
+        </h1>
+        <p class="article-intro">
+          La <strong>Lenovo Legion Tower</strong> est une gamme de PC de bureau
+          gaming conçue pour offrir des performances sérieuses sans passer par
+          l'assemblage maison. Processeurs Intel Core ou AMD Ryzen de dernière
+          génération, cartes graphiques NVIDIA GeForce RTX, châssis spacieux et
+          bien refroidi — la Legion Tower cible les joueurs exigeants et les
+          créateurs de contenu qui veulent une machine clé en main, fiable et
+          évolutive. Garantie constructeur, support Lenovo et logiciel de
+          pilotage inclus : rien à configurer, tout est prêt dès le déballage.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRÉSENTATION -->
+      <section>
+        <h2>🎮 Présentation de la gamme</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion-tower/Legion_Tower_5_03.png"
+            alt="Lenovo Legion Tower"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          La gamme Legion Tower se positionne dans le segment des PC gaming
+          préassemblés haut de gamme. Elle se décline principalement en deux
+          lignes : la <strong>Legion Tower 5</strong>, excellent rapport
+          performances/prix avec des configurations accessibles, et la
+          <strong>Legion Tower 7</strong>, destinée aux joueurs les plus
+          exigeants avec des composants au sommet de la hiérarchie.
+        </p>
+        <p>
+          Le design est immédiatement reconnaissable : châssis anguleux avec
+          façade structurée, panneau latéral en verre trempé laissant voir
+          l'intérieur, et éclairage RGB discret — Lenovo a volontairement évité
+          l'excès lumineux parfois associé aux machines gaming. Le boîtier est
+          spacieux, bien câblé en usine, et conçu pour faciliter une future mise
+          à niveau par l'utilisateur.
+        </p>
+        <p>
+          Toutes les configurations sont livrées avec
+          <strong>Windows 11</strong> préinstallé et le logiciel
+          <strong>Lenovo Vantage</strong>, qui centralise la gestion des modes
+          de performance (Quiet, Balance, Performance), la surveillance des
+          températures, les mises à jour de pilotes et les paramètres RGB depuis
+          une interface unique.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- TOWER 5 VS TOWER 7 -->
+      <section>
+        <h2>🔍 Legion Tower 5 ou Tower 7 — quelle différence ?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion-tower/Lenovo-Legion-Tower-5-VS-Legion-Tower-7.png"
+            alt="Lenovo Legion Tower 5 VS Lenovo Legion Tower 7"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          La gamme Legion Tower se divise en deux grandes lignes selon le niveau
+          de performance et le budget. Voici l'essentiel à retenir avant de
+          choisir :
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🔴 Legion Tower 5</div>
+            <div class="compare-body">
+              La référence accessible de la gamme. Processeurs Intel Core i5/i7
+              ou AMD Ryzen 5/7, cartes graphiques RTX 4060 à RTX 4070.
+              Refroidissement efficace, boîtier compact et bien fini. Idéale
+              pour jouer en 1080p et 1440p dans d'excellentes conditions.
+              Rapport performances/prix difficile à battre dans sa catégorie.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">⚫ Legion Tower 7</div>
+            <div class="compare-body">
+              Le haut de gamme de la gamme Legion Tower. Processeurs Intel Core
+              i9 ou AMD Ryzen 9, cartes graphiques RTX 4080 ou RTX 4090,
+              refroidissement renforcé (watercooling AIO possible), plus grande
+              capacité mémoire. Conçue pour le 4K, la création de contenu
+              intensive, le streaming en haute qualité et les usages
+              professionnels exigeants.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Le bon choix :</strong> si vous jouez en 1080p ou 1440p et
+          que vous n'avez pas besoin de faire tourner des logiciels de rendu 3D
+          ou de montage vidéo 4K en simultané, la Tower 5 couvre 95 % des
+          besoins. La Tower 7 se justifie pour les créateurs de contenu
+          professionnels ou les gamers qui visent le 4K ultra.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- POUR QUI -->
+      <section>
+        <h2>👤 Pour qui est la Legion Tower ?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion-tower/6sms9ahaqj086vqe8tw1e5qpewvfkn063615.png"
+            alt="Lenovo Legion Tower"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          La Legion Tower répond parfaitement à certains profils d'utilisateurs
+          — et moins bien à d'autres. Voici un aperçu clair pour orienter votre
+          choix :
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Fait pour vous si…</div>
+            <div class="profile-cell profile-header">❌ Moins adapté si…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous voulez un PC gaming performant sans vous occuper de
+              l'assemblage ni de la compatibilité des composants
+            </div>
+            <div class="profile-cell">
+              Vous aimez assembler vous-même et cherchez à maximiser chaque euro
+              de budget — un PC custom offre un meilleur rapport composant/prix
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous jouez à des titres AAA exigeants (Cyberpunk 2077, Alan Wake
+              2, Call of Duty…) et voulez une expérience fluide dès le premier
+              démarrage
+            </div>
+            <div class="profile-cell">
+              Votre budget est très serré — à composants équivalents, un
+              assemblage maison revient souvent moins cher qu'une machine de
+              marque
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous êtes créateur de contenu : streamer, vidéaste, monteur — la
+              Tower 7 gère de front jeu, encodage et rendu sans broncher
+            </div>
+            <div class="profile-cell">
+              Vous avez besoin d'une machine ultra-compacte ou transportable —
+              la tour reste un format fixe, non déplaçable
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              La garantie constructeur et le support technique sont importants
+              pour vous — Lenovo propose 2 à 3 ans de garantie selon les
+              configurations
+            </div>
+            <div class="profile-cell">
+              Vous souhaitez une personnalisation RGB très poussée — la Legion
+              Tower reste relativement sobre visuellement
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous pensez faire évoluer votre machine dans le temps : RAM, SSD,
+              carte graphique — le boîtier est conçu pour faciliter les upgrades
+            </div>
+            <div class="profile-cell">
+              Vous n'utilisez le PC que pour de la bureautique ou la navigation
+              web — la puissance sera largement surdimensionnée et inutile
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vous voulez jouer en 1440p ou en 4K avec des paramètres graphiques
+              au maximum — la Tower 5 en RTX 4070 ou la Tower 7 sont faites pour
+              ça
+            </div>
+            <div class="profile-cell">
+              Vous cherchez un laptop gaming — la Legion Tower est un PC de
+              bureau fixe uniquement
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 En résumé : la Legion Tower est idéale pour les
+          <strong
+            >gamers sérieux, les streamers et les créateurs de contenu</strong
+          >
+          qui veulent une machine performante, fiable et évolutive sans les
+          contraintes de l'assemblage. Si votre usage est plus modeste, une
+          autre gamme sera mieux adaptée à votre budget.
+        </div>
+      </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion-tower/lenovo-legion-tower-5-gen-10_rvc2.png"
+          alt="Lenovo Legion Tower intérieur"
+          style="width: 100%; height: auto"
+        />
+      </div>
+
+      <hr class="divider" />
+
+      <!-- AVANTAGES & INCONVÉNIENTS -->
+      <section>
+        <h2>👍 Avantages &amp; inconvénients</h2>
+
+        <p>
+          La Legion Tower convainc sur l'essentiel, mais elle n'est pas exempte
+          de limites — voici un bilan honnête pour guider votre décision.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Avantages</div>
+            <ul class="pros-list">
+              <li>
+                Performances gaming solides dès la sortie de boîte — aucune
+                configuration nécessaire
+              </li>
+              <li>
+                Excellent système de refroidissement — températures bien
+                maîtrisées même sous charge intense
+              </li>
+              <li>
+                Châssis spacieux et bien organisé, conçu pour les upgrades
+                futurs (RAM, SSD, GPU)
+              </li>
+              <li>
+                Connectique généreuse en façade : USB-A, USB-C, jack audio —
+                pratique au quotidien
+              </li>
+              <li>
+                Finition soignée et design sobre pour un PC gaming de marque
+              </li>
+              <li>
+                Logiciel Lenovo Vantage efficace : gestion des modes,
+                températures, mises à jour pilotes
+              </li>
+              <li>
+                Garantie constructeur 2 à 3 ans avec support technique Lenovo
+                inclus
+              </li>
+              <li>
+                Bonne valeur de revente par rapport à un assemblage équivalent
+                sans marque
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Inconvénients</div>
+            <ul class="cons-list">
+              <li>
+                Prix plus élevé qu'un assemblage maison à composants équivalents
+                — on paie la marque et la garantie
+              </li>
+              <li>
+                Bloatwares présents à la livraison — quelques logiciels
+                préinstallés inutiles à désinstaller
+              </li>
+              <li>
+                Ventilateurs audibles sous charge maximale — pas silencieux en
+                pleine session gaming intensive
+              </li>
+              <li>
+                RGB limité et peu personnalisable pour les amateurs de setup
+                très lumineux
+              </li>
+              <li>
+                Alimentation parfois juste sur les configurations Tower 5 — peut
+                limiter les upgrades GPU futurs
+              </li>
+              <li>
+                Poids et encombrement importants — format tour non transportable
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>À noter sur l'alimentation :</strong> si vous envisagez de
+          remplacer la carte graphique par un modèle plus puissant à l'avenir,
+          vérifiez la puissance de l'alimentation d'origine. Certaines
+          configurations de la Tower 5 sont livrées avec une PSU de 650 W qui
+          peut s'avérer limitante avec une RTX 4080 ou supérieure.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SOUS-SÉRIES -->
+      <section>
+        <h2>📋 Les principales versions de la gamme</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-legion-tower/lenovo-legion-tower-5i-2.png"
+            alt="Lenovo Legion Tower intérieur"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>Legion Tower 5i (Intel) — La polyvalente accessible</h3>
+          <p>
+            La version Intel de la Tower 5, propulsée par des processeurs Intel
+            Core i5 ou i7 de 13e ou 14e génération. Associée à une carte
+            graphique NVIDIA GeForce RTX 4060 ou RTX 4070 selon la
+            configuration, elle offre d'excellentes performances en 1080p et
+            1440p. Boîtier mid-tower compact et bien refroidi, alimentation 650
+            à 850 W, deux baies M.2 NVMe disponibles. La référence accessible de
+            la gamme pour les joueurs qui veulent une machine sérieuse sans
+            exploser leur budget.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Legion Tower 5 Gen 8 (AMD) — La version Ryzen</h3>
+          <p>
+            La déclinaison AMD de la Tower 5, avec des processeurs AMD Ryzen 5
+            ou Ryzen 7 de la série 7000. Performances équivalentes à la version
+            Intel, avec parfois un léger avantage dans les tâches multithread
+            intensives (streaming, encodage en parallèle). Même gamme de cartes
+            graphiques RTX disponibles. Un choix pertinent pour les utilisateurs
+            fidèles à l'écosystème AMD ou qui profitent des promotions sur les
+            processeurs Ryzen.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Legion Tower 7i (Intel) — Le haut de gamme</h3>
+          <p>
+            Le sommet de la gamme Legion Tower côté Intel. Processeurs Intel
+            Core i9 de 13e ou 14e génération, cartes graphiques RTX 4080 ou RTX
+            4090, 32 à 64 Go de RAM DDR5, refroidissement AIO liquide disponible
+            selon les versions. Conçue pour le gaming en 4K ultra, la création
+            de contenu 3D, le streaming en haute qualité et les rendus vidéo
+            professionnels. Une machine sans compromis pour ceux qui veulent le
+            meilleur sans assembler eux-mêmes.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Legion Tower 7 Gen 8 (AMD) — La puissance Ryzen 9</h3>
+          <p>
+            La version AMD haut de gamme de la Legion Tower, avec des
+            processeurs AMD Ryzen 9 7900X ou 7950X. Extrêmement performante dans
+            les tâches créatives intensives (rendu Blender, montage Premiere
+            Pro, encodage simultané), elle se distingue par son nombre de cœurs
+            élevé. Cartes graphiques RTX 4080 ou 4090 disponibles. Idéale pour
+            les créateurs de contenu qui privilégient AMD pour les performances
+            CPU multithreadées.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Notre avis</h2>
+        <div class="conclusion">
+          <p>
+            La Lenovo Legion Tower convainc là où beaucoup de PC gaming de
+            marque échouent : elle ne fait pas de compromis sur l'essentiel.
+            Performances au rendez-vous, construction solide, refroidissement
+            efficace — et un boîtier pensé pour durer et évoluer avec vous. Le
+            logiciel Vantage est l'un des rares exemples de logiciels
+            constructeurs réellement utiles.
+          </p>
+          <p style="margin-top: 10px">
+            Elle s'adresse avant tout à ceux qui veulent
+            <strong>gagner du temps et bénéficier d'une garantie</strong> : pas
+            de recherche de composants, pas de risque d'incompatibilité, un
+            support constructeur en cas de problème. En contrepartie, on paie
+            légèrement cette tranquillité d'esprit par rapport à un assemblage
+            maison à composants équivalents.
+          </p>
+          <p style="margin-top: 10px">
+            Si vous cherchez un PC gaming de bureau capable de tenir sur le long
+            terme, avec une bonne marge d'évolution et un niveau de finition
+            professionnel, la
+            <strong>Legion Tower est un choix difficile à contredire</strong> —
+            que vous soyez gamer, streamer ou créateur de contenu.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

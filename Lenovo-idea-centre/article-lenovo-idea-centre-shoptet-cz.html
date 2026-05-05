@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo IdeaCentre – Article</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      .article {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.25;
+        color: #111;
+        margin-bottom: 12px;
+      }
+
+      .intro {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 40px;
+        border-left: 3px solid #1a56db;
+        padding-left: 16px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+
+      section {
+        margin-bottom: 36px;
+      }
+
+      p {
+        margin-bottom: 12px;
+        color: #222;
+        text-align: justify;
+        text-justify: inter-word;
+        font-size: 16px;
+      }
+
+      .public-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .public-card {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      .public-card .icon {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .public-card strong {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 4px;
+      }
+
+      .public-card span {
+        font-size: 16px;
+        color: #222;
+      }
+
+      .pros-cons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 16px;
+      }
+
+      @media (max-width: 560px) {
+        .pros-cons {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .pros,
+      .cons {
+        border-radius: 8px;
+        padding: 18px 20px;
+      }
+
+      .pros {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+      }
+
+      .cons {
+        background: #fff7f7;
+        border: 1px solid #fecaca;
+      }
+
+      .pros h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #15803d;
+        margin-bottom: 10px;
+      }
+
+      .cons h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #b91c1c;
+        margin-bottom: 10px;
+      }
+
+      .pros ul,
+      .cons ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .pros ul li,
+      .cons ul li {
+        font-size: 16px;
+        color: #222;
+        padding: 4px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .pros ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #16a34a;
+        font-weight: 700;
+      }
+
+      .cons ul li::before {
+        content: "✗";
+        position: absolute;
+        left: 0;
+        color: #dc2626;
+        font-weight: 700;
+      }
+
+      .avis-box {
+        background: #f5f7ff;
+        border: 1px solid #c7d2fe;
+        border-radius: 8px;
+        padding: 24px;
+      }
+
+      .note {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .note-score {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1a56db;
+        line-height: 1;
+      }
+
+      .note-label {
+        font-size: 16px;
+        color: #222;
+      }
+
+      .note-label strong {
+        display: block;
+        font-size: 16px;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="article">
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/logo-lenovo-idea-centre.png"
+          alt="Lenovo IdeaCentre logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <p class="intro">
+        Řada IdeaCentre od nabízí stolní počítače navržené pro širokou
+        veřejnost: kompaktní, cenově dostupné a stále více zaměřené na AI. Zde
+        je přehled této řady, která zahrnuje jak nenápadné mini PC, tak
+        elegantní all-in-one řešení.
+      </p>
+
+      <section>
+        <h2>Představení řady</h2>
+        <p>
+          IdeaCentre zahrnuje několik formátů stolních počítačů určených pro
+          domácí použití. Najdeme zde hlavně tři varianty:
+          <strong>Tower</strong> (IdeaCentre Tower), pro ty, kteří potřebují
+          výkon s možností upgradu komponent; <strong>Mini</strong> (IdeaCentre
+          Mini), kompaktní počítač o objemu přibližně 1 litr, velmi nenápadný na
+          stole; a <strong>All-in-One</strong> (IdeaCentre AIO), který integruje
+          monitor a počítač do jednoho zařízení.
+        </p>
+        <p>
+          Od roku 2025 Lenovo postupně integruje funkce umělé inteligence do
+          této řady, zejména díky procesorům Intel Core Ultra nebo Qualcomm
+          Snapdragon X Plus, s integrovanými NPU jednotkami, které umožňují
+          lokální akceleraci inteligentních úloh bez nutnosti využití cloudu.
+        </p>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/Montage-photo-Lenovo-IdeaCentre.png"
+            alt="Lenovo IdeaCentre logo"
+            style="width: 100%; height: auto"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Pro koho je IdeaCentre?</h2>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/xtiz1ms62c9xrk0rqo5oy9dp0cmv1q359199.png"
+            alt="Lenovo IdeaCentre"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="public-grid">
+          <div class="public-card">
+            <div class="icon">🏠</div>
+            <strong>Rodina</strong>
+            <span
+              >Prohlížení webu, streaming, základní kancelářská práce, sdílené
+              každodenní použití.</span
+            >
+          </div>
+          <div class="public-card">
+            <div class="icon">🎓</div>
+            <strong>Studenti</strong>
+            <span>Dostupný stolní počítač pro studium, výzkum a úkoly.</span>
+          </div>
+          <div class="public-card">
+            <div class="icon">💼</div>
+            <strong>Práce z domova</strong>
+            <span
+              >Čisté a tiché pracovní prostředí pro hovory, produktivitu a
+              multitasking.</span
+            >
+          </div>
+          <div class="public-card">
+            <div class="icon">🎬</div>
+            <strong>Tvůrci obsahu</strong>
+            <span
+              >Lehká úprava videa, fotografií, sledování na velké obrazovce
+              (zejména AIO).</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Výhody a nevýhody</h2>
+
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>Výhody</h3>
+            <ul>
+              <li>Široký výběr formátů (tower, mini, AIO)</li>
+              <li>Dostupná vstupní cena</li>
+              <li>Elegantní a nenápadný design</li>
+              <li>Integrované AI funkce u novějších generací</li>
+              <li>Mini a Tower lze upgradovat (RAM, úložiště)</li>
+              <li>Dobrá pověst servisu Lenovo</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>Nevýhody</h3>
+            <ul>
+              <li>Nevhodné pro náročné hraní her</li>
+              <li>Hlučnost ventilátoru při zátěži (hlavně Mini)</li>
+              <li>AIO se obtížně opravuje</li>
+              <li>Žádná dedikovaná grafická karta u základních modelů</li>
+              <li>Předinstalovaný software někdy zbytečný</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/45275785842efd223070157949341cbe.png"
+            alt="Lenovo IdeaCentre"
+            style="width: 100%; height: auto"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Náš názor</h2>
+        <div class="avis-box">
+          <div class="note">
+            <div class="note-score">8/10</div>
+            <div class="note-label">
+              <strong>Dobrá volba pro rodinné použití</strong>
+              Výborný poměr cena/výkon
+            </div>
+          </div>
+          <p>
+            Řada IdeaCentre plní svůj účel: nabízí spolehlivý, kvalitně
+            zpracovaný a cenově dostupný stolní počítač pro každodenní použití.
+            Mini vyniká svou kompaktností, Tower univerzálností a AIO elegancí
+            na pracovním stole.
+          </p>
+          <p>
+            Nejde o nejvíce vzrušující řadu na trhu, ale je to jistá volba pro
+            ty, kteří hledají bezproblémový stolní počítač od důvěryhodné
+            značky. S rostoucí integrací AI v nových generacích Lenovo
+            zajišťuje, že IdeaCentre zůstane relevantní i v budoucnu.
+          </p>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>

@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lenovo ThinkCentre – Article</title>
+    <title>Lenovo ThinkCentre — Présentation de la gamme</title>
     <style>
       * {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
-      }
-
-      body {
         font-family:
           system-ui,
           -apple-system,
@@ -19,21 +16,41 @@
           "Open Sans",
           "Helvetica Neue",
           sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
         color: #222;
-        text-align: justify;
-        text-justify: inter-word;
       }
 
       .article {
-        max-width: 780px;
+        max-width: 860px;
         margin: 0 auto;
+        padding: 40px 20px 60px;
       }
 
-      /* En-tête */
+      /* ── EN-TÊTE ── */
       .article-header {
-        border-bottom: 3px solid #e8131a;
-        padding-bottom: 20px;
+        border-left: 4px solid #e8131a;
+        padding-left: 16px;
         margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #e8131a;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
       }
 
       .article-intro {
@@ -42,159 +59,260 @@
         line-height: 1.7;
       }
 
-      /* Sections */
-      .section {
-        margin-bottom: 36px;
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
       }
 
-      .section-title {
+      /* ── TITRES ── */
+      h2 {
         font-size: 18px;
         font-weight: 700;
-        color: #222;
-        margin-bottom: 12px;
-        padding-left: 12px;
-        border-left: 4px solid #e8131a;
+        color: #e8131a;
+        margin-bottom: 14px;
       }
 
-      .section p {
+      h3 {
         font-size: 16px;
-        color: #222;
-        line-height: 1.75;
-        margin-bottom: 10px;
-      }
-
-      /* Cibles (Pour qui) */
-      .targets {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-top: 14px;
-      }
-
-      .target-tag {
-        background: #f3f4f6;
-        border: 1px solid #e0e0e0;
-        border-radius: 4px;
-        padding: 8px 14px;
-        font-size: 16px;
-        color: #222;
         font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
       }
 
-      /* Avantages / Inconvénients */
-      .pros-cons {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .pros,
-      .cons {
-        flex: 1;
-        min-width: 220px;
-        border-radius: 6px;
-        padding: 18px 20px;
-      }
-
-      .pros {
-        background: #f0faf2;
-        border: 1px solid #b7dfc0;
-      }
-
-      .cons {
-        background: #fff5f5;
-        border: 1px solid #f5c0c0;
-      }
-
-      .pros-title,
-      .cons-title {
+      p {
         font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        color: #222;
         margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
       }
 
-      .pros-title {
-        color: #2a7a3b;
-      }
-      .cons-title {
-        color: #c0392b;
-      }
-
-      .pros ul,
-      .cons ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .pros ul li,
-      .cons ul li {
-        font-size: 16px;
-        color: #222;
-        line-height: 1.6;
-        padding: 5px 0;
-        padding-left: 22px;
-        position: relative;
-      }
-
-      .pros ul li::before {
-        content: "✓";
-        position: absolute;
-        left: 0;
-        color: #2a7a3b;
-        font-weight: 700;
-      }
-
-      .cons ul li::before {
-        content: "✕";
-        position: absolute;
-        left: 0;
-        color: #c0392b;
-        font-weight: 700;
-      }
-
-      /* Notre avis */
-      .verdict {
-        background: #f9f9f9;
-        border: 1px solid #e5e5e5;
-        border-radius: 6px;
-        padding: 22px 24px;
-      }
-
-      .verdict p {
-        font-size: 16px;
-        color: #222;
-        line-height: 1.75;
-        margin-bottom: 10px;
-      }
-
-      .verdict p:last-child {
+      p:last-child {
         margin-bottom: 0;
       }
 
-      .verdict-score {
-        display: inline-block;
-        background: #e8131a;
-        color: #fff;
-        font-size: 16px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        padding: 6px 14px;
-        border-radius: 4px;
-        margin-top: 14px;
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
       }
 
-      /* Séparateur */
-      hr.divider {
-        border: none;
-        border-top: 1px solid #eee;
-        margin: 36px 0;
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #fde8e8;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #fde8e8;
+        border-left: 4px solid #e8131a;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce0e8;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+        .cons-header {
+          border-radius: 0;
+        }
       }
     </style>
   </head>
   <body>
     <div class="article">
+      <!-- Logo -->
       <div style="text-align: center; margin-bottom: 30px">
         <img
           src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-thinkcentre/Logo-Lenovo-ThinkCentre.png"
@@ -203,20 +321,27 @@
         />
       </div>
 
-      <!-- Hlavička -->
+      <!-- HLAVIČKA -->
       <div class="article-header">
+        <div class="article-label">🖥️ Stolní počítače Lenovo</div>
+        <h1 class="article-title">
+          Lenovo ThinkCentre — špičkový profesionální stolní počítač
+        </h1>
         <p class="article-intro">
-          Řada ThinkCentre je referenční produkt společnosti Lenovo v oblasti
-          profesionálních stolních počítačů. Spolehlivé, kompaktní a navržené
-          tak, aby vydržely, tyto počítače jsou určeny především firmám a
-          náročným uživatelům, kteří potřebují stabilní zařízení pro každodenní
-          práci.
+          <strong>Lenovo ThinkCentre</strong> je řada profesionálních stolních
+          počítačů společnosti Lenovo, která navazuje na legendární značku Think
+          vzniklou u IBM. Je spolehlivý, odolný a navržený pro firemní
+          prostředí. Používá se v milionech kanceláří, škol a nemocnic po celém
+          světě. Díky své jednoduchosti a robustnosti je preferovanou volbou IT
+          manažerů a nákupčích, kteří potřebují zařízení s dlouhou životností.
         </p>
       </div>
 
-      <!-- Představení řady -->
-      <div class="section">
-        <h2 class="section-title">Představení řady</h2>
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🖥️ Představení řady</h2>
 
         <div style="text-align: center; margin-bottom: 30px">
           <img
@@ -227,32 +352,35 @@
         </div>
 
         <p>
-          Řada ThinkCentre zahrnuje několik linií stolních počítačů, z nichž
-          každá odpovídá specifickým potřebám. Najdeme zde série
-          <strong>M</strong>
-          (nejrozšířenější, ve formátech tower, compact nebo tiny), sérii
-          <strong>Neo</strong> (zaměřenou více na design a moderní vzhled) a
-          také all-in-one série <strong>AIO</strong>.
+          Řada ThinkCentre se dělí na několik sérií, z nichž každá odpovídá
+          konkrétním potřebám. Nejrozšířenější je <strong>série M</strong>,
+          která zahrnuje formáty <strong>Tower</strong> (M70t, M90t…) pro
+          univerzální použití, <strong>Small Form Factor (SFF)</strong> pro
+          úsporu místa na stole a především ultra-kompaktní modely
+          <strong>Tiny</strong> (M70q, M90q…), které jsou jen o málo větší než
+          kniha a lze je připevnit přímo za monitor kompatibilní s VESA.
         </p>
         <p>
-          Formáty jsou jednou z hlavních předností této řady: od klasických
-          velkých tower skříní až po ultra-kompaktní modely <em>Tiny</em> (jen o
-          něco větší než kapesní kniha) — každý si najde řešení podle prostoru a
-          využití. Modely Tiny lze dokonce připevnit přímo za monitor
-          kompatibilní s VESA.
+          <strong>Série Neo</strong> je určena uživatelům, kteří hledají
+          modernější design, ale stále v profesionálním prostředí. Modely
+          <strong>ThinkCentre AIO</strong> (All-in-One) pak kombinují počítač a
+          monitor do jednoho zařízení pro čistý pracovní prostor.
         </p>
         <p>
-          Co se týče konfigurací, Lenovo nabízí procesory Intel Core nebo AMD
-          Ryzen s možností rozšíření RAM a úložiště. Většina modelů je navržena
-          tak, aby byla snadno servisovatelná a upgradovatelná technikem.
+          Všechny modely ThinkCentre běží na systému
+          <strong>Windows 11 Pro</strong>
+          a jsou vybaveny procesory Intel Core (od Core i3 po Core i9) nebo AMD
+          Ryzen podle konfigurace. Komponenty jsou snadno přístupné a
+          rozšiřitelné a Lenovo nabízí dlouhodobé profesionální záruky včetně
+          servisních zásahů na místě.
         </p>
-      </div>
+      </section>
 
       <hr class="divider" />
 
-      <!-- Pro koho je určen -->
-      <div class="section">
-        <h2 class="section-title">Pro koho je ThinkCentre určen?</h2>
+      <!-- UŽIVATELSKÝ PROFIL -->
+      <section>
+        <h2>👤 Pro koho je ThinkCentre určen?</h2>
 
         <div style="text-align: center; margin-bottom: 30px">
           <img
@@ -263,79 +391,237 @@
         </div>
 
         <p>
-          ThinkCentre není běžný domácí počítač. Je jasně zaměřen na
-          profesionální prostředí a uživatele, kteří upřednostňují spolehlivost
-          a životnost před designem nebo cenou. Zde jsou typičtí uživatelé:
+          ThinkCentre je jednoznačně profesionální počítač. Není navržen tak,
+          aby zaujal designem, ale aby dlouhodobě spolehlivě fungoval v
+          náročných podmínkách. Zde je přehled, pro koho je — nebo není —
+          vhodný:
         </p>
-        <div class="targets">
-          <span class="target-tag">🏢 Malé a střední podniky</span>
-          <span class="target-tag">🖥️ Pevné pracovní stanice</span>
-          <span class="target-tag">🏫 Školy a vzdělávací instituce</span>
-          <span class="target-tag">🏥 Zdravotnictví a veřejný sektor</span>
-          <span class="target-tag">🔧 IT specialisté a správci</span>
-          <span class="target-tag">📊 Intenzivní kancelářská práce</span>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodný pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">
+              ❌ Není ideální, pokud…
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Spravujete IT infrastrukturu ve firmě nebo veřejné správě
+            </div>
+            <div class="profile-cell">
+              Hledáte počítač na moderní hry — bez dedikované GPU v základu
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete stabilní a spolehlivý kancelářský počítač
+            </div>
+            <div class="profile-cell">
+              Chcete designově výrazný nebo originální počítač
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Je pro vás důležitá údržba a možnost upgradu komponent
+            </div>
+            <div class="profile-cell">
+              Hledáte nejlevnější počítač na trhu — nejde o běžný spotřebitelský
+              PC
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Nasazujete desítky nebo stovky stejných zařízení
+            </div>
+            <div class="profile-cell">
+              Potřebujete pokročilou úpravu fotografií nebo videa bez dedikované
+              GPU
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete v regulovaném sektoru: zdravotnictví, školství, veřejná
+              správa
+            </div>
+            <div class="profile-cell">
+              Hledáte počítač pro domácnost nebo multimediální použití
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete centralizovanou vzdálenou správu (Intel vPro k
+              dispozici)
+            </div>
+            <div class="profile-cell">
+              Potřebujete notebook — ThinkCentre je pouze stolní počítač
+            </div>
+          </div>
         </div>
-      </div>
+
+        <div class="note">
+          💡 Shrnutí: ThinkCentre je ideální pro
+          <strong>profesionální prostředí, školy a veřejnou správu</strong>.
+          Pokud hledáte stolní počítač pro běžné domácí použití, jiné řady
+          Lenovo jako <strong>IdeaCentre</strong> budou vhodnější a cenově
+          dostupnější.
+        </div>
+      </section>
 
       <hr class="divider" />
 
-      <!-- Výhody a nevýhody -->
-      <div class="section">
-        <h2 class="section-title">Výhody a nevýhody</h2>
-        <div class="pros-cons">
-          <div class="pros">
-            <div class="pros-title">Výhody</div>
-            <ul>
-              <li>Ověřená odolnost a spolehlivost</li>
-              <li>Široká škála formátů (tower, compact, tiny, AIO)</li>
-              <li>Snadná rozšiřitelnost (RAM, úložiště)</li>
-              <li>Výborná vzdálená správa (vPro k dispozici)</li>
-              <li>Vojenské certifikace MIL-SPEC u některých modelů</li>
-              <li>Profesionální podpora a záruka Lenovo</li>
-              <li>Nízká spotřeba energie u modelů Tiny</li>
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody a nevýhody</h2>
+        <p>
+          ThinkCentre je navržen pro
+          <strong
+            >spolehlivost, dlouhou životnost a snadnou správu ve firmách</strong
+          >
+          — zde jsou jeho hlavní silné stránky a důležitá omezení, která je
+          dobré znát před nákupem.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Ověřená spolehlivost — postavená na desítkách let reputace
+                IBM/Lenovo Think
+              </li>
+              <li>
+                Certifikace MIL-SPEC u některých modelů (odolnost vůči vibracím,
+                prachu a teplotám)
+              </li>
+              <li>
+                Ultra-kompaktní formát Tiny — možnost připevnění za monitor VESA
+              </li>
+              <li>
+                Velmi snadný upgrade — RAM, úložiště a komponenty přístupné bez
+                nářadí u některých modelů
+              </li>
+              <li>Intel vPro — vzdálená správa a vyšší zabezpečení</li>
+              <li>
+                Windows 11 Pro v ceně — nezbytný pro profesionální prostředí
+              </li>
+              <li>Kvalitní profesionální záruka a podpora Lenovo</li>
+              <li>Nízká spotřeba energie u formátů Tiny a SFF</li>
+              <li>Široký výběr formátů: Tower, SFF, Tiny, AIO</li>
             </ul>
           </div>
-          <div class="cons">
-            <div class="cons-title">Nevýhody</div>
-            <ul>
-              <li>Jednoduchý, méně atraktivní design</li>
-              <li>Bez dedikované grafické karty ve standardu</li>
-              <li>Vyšší cena než u běžných PC</li>
-              <li>Méně vhodné pro kreativní práci nebo gaming</li>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Jednoduchý a funkční design — bez důrazu na estetiku</li>
+              <li>Žádná dedikovaná grafická karta ve standardní konfiguraci</li>
+              <li>
+                Vyšší cena než u běžných spotřebitelských PC se stejnou
+                konfigurací
+              </li>
+              <li>
+                Méně vhodný pro náročnou kreativní práci (video, 3D, pokročilé
+                úpravy)
+              </li>
+              <li>Nevhodný pro hraní her — omezený grafický výkon</li>
+              <li>Pouze stolní počítač — žádná přenosná varianta</li>
             </ul>
           </div>
         </div>
-      </div>
+
+        <div class="note">
+          💡 <strong>Klíčový bod:</strong> ThinkCentre není nejlevnější počítač
+          na trhu, ale často je nejvýhodnější z dlouhodobého hlediska. Jeho
+          spolehlivost snižuje poruchovost, údržba je jednoduchá a jeho
+          životnost obvykle převyšuje běžné spotřebitelské počítače. Pro firmy
+          jde často o nejlepší dlouhodobou investici.
+        </div>
+      </section>
 
       <hr class="divider" />
 
-      <!-- Náš názor -->
-      <div class="section">
-        <h2 class="section-title">Náš názor</h2>
-        <div class="verdict">
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní verze řady</h2>
+
+        <div class="model-block">
+          <h3>ThinkCentre M — hlavní řada (Tower, SFF, Tiny)</h3>
           <p>
-            ThinkCentre plně naplňuje očekávání jako profesionální stolní
-            počítač. Není to nejefektnější zařízení na trhu, ale patří mezi
-            nejspolehlivější. Lenovo si na této řadě vybudovalo silnou reputaci
-            — oprávněně: počítače vydrží, snadno se udržují a bez problémů
-            zapadnou do firemní IT infrastruktury.
+            Nejoblíbenější a nejrozšířenější řada ve firmách. Dostupná ve
+            formátu Tower pro maximální rozšiřitelnost, Small Form Factor (SFF)
+            pro úsporu místa a Tiny pro maximální nenápadnost. Modely Tiny
+            (M70q, M80q, M90q…) jsou velmi oblíbené — vejdou se kamkoliv a lze
+            je připevnit za monitor pomocí VESA držáku. Vybaveny procesory Intel
+            Core 12. nebo 13. generace podle modelu, s možností Intel vPro pro
+            správu firemních zařízení.
           </p>
-          <p>
-            Kompaktní a Tiny formáty jsou obzvláště zajímavé pro menší pracovní
-            prostory nebo hromadné nasazení. Pro běžnou kancelářskou práci —
-            prohlížení webu, e-maily, Office nástroje, ERP — fungují bez
-            problémů a tiše.
-          </p>
-          <p>
-            Pokud však potřebujete grafický výkon, střih videa nebo hraní her,
-            budete se muset poohlédnout jinde. ThinkCentre pro tyto účely není
-            určen.
-          </p>
-          <span class="verdict-score">
-            Doporučeno pro profesionální použití
-          </span>
         </div>
-      </div>
+
+        <div class="model-block">
+          <h3>ThinkCentre Neo — modernější design</h3>
+          <p>
+            Série Neo přináší modernější vzhled při zachování profesionálního
+            charakteru. Je určena firmám, které chtějí vybavit otevřené
+            kanceláře nebo recepce vizuálně nenápadnými zařízeními. Dostupná v
+            kompaktním formátu a AIO, s moderními procesory Intel Core a
+            kvalitními displeji.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkCentre AIO — profesionální all-in-one</h3>
+          <p>
+            Modely All-in-One integrují počítač přímo do monitoru, což zajišťuje
+            čisté pracovní prostředí a minimum kabelů. Ideální pro recepce,
+            zasedací místnosti a open space kanceláře. Dostupné ve velikostech
+            21,5 a 23,8 palce s Full HD nebo QHD displeji, u některých modelů i
+            s dotykovou obrazovkou.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>ThinkCentre M Tower — pro vysoký výkon</h3>
+          <p>
+            Pro uživatele s vyššími nároky — lehké pracovní stanice, analýza
+            dat, práce s více monitory — nabízí Tower formáty (M70t, M90t) více
+            rozšiřujících slotů a možnost přidání dedikované grafické karty.
+            Podporují až 128 GB RAM a více disků v RAID konfiguraci u vyšších
+            modelů, s kompletní konektivitou (Thunderbolt, USB-A, USB-C,
+            DisplayPort).
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš názor</h2>
+        <div class="conclusion">
+          <p>
+            ThinkCentre plně splňuje očekávání profesionálního stolního
+            počítače. Není to nejvýraznější zařízení na trhu, ale patří k
+            nejspolehlivějším. Lenovo si na této řadě vybudovalo silnou reputaci
+            díky tomu, že počítače vydrží, snadno se udržují a bez problémů
+            zapadnou do firemní infrastruktury.
+          </p>
+          <p style="margin-top: 10px">
+            Kompaktní a Tiny formáty jsou ideální pro malé pracovní prostory
+            nebo hromadné nasazení. Pro běžnou kancelářskou práci — internet,
+            e-mail, Office, ERP a další nástroje — fungují efektivně, tiše a
+            stabilně dlouhodobě.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud však potřebujete vysoký grafický výkon, profesionální video
+            tvorbu nebo hraní her, je lepší zvolit jiné řešení. ThinkCentre na
+            to není určen — a ani to není jeho cílem. Je to
+            <strong>spolehlivý a dlouhodobě udržitelný pracovní nástroj</strong
+            >, a v tomto ohledu patří k nejlepším.
+          </p>
+        </div>
+      </section>
     </div>
   </body>
 </html>

@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lenovo IdeaCentre – Article</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      .article {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.25;
+        color: #111;
+        margin-bottom: 12px;
+      }
+
+      .intro {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 40px;
+        border-left: 3px solid #1a56db;
+        padding-left: 16px;
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        border-bottom: 2px solid #f0f0f0;
+      }
+
+      section {
+        margin-bottom: 36px;
+      }
+
+      p {
+        margin-bottom: 12px;
+        color: #222;
+      }
+
+      .public-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        margin-top: 16px;
+      }
+
+      .public-card {
+        background: #f8f9fa;
+        border: 1px solid #e9ecef;
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      .public-card .icon {
+        font-size: 24px;
+        margin-bottom: 8px;
+      }
+
+      .public-card strong {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        color: #222;
+        margin-bottom: 4px;
+      }
+
+      .public-card span {
+        font-size: 16px;
+        color: #222;
+      }
+
+      .pros-cons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 16px;
+      }
+
+      @media (max-width: 560px) {
+        .pros-cons {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .pros,
+      .cons {
+        border-radius: 8px;
+        padding: 18px 20px;
+      }
+
+      .pros {
+        background: #f0fdf4;
+        border: 1px solid #bbf7d0;
+      }
+
+      .cons {
+        background: #fff7f7;
+        border: 1px solid #fecaca;
+      }
+
+      .pros h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #15803d;
+        margin-bottom: 10px;
+      }
+
+      .cons h3 {
+        font-size: 16px;
+        font-weight: 700;
+        color: #b91c1c;
+        margin-bottom: 10px;
+      }
+
+      .pros ul,
+      .cons ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .pros ul li,
+      .cons ul li {
+        font-size: 16px;
+        color: #222;
+        padding: 4px 0;
+        padding-left: 20px;
+        position: relative;
+      }
+
+      .pros ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #16a34a;
+        font-weight: 700;
+      }
+
+      .cons ul li::before {
+        content: "✗";
+        position: absolute;
+        left: 0;
+        color: #dc2626;
+        font-weight: 700;
+      }
+
+      .avis-box {
+        background: #f5f7ff;
+        border: 1px solid #c7d2fe;
+        border-radius: 8px;
+        padding: 24px;
+      }
+
+      .note {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .note-score {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1a56db;
+        line-height: 1;
+      }
+
+      .note-label {
+        font-size: 16px;
+        color: #222;
+      }
+
+      .note-label strong {
+        display: block;
+        font-size: 16px;
+        color: #222;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="article">
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/logo-lenovo-idea-centre.png"
+          alt="Lenovo IdeaCentre logo"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
+
+      <p class="intro">
+        La gamme IdeaCentre de Lenovo propose des ordinateurs de bureau pensés
+        pour le grand public : compacts, accessibles et de plus en plus orientés
+        IA. Tour d'horizon de cette ligne qui couvre aussi bien le mini PC
+        discret que le tout-en-un élégant.
+      </p>
+
+      <section>
+        <h2>Présentation de la gamme</h2>
+        <p>
+          L'IdeaCentre regroupe plusieurs formats d'ordinateurs de bureau
+          destinés à un usage familial ou domestique. On y trouve principalement
+          trois déclinaisons : la <strong>Tour</strong> (IdeaCentre Tower), pour
+          ceux qui ont besoin de puissance avec des composants upgradables ; le
+          <strong>Mini</strong> (IdeaCentre Mini), un PC compact d'environ 1
+          litre très discret sur le bureau ; et le
+          <strong>Tout-en-un</strong> (IdeaCentre AIO), qui intègre écran et
+          unité centrale dans un seul châssis.
+        </p>
+        <p>
+          Depuis 2025, Lenovo embarque progressivement des fonctionnalités d'IA
+          dans cette gamme, notamment via des processeurs Intel Core Ultra ou
+          Qualcomm Snapdragon X Plus, avec des NPU intégrés capables d'accélérer
+          les tâches intelligentes localement, sans passer par le cloud.
+        </p>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/Montage-photo-Lenovo-IdeaCentre.png"
+            alt="Lenovo IdeaCentre"
+            style="width: 100%; height: auto"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Pour qui est-ce l'IdeaCentre ?</h2>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/xtiz1ms62c9xrk0rqo5oy9dp0cmv1q359199.png"
+            alt="Lenovo IdeaCentre"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="public-grid">
+          <div class="public-card">
+            <div class="icon">🏠</div>
+            <strong>La famille</strong>
+            <span
+              >Navigation, streaming, bureautique légère, usage partagé au
+              quotidien.</span
+            >
+          </div>
+          <div class="public-card">
+            <div class="icon">🎓</div>
+            <strong>Les étudiants</strong>
+            <span
+              >Un poste fixe abordable pour les cours, les recherches et les
+              travaux.</span
+            >
+          </div>
+          <div class="public-card">
+            <div class="icon">💼</div>
+            <strong>Le télétravailleur</strong>
+            <span
+              >Un setup propre et silencieux pour les appels, la productivité et
+              le multitâche.</span
+            >
+          </div>
+          <div class="public-card">
+            <div class="icon">🎬</div>
+            <strong>L'amateur de contenu</strong>
+            <span
+              >Montage vidéo léger, photo, visionnage sur grand écran (surtout
+              via l'AIO).</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Avantages et inconvénients</h2>
+
+        <div class="pros-cons">
+          <div class="pros">
+            <h3>Points forts</h3>
+            <ul>
+              <li>Large choix de formats (tour, mini, AIO)</li>
+              <li>Prix d'entrée accessibles</li>
+              <li>Design soigné et discret</li>
+              <li>
+                Fonctionnalités IA intégrées sur les dernières générations
+              </li>
+              <li>Mini et Tour upgradables (RAM, stockage)</li>
+              <li>Bonne réputation après-vente Lenovo</li>
+            </ul>
+          </div>
+          <div class="cons">
+            <h3>Points faibles</h3>
+            <ul>
+              <li>Pas adapté au gaming sérieux</li>
+              <li>Ventilateur audible sous charge (Mini notamment)</li>
+              <li>L'AIO ne se répare pas facilement</li>
+              <li>Pas de carte graphique dédiée en entrée de gamme</li>
+              <li>Logiciels préinstallés parfois superflus</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/lenovo-idea-centre/45275785842efd223070157949341cbe.png"
+            alt="Lenovo IdeaCentre"
+            style="width: 100%; height: auto"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Notre avis</h2>
+        <div class="avis-box">
+          <div class="note">
+            <div class="note-score">8/10</div>
+            <div class="note-label">
+              <strong>Bon choix pour un usage familial</strong>
+              Rapport qualité/prix convaincant
+            </div>
+          </div>
+          <p>
+            La gamme IdeaCentre remplit bien son contrat : offrir un ordinateur
+            de bureau fiable, bien fini et abordable pour un usage du quotidien.
+            Le Mini séduit par sa discrétion, la Tour par sa polyvalence, et
+            l'AIO par son élégance sur le bureau.
+          </p>
+          <p>
+            Ce n'est pas la gamme la plus excitante du marché, mais c'est une
+            valeur sûre pour ceux qui cherchent un PC fixe sans prise de tête,
+            soutenu par une marque sérieuse. Avec l'intégration croissante de
+            l'IA dans les dernières générations, Lenovo positionne l'IdeaCentre
+            pour rester pertinent dans les années à venir.
+          </p>
+        </div>
+      </section>
+    </article>
+  </body>
+</html>
