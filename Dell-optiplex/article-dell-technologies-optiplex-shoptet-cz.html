@@ -1,0 +1,743 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dell OptiPlex — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #007db8;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #007db8;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #007db8;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── COMPARE ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #007db8;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #dff0f8;
+        color: #004f75;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #dff0f8;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #dff0f8;
+        border-left: 4px solid #007db8;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .cons-header {
+          border-radius: 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo Dell -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/Dell_Logo.png"
+          alt="Dell Technologies Logo"
+          style="max-width: 160px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🖥️ Stolní počítače Dell</div>
+        <h1 class="article-title">
+          Dell OptiPlex — Profesionální stolní počítač par excellence
+        </h1>
+        <p class="article-intro">
+          Řada <strong>Dell OptiPlex</strong> je celosvětovým standardem v
+          oblasti profesionálních stolních počítačů. Je navržena pro firmy,
+          veřejnou správu a vzdělávací instituce a vyniká svou
+          <strong
+            >spolehlivostí, dlouhou životností a snadnou správou ve velkém
+            měřítku</strong
+          >. Elegantní, robustní a navržený pro dlouhodobé používání – OptiPlex
+          vybavuje miliony pracovních stanic po celém světě již více než 30 let.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🏢 Představení řady</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/optiplex-13-5-franchise-1920x1440-mod6.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          OptiPlex není běžný domácí počítač — je to pracovní nástroj navržený
+          pro profesionální prostředí. Dell nabízí tuto řadu v několika
+          fyzických formátech, aby vyhověla různým prostorům a potřebám:
+          klasická tower skříň, kompaktní formát, ultra malý micro počítač nebo
+          all-in-one řešení. Každý formát odpovídá specifickým požadavkům
+          firemního nasazení.
+        </p>
+        <p>
+          Řada je postavena na moderních procesorech Intel Core s širokými
+          možnostmi konfigurace: rozšiřitelná RAM, rychlé SSD úložiště a
+          množství portů. Především je navržena pro
+          <strong>centralizovanou správu</strong> — IT týmy mohou nasazovat,
+          konfigurovat a spravovat stovky zařízení na dálku díky nástrojům jako
+          Dell BIOS Connect nebo kompatibilitě s Microsoft Intune a SCCM.
+        </p>
+        <p>
+          Od roku 2023 Dell zjednodušil značení: OptiPlex je dostupný ve třech
+          úrovních —
+          <strong>OptiPlex (základní úroveň)</strong>,
+          <strong>OptiPlex Plus</strong> a <strong>OptiPlex Pro</strong> — ve
+          formátech Tower, Small Form Factor (SFF), Micro a All-in-One.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- FORMÁTY -->
+      <section>
+        <h2>📐 Pro jaké pracovní prostředí?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/Dell-OptiPlex.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Při výběru modelu OptiPlex je formát často prvním rozhodnutím podle
+          dostupného prostoru a požadavků pracovního místa:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">
+              🏗️ Tower / SFF — Výkon a rozšiřitelnost
+            </div>
+            <div class="compare-body">
+              Formáty Tower a Small Form Factor (kompaktní) jsou nejčastější ve
+              firmách. Nabízejí nejlepší možnosti rozšíření: přidání RAM,
+              druhého disku, dedikované grafické karty. Ideální pro náročná
+              pracovní místa — účetnictví, design, technické stanice. SFF zabírá
+              dvakrát méně místa než klasická tower.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">
+              🔲 Micro / All-in-One — Diskrétnost a úspora místa
+            </div>
+            <div class="compare-body">
+              Micro je malé zařízení velikosti knihy, které lze připevnit za
+              monitor pomocí VESA držáku. Ideální pro open space kanceláře a
+              recepce. All-in-One integruje vše do monitoru — žádné kabely,
+              čistý pracovní stůl. Méně rozšiřitelné, ale dostačující pro běžnou
+              kancelářskou práci.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Dobrá rada:</strong> pro jednotný IT park zvolte jeden
+          formát a jednu generaci. Usnadní to údržbu, servis i aktualizace.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho je Dell OptiPlex?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/dell-optiplex-7070-sff-01.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          OptiPlex je ideální volbou v některých situacích a méně vhodný v
+          jiných:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Vhodné pro…</div>
+            <div class="profile-cell profile-header">❌ Nevhodné pokud…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Vybavujete kancelář, firmu nebo školu
+            </div>
+            <div class="profile-cell">
+              Potřebujete mobilitu — je to stolní PC
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Spravujete více zařízení na dálku</div>
+            <div class="profile-cell">Hledáte herní PC</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete spolehlivý a odolný počítač
+            </div>
+            <div class="profile-cell">
+              Máte velmi omezený rozpočet pro domácí použití
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Používáte profesionální software ve Windows
+            </div>
+            <div class="profile-cell">Potřebujete přenosné zařízení</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete více monitorů a příslušenství
+            </div>
+            <div class="profile-cell">Hledáte nejnižší cenu</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Prioritou je stabilita a bezpečnost</div>
+            <div class="profile-cell">
+              Potřebujete vysoký grafický výkon (3D, video)
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Shrnutí: Dell OptiPlex je
+          <strong>referenční volba pro firemní pracovní stanice</strong>.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY & NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody &amp; nevýhody</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/206625_dell-optiplex-5070-twr--1.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          OptiPlex je navržen pro
+          <strong
+            >spolehlivost, dlouhou životnost a profesionální správu</strong
+          >
+          — zde jsou jeho hlavní výhody i omezení, která je dobré znát před
+          nákupem.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Ověřená spolehlivost — navržen pro provoz 8 hodin denně, 5 dní v
+                týdnu po mnoho let
+              </li>
+              <li>
+                Snadná centralizovaná správa — kompatibilita s Dell BIOS
+                Connect, Intune, SCCM
+              </li>
+              <li>
+                Široká nabídka formátů — Tower, SFF, Micro, All-in-One dle
+                prostoru
+              </li>
+              <li>
+                Reálná rozšiřitelnost — možnost upgradu RAM a úložiště u Tower a
+                SFF
+              </li>
+              <li>
+                Výborná konektivita — mnoho USB portů, DisplayPort, volitelně
+                Wi-Fi a Bluetooth
+              </li>
+              <li>
+                Profesionální podpora Dell — záruky ProSupport s možností zásahu
+                na místě
+              </li>
+              <li>
+                Plná softwarová kompatibilita — Windows Pro, podnikové aplikace
+                a ERP systémy
+              </li>
+              <li>
+                Stabilní dostupnost — náhradní díly a modely dostupné po dlouhou
+                dobu
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>Není přenosný — určen výhradně pro stolní použití</li>
+              <li>
+                Střízlivý a funkční design — bez výrazných estetických prvků
+              </li>
+              <li>
+                Formáty Micro a All-in-One jsou méně rozšiřitelné než Tower
+              </li>
+              <li>
+                Není určen pro hraní her — integrovaná grafika nestačí na
+                moderní hry
+              </li>
+              <li>
+                Vyšší cena než u běžných PC — profesionální kvalita něco stojí
+              </li>
+              <li>
+                Omezený grafický výkon u základních verzí bez dedikované GPU
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Dobré vědět — dlouhodobá podpora:</strong>
+          Dell garantuje dlouhé životní cykly OptiPlex. Náhradní díly a BIOS
+          aktualizace jsou dostupné 5 až 7 let od uvedení na trh — klíčová
+          výhoda pro firemní IT infrastrukturu.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PODŘADY -->
+      <section>
+        <h2>📋 Hlavní verze řady</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/desktops-optiplex-d13-product-family-hero.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex — Základní profesionální řešení</h3>
+          <p>
+            Základní úroveň řady bez kompromisů ve spolehlivosti. Pokrývá
+            všechny běžné kancelářské potřeby: práce s dokumenty, tabulky,
+            e-mail, web, videokonference. Dostupný ve formátech Tower, SFF a
+            Micro. Ideální pro velké firemní nasazení s kontrolovanými náklady.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex Plus — Střední třída</h3>
+          <p>
+            Vyšší výkon pro uživatele, kteří potřebují více rychlosti: analýza
+            dat, náročné aplikace, práce na více monitorech. Formát SFF Plus je
+            velmi oblíbený díky kompaktnosti. Nabízí lepší zabezpečení a
+            konektivitu.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex Pro — Špičkový výkon</h3>
+          <p>
+            Nejvyšší úroveň řady pro náročné pracovní stanice: vývojáři,
+            analytici, databázoví specialisté. Nabízí maximální výkon, pokročilé
+            zabezpečení (Intel vPro) a Thunderbolt 4 u vybraných modelů.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex All-in-One — Minimalistické řešení</h3>
+          <p>
+            Monitor a počítač v jednom — žádná skříň ani kabely. Ideální pro
+            recepce, zasedací místnosti a sdílené prostory. Displeje od 23,8" do
+            27" (Full HD nebo QHD). Méně rozšiřitelný než Tower, ale dostatečný
+            pro kancelářskou práci.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Naše hodnocení</h2>
+        <div class="conclusion">
+          <p>
+            Dell OptiPlex si plně zaslouží své postavení standardu ve firemním
+            prostředí. Je spolehlivý, odolný, snadno spravovatelný a plně
+            kompatibilní s ekosystémem Windows. Díky dlouhé životnosti
+            představuje rozumnou investici pro firmy i veřejné instituce.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud ale hledáte domácí počítač nebo kreativní stanici, zvažte
+            spíše řady Dell Inspiron nebo Dell Vostro. OptiPlex je
+            specializovaný profesionální nástroj — a právě proto vyniká.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dell Precision — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #007db8;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #007db8;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #007db8;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── COMPARATIF ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #007db8;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #dff0f9;
+        color: #003f60;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #dff0f9;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #dff0f9;
+        border-left: 4px solid #007db8;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo Dell -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/Dell_Logo.png"
+          alt="Dell Latitude logo"
+          style="max-width: 280px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">💻 Dell Workstations</div>
+        <h1 class="article-title">
+          Dell Precision — Professional power for demanding professions
+        </h1>
+        <p class="article-intro">
+          The <strong>Dell Precision</strong> range brings together mobile and
+          fixed workstations designed for professionals who need
+          <strong>computing power, reliability, and ISV certifications</strong>.
+          3D modeling, engineering, rendering, data analysis, media, and
+          entertainment — Precision systems are built for use cases where a
+          standard laptop or desktop reaches its limits.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- OVERVIEW -->
+      <section>
+        <h2>🎯 Product range overview</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/8151RSErxXL._AC_UF894,1000_QL80_.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Dell Precision systems are not consumer machines. They are
+          <strong>certified workstations</strong> by major professional software
+          vendors — Autodesk, Adobe, Dassault Systèmes, Siemens, ESRI — ensuring
+          maximum compatibility and stability with the most demanding
+          professional applications.
+        </p>
+        <p>
+          The range is divided into two main families:
+          <strong>mobile workstations</strong> (Precision 3000, 5000, and 7000
+          laptops) for professionals on the move, and
+          <strong>fixed workstations</strong> (Precision 3000, 5000, 7000, and
+          9000 Tower) for high-performance setups in offices or studios.
+        </p>
+        <p>
+          Unlike traditional business laptops from the Latitude range, Precision
+          systems feature
+          <strong>professional NVIDIA RTX GPUs</strong> (Ada Lovelace series) or
+          <strong>AMD Radeon Pro</strong>, optimized for rendering, simulation,
+          and scientific visualization — where consumer graphics cards reach
+          their limits.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRECISION VS STANDARD LAPTOP -->
+      <section>
+        <h2>🔍 Precision workstation or standard business laptop?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/Dell-Precision-and-Latitude.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Before choosing a Dell Precision, it’s useful to understand how it
+          differs from a standard professional laptop like the Dell Latitude or
+          Dell XPS:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🔧 Dell Precision (Workstation)</div>
+            <div class="compare-body">
+              Certified professional GPU (NVIDIA RTX Ada / AMD Radeon Pro),
+              Intel Core Ultra HX or Xeon processors, optional ECC RAM, ISV
+              certifications (Autodesk, SolidWorks, Maya…). Designed for CAD,
+              rendering, simulation, data analysis, and critical environments.
+              Heavier and more expensive — it’s a production tool, not a
+              versatile laptop.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">💼 Standard business laptop</div>
+            <div class="compare-body">
+              Standard processor, integrated or consumer-grade discrete GPU,
+              focus on battery life, lightweight form factor. Perfect for office
+              work, video conferencing, project management, and frequent travel.
+              Not suitable for complex 3D rendering, physical simulation, or
+              heavy CAD software requiring hardware certification.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Key question:</strong> Do you use ISV-certified software
+          (SolidWorks, AutoCAD, Revit, Maya, Nuke, ArcGIS…) or need a
+          professional GPU for your workflows? If yes, Dell Precision is the
+          right choice. Otherwise, a Dell Latitude or XPS will be more than
+          enough at a lower cost.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is Dell Precision for?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/61WAsx+maHL._AC_UF1000,1000_QL80_.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Precision systems address very specific professional needs. Here’s a
+          clear overview of target users:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Right for you if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You work in CAD, BIM, 3D modeling, or simulation
+            </div>
+            <div class="profile-cell">
+              Your main use is office work, emails, and video calls
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You use ISV-certified software (SolidWorks, Revit, AutoCAD, Maya…)
+            </div>
+            <div class="profile-cell">
+              You mainly want a lightweight machine for travel
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You do professional video rendering, post-production, or VFX
+            </div>
+            <div class="profile-cell">
+              You have a limited budget — Precision systems are significant
+              investments
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You need ECC RAM for data integrity (scientific computing,
+              finance…)
+            </div>
+            <div class="profile-cell">
+              You don’t need a certified professional GPU
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Your IT department requires certified hardware for enterprise
+              software
+            </div>
+            <div class="profile-cell">
+              You mainly do gaming or casual content creation
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              You handle large datasets, GIS analysis, or machine learning
+              workflows
+            </div>
+            <div class="profile-cell">
+              You need maximum battery life on the go without power access
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In short: Dell Precision is a
+          <strong>professional production tool</strong>, not a general-purpose
+          computer. It is built for engineers, architects, production creatives,
+          and data scientists who need certified power — not for office use,
+          even intensive.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Advantages &amp; Drawbacks</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/workstation-precision-16-5690-black-compare-800x550-front.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Dell Precision stands out as a benchmark in its segment, but with
+          deliberate trade-offs. Here are the key points to consider before
+          investing.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>
+                ISV-certified professional GPUs — guaranteed stability with
+                professional software
+              </li>
+              <li>
+                Proven reliability and durability — designed for intensive
+                production use
+              </li>
+              <li>
+                Optional ECC RAM — data integrity for critical computations
+              </li>
+              <li>
+                Wide and modular range — from compact mobile to high-performance
+                tower
+              </li>
+              <li>
+                Dell ProSupport enterprise support — on-site service, extended
+                warranties
+              </li>
+              <li>
+                Excellent thermal management — stable performance under
+                sustained load
+              </li>
+              <li>
+                Hardware scalability on Tower models — upgradeable RAM, storage,
+                and GPU
+              </li>
+              <li>
+                Advanced hardware security — TPM, fingerprint reader, BIOS
+                access control
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>
+                High price — significant investment compared to a standard
+                business laptop
+              </li>
+              <li>Heavy and bulky for high-performance mobile models</li>
+              <li>
+                Limited battery life under full GPU load — often requires
+                plugged-in use
+              </li>
+              <li>
+                Not suitable for simple office tasks — oversized and overpowered
+              </li>
+              <li>
+                Long upgrade cycles — configurations are amortized over 4–5
+                years
+              </li>
+              <li>
+                Dependence on ISV certification ecosystem to fully justify the
+                extra cost
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Good to know:</strong> Dell offers
+          <strong>custom configurations</strong> for Precision systems, both
+          mobile and Tower. It is often wise to use Dell’s configurator or a B2B
+          reseller to get exactly the components you need — without paying for
+          unnecessary options.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELS -->
+      <section>
+        <h2>📋 Main versions of the range</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/pr3490-pr5690-pr7960-pr3280-pr7680-family-shot-v2.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>Dell Precision 3000 — Entry-level workstation</h3>
+          <p>
+            The most accessible series in the Precision range, available as a
+            mobile workstation (15-inch laptop) and compact mini-Tower. Designed
+            for professionals who need ISV certifications and an entry-level
+            professional GPU without the cost of higher-end models. Ideal for
+            architects, designers, and engineers using AutoCAD, Revit, or
+            SolidWorks in lighter configurations.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell Precision 5000 — Power / mobility balance</h3>
+          <p>
+            The best-selling series in the range, available in 15- and 16-inch
+            laptops and compact workstations. It offers an excellent balance
+            between computing power, premium design, and portability.
+            Particularly appreciated by creative professionals (video editing,
+            light VFX, architectural rendering) who need strong performance both
+            in the office and on the go.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>
+            Dell Precision 7000 Mobile — High-performance mobile workstation
+          </h3>
+          <p>
+            Dell’s high-end mobile lineup, available in 16- and 17-inch formats.
+            Designed to replace a desktop workstation where mobility is still
+            required. It features the most powerful professional GPUs from
+            NVIDIA and AMD, up to 128 GB of RAM, and multiple NVMe storage
+            options in RAID. Intended for simulation engineers, VFX studios, and
+            data scientists needing maximum performance outside the office.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>
+            Dell Precision Tower (3000 / 5000 / 7000 / 9000) — Desktop
+            workstation
+          </h3>
+          <p>
+            Dell’s fixed workstations range from compact SFF formats to highly
+            scalable full towers. The 9000 Tower series represents the top tier:
+            Xeon processors, up to 2 TB of ECC RAM, multiple professional GPUs,
+            and maximum scalability. Perfect for rendering studios, scientific
+            computing labs, and high-end production environments in media and
+            advanced engineering.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            Dell Precision is an undisputed reference in the world of
+            professional workstations. For industries that require it —
+            engineering, architecture, 3D creation, video production, scientific
+            computing — it delivers a combination of
+            <strong
+              >certified performance, reliability, and enterprise
+              support</strong
+            >
+            that is hard to match.
+          </p>
+          <p style="margin-top: 10px">
+            However, if your needs are limited to office tasks, even intensive
+            ones, or if you don’t use ISV-certified software, you should
+            consider a
+            <strong>Dell Latitude</strong> or <strong>Dell XPS</strong> instead
+            — you’ll benefit from a lighter, more energy-efficient, and more
+            affordable machine, perfectly suited for standard professional use.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

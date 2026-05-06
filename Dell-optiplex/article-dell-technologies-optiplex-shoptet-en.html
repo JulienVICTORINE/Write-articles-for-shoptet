@@ -1,0 +1,713 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dell OptiPlex — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #007db8;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #007db8;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #007db8;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── COMPARE ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #007db8;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #dff0f8;
+        color: #004f75;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #dff0f8;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #dff0f8;
+        border-left: 4px solid #007db8;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .cons-header {
+          border-radius: 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo Dell -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/Dell_Logo.png"
+          alt="Dell Technologies Logo"
+          style="max-width: 160px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">🖥️ Dell Desktop Computers</div>
+        <h1 class="article-title">
+          Dell OptiPlex — The ultimate professional desktop PC
+        </h1>
+        <p class="article-intro">
+          The <strong>Dell OptiPlex</strong> lineup is a global benchmark in
+          professional desktop computing. Designed for businesses, public
+          institutions, and educational organizations, it stands out for its
+          <strong
+            >reliability, durability, and ease of large-scale management</strong
+          >. Sleek, robust, and built to last, OptiPlex systems have powered
+          millions of workstations worldwide for over 30 years.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- OVERVIEW -->
+      <section>
+        <h2>🏢 Product overview</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/optiplex-13-5-franchise-1920x1440-mod6.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          OptiPlex is not a consumer PC — it is a professional tool built for
+          business environments. Dell offers this lineup in several form factors
+          to fit all workspaces: traditional tower, compact desktop, ultra-small
+          micro PC, and all-in-one solutions.
+        </p>
+        <p>
+          Built on the latest Intel Core processors, the range offers flexible
+          configurations: expandable RAM, fast SSD storage, and plenty of ports.
+          Most importantly, it is designed for
+          <strong>centralized management</strong> — IT teams can deploy,
+          configure, and maintain hundreds of devices remotely using tools like
+          Dell BIOS Connect and compatibility with Microsoft Intune and SCCM.
+        </p>
+        <p>
+          Since 2023, Dell has simplified its naming: OptiPlex is now available
+          in three tiers —
+          <strong>OptiPlex (entry-level)</strong>,
+          <strong>OptiPlex Plus</strong>, and <strong>OptiPlex Pro</strong>,
+          across Tower, Small Form Factor (SFF), Micro, and All-in-One formats.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- FORM FACTORS -->
+      <section>
+        <h2>📐 Which work environment?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/Dell-OptiPlex.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Choosing the right form factor is often the first step, depending on
+          available space and workstation constraints:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">
+              🏗️ Tower / SFF — Power and scalability
+            </div>
+            <div class="compare-body">
+              Tower and Small Form Factor models are the most common in
+              businesses. They offer the best upgrade options: RAM, storage, and
+              dedicated GPU. Ideal for demanding roles like accounting, design,
+              and technical workstations.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">
+              🔲 Micro / All-in-One — Compact and space-saving
+            </div>
+            <div class="compare-body">
+              Micro PCs are ultra-small and can be mounted behind monitors
+              (VESA). Perfect for open spaces and reception areas. All-in-One
+              integrates everything into the screen for a clean setup.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Best practice:</strong> standardize one format and one
+          generation for easier maintenance and IT management.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is Dell OptiPlex for?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/dell-optiplex-7070-sff-01.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>OptiPlex is perfect in some cases, less suitable in others:</p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Good fit if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">You equip offices or institutions</div>
+            <div class="profile-cell">You need mobility</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You manage multiple machines remotely
+            </div>
+            <div class="profile-cell">You want a gaming PC</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">You need reliability and durability</div>
+            <div class="profile-cell">
+              You have a very tight personal budget
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You use professional Windows software
+            </div>
+            <div class="profile-cell">You need a portable device</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You use multiple monitors and peripherals
+            </div>
+            <div class="profile-cell">You want the cheapest option</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Stability and security matter</div>
+            <div class="profile-cell">You need heavy GPU performance</div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In short: OptiPlex is
+          <strong>the go-to choice for business desktops</strong>.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Advantages &amp; Drawbacks</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/206625_dell-optiplex-5070-twr--1.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          OptiPlex is built for
+          <strong>reliability, durability, and professional management</strong>
+          — here are its key strengths and limitations to consider before
+          investing.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>
+                Proven reliability — designed to run 8 hours/day, 5 days/week
+                for years
+              </li>
+              <li>
+                Easy centralized management — compatible with Dell BIOS Connect,
+                Intune, SCCM
+              </li>
+              <li>
+                Wide range of form factors — Tower, SFF, Micro, All-in-One
+              </li>
+              <li>
+                Real upgradeability — expandable RAM and storage on Tower and
+                SFF
+              </li>
+              <li>
+                Excellent connectivity — multiple USB ports, DisplayPort,
+                optional Wi-Fi and Bluetooth
+              </li>
+              <li>
+                Dell professional support — ProSupport warranties with on-site
+                service
+              </li>
+              <li>
+                Full software compatibility — Windows Pro, enterprise apps, ERP
+                systems
+              </li>
+              <li>
+                Stable supply — parts and models available over long periods
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>Not portable — strictly a desktop solution</li>
+              <li>Minimalist design — functional rather than stylish</li>
+              <li>Micro and All-in-One are less upgradeable than towers</li>
+              <li>Not built for gaming — integrated graphics are limited</li>
+              <li>
+                Higher price than consumer PCs — professional quality comes at a
+                cost
+              </li>
+              <li>
+                Limited graphics performance on base models without dedicated
+                GPU
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Good to know — Long-term support:</strong>
+          Dell commits to long lifecycle support for OptiPlex systems. Spare
+          parts and BIOS updates are available for 5 to 7 years after release.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELS -->
+      <section>
+        <h2>📋 Main versions of the lineup</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-optiplex/desktops-optiplex-d13-product-family-hero.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex — Essential business level</h3>
+          <p>
+            Entry-level without compromising reliability. Covers all standard
+            office needs: documents, spreadsheets, email, web browsing, and
+            video conferencing.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex Plus — Mid-range performance</h3>
+          <p>
+            Designed for users needing more responsiveness: data analysis,
+            demanding applications, multi-monitor setups. Improved security and
+            connectivity.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex Pro — High-end desktop</h3>
+          <p>
+            Top-tier performance for demanding users: developers, analysts,
+            database professionals. Includes advanced security and top hardware
+            options.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell OptiPlex All-in-One — Clean workspace</h3>
+          <p>
+            PC and display in one device — no cables, no tower. Perfect for
+            reception areas and shared workspaces.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            Dell OptiPlex fully deserves its reputation as a business standard.
+            Reliable, durable, and easy to manage at scale, it meets the needs
+            of modern IT environments.
+          </p>
+          <p style="margin-top: 10px">
+            However, for home use or creative workloads, consider Dell Inspiron
+            or Dell Vostro instead. OptiPlex is a specialized professional tool
+            — and that’s why it excels.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

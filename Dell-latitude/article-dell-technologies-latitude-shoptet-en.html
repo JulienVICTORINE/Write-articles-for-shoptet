@@ -1,0 +1,770 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dell Latitude — Présentation de la gamme</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      /* ── EN-TÊTE ── */
+      .article-header {
+        border-left: 4px solid #0076ce;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #0076ce;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      /* ── SÉPARATEUR ── */
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      /* ── TITRES ── */
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #0076ce;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── LATITUDE VS INSPIRON ── */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #0076ce;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #ddeeff;
+        color: #003d6b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* ── PROFIL UTILISATEUR ── */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #ddeeff;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* ── AVANTAGES / INCONVÉNIENTS ── */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* ── MODÈLES ── */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* ── NOTE ── */
+      .note {
+        background: #ddeeff;
+        border-left: 4px solid #0076ce;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* ── CONCLUSION ── */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/dell-latitude/Dell_Logo.png"
+          alt="Dell Latitude logo"
+          style="max-width: 280px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HEADER -->
+      <div class="article-header">
+        <div class="article-label">💼 Dell Laptops</div>
+        <h1 class="article-title">
+          Dell Latitude — The reliable and scalable business laptop
+        </h1>
+        <p class="article-intro">
+          The <strong>Dell Latitude</strong> range is the benchmark for business
+          laptops at Dell. Designed for companies, public administrations, and
+          mobile workers, it stands out for its durability, advanced security,
+          and ease of large-scale management. Unlike consumer-grade models,
+          Latitude devices are built to last, be repaired, and maintained over
+          time — with professional Dell support behind every device.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PRESENTATION -->
+      <section>
+        <h2>🎯 Overview of the range</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-latitude/lati-compact-franchise-1920x1440-fy25-mod-1.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The Dell Latitude is the go-to laptop for professionals who need a
+          reliable daily tool. Available in
+          <strong>13, 14, and 15 inches</strong>, the range covers all profiles:
+          from constantly traveling salespeople to office employees and field
+          technicians. Each model is designed to be managed, deployed, and
+          maintained at scale.
+        </p>
+        <p>
+          What sets Latitude apart from consumer laptops is above all its
+          <strong>durability and serviceability</strong>: MIL-STD-810 certified
+          chassis (resistant to shocks, dust, and temperature variations),
+          easily replaceable components (RAM, SSD, battery), and guaranteed
+          compatibility with enterprise management tools like Microsoft Intune
+          or Dell APEX.
+        </p>
+        <p>
+          Latitude devices feature
+          <strong>latest-generation Intel Core processors</strong> (U or P
+          series depending on the model), full connectivity options —
+          Thunderbolt 4, HDMI, USB-A, SD card reader — and hardware security
+          features such as fingerprint readers, infrared cameras for Windows
+          Hello, and TPM 2.0 chips. Dell also offers 4G/LTE and 5G options for
+          the most mobile models.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- LATITUDE VS INSPIRON -->
+      <section>
+        <h2>🔍 Latitude or Inspiron — what's the difference?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-latitude/Dell-Latitude-and-Inspiron.png"
+            alt="Dell Technologies Latitude & Inspiron"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Dell offers two main families of Windows laptops. Here's how they
+          differ in practice:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">💼 Latitude (Business)</div>
+            <div class="compare-body">
+              Designed for companies and demanding environments. Reinforced
+              chassis, MIL-STD-810 certifications, replaceable components,
+              advanced hardware security (TPM, IR camera, fingerprint). Easy
+              centralized management via Dell Command | Manage or Intune. Dell
+              ProSupport available. Predictable lifecycle and replacement cycles
+              — ideal for enterprise fleets.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🏠 Inspiron (Consumer)</div>
+            <div class="compare-body">
+              Designed for personal and family use. Plastic or aluminum finish
+              depending on the range, good performance for the price, but fewer
+              ports, certifications, and maintenance options. Not intended for
+              IT fleet management. Excellent value for everyday home or student
+              use — but not suited for business constraints.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>The right choice:</strong> if you're buying a laptop for
+          business use, Latitude pays off over time thanks to its durability and
+          support. For personal use or a tight budget, Inspiron remains an
+          excellent option.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- USER PROFILE -->
+      <section>
+        <h2>👤 Who is the Dell Latitude for?</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-latitude/gym1.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Latitude is designed for a specific professional context. Here’s an
+          overview of who it is — or isn’t — suitable for:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">✅ Right for you if…</div>
+            <div class="profile-cell profile-header">❌ Not ideal if…</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You work in a company and need an IT-managed laptop
+            </div>
+            <div class="profile-cell">
+              You're looking for a personal or family laptop — Inspiron will be
+              more affordable
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You travel frequently and need a shock-resistant device
+            </div>
+            <div class="profile-cell">
+              You need high graphics performance — Precision or XPS would be
+              better options
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              Security is a priority: sensitive data, GDPR compliance, biometric
+              access
+            </div>
+            <div class="profile-cell">
+              You play video games — no Latitude model is designed for gaming
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You manage multiple laptops and want simplified centralized
+              management
+            </div>
+            <div class="profile-cell">
+              Your budget is limited — Latitude is more expensive than consumer
+              models
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You need advanced connectivity: Thunderbolt 4, LTE/5G, card reader
+            </div>
+            <div class="profile-cell">
+              You expect premium design — not the priority of this range
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">
+              You want a repairable laptop — easy RAM, SSD, and battery
+              replacement
+            </div>
+            <div class="profile-cell">
+              You want a lightweight premium machine — consider Dell XPS instead
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 In summary: Dell Latitude is built for
+          <strong>professionals, SMEs, and large enterprises</strong>
+          looking for a reliable, secure, and maintainable laptop over several
+          years. It’s not the flashiest laptop — it’s the one that lasts.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROS & CONS -->
+      <section>
+        <h2>👍 Advantages &amp; Drawbacks</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-latitude/lati-compact-franchise-1920x1440-fy25-hero-module.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          The Dell Latitude stands out as a
+          <strong
+            >benchmark for durability and reliability in professional
+            environments</strong
+          >
+          — here are its real strengths and the trade-offs to consider.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Advantages</div>
+            <ul class="pros-list">
+              <li>
+                Rugged chassis with MIL-STD-810 certification — resistant to
+                shocks, vibrations, and temperature variations
+              </li>
+              <li>
+                Comprehensive hardware security — TPM 2.0, fingerprint reader,
+                IR camera for Windows Hello, webcam shutter
+              </li>
+              <li>
+                Replaceable components — RAM, SSD, and battery accessible for
+                maintenance and upgrades
+              </li>
+              <li>
+                Full professional connectivity — Thunderbolt 4, USB-A, HDMI, SD
+                card reader
+              </li>
+              <li>
+                Built-in 4G/5G options on some models — mobile connectivity
+                without a dongle
+              </li>
+              <li>
+                Compatible with all professional Windows software and business
+                tools
+              </li>
+              <li>
+                Simplified fleet management via Dell Command | Manage, Microsoft
+                Intune, and other MDM solutions
+              </li>
+              <li>Dell ProSupport available with on-site intervention</li>
+              <li>
+                Long lifespan — designed for 4 to 5 years of intensive business
+                use
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Drawbacks</div>
+            <ul class="cons-list">
+              <li>
+                Higher price than consumer laptops with similar specifications
+              </li>
+              <li>
+                Minimalist and functional design — not focused on premium
+                aesthetics
+              </li>
+              <li>Generally heavier than ultrabooks or thin laptops</li>
+              <li>Not suitable for gaming or heavy graphics tasks</li>
+              <li>
+                Entry-level displays can be disappointing — upgrading is
+                recommended for quality Full HD IPS panels
+              </li>
+              <li>
+                Noticeable fan noise under load — fanless versions are rare
+              </li>
+              <li>
+                Proprietary Dell accessories and docking stations — additional
+                cost to consider
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Note — ProSupport:</strong> Dell offers several levels of
+          warranty and support for Latitude devices.
+          <strong>ProSupport Plus</strong> includes next business day on-site
+          service and accidental damage protection — a major advantage for
+          companies that cannot afford downtime.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- SERIES -->
+      <section>
+        <h2>📋 Main series in the range</h2>
+
+        <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-latitude/latitude-family.png"
+            alt="Dell Technologies - Latitude"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>Dell Latitude 5000 — The versatile series</h3>
+          <p>
+            The best-selling Latitude series, available in 13, 14, and 15
+            inches. It offers an excellent balance between performance,
+            portability, and price for most professional profiles. Durable
+            chassis, good battery life, full connectivity, and hardware security
+            options. It is the default choice for equipping a business fleet
+            without major compromises.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell Latitude 7000 — The premium mobile series</h3>
+          <p>
+            The high-end Latitude series, designed for executives and highly
+            mobile professionals. Aluminum or magnesium build, lightweight
+            design, high-quality Full HD or QHD displays, extended battery life,
+            and optional 5G connectivity. It features the latest Intel Core
+            processors and enhanced display options for users who want mobility
+            without sacrificing visual experience.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell Latitude 9000 — The ultra-premium series</h3>
+          <p>
+            The flagship of the Latitude range, designed for executives and
+            demanding users. Ultra-lightweight, premium finish, OLED or QHD
+            displays, built-in 5G, and Dell Optimizer AI features that adapt
+            performance in real time. This is the Latitude for those who want
+            the best without compromise — at a premium price.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Dell Latitude 3000 — The budget-friendly series</h3>
+          <p>
+            The entry-level Latitude series, designed for schools, associations,
+            and businesses with limited budgets. It retains the essentials —
+            durability, centralized management, and basic security — in a more
+            affordable plastic chassis. A solid compromise for organizations
+            wanting Latitude benefits without the cost of higher-end series.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- CONCLUSION -->
+      <section>
+        <h2>✅ Our opinion</h2>
+        <div class="conclusion">
+          <p>
+            The Dell Latitude is a safe choice for any professional environment.
+            Its durability, hardware security, and serviceability make it a
+            long-term investment — especially for companies managing multiple
+            devices.
+          </p>
+          <p style="margin-top: 10px">
+            However, if you're looking for a laptop for personal use, a tight
+            budget, or premium design, other Dell ranges — such as
+            <strong>Inspiron</strong> or <strong>XPS</strong> — will be better
+            suited. Latitude is not for everyone — and that’s exactly what makes
+            it excellent for its target audience.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

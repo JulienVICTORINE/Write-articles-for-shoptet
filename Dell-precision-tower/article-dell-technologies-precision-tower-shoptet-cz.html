@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dell Precision — Stations de travail Tower & Rack</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        line-height: 1.7;
+        color: #222;
+      }
+
+      .article {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 40px 20px 60px;
+      }
+
+      .article-header {
+        border-left: 4px solid #007db8;
+        padding-left: 16px;
+        margin-bottom: 36px;
+      }
+
+      .article-label {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: #007db8;
+        margin-bottom: 6px;
+      }
+
+      .article-title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #0a0f1e;
+        line-height: 1.2;
+        margin-bottom: 10px;
+      }
+
+      .article-intro {
+        font-size: 16px;
+        color: #222;
+        line-height: 1.7;
+      }
+
+      .divider {
+        border: none;
+        border-top: 1px solid #e8e8e8;
+        margin: 32px 0;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #007db8;
+        margin-bottom: 14px;
+      }
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+        color: #0a0f1e;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 16px;
+        color: #222;
+        margin-bottom: 12px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* TABLEAU TOWER / RACK */
+      .compare-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .compare-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .compare-col:first-child {
+        border-right: 4px solid #ffffff;
+      }
+
+      .compare-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+
+      .compare-col:first-child .compare-header {
+        background: #007db8;
+        color: #ffffff;
+        border-radius: 6px 0 0 0;
+      }
+
+      .compare-col:last-child .compare-header {
+        background: #ddeef7;
+        color: #004d73;
+        border-radius: 0 6px 0 0;
+      }
+
+      .compare-body {
+        border: 1px solid #e0e0e0;
+        border-top: none;
+        padding: 14px 16px;
+        font-size: 15px;
+        color: #333;
+        line-height: 1.6;
+        background: #fafafa;
+      }
+
+      .compare-col:first-child .compare-body {
+        border-right: none;
+      }
+
+      /* PROFIL */
+      .profile-grid {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .profile-row {
+        display: table-row;
+      }
+
+      .profile-cell {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+        padding: 10px 14px;
+        border: 1px solid #e0e0e0;
+        font-size: 16px;
+        color: #222;
+        line-height: 1.5;
+      }
+
+      .profile-cell:first-child {
+        border-right: none;
+      }
+
+      .profile-header {
+        background: #ddeef7;
+        font-weight: 600;
+        font-size: 16px;
+        color: #222;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+      }
+
+      /* AVANTAGES / INCONVÉNIENTS */
+      .pros-cons-row {
+        display: table;
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 4px;
+      }
+
+      .pros-col,
+      .cons-col {
+        display: table-cell;
+        width: 50%;
+        vertical-align: top;
+      }
+
+      .pros-col {
+        border-right: 4px solid #ffffff;
+      }
+
+      .pros-header,
+      .cons-header {
+        padding: 10px 16px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+      }
+
+      .pros-header {
+        background: #dcf5e7;
+        color: #222;
+        border-radius: 6px 0 0 0;
+      }
+
+      .cons-header {
+        background: #fde8e8;
+        color: #991b1b;
+        border-radius: 0 6px 0 0;
+      }
+
+      .pros-list,
+      .cons-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border: 1px solid #e0e0e0;
+        border-top: none;
+      }
+
+      .pros-col .pros-list {
+        border-right: none;
+      }
+
+      .pros-list li,
+      .cons-list li {
+        padding: 9px 14px 9px 36px;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #222;
+        border-bottom: 1px solid #f0f0f0;
+        position: relative;
+      }
+
+      .pros-list li:last-child,
+      .cons-list li:last-child {
+        border-bottom: none;
+      }
+
+      .pros-list li:nth-child(odd),
+      .cons-list li:nth-child(odd) {
+        background: #fafafa;
+      }
+
+      .pros-list li::before {
+        content: "✔";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      .cons-list li::before {
+        content: "✘";
+        position: absolute;
+        left: 12px;
+        color: #222;
+        font-size: 16px;
+        top: 10px;
+      }
+
+      /* MODÈLES */
+      .model-block {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        padding: 18px 20px;
+        margin-bottom: 12px;
+        background: #f7f9fb;
+      }
+
+      .model-block h3 {
+        color: #222;
+        font-size: 16px;
+        margin-bottom: 6px;
+      }
+
+      .model-block p {
+        font-size: 16px;
+        color: #222;
+        margin: 0;
+      }
+
+      /* NOTE */
+      .note {
+        background: #ddeef7;
+        border-left: 4px solid #007db8;
+        padding: 14px 18px;
+        border-radius: 0 4px 4px 0;
+        font-size: 16px;
+        color: #222;
+        margin-top: 20px;
+      }
+
+      /* CONCLUSION */
+      .conclusion {
+        background: #f7f9fb;
+        border: 1px solid #dce8f0;
+        border-radius: 6px;
+        padding: 20px 24px;
+        margin-top: 4px;
+      }
+
+      .conclusion p {
+        font-size: 16px;
+        color: #222;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 600px) {
+        .article-title {
+          font-size: 22px;
+        }
+        h2 {
+          font-size: 16px;
+        }
+
+        .compare-row,
+        .compare-col {
+          display: block;
+          width: 100%;
+        }
+        .compare-col:first-child {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .compare-col:first-child .compare-body {
+          border-right: 1px solid #e0e0e0;
+        }
+        .compare-col:first-child .compare-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .compare-col:last-child .compare-header {
+          border-radius: 0;
+        }
+
+        .profile-grid,
+        .profile-row,
+        .profile-cell {
+          display: block;
+          width: 100%;
+        }
+        .profile-cell:first-child {
+          border-right: 1px solid #e0e0e0;
+          border-bottom: none;
+        }
+
+        .pros-cons-row,
+        .pros-col,
+        .cons-col {
+          display: block;
+          width: 100%;
+        }
+        .pros-col {
+          border-right: none;
+          border-bottom: 4px solid #ffffff;
+        }
+        .pros-header {
+          border-radius: 6px 6px 0 0;
+        }
+        .pros-col .pros-list {
+          border-right: 1px solid #e0e0e0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="article">
+      <!-- Logo Dell -->
+      <div style="text-align: center; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision-tower-rack/Dell_Logo.png"
+          alt="Dell Technologies Logo"
+          style="max-width: 280px; width: 100%; height: auto"
+        />
+      </div>
+
+      <!-- HLAVIČKA -->
+      <div class="article-header">
+        <div class="article-label">🖥️ Pracovní stanice Dell</div>
+        <h1 class="article-title">
+          Dell Precision — Referenční standard profesionálních pracovních stanic
+        </h1>
+        <p class="article-intro">
+          Řada <strong>Dell Precision</strong> zahrnuje nejvýkonnější pracovní
+          stanice od společnosti Dell, dostupné ve formátu
+          <strong>Tower</strong> (stolní skříň) a <strong>Rack</strong> (server
+          do racku). Jsou navrženy pro inženýry, architekty, kreativce a vědce,
+          kteří potřebují maximální výkon a certifikovanou spolehlivost.
+          Představují špičku profesionálního trhu. Certifikovány předními
+          softwarovými společnostmi — Autodesk, Dassault Systèmes, Adobe, ANSYS
+          — jsou určeny pro nejnáročnější pracovní úlohy.
+        </p>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- PŘEDSTAVENÍ -->
+      <section>
+        <h2>🎯 Představení řady</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision-tower-rack/Hinh-1-top-3-workstation-dell-chinh-hang-gia-tot-nhat.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Dell Precision je řada pracovních stanic certifikovaných ISV (<em
+            >Independent Software Vendor</em
+          >) od společnosti Dell Technologies. Na rozdíl od běžných stolních
+          počítačů nebo notebooků jsou tyto stroje navrženy, testovány a ověřeny
+          pro práci s nejnáročnějším profesionálním softwarem: CAD, BIM,
+          simulace, 3D rendering, střih videa ve 4K/8K, analýza dat a vědecké
+          výpočty.
+        </p>
+        <p>
+          Řada se dělí na dvě hlavní kategorie podle formátu:
+          <strong>Precision Tower</strong>, které se umisťují pod nebo na
+          pracovní stůl, a <strong>Precision Rack</strong>, určené pro instalaci
+          do serverových racků (datacentra nebo serverovny). Obě sdílejí stejnou
+          filozofii: maximální rozšiřitelnost, průmyslovou spolehlivost a
+          softwarovou certifikaci.
+        </p>
+        <p>
+          Dell nabízí také <strong>Precision Mobile</strong> (notebooky) a
+          <strong>Precision Ultra</strong> (kompaktní), ale řada Tower/Rack
+          zůstává klíčová pro stacionární pracovní stanice a centralizovaná
+          multi-user prostředí.
+        </p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- TOWER VS RACK -->
+      <section>
+        <h2>🔍 Tower nebo Rack — jaký je rozdíl?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision-tower-rack/Dell-Precision-Tower-&-Dell-Precision-Rack.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Oba formáty sdílejí stejné komponenty a výkon, ale zásadně se liší ve
+          způsobu použití a prostředí nasazení:
+        </p>
+
+        <div class="compare-row">
+          <div class="compare-col">
+            <div class="compare-header">🏢 Precision Tower</div>
+            <div class="compare-body">
+              Klasický tower formát, umístěný na nebo pod stolem. Ideální pro
+              individuální pracovní stanice. Snadno se otevírá, upgraduje a
+              udržuje bez nářadí. Tichý provoz, efektivní chlazení. Vhodný pro
+              studia, projekční kanceláře, laboratoře a kreativní agentury.
+              Uživatel je v přímém kontaktu s počítačem.
+            </div>
+          </div>
+          <div class="compare-col">
+            <div class="compare-header">🗄️ Precision Rack</div>
+            <div class="compare-body">
+              Formát 1U, 2U nebo 4U pro montáž do serverového racku. Určen pro
+              serverovny, datacentra a sdílená prostředí. Centralizovaná správa
+              pomocí iDRAC (vzdálený přístup, monitoring, restart na dálku).
+              Ideální pro týmy sdílející výpočetní výkon přes síť nebo VDI
+              infrastrukturu.
+            </div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 <strong>Shrnutí:</strong> zvolte <strong>Tower</strong>, pokud
+          uživatel pracuje přímo na počítači u svého stolu. Zvolte
+          <strong>Rack</strong>, pokud má být stanice umístěna v serverovně a
+          přístupná na dálku nebo sdílená více uživateli.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PROFIL UŽIVATELE -->
+      <section>
+        <h2>👤 Pro koho je Dell Precision?</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision-tower-rack/precision-fixed-franchise-mod3-collapsed-1920x1440.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Řada Precision je určena profesionálům, pro které je specializovaný
+          software klíčovým pracovním nástrojem. Zde jsou typické profily:
+        </p>
+
+        <div class="profile-grid">
+          <div class="profile-row">
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
+            </div>
+            <div class="profile-cell profile-header">❌ Nevhodné, pokud…</div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Pracujete s náročným CAD/BIM softwarem: AutoCAD, Revit, CATIA,
+              SolidWorks, Inventor
+            </div>
+            <div class="profile-cell">
+              Používáte běžnou kancelářskou práci — postačí Dell OptiPlex
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Provádíte 3D rendering, fyzikální simulace nebo FEA/CFD analýzy
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — Precision je prémiová řada
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Stříháte nebo produkujete video ve 4K/8K nebo audio postprodukci
+            </div>
+            <div class="profile-cell">
+              Hledáte PC na gaming — existují vhodnější a levnější řešení
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete ISV certifikaci garantovanou Dellem
+            </div>
+            <div class="profile-cell">
+              Váš software ISV certifikaci nevyužívá
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Spravujete sdílenou infrastrukturu (VDI, centralizovaný výpočet)
+            </div>
+            <div class="profile-cell">
+              Potřebujete mobilní nebo kompaktní zařízení
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Potřebujete vysokou dostupnost a podporu Dell ProSupport
+            </div>
+            <div class="profile-cell">Nepotřebujete profesionální GPU</div>
+          </div>
+        </div>
+
+        <div class="note">
+          💡 Dell Precision není univerzální počítač — je to profesionální
+          pracovní nástroj. Jeho cena odpovídá certifikaci, spolehlivosti a
+          podnikové podpoře.
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- VÝHODY A NEVÝHODY -->
+      <section>
+        <h2>👍 Výhody a nevýhody</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision-tower-rack/22434-small-business-precision-family-964x396-1.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <p>
+          Dell Precision je navržena pro
+          <strong>výkon, spolehlivost a softwarovou jistotu</strong>
+          — zde jsou její hlavní přínosy i omezení, která je dobré znát před
+          nákupem.
+        </p>
+
+        <div class="pros-cons-row">
+          <div class="pros-col">
+            <div class="pros-header">✔ Výhody</div>
+            <ul class="pros-list">
+              <li>
+                Oficiální ISV certifikace — ověřeno společnostmi Autodesk,
+                Dassault, Adobe, ANSYS a dalšími
+              </li>
+              <li>
+                Maximální výkon — procesory Xeon nebo nejnovější Intel Core, ECC
+                RAM, profesionální GPU
+              </li>
+              <li>
+                Vynikající rozšiřitelnost — mnoho PCIe slotů, diskových pozic a
+                podpora více GPU
+              </li>
+              <li>
+                Průmyslová spolehlivost — kvalitní komponenty, důkladné
+                testování, dlouhá životnost
+              </li>
+              <li>
+                Podpora Dell ProSupport — servis na místě, zásah následující
+                den, podnikové SLA
+              </li>
+              <li>
+                Vzdálená správa přes iDRAC (Rack) — monitoring, restart a
+                diagnostika bez fyzické přítomnosti
+              </li>
+              <li>
+                Kompatibilita s VDI infrastrukturou a multi-user prostředím
+              </li>
+              <li>
+                Dlouhá dostupnost náhradních dílů a konfigurací — stabilní
+                životní cyklus pro IT parky
+              </li>
+            </ul>
+          </div>
+
+          <div class="cons-col">
+            <div class="cons-header">✘ Nevýhody</div>
+            <ul class="cons-list">
+              <li>
+                Vysoká cena — výrazně dražší než běžné stolní PC se srovnatelným
+                výkonem
+              </li>
+              <li>Velké rozměry — výkonné Tower modely jsou objemné a těžké</li>
+              <li>
+                Předimenzované pro běžnou kancelářskou práci — bez náročného
+                softwaru nedává smysl
+              </li>
+              <li>
+                Složitá konfigurace — ECC RAM, profesionální GPU a NVMe vyžadují
+                IT znalosti
+              </li>
+              <li>
+                Rack verze je hlučná v kanceláři — určena spíše do serverovny
+              </li>
+              <li>
+                Nutnost správy ovladačů a BIOSu — ISV certifikace vyžadují
+                specifické verze
+              </li>
+              <li>Vysoká spotřeba energie u maximálních konfigurací</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- MODELY -->
+      <section>
+        <h2>📋 Hlavní řady v nabídce</h2>
+
+        <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
+          <img
+            src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision-tower-rack/Dell-Technologies-Precision-Tower.png"
+            alt="Dell Technologies - OptiPlex"
+            style="width: 100%; height: auto"
+          />
+        </div>
+
+        <div class="model-block">
+          <h3>Precision 3000 Tower — Základní profesionální řada</h3>
+          <p>
+            Nejdostupnější řada Precision bez kompromisů v ISV certifikaci.
+            Ideální pro inženýry, architekty a zdravotnické profesionály, kteří
+            používají certifikovaný software bez potřeby extrémních konfigurací.
+            Kompaktní, tichá a snadno integrovatelná do kanceláře.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Precision 5000 Tower — Univerzální střední třída</h3>
+          <p>
+            Nejprodávanější model, který vyvažuje výkon, rozšiřitelnost a
+            rozumné rozměry. Vhodný pro kreativní studia, projekční kanceláře a
+            R&D týmy. Nabízí široký výběr procesorů a profesionálních GPU NVIDIA
+            RTX Ada nebo AMD Radeon Pro.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Precision 7000 Tower — Vysoce výkonná pracovní stanice</h3>
+          <p>
+            Nejvyšší řada Tower pro nejnáročnější úlohy: simulace, realtime
+            rendering, 8K video, deep learning a analýza velkých dat. Podporuje
+            dva procesory Intel Xeon, velké množství ECC RAM a více
+            profesionálních GPU.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>Precision Rack (3U / 5U) — Centralizovaná stanice</h3>
+          <p>
+            Rack verze určená pro serverovny a vzdálený přístup přes síť nebo
+            VDI. Sdílí stejné komponenty jako Tower, ale přidává iDRAC pro
+            vzdálenou správu. Ideální pro sdílené výpočetní prostředí a
+            datacentra.
+          </p>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- ZÁVĚR -->
+      <section>
+        <h2>✅ Náš názor</h2>
+        <div class="conclusion">
+          <p>
+            Dell Precision je referenční pracovní stanice pro profesionály,
+            jejichž práce závisí na specializovaném softwaru. ISV certifikace,
+            dlouhodobá spolehlivost a podniková podpora ospravedlňují investici.
+          </p>
+          <p style="margin-top: 10px">
+            Pokud však pracujete hlavně v kancelářských aplikacích, zvažte spíše
+            <strong>Dell OptiPlex</strong> nebo <strong>Dell Vostro</strong>.
+            Precision není univerzální PC — je to profesionální nástroj.
+          </p>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
