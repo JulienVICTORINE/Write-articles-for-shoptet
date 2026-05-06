@@ -289,6 +289,22 @@
         color: #c2410c;
       }
 
+      /* Rendre les items cliquables */
+      .laptop-item.clickable {
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .laptop-item.clickable:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 16px rgba(0, 118, 206, 0.15);
+        transform: translateY(-2px);
+      }
+
+      .laptop-item.clickable:active {
+        transform: translateY(0);
+      }
+
       /* ── DIVIDER ── */
       .divider {
         border: none;
@@ -520,7 +536,13 @@
         </p>
 
         <ul class="laptop-list">
-          <li class="laptop-item">
+          <li
+            class="laptop-item clickable"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/dell-technologies-xps/'
+            "
+          >
             <div class="laptop-info">
               <h4>XPS</h4>
               <p class="paragraph-text">
@@ -529,10 +551,16 @@
                 v kompaktním těle.
               </p>
             </div>
-            <span class="laptop-tag future">Článek připravujeme</span>
+            <span class="laptop-tag future">→ 📄 Číst článek</span>
           </li>
 
-          <li class="laptop-item">
+          <li
+            class="laptop-item clickable"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/dell-technologies-latitude/'
+            "
+          >
             <div class="laptop-info">
               <h4>Latitude</h4>
               <p class="paragraph-text">
@@ -541,10 +569,16 @@
                 náročné pracovní podmínky.
               </p>
             </div>
-            <span class="laptop-tag future">Článek připravujeme</span>
+            <span class="laptop-tag future">→ 📄 Číst článek</span>
           </li>
 
-          <li class="laptop-item">
+          <li
+            class="laptop-item clickable"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/dell-technologies-precision/'
+            "
+          >
             <div class="laptop-info">
               <h4>Precision</h4>
               <p class="paragraph-text">
@@ -553,7 +587,7 @@
                 nebo CAD.
               </p>
             </div>
-            <span class="laptop-tag future">Článek připravujeme</span>
+            <span class="laptop-tag future">→ 📄 Číst článek</span>
           </li>
 
           <li class="laptop-item">
@@ -622,7 +656,13 @@
         </p>
 
         <ul class="laptop-list">
-          <li class="laptop-item">
+          <li
+            class="laptop-item clickable"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/dell-technologies-optiplex/'
+            "
+          >
             <div class="laptop-info">
               <h4>OptiPlex</h4>
               <p class="paragraph-text">
@@ -638,11 +678,17 @@
               class="laptop-tag"
               style="background: #f0fdf4; color: #166534"
             >
-              Zahrnuto zde
+              → 📄 Číst článek
             </span>
           </li>
 
-          <li class="laptop-item">
+          <li
+            class="laptop-item clickable"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/dell-technologies-precision--tower-rack/'
+            "
+          >
             <div class="laptop-info">
               <h4>Precision (Tower / Rack)</h4>
               <p class="paragraph-text">
@@ -654,7 +700,7 @@
                 maximální spolehlivost výpočtů.
               </p>
             </div>
-            <span class="laptop-tag future">Článek připravujeme</span>
+            <span class="laptop-tag future">→ 📄 Číst článek</span>
           </li>
 
           <li class="laptop-item">
@@ -686,7 +732,7 @@
                 prostoru.
               </p>
             </div>
-            <span class="laptop-tag future">Článek připravujeme</span>
+            <span class="laptop-tag future">Zahrnuto zde</span>
           </li>
 
           <li class="laptop-item">

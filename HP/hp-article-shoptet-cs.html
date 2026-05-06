@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>HP - Article</title>
     <style>
       *,
       *::before,
@@ -435,6 +435,42 @@
           flex-wrap: wrap;
         }
       }
+
+      /* Style pour les cartes cliquables HP avec bouton intégré */
+      .hp-card-link.item {
+        display: block;
+        cursor: pointer;
+        transition: all 0.2s;
+        position: relative;
+      }
+
+      .hp-card-link.item:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 20px rgba(0, 150, 214, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .hp-card-link.item:active {
+        transform: translateY(0);
+      }
+
+      /* Bouton "Číst článek" intégré dans la carte */
+      .hp-card-link .hp-read-btn {
+        display: inline-block;
+        margin-top: 16px;
+        background: var(--blue-light);
+        color: var(--black);
+        padding: 8px 16px;
+        border-radius: 999px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+
+      .hp-card-link:hover .hp-read-btn {
+        background: var(--blue);
+        color: var(--white);
+      }
     </style>
   </head>
   <body>
@@ -698,81 +734,106 @@
         <div class="sub-title">🧑‍💻 Běžné použití &amp; univerzální</div>
         <ul class="item-list">
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">🏠 HP Pavilion</h4>
-              <p class="paragraph-text">
-                Historická řada HP uvedená v roce 1995, určená pro běžné
-                uživatele. Pavilion pokrývá každodenní použití — internet,
-                kancelářskou práci, streaming a videohovory — s dobrým poměrem
-                ceny a výkonu. Dostupný ve velikostech 14 a 15,6 palce, s
-                procesory Intel Core nebo AMD Ryzen, Full HD IPS displejem a
-                solidní výdrží baterie. Ideální pro studenty a rodiny.
-              </p>
-            </div>
-            <a class="item" href="/hp-pavilion.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-pavilion/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">🏠 HP Pavilion</h4>
+                <p class="paragraph-text">
+                  Historická řada HP uvedená v roce 1995, určená pro běžné
+                  uživatele. Pavilion pokrývá každodenní použití — internet,
+                  kancelářskou práci, streaming a videohovory — s dobrým poměrem
+                  ceny a výkonu. Dostupný ve velikostech 14 a 15,6 palce, s
+                  procesory Intel Core nebo AMD Ryzen, Full HD IPS displejem a
+                  solidní výdrží baterie. Ideální pro studenty a rodiny.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">
-                📘 HP Essential (dříve HP Stream / HP 15)
-              </h4>
-              <p class="paragraph-text">
-                Základní cenově dostupná řada HP určená pro omezené rozpočty:
-                studenti a první počítače. Tyto notebooky nabízejí procesory
-                Intel Celeron nebo Pentium, 15,6" HD displej a často Windows v
-                režimu S nebo Microsoft 365. Lehký, jednoduchý a cenově dostupný
-                — zaměřený na základní potřeby.
-              </p>
-            </div>
-            <a class="item" href="/hp-essential.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-essential/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">
+                  📘 HP Essential (dříve HP Stream / HP 15)
+                </h4>
+                <p class="paragraph-text">
+                  Základní cenově dostupná řada HP určená pro omezené rozpočty:
+                  studenty a první počítače. Tyto notebooky nabízejí procesory
+                  Intel Celeron nebo Pentium, 15,6" HD displej a často Windows v
+                  režimu S nebo Microsoft 365. Lehký, jednoduchý a cenově
+                  dostupný — zaměřený na základní potřeby.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">💎 HP Envy</h4>
-              <p clas="paragraph-text">
-                Vyšší střední třída pro běžné uživatele. Envy vyniká prémiovým
-                designem z broušeného hliníku, kvalitními OLED nebo IPS displeji
-                (2K, 4K), reproduktory Bang &amp; Olufsen a dobrým výkonem.
-                Dostupný v klasické verzi nebo jako 2v1 (Envy x360).
-              </p>
-            </div>
-            <a class="item" href="/hp-envy.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-envy/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">💎 HP Envy</h4>
+                <p class="paragraph-text">
+                  Vyšší střední třída pro běžné uživatele. Envy vyniká prémiovým
+                  designem z broušeného hliníku, kvalitními OLED nebo IPS
+                  displeji (2K, 4K), reproduktory Bang &amp; Olufsen a dobrým
+                  výkonem. Dostupný v klasické verzi nebo jako 2v1 (Envy x360).
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">✨ HP Spectre x360</h4>
-              <p clas="paragraph-text">
-                Vlajková loď HP. Ultra tenké hliníkové tělo, OLED dotykový
-                displej, otočný pant 360°, dlouhá výdrž baterie a prémiové
-                zpracování. Konkuruje modelům Dell XPS, MacBook Pro a Lenovo
-                Yoga.
-              </p>
-            </div>
-            <a class="item" href="/hp-spectre.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-spectre-x360/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">✨ HP Spectre x360</h4>
+                <p class="paragraph-text">
+                  Vlajková loď HP. Ultra tenké hliníkové tělo, OLED dotykový
+                  displej, otočný pant 360°, dlouhá výdrž baterie a prémiové
+                  zpracování. Konkuruje modelům Dell XPS, MacBook Pro a Lenovo
+                  Yoga.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">🔮 HP OmniBook</h4>
-              <p clas="paragraph-text">
-                Nová řada AI notebooků představená v roce 2024, postavená na
-                procesorech s NPU. Optimalizovaná pro AI funkce jako přepis,
-                redukce šumu nebo generování obsahu. Symbol nové éry „AI PC“.
-              </p>
-            </div>
-            <a class="item" href="/hp-omnibook.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-omnibook/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">🔮 HP OmniBook</h4>
+                <p class="paragraph-text">
+                  Nová řada AI notebooků představená v roce 2024, postavená na
+                  procesorech s NPU. Optimalizovaná pro AI funkce jako přepis,
+                  redukce šumu nebo generování obsahu. Symbol nové éry „AI PC".
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
         </ul>
@@ -781,74 +842,98 @@
         <div class="sub-title">👔 Profesionální &amp; firmy</div>
         <ul class="item-list">
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">🏆 HP EliteBook</h4>
-              <p clas="paragraph-text">
-                Špičková profesionální řada HP — ekvivalent ThinkPad od Lenovo.
-                Certifikace MIL-STD 810H (odolnost proti nárazům, extrémním
-                teplotám a vlhkosti), integrované zabezpečení HP Wolf Security,
-                čtečka otisků prstů, IR kamera pro Windows Hello, displej Sure
-                View (ochrana soukromí) a nástroje pro správu zařízení. Dostupný
-                ve velikostech 13 až 16 palců s procesory Intel Core Ultra nebo
-                AMD Ryzen Pro.
-              </p>
-            </div>
-            <a class="item" href="/hp-elitebook.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-elitebook/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">🏆 HP EliteBook</h4>
+                <p class="paragraph-text">
+                  Špičková profesionální řada HP — ekvivalent ThinkPad od
+                  Lenovo. Certifikace MIL-STD 810H (odolnost proti nárazům,
+                  extrémním teplotám a vlhkosti), integrované zabezpečení HP
+                  Wolf Security, čtečka otisků prstů, IR kamera pro Windows
+                  Hello, displej Sure View (ochrana soukromí) a nástroje pro
+                  správu zařízení. Dostupný ve velikostech 13 až 16 palců s
+                  procesory Intel Core Ultra nebo AMD Ryzen Pro.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">
-                💼 HP Elite — Profesionální (HP Elite x360, HP Elite Dragonfly)
-              </h4>
-              <p clas="paragraph-text">
-                Prémiové firemní ultrabooky HP. <strong>Elite x360</strong> je
-                odolný 2v1 notebook pro mobilní profesionály, zatímco
-                <strong>Elite Dragonfly</strong> je nejlehčí ultrabook HP (méně
-                než 990 g), vyrobený z hořčíku a karbonu, určený pro manažery a
-                časté cestovatele. Oba modely nabízejí kompletní konektivitu,
-                volitelnou 4G/5G a HP Wolf Security.
-              </p>
-            </div>
-            <a class="item" href="/hp-elite-pro.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-elite-dragonfly-elite-x360/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">
+                  💼 HP Elite — Profesionální (HP Elite x360, HP Elite
+                  Dragonfly)
+                </h4>
+                <p class="paragraph-text">
+                  Prémiové firemní ultrabooky HP. <strong>Elite x360</strong> je
+                  odolný 2v1 notebook pro mobilní profesionály, zatímco
+                  <strong>Elite Dragonfly</strong> je nejlehčí ultrabook HP
+                  (méně než 990 g), vyrobený z hořčíku a karbonu, určený pro
+                  manažery a časté cestovatele. Oba modely nabízejí kompletní
+                  konektivitu, volitelnou 4G/5G a HP Wolf Security.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">
-                🏗️ HP Essential Profesionální (ProBook)
-              </h4>
-              <p clas="paragraph-text">
-                Základní až střední profesionální řada HP, mezi běžnými
-                notebooky a EliteBookem. <strong>ProBook</strong> nabízí dobrou
-                odolnost, kompletní konektivitu (USB-A, USB-C, HDMI, čtečka SD
-                karet) a základní bezpečnostní funkce za dostupnou cenu pro malé
-                firmy a živnostníky. Dostupný v řadách 440, 450 a 455 G-Series.
-              </p>
-            </div>
-            <a class="item" href="/hp-essential-pro.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-essential-professionnal--probook/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">
+                  🏗️ HP Essential Profesionální (ProBook)
+                </h4>
+                <p class="paragraph-text">
+                  Základní až střední profesionální řada HP, mezi běžnými
+                  notebooky a EliteBookem. <strong>ProBook</strong> nabízí
+                  dobrou odolnost, kompletní konektivitu (USB-A, USB-C, HDMI,
+                  čtečka SD karet) a základní bezpečnostní funkce za dostupnou
+                  cenu pro malé firmy a živnostníky. Dostupný v řadách 440, 450
+                  a 455 G-Series.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">⚙️ HP ZBook — Mobilní pracovní stanice</h4>
-              <p clas="paragraph-text">
-                Mobilní pracovní stanice HP určené pro profesionály s vysokými
-                nároky na grafiku a výkon. ZBook obsahuje profesionální GPU
-                NVIDIA RTX, certifikace ISV (Autodesk, SolidWorks, Adobe),
-                procesory Intel Core Ultra HX nebo Xeon, ECC paměť a 4K
-                DreamColor displeje. Dostupné jako Firefly (lehké), Studio
-                (univerzální) a Fury (maximální výkon).
-              </p>
-            </div>
-            <a class="item" href="/hp-zbook.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-zbook/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">
+                  ⚙️ HP ZBook — Mobilní pracovní stanice
+                </h4>
+                <p class="paragraph-text">
+                  Mobilní pracovní stanice HP určené pro profesionály s vysokými
+                  nároky na grafiku a výkon. ZBook obsahuje profesionální GPU
+                  NVIDIA RTX, certifikace ISV (Autodesk, SolidWorks, Adobe),
+                  procesory Intel Core Ultra HX nebo Xeon, ECC paměť a 4K
+                  DreamColor displeje. Dostupné jako Firefly (lehké), Studio
+                  (univerzální) a Fury (maximální výkon).
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
         </ul>
@@ -857,37 +942,47 @@
         <div class="sub-title">🎮 Gaming</div>
         <ul class="item-list">
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">🔥 HP OMEN</h4>
-              <p clas="paragraph-text">
-                Herní řada HP vyšší třídy. Notebooky OMEN jsou vybaveny
-                výkonnými grafickými kartami NVIDIA GeForce RTX (až RTX 4090
-                Laptop), displeji s vysokou obnovovací frekvencí (až 240 Hz
-                QHD), pokročilým chlazením (Thermal Grizzly) a softwarem OMEN
-                Gaming Hub pro optimalizaci výkonu. OMEN Transcend je nejtenčí a
-                nejlehčí model v řadě a konkuruje ASUS ROG Zephyrus a Razer
-                Blade.
-              </p>
-            </div>
-            <a class="item" href="/hp-omen.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-omen/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">🔥 HP OMEN</h4>
+                <p class="paragraph-text">
+                  Herní řada HP vyšší třídy. Notebooky OMEN jsou vybaveny
+                  výkonnými grafickými kartami NVIDIA GeForce RTX (až RTX 4090
+                  Laptop), displeji s vysokou obnovovací frekvencí (až 240 Hz
+                  QHD), pokročilým chlazením (Thermal Grizzly) a softwarem OMEN
+                  Gaming Hub pro optimalizaci výkonu. OMEN Transcend je nejtenčí
+                  a nejlehčí model v řadě a konkuruje ASUS ROG Zephyrus a Razer
+                  Blade.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">🎯 HP Victus</h4>
-              <p clas="paragraph-text">
-                Dostupný herní notebook od HP určený pro hráče, kteří chtějí
-                dobrý výkon bez vysoké ceny. Victus nabízí grafické karty NVIDIA
-                GeForce RTX 3050 až 4060, 144 Hz Full HD displeje, střídmý
-                design (bez výrazného RGB) a příznivou cenu. Oblíbený mezi
-                studenty a uživateli hledajícími univerzální notebook pro hraní
-                i práci.
-              </p>
-            </div>
-            <a class="item" href="/hp-victus.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-victus/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">🎯 HP Victus</h4>
+                <p class="paragraph-text">
+                  Dostupný herní notebook od HP určený pro hráče, kteří chtějí
+                  dobrý výkon bez vysoké ceny. Victus nabízí grafické karty
+                  NVIDIA GeForce RTX 3050 až 4060, 144 Hz Full HD displeje,
+                  střídmý design (bez výrazného RGB) a příznivou cenu. Oblíbený
+                  mezi studenty a uživateli hledajícími univerzální notebook pro
+                  hraní i práci.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
         </ul>
@@ -896,20 +991,25 @@
         <div class="sub-title">🎓 Chromebook &amp; vzdělávání</div>
         <ul class="item-list">
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">🎓 HP Chromebook</h4>
-              <p clas="paragraph-text">
-                Chromebooky HP běží na systému <strong>ChromeOS</strong> od
-                Google a jsou navrženy pro jednoduchost, bezpečnost a lehké
-                použití. Jsou velmi rozšířené ve školách, nabízejí rychlé
-                spuštění, dlouhou výdrž baterie, centrální správu přes Google
-                Admin Console a přístup k aplikacím Google (Docs, Slides, Meet).
-                Dostupné v levnějších plastových verzích nebo v prémiovém
-                hliníkovém provedení (HP Chromebook Plus).
-              </p>
-            </div>
-            <a class="item" href="/hp-chromebook.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-chromebook/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">🎓 HP Chromebook</h4>
+                <p class="paragraph-text">
+                  Chromebooky HP běží na systému <strong>ChromeOS</strong> od
+                  Google a jsou navrženy pro jednoduchost, bezpečnost a lehké
+                  použití. Jsou velmi rozšířené ve školách, nabízejí rychlé
+                  spuštění, dlouhou výdrž baterie, centrální správu přes Google
+                  Admin Console a přístup k aplikacím Google (Docs, Slides,
+                  Meet). Dostupné v levnějších plastových verzích nebo v
+                  prémiovém hliníkovém provedení (HP Chromebook Plus).
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
         </ul>
@@ -929,87 +1029,113 @@
 
         <ul class="item-list">
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">
-                🏢 HP Elite — Profesionální stolní PC (EliteDesk / Elite Mini)
-              </h4>
-              <p clas="paragraph-text">
-                Referenční řada HP pro firemní IT infrastrukturu. Dostupná ve
-                formátu tower, SFF, micro a all-in-one. EliteDesk (nově HP Elite
-                Mini) vyniká snadnou správou, certifikovanou odolností a
-                pokročilým zabezpečením HP Wolf Security. Model Elite Mini 800
-                G9 je oblíbený díky kompaktní velikosti a vysokému výkonu.
-              </p>
-            </div>
-            <a class="item" href="/hp-elitedesk.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-elitedesk-elite-mini/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">
+                  🏢 HP Elite — Profesionální stolní PC (EliteDesk / Elite Mini)
+                </h4>
+                <p class="paragraph-text">
+                  Referenční řada HP pro firemní IT infrastrukturu. Dostupná ve
+                  formátu tower, SFF, micro a all-in-one. EliteDesk (nově HP
+                  Elite Mini) vyniká snadnou správou, certifikovanou odolností a
+                  pokročilým zabezpečením HP Wolf Security. Model Elite Mini 800
+                  G9 je oblíbený díky kompaktní velikosti a vysokému výkonu.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">
-                🏗️ HP Essential Profesionální — Desktop (ProDesk)
-              </h4>
-              <p clas="paragraph-text">
-                Základní profesionální řada stolních počítačů HP. ProDesk nabízí
-                spolehlivost a správu za dostupnou cenu pro malé firmy:
-                zabezpečené spuštění, TPM šifrování, kompletní konektivitu a
-                snadnou rozšiřitelnost. Dostupný ve formátech tower, SFF a
-                micro.
-              </p>
-            </div>
-            <a class="item" href="/hp-essential-pro-desktop.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-essential-professional-desktop-prodesk/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">
+                  🏗️ HP Essential Profesionální — Desktop (ProDesk)
+                </h4>
+                <p class="paragraph-text">
+                  Základní profesionální řada stolních počítačů HP. ProDesk
+                  nabízí spolehlivost a správu za dostupnou cenu pro malé firmy:
+                  zabezpečené spuštění, TPM šifrování, kompletní konektivitu a
+                  snadnou rozšiřitelnost. Dostupný ve formátech tower, SFF a
+                  micro.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">🏠 HP OmniDesk</h4>
-              <p clas="paragraph-text">
-                Nová řada stolních počítačů HP pro běžné uživatele, uvedená v
-                roce 2024. Dostupná jako kompaktní tower nebo all-in-one, s
-                moderními procesory Intel Core nebo AMD Ryzen, elegantním
-                designem a integrovanými AI funkcemi. Určena pro domácnosti a
-                práci z domova.
-              </p>
-            </div>
-            <a class="item" href="/hp-omnidesk.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-omnidesk/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">🏠 HP OmniDesk</h4>
+                <p class="paragraph-text">
+                  Nová řada stolních počítačů HP pro běžné uživatele, uvedená v
+                  roce 2024. Dostupná jako kompaktní tower nebo all-in-one, s
+                  moderními procesory Intel Core nebo AMD Ryzen, elegantním
+                  designem a integrovanými AI funkcemi. Určena pro domácnosti a
+                  práci z domova.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">⚙️ HP Z Series — Pracovní stanice</h4>
-              <p clas="paragraph-text">
-                Profesionální pracovní stanice HP. Dostupné v různých formátech:
-                <strong>Z2 Mini</strong>, <strong>Z4</strong>,
-                <strong>Z6</strong> a <strong>Z8 Fury</strong>. Nabízejí
-                procesory Intel Xeon nebo Core i9, profesionální GPU NVIDIA RTX
-                a podporu velké kapacity RAM.
-              </p>
-            </div>
-            <a class="item" href="/hp-z-workstation.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-z-series/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">⚙️ HP Z Series — Pracovní stanice</h4>
+                <p class="paragraph-text">
+                  Profesionální pracovní stanice HP. Dostupné v různých
+                  formátech:
+                  <strong>Z2 Mini</strong>, <strong>Z4</strong>,
+                  <strong>Z6</strong> a <strong>Z8 Fury</strong>. Nabízejí
+                  procesory Intel Xeon nebo Core i9, profesionální GPU NVIDIA
+                  RTX a podporu velké kapacity RAM.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
 
           <li>
-            <div class="item-info">
-              <h4 class="item-emoji">
-                🎮 HP OMEN Desktop &amp; Victus Desktop
-              </h4>
-              <p clas="paragraph-text">
-                Herní stolní počítače HP. Modely OMEN 45L a 35L nabízejí
-                špičkové chlazení, snadný přístup ke komponentám a vysoký výkon.
-                Victus Desktop nabízí dostupnější řešení s dobrým herním
-                výkonem.
-              </p>
-            </div>
-            <a class="item" href="/hp-omen-desktop.html"
-              ><span class="item-tag tag-article">📄 Číst článek</span>
+            <a
+              class="item hp-card-link"
+              href="https://www.pocitace24.cz/rubriky/blog/hp-omen-victus-desktop/"
+            >
+              <div class="item-info">
+                <h4 class="item-emoji">
+                  🎮 HP OMEN Desktop &amp; Victus Desktop
+                </h4>
+                <p class="paragraph-text">
+                  Herní stolní počítače HP. Modely OMEN 45L a 35L nabízejí
+                  špičkové chlazení, snadný přístup ke komponentám a vysoký
+                  výkon. Victus Desktop nabízí dostupnější řešení s dobrým
+                  herním výkonem.
+                </p>
+              </div>
+              <span class="item-tag tag-article hp-read-btn"
+                >📄 Číst článek</span
+              >
             </a>
           </li>
         </ul>
@@ -1098,7 +1224,7 @@
       <hr class="divider" />
 
       <!-- SOUVISEJÍCÍ ČLÁNKY -->
-      <section id="articles">
+      <!-- <section id="articles">
         <p
           style="
             font-size: 16px;
@@ -1715,7 +1841,7 @@
         </table>
       </section>
 
-      <hr class="divider" />
+      <hr class="divider" /> -->
 
       <!-- ZÁVĚR -->
       <section>

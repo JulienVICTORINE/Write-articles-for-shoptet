@@ -1,10 +1,11 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Lenovo - Article</title>
     <style>
+      *,
       *::before,
       *::after {
         box-sizing: border-box;
@@ -99,6 +100,7 @@
         opacity: 0.88;
         max-width: 560px;
         color: white;
+        font-size: 17px;
       }
 
       /* ---- MAIN LAYOUT ---- */
@@ -359,22 +361,6 @@
         color: var(--red-pocitce24);
       }
 
-      /* Rendre les items avec lien cliquables */
-      a.item {
-        cursor: pointer;
-        transition: all 0.2s;
-      }
-
-      a.item:hover {
-        border-color: var(--red-pocitce24);
-        box-shadow: 0 4px 16px rgba(226, 0, 26, 0.12);
-        transform: translateY(-2px);
-      }
-
-      a.item:active {
-        transform: translateY(0);
-      }
-
       /* Lien article d√©di√© */
       .item-link-arrow {
         flex-shrink: 0;
@@ -620,7 +606,6 @@
         </p>
       </div>
     </div>
-
     <!-- MAIN -->
     <main>
       <!-- PR√âSENTATION -->
@@ -662,7 +647,6 @@
             své produkty prodává ve více než <strong>180 zemích</strong>.
           </p>
         </div>
-
         <!-- STATISTIKY -->
         <div class="stats">
           <div class="stat">
@@ -690,7 +674,6 @@
             <div class="stat-label">Zaměstnanců</div>
           </div>
         </div>
-
         <!-- ČASOVÁ OSA -->
         <div class="section-label" style="margin-top: 32px">
           Klíčová historie 📅
@@ -761,9 +744,7 @@
           </div>
         </div>
       </section>
-
       <hr class="divider" />
-
       <!-- PRODUKTOVÁ ŘADA -->
       <section id="produkty">
         <div class="section-label">Produktová řada</div>
@@ -852,9 +833,7 @@
           </p>
         </div>
       </section>
-
       <hr class="divider" />
-
       <!-- LAPTOPS -->
       <section id="notebooky">
         <div class="section-label">Zaměření — Notebooky</div>
@@ -865,103 +844,96 @@
           vlastní podrobný článek.
         </p>
         <ul class="item-list">
-          <li>
+          <li class="item">
+            <div class="item-emoji">🏆</div>
+            <div class="item-info">
+              <h4>ThinkPad</h4>
+              <p class="paragraph-text">
+                Ikonická profesionální řada zděděná od IBM, rozpoznatelná podle
+                matného černého šasi a legendárního červeného TrackPointu.
+                Odolnost vojenské úrovně (certifikace MIL-SPEC), skvělé
+                klávesnice, dlouhá výdrž baterie a pokročilé zabezpečení (čtečka
+                otisků prstů, TPM, krytka webkamery). Dostupná v řadách T
+                (univerzální), X (kompaktní), L (dobrý poměr cena/výkon), E
+                (základní firemní) a X1 Carbon (prémiový ultratenký ultrabook).
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkpad/"
+              >→</a
             >
-              <div class="item-emoji">🏆</div>
-              <div class="item-info">
-                <h4>ThinkPad</h4>
-                <p class="paragraph-text">
-                  Ikonická profesionální řada zděděná od IBM, rozpoznatelná
-                  podle matného černého šasi a legendárního červeného
-                  TrackPointu. Odolnost vojenské úrovně (certifikace MIL-SPEC),
-                  skvělé klávesnice, dlouhá výdrž baterie a pokročilé
-                  zabezpečení (čtečka otisků prstů, TPM, krytka webkamery).
-                  Dostupná v řadách T (univerzální), X (kompaktní), L (dobrý
-                  poměr cena/výkon), E (základní firemní) a X1 Carbon (prémiový
-                  ultratenký ultrabook).
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
-          <li>
+          <li class="item">
+            <div class="item-emoji">💼</div>
+            <div class="item-info">
+              <h4>ThinkBook</h4>
+              <p class="paragraph-text">
+                Ideální kompromis mezi ThinkPad a IdeaPad: moderní a čistý
+                design pro malé a střední podniky a mladé profesionály, solidní
+                výkon, kompletní konektivita a dostupnější cena než ThinkPad.
+                Dostupný ve velikostech 13, 14 a 16 palců s procesory Intel Core
+                nebo AMD Ryzen.
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkbook/"
+              >→</a
             >
-              <div class="item-emoji">💼</div>
-              <div class="item-info">
-                <h4>ThinkBook</h4>
-                <p class="paragraph-text">
-                  Ideální kompromis mezi ThinkPad a IdeaPad: moderní a čistý
-                  design pro malé a střední podniky a mladé profesionály,
-                  solidní výkon, kompletní konektivita a dostupnější cena než
-                  ThinkPad. Dostupný ve velikostech 13, 14 a 16 palců s
-                  procesory Intel Core nebo AMD Ryzen.
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
-          <li>
+          <li class="item">
+            <div class="item-emoji">🎒</div>
+            <div class="item-info">
+              <h4>IdeaPad</h4>
+              <p class="paragraph-text">
+                Univerzální spotřebitelská řada Lenovo: studenti, rodiny a
+                uživatelé hledající dobrý poměr ceny a výkonu. Dostupná v
+                několika podřadách (Slim, Flex, Gaming), pokrývá každodenní
+                použití — prohlížení webu, kancelářskou práci a streaming.
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-ideapad/"
+              >→</a
             >
-              <div class="item-emoji">🎒</div>
-              <div class="item-info">
-                <h4>IdeaPad</h4>
-                <p class="paragraph-text">
-                  Univerzální spotřebitelská řada Lenovo: studenti, rodiny a
-                  uživatelé hledající dobrý poměr ceny a výkonu. Dostupná v
-                  několika podřadách (Slim, Flex, Gaming), pokrývá každodenní
-                  použití — prohlížení webu, kancelářskou práci a streaming.
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
-          <li>
+          <li class="item">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>Legion</h4>
+              <p class="paragraph-text">
+                Vysoce výkonná herní řada Lenovo. Notebooky Legion disponují
+                nejnovějšími GPU NVIDIA GeForce RTX, displeji s vysokou
+                obnovovací frekvencí (až 240 Hz), pokročilým chlazením
+                (Coldfront) a výrazným designem s RGB podsvícením. Řady 5
+                (střední třída) a 7 (high-end) konkurují Asus ROG a Razer Blade.
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-legion/"
+              >→</a
             >
-              <div class="item-emoji">🎮</div>
-              <div class="item-info">
-                <h4>Legion</h4>
-                <p class="paragraph-text">
-                  Vysoce výkonná herní řada Lenovo. Notebooky Legion disponují
-                  nejnovějšími GPU NVIDIA GeForce RTX, displeji s vysokou
-                  obnovovací frekvencí (až 240 Hz), pokročilým chlazením
-                  (Coldfront) a výrazným designem s RGB podsvícením. Řady 5
-                  (střední třída) a 7 (high-end) konkurují Asus ROG a Razer
-                  Blade.
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
-          <li>
+          <li class="item">
+            <div class="item-emoji">🧘</div>
+            <div class="item-info">
+              <h4>Yoga</h4>
+              <p class="paragraph-text">
+                Prémiová řada konvertibilních zařízení a ultrabooků Lenovo. Yoga
+                lze otočit o 360° a používat v režimu notebooku, tabletu nebo
+                prezentace. Nabízí kvalitní dotykové OLED nebo IPS displeje,
+                hliníkové zpracování a vysokou mobilitu. Součástí je i Yoga Slim
+                pro klasický ultratenký formát.
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-yoga/"
+              >→</a
             >
-              <div class="item-emoji">🧘</div>
-              <div class="item-info">
-                <h4>Yoga</h4>
-                <p class="paragraph-text">
-                  Prémiová řada konvertibilních zařízení a ultrabooků Lenovo.
-                  Yoga lze otočit o 360° a používat v režimu notebooku, tabletu
-                  nebo prezentace. Nabízí kvalitní dotykové OLED nebo IPS
-                  displeje, hliníkové zpracování a vysokou mobilitu. Součástí je
-                  i Yoga Slim pro klasický ultratenký formát.
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
           <li class="item">
             <div class="item-emoji">✨</div>
@@ -979,9 +951,7 @@
           </li>
         </ul>
       </section>
-
       <hr class="divider" />
-
       <!-- STOLNÍ POČÍTAČE -->
       <section id="desktop">
         <div class="section-label">Zaměření — Stolní počítače</div>
@@ -992,92 +962,85 @@
           profesionály.
         </p>
         <ul class="item-list">
-          <li>
+          <li class="item">
+            <div class="item-emoji">🏢</div>
+            <div class="item-info">
+              <h4>ThinkCentre</h4>
+              <p class="paragraph-text">
+                Stolní ekvivalent ThinkPadu: reference pro firemní IT
+                infrastruktury. Dostupný ve formátech tower, mini, micro a
+                all-in-one. ThinkCentre vyniká snadným nasazením, odolností a
+                nástroji pro správu (Lenovo Device Manager, SCCM). Modely Tiny
+                jsou obzvláště oblíbené díky minimálním rozměrům a překvapivému
+                výkonu v kompaktním těle.
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkcentre/"
+              >→</a
             >
-              <div class="item-emoji">🏢</div>
-              <div class="item-info">
-                <h4>ThinkCentre</h4>
-                <p class="paragraph-text">
-                  Stolní ekvivalent ThinkPadu: reference pro firemní IT
-                  infrastruktury. Dostupný ve formátech tower, mini, micro a
-                  all-in-one. ThinkCentre vyniká snadným nasazením, odolností a
-                  nástroji pro správu (Lenovo Device Manager, SCCM). Modely Tiny
-                  jsou obzvláště oblíbené díky minimálním rozměrům a
-                  překvapivému výkonu v kompaktním těle.
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
-          <li>
+          <li class="item">
+            <div class="item-emoji">⚙️</div>
+            <div class="item-info">
+              <h4>ThinkStation</h4>
+              <p class="paragraph-text">
+                Pracovní stanice Lenovo pro profesionály s vysokými nároky: CAD
+                inženýři, BIM architekti, 3D umělci, datoví specialisté a
+                výzkumníci. Dostupné ve formátu tower (řady P3, P5, P7) nebo
+                ultra-kompaktním (PX), vybavené procesory Intel Xeon nebo Core
+                i9, certifikovanými GPU NVIDIA RTX Ada nebo AMD Radeon Pro a
+                podporou velkého množství ECC paměti. Certifikované hlavními ISV
+                (Autodesk, Adobe, Dassault).
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkstation/"
+              >→</a
             >
-              <div class="item-emoji">⚙️</div>
-              <div class="item-info">
-                <h4>ThinkStation</h4>
-                <p class="paragraph-text">
-                  Pracovní stanice Lenovo pro profesionály s vysokými nároky:
-                  CAD inženýři, BIM architekti, 3D umělci, datoví specialisté a
-                  výzkumníci. Dostupné ve formátu tower (řady P3, P5, P7) nebo
-                  ultra-kompaktním (PX), vybavené procesory Intel Xeon nebo Core
-                  i9, certifikovanými GPU NVIDIA RTX Ada nebo AMD Radeon Pro a
-                  podporou velkého množství ECC paměti. Certifikované hlavními
-                  ISV (Autodesk, Adobe, Dassault).
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
-          <li>
+          <li class="item">
+            <div class="item-emoji">🏠</div>
+            <div class="item-info">
+              <h4>IdeaCentre</h4>
+              <p class="paragraph-text">
+                Spotřebitelská řada stolních počítačů Lenovo. IdeaCentre je
+                dostupný jako kompaktní tower, all-in-one nebo mini PC. Cenově
+                dostupné řešení vhodné pro domácí a školní použití: prohlížení
+                internetu, streaming, základní kancelářská práce a nenáročné
+                hraní. Formát all-in-one je oblíbený díky čistému designu bez
+                velké skříně.
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-ideacentre/"
+              >→</a
             >
-              <div class="item-emoji">🏠</div>
-              <div class="item-info">
-                <h4>IdeaCentre</h4>
-                <p class="paragraph-text">
-                  Spotřebitelská řada stolních počítačů Lenovo. IdeaCentre je
-                  dostupný jako kompaktní tower, all-in-one nebo mini PC. Cenově
-                  dostupné řešení vhodné pro domácí a školní použití: prohlížení
-                  internetu, streaming, základní kancelářská práce a nenáročné
-                  hraní. Formát all-in-one je oblíbený díky čistému designu bez
-                  velké skříně.
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
-          <li>
+          <li class="item">
+            <div class="item-emoji">🎮</div>
+            <div class="item-info">
+              <h4>Legion Tower</h4>
+              <p class="paragraph-text">
+                Stolní verze herní řady Legion. Tyto počítače podporují
+                nejvýkonnější GPU NVIDIA GeForce RTX, mají optimalizované
+                chlazení, snadný přístup ke komponentům pro upgrade a
+                přizpůsobitelné RGB podsvícení. Ideální pro hráče, kteří chtějí
+                maximální výkon bez kompromisů typických pro herní notebooky.
+              </p>
+            </div>
             <a
-              class="item"
+              class="item-link-arrow"
               href="https://www.pocitace24.cz/rubriky/blog/lenovo-legion-tower/"
+              >→</a
             >
-              <div class="item-emoji">🎮</div>
-              <div class="item-info">
-                <h4>Legion Tower</h4>
-                <p class="paragraph-text">
-                  Stolní verze herní řady Legion. Tyto počítače podporují
-                  nejvýkonnější GPU NVIDIA GeForce RTX, mají optimalizované
-                  chlazení, snadný přístup ke komponentám pro upgrade a
-                  přizpůsobitelné RGB podsvícení. Ideální pro hráče, kteří
-                  chtějí maximální výkon bez kompromisů typických pro herní
-                  notebooky.
-                </p>
-              </div>
-              <span class="item-link-arrow">→</span>
-            </a>
           </li>
         </ul>
       </section>
-
       <hr class="divider" />
-
       <!-- MONITORY -->
       <section id="monitory">
         <div class="section-label">Zaměření — Monitory</div>
@@ -1166,9 +1129,7 @@
           </li>
         </ul>
       </section>
-
       <hr class="divider" />
-
       <!-- ZÁVĚR -->
       <section>
         <div class="section-label">Shrnutí</div>
