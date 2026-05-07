@@ -268,18 +268,27 @@
 
       .item {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 16px;
-        padding: 23px 24px;
+        padding: 24px;
         border: 1px solid var(--border);
         border-radius: var(--radius);
         background: var(--white);
         margin-bottom: 12px;
-        transition:
-          border-color 0.2s,
-          box-shadow 0.2s;
+        transition: all 0.2s;
         text-decoration: none;
         color: inherit;
+        cursor: pointer;
+      }
+
+      .item:hover {
+        border-color: var(--blue);
+        box-shadow: 0 4px 20px rgba(0, 150, 214, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .item:active {
+        transform: translateY(0);
       }
 
       /* Slightly larger CTA blocks in laptop/desktop sections */
@@ -289,15 +298,12 @@
         padding-bottom: 28px;
       }
 
-      .item:hover {
-        border-color: var(--blue);
-        box-shadow: 0 4px 20px rgba(0, 150, 214, 0.08);
-      }
-
       .item-emoji {
-        font-size: 23px;
+        font-size: 28px;
         flex-shrink: 0;
-        margin-top: 2px;
+        line-height: 1;
+        width: 40px;
+        text-align: center;
       }
 
       .item-info {
@@ -307,8 +313,9 @@
 
       .item-info h4 {
         font-weight: 700;
-        font-size: 16px;
-        margin-bottom: 5px;
+        font-size: 18px;
+        margin-bottom: 6px;
+        letter-spacing: -0.01em;
       }
 
       .item-info p {
@@ -322,11 +329,12 @@
         flex-shrink: 0;
         font-size: 16px;
         font-weight: 600;
-        padding: 3px 10px;
+        padding: 6px 14px;
         border-radius: 999px;
         white-space: nowrap;
-        align-self: flex-start;
+        align-self: center;
         margin-top: 4px;
+        transition: all 0.2s;
       }
 
       .tag-here {
@@ -340,6 +348,25 @@
       .tag-article {
         background: var(--blue-light);
         color: var(--black);
+      }
+
+      /* Style pour les liens "Číst článek" */
+      .hp-read-btn {
+        background: var(--blue-light);
+        color: var(--black);
+        padding: 8px 16px;
+        border-radius: 999px;
+        font-size: 15px;
+        font-weight: 600;
+        transition: all 0.2s;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .item:hover .hp-read-btn {
+        background: var(--blue);
+        color: var(--white);
       }
 
       .item-link-arrow {
@@ -486,9 +513,7 @@
         </p>
       </div>
     </div>
-    <p>&nbsp;</p>
-    <p>&nbsp;</p>
-    <p></p>
+
     <main>
       <!-- PREZENTACE -->
       <section id="presentation">
@@ -526,6 +551,7 @@
             <strong>Palo Altu v Kalifornii</strong>.
           </p>
         </div>
+
         <!-- STATS -->
         <div class="stats">
           <div class="stat">
@@ -553,6 +579,7 @@
             <div class="stat-label">Počet zemí</div>
           </div>
         </div>
+
         <!-- TIMELINE -->
         <div class="section-label" style="margin-top: 32px">
           Klíčová historie 📅
@@ -615,7 +642,9 @@
           </div>
         </div>
       </section>
+
       <hr class="divider" />
+
       <!-- PRODUKTOVÁ ŘADA -->
       <section id="produits">
         <div class="section-label">Produktová řada</div>
@@ -627,6 +656,7 @@
           laserové a velkoformátové tiskárny). Značka také nabízí příslušenství,
           hardwarovou bezpečnost a spravované služby.
         </p>
+
         <div class="products-grid">
           <div class="product-card">
             <div class="product-icon">💻</div>
@@ -699,6 +729,7 @@
             </p>
           </div>
         </div>
+
         <div class="info-box">
           <p class="paragraph-text">
             📌 V rámci této série článků se zaměřujeme na
@@ -708,7 +739,9 @@
           </p>
         </div>
       </section>
+
       <hr class="divider" />
+
       <!-- NOTEBOOKY -->
       <section id="laptops">
         <div class="section-label">Zaměření — Notebooky</div>
@@ -718,12 +751,17 @@
           všechny segmenty: běžné uživatele, profesionály, kreativce, gaming i
           vzdělávání. Řady jsou zde rozděleny podle způsobu použití.
         </p>
+
         <!-- BĚŽNÍ UŽIVATELÉ -->
         <div class="sub-title">🧑‍💻 Běžné použití &amp; univerzální</div>
         <ul class="item-list">
-          <li>
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-pavilion/'"
+          >
+            <div class="item-emoji">🏠</div>
             <div class="item-info">
-              <h4 class="item-emoji">🏠 HP Pavilion</h4>
+              <h4>HP Pavilion</h4>
               <p class="paragraph-text">
                 Historická řada HP uvedená v roce 1995, určená pro běžné
                 uživatele. Pavilion pokrývá každodenní použití — internet,
@@ -733,17 +771,16 @@
                 solidní výdrží baterie. Ideální pro studenty a rodiny.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-pavilion/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-essential/'"
+          >
+            <div class="item-emoji">📘</div>
             <div class="item-info">
-              <h4 class="item-emoji">
-                📘 HP Essential (dříve HP Stream / HP 15)
-              </h4>
+              <h4>HP Essential (dříve HP Stream / HP 15)</h4>
               <p class="paragraph-text">
                 Základní cenově dostupná řada HP určená pro omezené rozpočty:
                 studenty a první počítače. Tyto notebooky nabízejí procesory
@@ -752,15 +789,16 @@
                 — zaměřený na základní potřeby.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-essential/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-envy/'"
+          >
+            <div class="item-emoji">💎</div>
             <div class="item-info">
-              <h4 class="item-emoji">💎 HP Envy</h4>
+              <h4>HP Envy</h4>
               <p class="paragraph-text">
                 Vyšší střední třída pro běžné uživatele. Envy vyniká prémiovým
                 designem z broušeného hliníku, kvalitními OLED nebo IPS displeji
@@ -768,15 +806,16 @@
                 Dostupný v klasické verzi nebo jako 2v1 (Envy x360).
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-envy/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-spectre-x360/'"
+          >
+            <div class="item-emoji">✨</div>
             <div class="item-info">
-              <h4 class="item-emoji">✨ HP Spectre x360</h4>
+              <h4>HP Spectre x360</h4>
               <p class="paragraph-text">
                 Vlajková loď HP. Ultra tenké hliníkové tělo, OLED dotykový
                 displej, otočný pant 360°, dlouhá výdrž baterie a prémiové
@@ -784,34 +823,36 @@
                 Yoga.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-spectre-x360/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-omnibook/'"
+          >
+            <div class="item-emoji">🔮</div>
             <div class="item-info">
-              <h4 class="item-emoji">🔮 HP OmniBook</h4>
+              <h4>HP OmniBook</h4>
               <p class="paragraph-text">
                 Nová řada AI notebooků představená v roce 2024, postavená na
                 procesorech s NPU. Optimalizovaná pro AI funkce jako přepis,
                 redukce šumu nebo generování obsahu. Symbol nové éry „AI PC".
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-omnibook/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
         </ul>
+
         <!-- PROFESIONÁLNÍ -->
         <div class="sub-title">👔 Profesionální &amp; firmy</div>
         <ul class="item-list">
-          <li>
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-elitebook/'"
+          >
+            <div class="item-emoji">👔</div>
             <div class="item-info">
-              <h4 class="item-emoji">🏆 HP EliteBook</h4>
+              <h4>HP EliteBook</h4>
               <p class="paragraph-text">
                 Špičková profesionální řada HP — ekvivalent ThinkPad od Lenovo.
                 Certifikace MIL-STD 810H (odolnost proti nárazům, extrémním
@@ -822,16 +863,20 @@
                 AMD Ryzen Pro.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-elitebook/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                '/rubriky/blog/hp-elite-dragonfly-elite-x360/'
+            "
+          >
+            <div class="item-emoji">💼</div>
             <div class="item-info">
-              <h4 class="item-emoji">
-                💼 HP Elite — Profesionální (HP Elite x360, HP Elite Dragonfly)
+              <h4>
+                HP Elite — Profesionální (HP Elite x360, HP Elite Dragonfly)
               </h4>
               <p class="paragraph-text">
                 Prémiové firemní ultrabooky HP. <strong>Elite x360</strong> je
@@ -842,19 +887,19 @@
                 volitelnou 4G/5G a HP Wolf Security.
               </p>
             </div>
-            <a
-              class="item hp-card-link"
-              href="/rubriky/blog/hp-elite-dragonfly-elite-x360/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                '/rubriky/blog/hp-essential-professionnal--probook/'
+            "
+          >
+            <div class="item-emoji">🏗️</div>
             <div class="item-info">
-              <h4 class="item-emoji">
-                🏗️ HP Essential Profesionální (ProBook)
-              </h4>
+              <h4>HP Essential Profesionální (ProBook)</h4>
               <p class="paragraph-text">
                 Základní až střední profesionální řada HP, mezi běžnými
                 notebooky a EliteBookem. <strong>ProBook</strong> nabízí dobrou
@@ -863,17 +908,16 @@
                 firmy a živnostníky. Dostupný v řadách 440, 450 a 455 G-Series.
               </p>
             </div>
-            <a
-              class="item hp-card-link"
-              href="/rubriky/blog/hp-essential-professionnal--probook/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-zbook/'"
+          >
+            <div class="item-emoji">⚙️</div>
             <div class="item-info">
-              <h4 class="item-emoji">⚙️ HP ZBook — Mobilní pracovní stanice</h4>
+              <h4>HP ZBook — Mobilní pracovní stanice</h4>
               <p class="paragraph-text">
                 Mobilní pracovní stanice HP určené pro profesionály s vysokými
                 nároky na grafiku a výkon. ZBook obsahuje profesionální GPU
@@ -883,19 +927,21 @@
                 (univerzální) a Fury (maximální výkon).
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-zbook/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
         </ul>
+
         <!-- GAMING -->
+
         <div class="sub-title">🎮 Gaming</div>
         <ul class="item-list">
-          <li>
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-omen/'"
+          >
+            <div class="item-emoji">🔥</div>
             <div class="item-info">
-              <h4 class="item-emoji">🔥 HP OMEN</h4>
+              <h4>HP OMEN</h4>
               <p class="paragraph-text">
                 Herní řada HP vyšší třídy. Notebooky OMEN jsou vybaveny
                 výkonnými grafickými kartami NVIDIA GeForce RTX (až RTX 4090
@@ -906,15 +952,16 @@
                 Blade.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-omen/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-victus/'"
+          >
+            <div class="item-emoji">🎯</div>
             <div class="item-info">
-              <h4 class="item-emoji">🎯 HP Victus</h4>
+              <h4>HP Victus</h4>
               <p class="paragraph-text">
                 Dostupný herní notebook od HP určený pro hráče, kteří chtějí
                 dobrý výkon bez vysoké ceny. Victus nabízí grafické karty NVIDIA
@@ -924,19 +971,20 @@
                 i práci.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-victus/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
         </ul>
+
         <!-- CHROMEBOOK -->
         <div class="sub-title">🎓 Chromebook &amp; vzdělávání</div>
         <ul class="item-list">
-          <li>
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-chromebook/'"
+          >
+            <div class="item-emoji">🎓</div>
             <div class="item-info">
-              <h4 class="item-emoji">🎓 HP Chromebook</h4>
+              <h4>HP Chromebook</h4>
               <p class="paragraph-text">
                 Chromebooky HP běží na systému <strong>ChromeOS</strong> od
                 Google a jsou navrženy pro jednoduchost, bezpečnost a lehké
@@ -947,15 +995,13 @@
                 hliníkovém provedení (HP Chromebook Plus).
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-chromebook/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
         </ul>
       </section>
+
       <hr class="divider" />
+
       <!-- STOLNÍ POČÍTAČE -->
       <section id="desktop">
         <div class="section-label">Zaměření — Stolní počítače</div>
@@ -965,11 +1011,18 @@
           přes výkonné pracovní stanice až po domácí počítače a all-in-one
           řešení.
         </p>
+
         <ul class="item-list">
-          <li>
+          <li
+            class="item"
+            onclick="
+              window.location.href = '/rubriky/blog/hp-elitedesk-elite-mini/'
+            "
+          >
+            <div class="item-emoji">🏢</div>
             <div class="item-info">
-              <h4 class="item-emoji">
-                🏢 HP Elite — Profesionální stolní PC (EliteDesk / Elite Mini)
+              <h4>
+                HP Elite — Profesionální stolní PC (EliteDesk / Elite Mini)
               </h4>
               <p class="paragraph-text">
                 Referenční řada HP pro firemní IT infrastrukturu. Dostupná ve
@@ -979,19 +1032,19 @@
                 G9 je oblíbený díky kompaktní velikosti a vysokému výkonu.
               </p>
             </div>
-            <a
-              class="item hp-card-link"
-              href="/rubriky/blog/hp-elitedesk-elite-mini/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                '/rubriky/blog/hp-essential-professional-desktop-prodesk/'
+            "
+          >
+            <div class="item-emoji">🏗️</div>
             <div class="item-info">
-              <h4 class="item-emoji">
-                🏗️ HP Essential Profesionální — Desktop (ProDesk)
-              </h4>
+              <h4>HP Essential Profesionální — Desktop (ProDesk)</h4>
               <p class="paragraph-text">
                 Základní profesionální řada stolních počítačů HP. ProDesk nabízí
                 spolehlivost a správu za dostupnou cenu pro malé firmy:
@@ -1000,17 +1053,16 @@
                 micro.
               </p>
             </div>
-            <a
-              class="item hp-card-link"
-              href="/rubriky/blog/hp-essential-professional-desktop-prodesk/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-omnidesk/'"
+          >
+            <div class="item-emoji">🏠</div>
             <div class="item-info">
-              <h4 class="item-emoji">🏠 HP OmniDesk</h4>
+              <h4>HP OmniDesk</h4>
               <p class="paragraph-text">
                 Nová řada stolních počítačů HP pro běžné uživatele, uvedená v
                 roce 2024. Dostupná jako kompaktní tower nebo all-in-one, s
@@ -1019,15 +1071,16 @@
                 práci z domova.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-omnidesk/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="window.location.href = '/rubriky/blog/hp-z-series/'"
+          >
+            <div class="item-emoji">⚙️</div>
             <div class="item-info">
-              <h4 class="item-emoji">⚙️ HP Z Series — Pracovní stanice</h4>
+              <h4>HP Z Series — Pracovní stanice</h4>
               <p class="paragraph-text">
                 Profesionální pracovní stanice HP. Dostupné v různých formátech:
                 <strong>Z2 Mini</strong>, <strong>Z4</strong>,
@@ -1036,17 +1089,18 @@
                 a podporu velké kapacity RAM.
               </p>
             </div>
-            <a class="item hp-card-link" href="/rubriky/blog/hp-z-series/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li>
+
+          <li
+            class="item"
+            onclick="
+              window.location.href = '/rubriky/blog/hp-omen-victus-desktop/'
+            "
+          >
+            <div class="item-emoji">🎮</div>
             <div class="item-info">
-              <h4 class="item-emoji">
-                🎮 HP OMEN Desktop &amp; Victus Desktop
-              </h4>
+              <h4>HP OMEN Desktop &amp; Victus Desktop</h4>
               <p class="paragraph-text">
                 Herní stolní počítače HP. Modely OMEN 45L a 35L nabízejí
                 špičkové chlazení, snadný přístup ke komponentám a vysoký výkon.
@@ -1054,17 +1108,13 @@
                 výkonem.
               </p>
             </div>
-            <a
-              class="item hp-card-link"
-              href="/rubriky/blog/hp-omen-victus-desktop/"
-              ><span class="item-tag tag-article hp-read-btn"
-                >📄 Číst článek</span
-              ></a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
         </ul>
       </section>
+
       <hr class="divider" />
+
       <!-- MONITORY -->
       <section id="moniteurs">
         <div class="section-label">Zaměření — Monitory</div>
@@ -1075,6 +1125,7 @@
           méně dominantní než Dell UltraSharp v high-end segmentu, ale nabízí
           kvalitní produkty s moderní USB-C konektivitou.
         </p>
+
         <ul class="item-list">
           <li class="item" style="cursor: default">
             <div class="item-emoji">🎨</div>
@@ -1089,6 +1140,7 @@
             </div>
             <span class="item-tag tag-here">Zde pokryto</span>
           </li>
+
           <li class="item" style="cursor: default">
             <div class="item-emoji">🏢</div>
             <div class="item-info">
@@ -1101,6 +1153,7 @@
             </div>
             <span class="item-tag tag-here">Zde pokryto</span>
           </li>
+
           <li class="item" style="cursor: default">
             <div class="item-emoji">💡</div>
             <div class="item-info">
@@ -1112,6 +1165,7 @@
             </div>
             <span class="item-tag tag-here">Zde pokryto</span>
           </li>
+
           <li class="item" style="cursor: default">
             <div class="item-emoji">🏠</div>
             <div class="item-info">
@@ -1123,6 +1177,7 @@
             </div>
             <span class="item-tag tag-here">Zde pokryto</span>
           </li>
+
           <li class="item" style="cursor: default">
             <div class="item-emoji">🎮</div>
             <div class="item-info">
@@ -1137,6 +1192,7 @@
           </li>
         </ul>
       </section>
+
       <hr class="divider" />
 
       <section>

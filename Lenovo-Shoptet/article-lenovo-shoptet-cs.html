@@ -136,7 +136,7 @@
         margin-bottom: 0;
       }
 
-      /* ---- TEXTE JUSTIFI√â ---- */
+      /* ---- TEXTE JUSTIFIÉ ---- */
       .paragraph-text {
         text-align: justify;
         text-justify: inter-word;
@@ -276,7 +276,7 @@
         line-height: 1.6;
       }
 
-      /* ---- ITEM LIST (gammes) ---- */
+      /* ---- ITEM LIST — STYLE DELL ---- */
       .item-list {
         list-style: none;
         margin-top: 20px;
@@ -284,54 +284,53 @@
 
       .item {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 16px;
-        padding: 22.4px 24px;
+        padding: 24px;
         border: 1px solid var(--border);
         border-radius: var(--radius);
         background: var(--white);
         margin-bottom: 12px;
-        transition:
-          border-color 0.2s,
-          box-shadow 0.2s;
+        transition: all 0.2s;
         text-decoration: none;
         color: inherit;
+        cursor: pointer;
       }
 
       .item:hover {
         border-color: var(--red-pocitce24);
-        box-shadow: 0 4px 20px rgba(226, 0, 26, 0.07);
+        box-shadow: 0 4px 20px rgba(226, 0, 26, 0.12);
+        transform: translateY(-2px);
       }
 
-      .item-dot {
-        flex-shrink: 0;
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background: var(--red-pocitce24);
-        margin-top: 8px;
+      .item:active {
+        transform: translateY(0);
       }
 
       .item-emoji {
-        font-size: 22.4px;
+        font-size: 28px;
         flex-shrink: 0;
-        margin-top: 2px;
+        line-height: 1;
+        width: 40px;
+        text-align: center;
       }
 
       .item-info {
         flex: 1;
+        min-width: 0;
       }
 
       .item-info h4 {
         font-weight: 700;
-        font-size: 16px;
-        margin-bottom: 4.8px;
+        font-size: 18px;
+        margin-bottom: 6px;
+        letter-spacing: -0.01em;
       }
 
       .item-info p {
         font-size: 16px;
         color: var(--black);
-        margin-bottom: 0;
+        margin: 0;
         line-height: 1.55;
       }
 
@@ -339,11 +338,12 @@
         flex-shrink: 0;
         font-size: 16px;
         font-weight: 600;
-        padding: 3px 10px;
+        padding: 6px 14px;
         border-radius: 999px;
         white-space: nowrap;
-        align-self: flex-start;
+        align-self: center;
         margin-top: 4px;
+        transition: all 0.2s;
       }
 
       .tag-here {
@@ -361,7 +361,7 @@
         color: var(--red-pocitce24);
       }
 
-      /* Lien article d√©di√© */
+      /* Lien article dédié — Style flèche */
       .item-link-arrow {
         flex-shrink: 0;
         width: 32px;
@@ -380,63 +380,9 @@
         text-decoration: none;
       }
 
-      a.item:hover .item-link-arrow,
       .item:hover .item-link-arrow {
         background: var(--red-pocitce24);
         color: var(--white);
-      }
-
-      /* ---- SHOPTET-SAFE FIX (Notebooky + Desktop only) ---- */
-      #notebooky .item-list,
-      #desktop .item-list {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      #notebooky .item-list > li > a.item,
-      #desktop .item-list > li > a.item {
-        display: flex !important;
-        align-items: flex-start !important;
-        gap: 16px !important;
-        padding: 22.4px 24px !important;
-        border: 1px solid var(--border) !important;
-        border-radius: var(--radius) !important;
-        background: var(--white) !important;
-        text-decoration: none !important;
-        color: inherit !important;
-      }
-
-      #notebooky .item-list > li.item,
-      #desktop .item-list > li.item {
-        display: flex !important;
-        align-items: flex-start !important;
-        gap: 16px !important;
-        padding: 22.4px 24px !important;
-        border: 1px solid var(--border) !important;
-        border-radius: var(--radius) !important;
-        background: var(--white) !important;
-        margin-bottom: 12px !important;
-      }
-
-      #notebooky .item-info,
-      #desktop .item-info {
-        flex: 1 1 auto !important;
-        min-width: 0;
-      }
-
-      #notebooky .item-tag,
-      #desktop .item-tag {
-        display: inline-flex !important;
-        width: auto !important;
-        max-width: 100%;
-        align-self: flex-start !important;
-      }
-
-      #notebooky .item-link-arrow,
-      #desktop .item-link-arrow {
-        flex: 0 0 32px !important;
-        align-self: center !important;
-        margin-left: 8px !important;
       }
 
       /* ---- DIVIDER ---- */
@@ -524,45 +470,6 @@
         text-align: right;
       }
 
-      /* ---- SHOPTET-SAFE FIX (Articles only) ---- */
-      #articles .lv-related-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 16px !important;
-        margin-top: 24px !important;
-      }
-
-      #articles .lv-related-grid > a.lv-related-card {
-        display: flex !important;
-        flex-direction: column !important;
-        gap: 8px !important;
-        border: 1px solid var(--border) !important;
-        border-radius: var(--radius) !important;
-        padding: 24px !important;
-        background: var(--white) !important;
-        text-decoration: none !important;
-        color: inherit !important;
-      }
-
-      #articles .lv-related-grid > a.lv-related-card h4,
-      #articles .lv-related-grid > a.lv-related-card p,
-      #articles .lv-related-grid > a.lv-related-card .lv-rc-label,
-      #articles .lv-related-grid > a.lv-related-card .lv-rc-emoji {
-        margin: 0 !important;
-      }
-
-      #articles ul {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-      }
-
-      #articles .lv-related-grid > a.lv-related-card .lv-rc-arrow {
-        margin-top: auto !important;
-        align-self: flex-end !important;
-        text-align: right !important;
-      }
-
       /* ---- RESPONSIVE ---- */
       @media (max-width: 768px) {
         nav {
@@ -608,7 +515,7 @@
     </div>
     <!-- MAIN -->
     <main>
-      <!-- PR√âSENTATION -->
+      <!-- PRÉSENTATION -->
       <section id="presentation">
         <div class="section-label">Prezentace</div>
         <h2>Kdo je Lenovo?</h2>
@@ -616,10 +523,10 @@
           <p class="paragraph-text">
             Lenovo je čínská nadnárodní společnost specializující se na
             informační technologie. Byla založena v roce <strong>1984</strong> v
-            Pekingu pod názvem <strong>Legend Holdings</strong> Liou Čchuan-č’ a
+            Pekingu pod názvem <strong>Legend Holdings</strong> Liou Čchuan-č' a
             jedenácti dalšími inženýry z Čínské akademie věd. V roce 2003
             společnost přijala název <strong>Lenovo</strong> — kombinaci
-            <em>"Le-"</em> (z Legend) a <em>"novo"</em> (latinsky „nový“).
+            <em>"Le-"</em> (z Legend) a <em>"novo"</em> (latinsky „nový").
           </p>
           <p class="paragraph-text">
             Klíčovým momentem, který Lenovo vynesl na světovou scénu, bylo
@@ -698,7 +605,7 @@
             <div class="timeline-year">2003</div>
             <p class="timeline-text paragraph-text">
               Společnost se přejmenovává na <strong>Lenovo</strong>, kombinaci
-              slov "Legend" a "novo" (latinsky „nový“) pro podporu mezinárodní
+              slov "Legend" a "novo" (latinsky „nový") pro podporu mezinárodní
               expanze.
             </p>
           </div>
@@ -844,7 +751,13 @@
           vlastní podrobný článek.
         </p>
         <ul class="item-list">
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-thinkpad/'
+            "
+          >
             <div class="item-emoji">🏆</div>
             <div class="item-info">
               <h4>ThinkPad</h4>
@@ -858,13 +771,15 @@
                 (základní firemní) a X1 Carbon (prémiový ultratenký ultrabook).
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkpad/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-thinkbook/'
+            "
+          >
             <div class="item-emoji">💼</div>
             <div class="item-info">
               <h4>ThinkBook</h4>
@@ -876,13 +791,15 @@
                 nebo AMD Ryzen.
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkbook/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-ideapad/'
+            "
+          >
             <div class="item-emoji">🎒</div>
             <div class="item-info">
               <h4>IdeaPad</h4>
@@ -893,13 +810,15 @@
                 použití — prohlížení webu, kancelářskou práci a streaming.
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-ideapad/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-legion/'
+            "
+          >
             <div class="item-emoji">🎮</div>
             <div class="item-info">
               <h4>Legion</h4>
@@ -911,13 +830,15 @@
                 (střední třída) a 7 (high-end) konkurují Asus ROG a Razer Blade.
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-legion/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-yoga/'
+            "
+          >
             <div class="item-emoji">🧘</div>
             <div class="item-info">
               <h4>Yoga</h4>
@@ -929,13 +850,9 @@
                 pro klasický ultratenký formát.
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-yoga/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li class="item" style="cursor: default">
             <div class="item-emoji">✨</div>
             <div class="item-info">
               <h4>ThinkPad X1 Carbon &amp; X1 Extreme</h4>
@@ -962,7 +879,13 @@
           profesionály.
         </p>
         <ul class="item-list">
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-thinkcentre/'
+            "
+          >
             <div class="item-emoji">🏢</div>
             <div class="item-info">
               <h4>ThinkCentre</h4>
@@ -975,13 +898,15 @@
                 výkonu v kompaktním těle.
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkcentre/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-thinkstation/'
+            "
+          >
             <div class="item-emoji">⚙️</div>
             <div class="item-info">
               <h4>ThinkStation</h4>
@@ -995,13 +920,15 @@
                 (Autodesk, Adobe, Dassault).
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-thinkstation/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-ideacentre/'
+            "
+          >
             <div class="item-emoji">🏠</div>
             <div class="item-info">
               <h4>IdeaCentre</h4>
@@ -1014,13 +941,15 @@
                 velké skříně.
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-ideacentre/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
-          <li class="item">
+          <li
+            class="item"
+            onclick="
+              window.location.href =
+                'https://www.pocitace24.cz/rubriky/blog/lenovo-legion-tower/'
+            "
+          >
             <div class="item-emoji">🎮</div>
             <div class="item-info">
               <h4>Legion Tower</h4>
@@ -1032,11 +961,7 @@
                 maximální výkon bez kompromisů typických pro herní notebooky.
               </p>
             </div>
-            <a
-              class="item-link-arrow"
-              href="https://www.pocitace24.cz/rubriky/blog/lenovo-legion-tower/"
-              >→</a
-            >
+            <span class="item-tag tag-article">📄 Číst článek →</span>
           </li>
         </ul>
       </section>
@@ -1153,7 +1078,7 @@
           <p class="paragraph-text">
             Díky orientaci na
             <strong>řešení s integrovanou umělou inteligencí</strong>,
-            „AI-ready“ počítače (s integrovanými NPU) a rychle rostoucí
+            „AI-ready" počítače (s integrovanými NPU) a rychle rostoucí
             serverové divizi ISG se Lenovo připravuje na to, aby zůstalo
             klíčovým hráčem na rychle se měnícím trhu. Další články této série
             se zaměří na jednotlivé produktové řady a pomohou vám s výběrem.
