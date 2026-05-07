@@ -348,15 +348,37 @@
           border-radius: 0;
         }
 
-        .profile-grid,
+        /* .profile-grid,
         .profile-row,
         .profile-cell {
           display: block;
           width: 100%;
+        } */
+
+        .profile-grid {
+          display: table;
+          width: 100%;
         }
+        .profile-row {
+          display: table-row;
+        }
+        .profile-cell {
+          display: table-cell;
+          width: 100%;
+          font-size: 14px; /* Optionnel : réduire un peu la taille */
+          padding: 8px 10px; /* Optionnel : réduire le padding */
+        }
+
         .profile-cell:first-child {
           border-right: 1px solid #e0e0e0;
-          border-bottom: none;
+        }
+
+        .profile-header:first-child {
+          border-radius: 6px 0 0 0;
+        }
+
+        .profile-header:last-child {
+          border-radius: 0 6px 0 0;
         }
 
         .pros-cons-row,
@@ -384,7 +406,7 @@
       <div style="text-align: center; margin-bottom: 30px">
         <img
           src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/Dell_Logo.png"
-          alt="Dell Latitude logo"
+          alt="Dell Precision logo"
           style="max-width: 280px; width: 100%; height: auto"
         />
       </div>
@@ -414,7 +436,7 @@
         <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
           <img
             src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/8151RSErxXL._AC_UF894,1000_QL80_.png"
-            alt="Dell Technologies - Latitude"
+            alt="Dell Technologies - Precision"
             style="width: 100%; height: auto"
           />
         </div>
@@ -450,7 +472,7 @@
         <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
           <img
             src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/Dell-Precision-and-Latitude.png"
-            alt="Dell Technologies - Latitude"
+            alt="Dell Technologies - Precision"
             style="width: 100%; height: auto"
           />
         </div>
@@ -493,7 +515,7 @@
         <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
           <img
             src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/61WAsx+maHL._AC_UF1000,1000_QL80_.png"
-            alt="Dell Technologies - Latitude"
+            alt="Dell Technologies - Precision"
             style="width: 100%; height: auto"
           />
         </div>
@@ -536,7 +558,7 @@
         <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
           <img
             src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/workstation-precision-16-5690-black-compare-800x550-front.png"
-            alt="Dell Technologies - Latitude"
+            alt="Dell Technologies - Precision"
             style="width: 100%; height: auto"
           />
         </div>
@@ -594,7 +616,7 @@
         <div style="text-align: center; margin-top: 30px; margin-bottom: 30px">
           <img
             src="https://www.pocitace24.cz/user/documents/upload/articles/dell-precision/pr3490-pr5690-pr7960-pr3280-pr7680-family-shot-v2.png"
-            alt="Dell Technologies - Latitude"
+            alt="Dell Technologies - Precision"
             style="width: 100%; height: auto"
           />
         </div>

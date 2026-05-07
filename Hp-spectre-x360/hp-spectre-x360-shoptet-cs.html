@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HP Essential — Présentation de la gamme</title>
+    <title>HP Spectre x360 — Présentation de la gamme</title>
     <style>
       * {
         box-sizing: border-box;
@@ -277,15 +277,37 @@
           font-size: 16px;
         }
 
-        .profile-grid,
+        /* .profile-grid,
         .profile-row,
         .profile-cell {
           display: block;
           width: 100%;
+        } */
+
+        .profile-grid {
+          display: table;
+          width: 100%;
         }
+        .profile-row {
+          display: table-row;
+        }
+        .profile-cell {
+          display: table-cell;
+          width: 100%;
+          font-size: 14px; /* Optionnel : réduire un peu la taille */
+          padding: 8px 10px; /* Optionnel : réduire le padding */
+        }
+
         .profile-cell:first-child {
           border-right: 1px solid #e0e0e0;
-          border-bottom: none;
+        }
+
+        .profile-header:first-child {
+          border-radius: 6px 0 0 0;
+        }
+
+        .profile-header:last-child {
+          border-radius: 0 6px 0 0;
         }
 
         .pros-cons-row,
@@ -309,60 +331,68 @@
   </head>
   <body>
     <div class="article">
-      <!-- Image Logo HP Pavilion -->
+      <!-- Image HP Spectre x360 logo -->
       <div style="text-align: center; margin-bottom: 30px">
         <img
-          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-essential-logo.png"
-          alt="HP Essential Logo"
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-logo.png"
+          alt="HP Spectre x360 Logo"
           style="max-width: 240px; width: 100%; height: auto"
         />
       </div>
 
-      <!-- HLAVIČKA -->
+      <!-- TVRDOHLAVÝ -->
       <div class="article-header">
         <div class="article-label">💻 Notebooky HP</div>
         <h1 class="article-title">
-          HP Essential — Cenově dostupný notebook pro začátek
+          HP Spectre x360 — Ultra prémiová vlajková loď HP
         </h1>
         <p class="article-intro">
-          Dříve známá pod názvy HP Stream a HP 15, řada HP Essential představuje
-          základní nabídku společnosti HP. Je určena pro uživatele, kteří
-          potřebují jednoduchý, levný a ihned použitelný notebook, bez
-          zvláštních požadavků na výkon nebo design.
+          HP Spectre x360 je nejvyšší model v celé spotřebitelské řadě HP. Díky
+          zkosenému hliníkovému šasi, dotykovému OLED displeji s rozlišením 2.8K
+          nebo 4K, 360° kloubu a výdrži baterie až 17 hodin představuje to
+          nejlepší, co HP nabízí. Přímý konkurent modelů Dell XPS, MacBook Pro a
+          Lenovo Yoga Slim dosahuje úrovně zpracování, která je ve světě Windows
+          velmi vzácná.
         </p>
       </div>
 
-      <hr class="divider" />
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-14-main.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
 
       <!-- PŘEDSTAVENÍ -->
       <section>
-        <h2>🏠 Přehled řady</h2>
+        <h2>✨ Přehled řady</h2>
         <p>
-          HP Essential se nachází na
-          <strong>základní úrovni nabídky HP</strong>. Je umístěn pod řadou
-          Pavilion (střední třída) a představuje nejlevnější vstup do světa
-          notebooků HP s Windows. Je to výchozí volba pro ty, kteří hledají
-          především nízkou cenu a jednoduché používání.
+          HP Spectre x360 se nachází na <strong>vrcholu nabídky HP</strong>, nad
+          řadami Envy a Pavilion. Je určen uživatelům, kteří chtějí to nejlepší
+          bez kompromisů: nejpreciznější design, nejkvalitnější displej a silný
+          výkon v co nejtenčím těle.
         </p>
         <p>
-          Tato řada je dostupná především ve velikosti
-          <strong>15,6 palce</strong>, s některými modely o velikosti 14 palců.
-          Displeje jsou typu TN nebo IPS podle verze, s rozlišením Full HD
-          (1920×1080). Konstrukce je kompletně plastová, jednoduchá, bez
-          výrazných barev — obvykle tmavě šedá nebo černá.
+          K dispozici ve verzích <strong>13,5 a 14 palců</strong> se Spectre
+          x360 vyznačuje <strong>typickými zkosenými hranami</strong> z hliníku,
+          360° pantem umožňujícím režim notebooku, tabletu, stanu nebo
+          prezentace a dotykovým OLED displejem standardně u novějších
+          konfigurací. Dobíjecí pero HP je součástí balení nebo volitelně dle
+          modelu.
         </p>
         <p>
-          Tyto počítače jsou vybaveny základními procesory (Intel Celeron,
-          Pentium Silver nebo AMD Athlon / Ryzen 3) a omezeným úložištěm (64 GB
-          eMMC u starších modelů HP Stream, 256 GB SSD u novějších HP 15). Jsou
-          určeny pro nenáročné domácí použití, většinou připojené k napájení.
+          Nejnovější generace využívají procesory
+          <strong>Intel Core Ultra</strong> s integrovanou NPU jednotkou pro
+          funkce umělé inteligence ve Windows (Copilot+). Kvalita zpracování
+          převyšuje vše, co HP nabízí mimo profesionální řadu EliteBook.
         </p>
       </section>
 
       <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
         <img
-          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-essential.png"
-          alt="HP Essential"
+          src="https://www.pocitace24.cz/user/documents/upload/articles/SphinxInline-removebg.png"
+          alt="HP Spectre x360"
           style="max-width: 380px; width: 100%; height: auto"
         />
       </div>
@@ -371,69 +401,97 @@
 
       <!-- PROFIL UŽIVATELE -->
       <section>
-        <h2>👤 Pro koho je HP Essential určen?</h2>
+        <h2>👤 Pro koho je HP Spectre x360 určen?</h2>
         <p>
-          HP Essential je navržen pro velmi jednoduché použití. Některým
-          uživatelům vyhovuje dobře, jiným mnohem méně:
+          Spectre x360 je prémiový notebook určený pro velmi specifické
+          uživatelské profily. Není určen pro každého:
         </p>
 
         <div class="profile-grid">
           <div class="profile-row">
             <div class="profile-cell profile-header">
-              ✅ Vhodné pro vás, pokud…
+              ✅ Hodí se pro vás, pokud…
             </div>
             <div class="profile-cell profile-header">
               ❌ Není ideální, pokud…
             </div>
           </div>
+
           <div class="profile-row">
-            <div class="profile-cell">Hledáte co nejnižší cenu</div>
             <div class="profile-cell">
-              Používáte náročné programy (Photoshop, střih videa…)
+              Chcete nejlepší notebook HP bez kompromisů v kvalitě
+            </div>
+            <div class="profile-cell">
+              Máte omezený rozpočet — existují levnější a výhodnější varianty
+              (Envy, Pavilion)
             </div>
           </div>
+
           <div class="profile-row">
-            <div class="profile-cell">Základní prohlížení webu a e-mail</div>
             <div class="profile-cell">
-              Potřebujete mít otevřeno mnoho karet nebo aplikací současně
+              Často pracujete na cestách a chcete lehký a elegantní notebook
+            </div>
+            <div class="profile-cell">
+              Hrajete videohry — nemá dedikovanou herní grafickou kartu
             </div>
           </div>
+
           <div class="profile-row">
             <div class="profile-cell">
-              Sledování YouTube nebo Netflixu ve Full HD
+              Pravidelně používáte stylus pro poznámky, kreslení nebo podpisy
             </div>
-            <div class="profile-cell">Hrajete videohry, i nenáročné</div>
-          </div>
-          <div class="profile-row">
-            <div class="profile-cell">Příležitostné použití doma</div>
             <div class="profile-cell">
-              Potřebujete ukládat velké množství souborů lokálně
+              Potřebujete velký displej — dostupný je pouze ve velikosti 13,5 a
+              14 palců
             </div>
           </div>
+
           <div class="profile-row">
-            <div class="profile-cell">První počítač pro seniora nebo dítě</div>
             <div class="profile-cell">
-              Pravidelně pracujete s velkými soubory ve Wordu nebo Excelu
+              Důležitá je pro vás kvalita obrazu — 2.8K OLED displej je
+              výjimečný
+            </div>
+            <div class="profile-cell">
+              Hledáte mobilní pracovní stanici pro CAD nebo 3D (zvolte spíše
+              ZBook)
             </div>
           </div>
+
           <div class="profile-row">
             <div class="profile-cell">
-              Základní videokonference (Teams, Zoom)
+              Manažer, konzultant nebo podnikatel, který se často setkává s
+              klienty
             </div>
             <div class="profile-cell">
-              Chcete notebook, který vydrží více než 4–5 let bez zpomalení
+              Potřebujete mnoho portů bez adaptérů (omezená konektivita)
+            </div>
+          </div>
+
+          <div class="profile-row">
+            <div class="profile-cell">
+              Rádi používáte notebook v režimu tabletu nebo stanu
+            </div>
+            <div class="profile-cell">
+              Preferujete klasický notebook bez dotykové obrazovky a 360° kloubu
             </div>
           </div>
         </div>
 
         <div class="note">
-          💡 Shrnutí: HP Essential je určen pro
-          <strong>velmi základní</strong> použití. Pokud si myslíte, že budete v
-          budoucnu potřebovat více výkonu, je lepší investovat rovnou do řady
-          Pavilion — vyhnete se tomu, že vám bude za 2 roky připadat příliš
-          pomalý.
+          💡 Shrnutí: HP Spectre x360 je určen pro uživatele, kteří vnímají svůj
+          notebook jako
+          <strong>prémiový pracovní nástroj</strong> a jsou ochotni investovat
+          do nejlepšího možného každodenního zážitku.
         </div>
       </section>
+
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/00uwiwERhM15aoADGVjjUUy-2_1.png"
+          alt="HP Spectre x360"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
 
       <hr class="divider" />
 
@@ -441,54 +499,65 @@
       <section>
         <h2>👍 Výhody &amp; nevýhody</h2>
         <p>
-          HP Essential je navržen pro <strong>lehké domácí použití</strong> —
-          zde jsou jeho silné stránky a omezení v tomto kontextu.
+          HP Spectre x360 míří na špičkovou kvalitu — zde jsou jeho silné
+          stránky a také několik omezení, která je dobré znát před koupí.
         </p>
 
         <div class="pros-cons-row">
           <div class="pros-col">
             <div class="pros-header">✔ Výhody</div>
             <ul class="pros-list">
-              <li>Velmi nízká cena — nejlevnější notebook HP na trhu</li>
-              <li>Připraven k použití ihned po vybalení s Windows 11</li>
-              <li>Lehký vzhledem ke své velikosti (cca 1,7 kg)</li>
-              <li>Pohodlný 15,6palcový Full HD displej pro sledování videí</li>
-              <li>Solidní výdrž baterie pro domácí použití (6 až 8 hodin)</li>
               <li>
-                Tichý — ventilátor je při běžné kancelářské práci nenápadný
+                Výjimečný design — zkosené hliníkové šasi s perfektním
+                zpracováním
               </li>
-              <li>Dostatečná konektivita: USB-A, USB-C, HDMI, audio jack</li>
-              <li>Ideální jako druhý počítač nebo záložní zařízení</li>
+              <li>
+                Dotykový OLED displej 2.8K — špičkové barvy, kontrast a jas
+              </li>
+              <li>
+                Odolný 360° pant — 4 režimy použití (notebook, tablet, stan,
+                prezentace)
+              </li>
+              <li>
+                Stylus HP součástí nebo volitelně — ideální pro poznámky a
+                kreslení
+              </li>
+              <li>Až 17 hodin výdrže baterie — jedna z nejlepších na trhu</li>
+              <li>Nejnovější procesor Intel Core Ultra s AI NPU</li>
+              <li>
+                Vysoce kvalitní zvuk Bang &amp; Olufsen — nejlepší audio v
+                nabídce HP
+              </li>
+              <li>FHD webkamera s fyzickou krytkou a potlačením šumu</li>
+              <li>Lehký na 14palcový notebook — pouze kolem 1,4 kg</li>
             </ul>
           </div>
 
           <div class="cons-col">
             <div class="cons-header">✘ Nevýhody</div>
             <ul class="cons-list">
-              <li>Základní procesor — pomalý při více spuštěných úlohách</li>
+              <li>Vysoká cena — nejdražší spotřebitelský notebook HP</li>
               <li>
-                Pouze 8 GB RAM — rychle nedostačující při práci v prohlížeči
+                Bez dedikované grafiky — nevhodné pro hry a náročnou 3D práci
               </li>
-              <li>Omezené úložiště u starších modelů (64 GB eMMC)</li>
               <li>
-                Plastové šasi — základní provedení, méně odolné proti nárazům
+                Omezená konektivita — 2× Thunderbolt 4 + 1 USB-A, chybí čtečka
+                SD karet
               </li>
-              <li>TN panel u některých modelů — horší pozorovací úhly</li>
-              <li>Žádná dedikovaná grafická karta — nevhodné pro hraní her</li>
-              <li>
-                Pouze 720p webkamera — nedostatečná kvalita pro profesionální
-                videohovory
-              </li>
-              <li>Riziko zpomalení v průběhu času bez možnosti upgradu</li>
+              <li>Maximálně 14 palců — není k dispozici větší varianta</li>
+              <li>RAM je připájená a nelze ji později rozšířit</li>
+              <li>Mírné zahřívání při dlouhodobé zátěži kvůli tenkému tělu</li>
+              <li>Dotykový OLED displej snadno zachytává otisky prstů</li>
+              <li>Předražený, pokud nevyužijete 360° pant nebo stylus</li>
             </ul>
           </div>
         </div>
 
         <div class="note">
-          💡 <strong>Domácí použití:</strong> pro prohlížení internetu, posílání
-          e-mailů, sledování seriálů nebo občasné videohovory je HP Essential
-          dostačující. Jakmile však vyžadujete vyšší výkon, rychle narazí na své
-          limity.
+          💡 <strong>Vhodná volba, pokud:</strong> hledáte ultra prémiový
+          Windows notebook pro práci, cestování a univerzální použití se
+          stylusem. Pokud nepotřebujete 360° pant, <strong>HP Envy 14</strong> s
+          OLED displejem nabízí velmi podobný zážitek za výrazně nižší cenu.
         </div>
       </section>
 
@@ -496,37 +565,38 @@
 
       <!-- PODŘADY -->
       <section>
-        <h2>📋 Hlavní verze řady</h2>
+        <h2>📋 Hlavní verze Spectre x360</h2>
 
         <div class="model-block">
-          <h3>HP Stream (starší generace)</h3>
+          <h3>HP Spectre x360 13,5 palce</h3>
           <p>
-            Předchůdce řady Essential, uvedený na trh v roce 2014 jako
-            konkurence Chromebooků. Velmi cenově dostupný, ale omezený úložištěm
-            32 nebo 64 GB eMMC (pomalá flash paměť) a 4 GB RAM. Byl dodáván s
-            předplatným Microsoft 365, které mělo kompenzovat omezené lokální
-            úložiště. Dnes je nahrazen novějšími modely HP 15.
+            Nejkompaktnější a nejlehčí model v celé řadě — ideální pro časté
+            cestovatele. Displej s poměrem stran 3:2 (vyšší než klasických 16:9)
+            je velmi pohodlný pro čtení dokumentů, prohlížení webu nebo práci s
+            tabulkami. Je o něco méně výkonný než 14palcová verze kvůli tepelným
+            omezením menšího šasi.
           </p>
         </div>
 
         <div class="model-block">
-          <h3>HP 15 / HP Essential 15</h3>
+          <h3>HP Spectre x360 14 palců</h3>
           <p>
-            Aktuální verze řady. Nabízí skutečný SSD disk o kapacitě 256 GB
-            (někdy 512 GB), moderní procesor AMD Ryzen 3 nebo Intel Core i3 a 8
-            GB RAM. Oproti starému modelu Stream je výrazně použitelnější a
-            zůstává nejdostupnějším řešením HP pro základní používání Windows v
-            domácnosti.
+            Nejoblíbenější a nejdoporučovanější verze. Kombinuje kvalitní 2.8K
+            OLED dotykový displej, nejnovější procesory Intel Core Ultra, výdrž
+            baterie až 17 hodin a hmotnost kolem 1,4 kg. Představuje nejlepší
+            rovnováhu mezi výkonem, výdrží a přenositelností v celé řadě.
           </p>
         </div>
 
         <div class="model-block">
-          <h3>HP Essential 14</h3>
+          <h3>HP Spectre x360 16 palců (předchozí generace)</h3>
           <p>
-            Varianta s 14palcovým displejem, kompaktnější a o něco lehčí.
-            Využívá stejné komponenty jako HP 15, ale v menším šasi — ideální
-            pro uživatele, kteří hledají prostorově úsporný počítač na malý stůl
-            nebo kompaktní pracovní místo.
+            HP dříve nabízelo 16palcovou verzi Spectre x360 v předchozích
+            generacích s volitelnou dedikovanou grafickou kartou NVIDIA. Tento
+            model již není součástí nabídky pro roky 2024–2025, protože HP se
+            zaměřilo na kompaktnější formáty 13,5 a 14 palců. Uživatelé
+            požadující velký prémiový displej jsou nyní směrováni na model Envy
+            16.
           </p>
         </div>
       </section>
@@ -535,18 +605,20 @@
 
       <!-- ZÁVĚR -->
       <section>
-        <h2>✅ Náš názor</h2>
+        <h2>✅ Náš verdikt</h2>
         <div class="conclusion">
           <p>
-            HP Essential plní svůj účel: nabídnout funkční notebook za co
-            nejnižší cenu. Je ideální jako první počítač pro dítě, záložní
-            zařízení nebo pro velmi občasné domácí použití.
+            HP Spectre x360 je jednoduše jeden z nejlepších Windows notebooků na
+            trhu. Jeho OLED displej, kvalita zpracování a univerzálnost z něj
+            dělají velmi těžko překonatelnou volbu pro každého, kdo hledá
+            prémiový ultrabook s Windows.
           </p>
           <p style="margin-top: 10px">
-            Pokud vám to však rozpočet dovolí, doporučujeme rovnou zvolit
-            <strong>HP Pavilion</strong>: za často jen mírně vyšší cenu získáte
-            výrazně rychlejší procesor, více paměti RAM a celkově lepší
-            uživatelský zážitek, který vydrží mnohem déle.
+            Je však nutné být upřímný: jeho vyšší cena je plně opodstatněná
+            pouze tehdy, pokud skutečně využijete 360° pant a dotykový displej.
+            Pokud používáte notebook pouze klasickým způsobem,
+            <strong>HP Envy 14 s OLED</strong> nabídne přibližně 90 % stejného
+            zážitku za výrazně nižší cenu.
           </p>
         </div>
       </section>

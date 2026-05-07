@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HP Spectre x360 — Product Presentation</title>
+    <title>Document</title>
     <style>
       * {
         box-sizing: border-box;
@@ -277,15 +277,37 @@
           font-size: 16px;
         }
 
-        .profile-grid,
+        /* .profile-grid,
         .profile-row,
         .profile-cell {
           display: block;
           width: 100%;
+        } */
+
+        .profile-grid {
+          display: table;
+          width: 100%;
         }
+        .profile-row {
+          display: table-row;
+        }
+        .profile-cell {
+          display: table-cell;
+          width: 100%;
+          font-size: 14px; /* Optionnel : réduire un peu la taille */
+          padding: 8px 10px; /* Optionnel : réduire le padding */
+        }
+
         .profile-cell:first-child {
           border-right: 1px solid #e0e0e0;
-          border-bottom: none;
+        }
+
+        .profile-header:first-child {
+          border-radius: 6px 0 0 0;
+        }
+
+        .profile-header:last-child {
+          border-radius: 0 6px 0 0;
         }
 
         .pros-cons-row,
@@ -309,71 +331,64 @@
   </head>
   <body>
     <div class="article">
-      <!-- Image HP Spectre x360 logo -->
+      <!-- Image HP ENVY logo -->
       <div style="text-align: center; margin-bottom: 30px">
         <img
-          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-logo.png"
-          alt="HP Spectre x360 Logo"
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-logo.jpg"
+          alt="HP Envy Logo"
           style="max-width: 240px; width: 100%; height: auto"
         />
       </div>
 
       <!-- HEADER -->
       <div class="article-header">
-        <div class="article-label">💻 HP laptops</div>
+        <div class="article-label">💻 HP Laptops</div>
         <h1 class="article-title">
-          HP Spectre x360 — HP’s ultra-premium flagship
+          HP Envy — Affordable premium for creatives and professionals
         </h1>
         <p class="article-intro">
-          The HP Spectre x360 is the most high-end laptop in the entire HP
-          consumer lineup. With its chamfered aluminum chassis, 2.8K or 4K OLED
-          touchscreen display, 360° hinge, and up to 17 hours of battery life,
-          it represents the very best HP has to offer. A direct competitor to
-          the Dell XPS, MacBook Pro, and Lenovo Yoga Slim, it reaches a level of
-          finish rarely seen in Windows devices.
+          The HP Envy is HP’s high-end consumer lineup. Positioned between the
+          Pavilion (mid-range) and the Spectre x360 (ultra-premium), the Envy
+          targets users who want a sleek, well-built, and powerful laptop
+          without paying a premium price. Aluminum design, high-quality display,
+          Bang &amp; Olufsen certified sound — the Envy is made for those who
+          don’t want to compromise on everyday experience.
         </p>
-      </div>
-
-      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
-        <img
-          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-spectre-x360-14-main.png"
-          alt="HP Spectre x360"
-          style="max-width: 380px; width: 100%; height: auto"
-        />
       </div>
 
       <hr class="divider" />
 
       <!-- PRESENTATION -->
       <section>
-        <h2>✨ Overview of the lineup</h2>
+        <h2>💎 Line overview</h2>
         <p>
-          The HP Spectre x360 sits at the <strong>top of the HP range</strong>,
-          above the Envy and Pavilion series. It is designed for users who want
-          the very best without compromise: refined design, top-quality display,
-          and strong performance in the thinnest possible chassis.
+          The HP Envy occupies the <strong>premium consumer segment</strong> in
+          HP’s lineup. It immediately stands out from the Pavilion with its
+          <strong>brushed aluminum chassis</strong>, which is more durable and
+          elegant, as well as the quality of its displays — available in OLED or
+          2K options depending on the model. It’s the HP laptop you choose when
+          you want something stylish on your desk.
         </p>
         <p>
-          Available in <strong>13.5-inch and 14-inch</strong> versions, the
-          Spectre x360 stands out with its
-          <strong>signature beveled edges</strong> in aluminum, its 360° hinge
-          allowing use in laptop, tablet, tent, or presentation mode, and its
-          OLED touchscreen as standard on recent configurations. The
-          rechargeable HP stylus is included or available as an option depending
-          on the model.
+          The Envy lineup is available in
+          <strong>13, 14, and 16 inches</strong>, with IPS Full HD, OLED 2.8K,
+          or 2K panels depending on configurations. Recent models feature Intel
+          Core Ultra or AMD Ryzen 7/9 8000 series processors, with optional
+          dedicated NVIDIA GeForce RTX 3050 or 4050 GPUs on 16-inch versions.
         </p>
         <p>
-          The latest generations feature
-          <strong>Intel Core Ultra</strong> processors with an integrated NPU
-          for Windows AI features (Copilot+). Build quality exceeds anything
-          else HP offers outside its professional EliteBook lineup.
+          The Envy is also available in a convertible version, the
+          <strong>Envy x360</strong>, featuring a 360° hinge and a touchscreen,
+          allowing it to switch from laptop mode to tablet mode. This version is
+          particularly popular among creatives and design students who use an HP
+          stylus.
         </p>
       </section>
 
       <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
         <img
-          src="https://www.pocitace24.cz/user/documents/upload/articles/SphinxInline-removebg.png"
-          alt="HP Spectre x360"
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-x360-laptop.jpg"
+          alt="HP Envy"
           style="max-width: 380px; width: 100%; height: auto"
         />
       </div>
@@ -382,94 +397,77 @@
 
       <!-- USER PROFILE -->
       <section>
-        <h2>👤 Who is the HP Spectre x360 for?</h2>
+        <h2>👤 Who is the HP Envy for?</h2>
         <p>
-          The Spectre x360 is a premium laptop designed for very specific user
-          profiles. It is not meant for everyone:
+          The Envy is a versatile laptop but geared toward demanding and
+          creative use cases. It is well suited for the following profiles:
         </p>
 
         <div class="profile-grid">
           <div class="profile-row">
-            <div class="profile-cell profile-header">✅ A good fit if…</div>
+            <div class="profile-cell profile-header">✅ Ideal for you if…</div>
             <div class="profile-cell profile-header">❌ Not ideal if…</div>
           </div>
-
           <div class="profile-row">
             <div class="profile-cell">
-              You want the best HP laptop with no compromise on quality
+              You do photo editing or graphic design
             </div>
             <div class="profile-cell">
-              You are on a limited budget — cheaper and better-value options
-              exist (Envy, Pavilion)
+              You play recent games at high settings (consider the OMEN)
             </div>
           </div>
-
           <div class="profile-row">
             <div class="profile-cell">
-              You work frequently on the go and want a lightweight, elegant
-              laptop
+              You work on creative projects: design, light video editing,
+              illustration
             </div>
             <div class="profile-cell">
-              You play video games — it has no dedicated gaming GPU
+              You need MIL-SPEC certified durability (consider the EliteBook)
             </div>
           </div>
-
           <div class="profile-row">
             <div class="profile-cell">
-              You regularly use a stylus for annotating, drawing, or signing
+              You want a high-quality display for streaming or work
             </div>
             <div class="profile-cell">
-              You need a large screen — it is only available in 13.5 and 14
-              inches
+              You’re looking for the lightest possible HP laptop (consider the
+              Spectre)
             </div>
           </div>
-
           <div class="profile-row">
             <div class="profile-cell">
-              You care about display quality — the 2.8K OLED panel is
-              outstanding
+              You appreciate refined design and aluminum finish
             </div>
             <div class="profile-cell">
-              You are looking for a mobile workstation for CAD or 3D work
-              (prefer a ZBook)
+              Your budget is tight — the Pavilion will be more suitable
             </div>
           </div>
-
           <div class="profile-row">
             <div class="profile-cell">
-              Executive, consultant, or entrepreneur who meets clients regularly
+              Remote work with frequent video calls and advanced office tasks
             </div>
             <div class="profile-cell">
-              You need many ports without adapters (limited connectivity)
+              You need multiple Thunderbolt 4 ports or full professional
+              connectivity
             </div>
           </div>
-
           <div class="profile-row">
             <div class="profile-cell">
-              You like using your laptop in tablet or tent mode
+              You are a student in design, architecture, or communication
             </div>
             <div class="profile-cell">
-              You prefer a traditional laptop without a touchscreen or 360°
-              hinge
+              You need a mobile workstation for CAD or 3D (consider the ZBook)
             </div>
           </div>
         </div>
 
         <div class="note">
-          💡 In short: the HP Spectre x360 is designed for users who see their
-          laptop as a
-          <strong>premium productivity tool</strong> and are willing to invest
-          in the best possible everyday experience.
+          💡 In summary: the HP Envy is the
+          <strong>best balance in HP’s lineup</strong> between design,
+          performance, and price. It suits both demanding remote workers and
+          creative students who want a laptop they can be proud of.
         </div>
       </section>
-
-      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
-        <img
-          src="https://www.pocitace24.cz/user/documents/upload/articles/00uwiwERhM15aoADGVjjUUy-2_1.png"
-          alt="HP Spectre x360"
-          style="max-width: 380px; width: 100%; height: auto"
-        />
-      </div>
 
       <hr class="divider" />
 
@@ -477,8 +475,9 @@
       <section>
         <h2>👍 Pros &amp; cons</h2>
         <p>
-          The HP Spectre x360 aims for excellence — here’s what it does
-          extremely well and the few limitations to be aware of before buying.
+          The HP Envy is designed for
+          <strong>creative and everyday professional use</strong> — here are its
+          strengths and limitations.
         </p>
 
         <div class="pros-cons-row">
@@ -486,104 +485,124 @@
             <div class="pros-header">✔ Pros</div>
             <ul class="pros-list">
               <li>
-                Exceptional design — chamfered aluminum chassis with flawless
-                finish
+                Brushed aluminum chassis — premium, sturdy, and elegant finish
+              </li>
+              <li>Optional OLED or 2K display — vibrant colors, deep blacks</li>
+              <li>
+                Bang &amp; Olufsen certified sound — audio quality above average
               </li>
               <li>
-                2.8K OLED touchscreen — top-tier colors, contrast, and
-                brightness
+                Solid performance for content creation and advanced productivity
+              </li>
+              <li>x360 version with touchscreen and HP pen compatibility</li>
+              <li>FHD webcam with built-in physical privacy shutter</li>
+              <li>
+                Good battery life: 8 to 12 hours depending on model and usage
               </li>
               <li>
-                Durable 360° hinge — 4 usage modes (laptop, tablet, tent,
-                presentation)
+                Full connectivity: USB-C (Thunderbolt), USB-A, HDMI, SD card
+                reader
               </li>
               <li>
-                HP stylus included or available — ideal for note-taking and
-                drawing
+                Dedicated GPU available on 16-inch models for graphic workloads
               </li>
-              <li>
-                Up to 17 hours of battery life — among the best on the market
-              </li>
-              <li>Latest Intel Core Ultra processor with integrated AI NPU</li>
-              <li>
-                High-quality Bang &amp; Olufsen audio — the best sound in the HP
-                lineup
-              </li>
-              <li>FHD webcam with privacy shutter and noise reduction</li>
-              <li>Lightweight for a 14-inch device — around 1.4 kg only</li>
             </ul>
           </div>
 
           <div class="cons-col">
             <div class="cons-header">✘ Cons</div>
             <ul class="cons-list">
-              <li>High price — the most expensive consumer HP laptop</li>
+              <li>Higher price than the Pavilion — you pay for quality</li>
               <li>
-                No dedicated GPU — not suitable for gaming or heavy 3D workloads
+                Noticeable heat under sustained load (video rendering,
+                multitasking)
               </li>
               <li>
-                Limited connectivity — 2× Thunderbolt 4 + 1 USB-A, no SD card
-                reader
+                Medium weight: 1.4 to 1.8 kg depending on model — not the
+                lightest ultrabook
               </li>
               <li>
-                Limited to 14-inch maximum — no larger screen option available
+                Limited dedicated GPU — not suitable for demanding gaming or
+                professional 3D work
               </li>
-              <li>RAM is soldered and not upgradable after purchase</li>
-              <li>Slight heat under sustained load despite thin chassis</li>
-              <li>OLED touchscreen can attract fingerprints easily</li>
+              <li>Soldered RAM on some models — no upgrade after purchase</li>
               <li>
-                Overpriced if you don’t use the 360° hinge or stylus features
+                No durability certification — less resistant to shocks or drops
               </li>
+              <li>
+                Noticeable fan noise under load — less silent than the Spectre
+              </li>
+              <li>No native RJ45 (Ethernet) port — requires an adapter</li>
             </ul>
           </div>
         </div>
 
         <div class="note">
-          💡 <strong>Best choice if:</strong> you’re looking for an
-          ultra-premium Windows laptop for work, travel, and versatile stylus
-          use. If you don’t need the 360° hinge, the
-          <strong>HP Envy 14</strong> with OLED option offers a very similar
-          experience at a significantly lower price.
+          💡 <strong>Creative and professional use:</strong> for photo editing
+          in Lightroom, creating polished presentations, light video editing, or
+          simply working in a café with a stylish laptop, the HP Envy is an
+          excellent choice. It is not designed for heavy gaming or very
+          demanding professional workloads.
         </div>
       </section>
+
+      <!-- Image HP ENVY -->
+      <div style="text-align: center; margin-top: 28px; margin-bottom: 30px">
+        <img
+          src="https://www.pocitace24.cz/user/documents/upload/articles/hp-envy-notebooky.jpg"
+          alt="HP Envy"
+          style="max-width: 380px; width: 100%; height: auto"
+        />
+      </div>
 
       <hr class="divider" />
 
       <!-- SUBSERIES -->
       <section>
-        <h2>📋 Main Spectre x360 versions</h2>
+        <h2>📋 Main versions of the lineup</h2>
 
         <div class="model-block">
-          <h3>HP Spectre x360 13.5-inch</h3>
+          <h3>HP Envy 14</h3>
           <p>
-            The most compact and lightweight model in the lineup — ideal for
-            frequent travelers. Its 3:2 aspect ratio display (taller than the
-            classic 16:9) is very comfortable for reading documents, browsing
-            the web, or working on spreadsheets. It is slightly less powerful
-            than the 14-inch version due to thermal constraints from its smaller
-            chassis.
+            The compact version of the lineup — 14 inches, lightweight (around
+            1.4 kg) and elegant. It features an IPS or 2.8K OLED display, Intel
+            Core Ultra or AMD Ryzen 7 processors, and one of the best battery
+            lives in the series. Ideal for mobile creatives who don’t want to
+            carry a large laptop.
           </p>
         </div>
 
         <div class="model-block">
-          <h3>HP Spectre x360 14-inch</h3>
+          <h3>HP Envy 16</h3>
           <p>
-            The most popular and recommended version. It combines a high-quality
-            2.8K OLED touchscreen, the latest Intel Core Ultra processors, up to
-            17 hours of battery life, and a weight of around 1.4 kg. It
-            represents the best balance in the lineup between performance,
-            battery life, and portability.
+            The large format of the lineup — 16 inches with a more comfortable
+            16:10 aspect ratio for productivity. It is the only model in the
+            range offering an optional dedicated GPU (NVIDIA GeForce RTX 3050 /
+            4050), making it a great choice for photo editing, video editing, or
+            graphic design. Slightly heavier (around 1.9 kg), but the larger
+            screen more than makes up for it.
           </p>
         </div>
 
         <div class="model-block">
-          <h3>HP Spectre x360 16-inch (previous generation)</h3>
+          <h3>HP Envy x360 (2-in-1)</h3>
           <p>
-            HP previously offered a 16-inch version of the Spectre x360 in
-            earlier generations, with an optional NVIDIA discrete GPU. This
-            model is no longer part of the 2024–2025 lineup, as HP has refocused
-            the Spectre series on compact 13.5- and 14-inch formats. Users
-            needing a large premium display are now directed toward the Envy 16.
+            The convertible version of the Envy, featuring a 360° hinge and an
+            OLED or IPS touchscreen. Compatible with the rechargeable HP pen for
+            note-taking or drawing directly on the screen. Available in 13.3 and
+            14-inch sizes. Slightly thicker than the clamshell version, but the
+            added versatility is a real advantage for creatives and students.
+          </p>
+        </div>
+
+        <div class="model-block">
+          <h3>HP Envy Move</h3>
+          <p>
+            An unusual model in the lineup: a portable all-in-one PC with a
+            built-in battery and a 23.8-inch display. It can be moved from room
+            to room without cables and used like a mobile desktop computer. A
+            unique device in HP’s range, designed for users who want a large
+            screen without the constraints of a fixed workstation.
           </p>
         </div>
       </section>
@@ -592,20 +611,20 @@
 
       <!-- CONCLUSION -->
       <section>
-        <h2>✅ Our verdict</h2>
+        <h2>✅ Our opinion</h2>
         <div class="conclusion">
           <p>
-            The HP Spectre x360 is simply one of the best Windows laptops
-            available on the market. Its OLED display, build quality, and
-            versatility make it a hard choice to beat for anyone looking for a
-            premium Windows ultrabook.
+            The HP Envy is the HP laptop that offers the best balance between
+            build quality, performance, and price. It perfectly fills the gap
+            between the overly plastic Pavilion and the overpriced Spectre —
+            exactly where most demanding users are.
           </p>
           <p style="margin-top: 10px">
-            However, it is important to be honest: its high price is fully
-            justified only if you actually make use of the 360° hinge and
-            touchscreen. If you use your laptop strictly in traditional mode,
-            the <strong>HP Envy 14 with OLED</strong> will deliver about 90% of
-            the experience for a much more reasonable budget.
+            If you’re hesitating between the Envy and the Spectre, ask yourself:
+            do you need the thinnest possible design and the highest-end display
+            quality? If yes, the Spectre is worth the extra cost. Otherwise, the
+            <strong>Envy 14 or 16 with OLED option</strong> will give you a very
+            similar experience for much less money.
           </p>
         </div>
       </section>

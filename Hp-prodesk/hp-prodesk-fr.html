@@ -324,15 +324,37 @@
           margin-bottom: 4px;
         }
 
-        .profile-grid,
+        /* .profile-grid,
         .profile-row,
         .profile-cell {
           display: block;
           width: 100%;
+        } */
+
+        .profile-grid {
+          display: table;
+          width: 100%;
         }
+        .profile-row {
+          display: table-row;
+        }
+        .profile-cell {
+          display: table-cell;
+          width: 100%;
+          font-size: 14px; /* Optionnel : réduire un peu la taille */
+          padding: 8px 10px; /* Optionnel : réduire le padding */
+        }
+
         .profile-cell:first-child {
           border-right: 1px solid #e0e0e0;
-          border-bottom: none;
+        }
+
+        .profile-header:first-child {
+          border-radius: 6px 0 0 0;
+        }
+
+        .profile-header:last-child {
+          border-radius: 0 6px 0 0;
         }
 
         .pros-cons-row,

@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HP Essential - Presentation of the Notebook</title>
+    <title>HP Essential — Présentation de la gamme</title>
     <style>
       * {
         box-sizing: border-box;
@@ -277,15 +277,37 @@
           font-size: 16px;
         }
 
-        .profile-grid,
+        /* .profile-grid,
         .profile-row,
         .profile-cell {
           display: block;
           width: 100%;
+        } */
+
+        .profile-grid {
+          display: table;
+          width: 100%;
         }
+        .profile-row {
+          display: table-row;
+        }
+        .profile-cell {
+          display: table-cell;
+          width: 100%;
+          font-size: 14px; /* Optionnel : réduire un peu la taille */
+          padding: 8px 10px; /* Optionnel : réduire le padding */
+        }
+
         .profile-cell:first-child {
           border-right: 1px solid #e0e0e0;
-          border-bottom: none;
+        }
+
+        .profile-header:first-child {
+          border-radius: 6px 0 0 0;
+        }
+
+        .profile-header:last-child {
+          border-radius: 0 6px 0 0;
         }
 
         .pros-cons-row,
@@ -318,44 +340,44 @@
         />
       </div>
 
-      <!-- HEADER -->
+      <!-- HLAVIČKA -->
       <div class="article-header">
-        <div class="article-label">💻 HP Laptops</div>
+        <div class="article-label">💻 Notebooky HP</div>
         <h1 class="article-title">
-          HP Essential — The affordable laptop to get started
+          HP Essential — Cenově dostupný notebook pro začátek
         </h1>
         <p class="article-intro">
-          Formerly known as HP Stream and HP 15, the HP Essential range is HP’s
-          entry-level offering. It is designed for people who need a simple,
-          low-cost, ready-to-use laptop, without specific requirements in terms
-          of performance or design.
+          Dříve známá pod názvy HP Stream a HP 15, řada HP Essential představuje
+          základní nabídku společnosti HP. Je určena pro uživatele, kteří
+          potřebují jednoduchý, levný a ihned použitelný notebook, bez
+          zvláštních požadavků na výkon nebo design.
         </p>
       </div>
 
       <hr class="divider" />
 
-      <!-- PRESENTATION -->
+      <!-- PŘEDSTAVENÍ -->
       <section>
-        <h2>🏠 Range overview</h2>
+        <h2>🏠 Přehled řady</h2>
         <p>
-          The HP Essential sits at the <strong>base of HP’s lineup</strong>. It
-          is positioned below the Pavilion (mid-range) and represents the most
-          affordable entry point into the brand’s Windows laptops. It is the
-          default choice for those primarily looking for a low price and
-          hassle-free use.
+          HP Essential se nachází na
+          <strong>základní úrovni nabídky HP</strong>. Je umístěn pod řadou
+          Pavilion (střední třída) a představuje nejlevnější vstup do světa
+          notebooků HP s Windows. Je to výchozí volba pro ty, kteří hledají
+          především nízkou cenu a jednoduché používání.
         </p>
         <p>
-          The range is mainly available in <strong>15.6 inches</strong>, with
-          some 14-inch models. Displays are TN or IPS panels depending on the
-          version, with Full HD resolution (1920×1080). The chassis is entirely
-          plastic, simple, without fancy colors — usually dark gray or black.
+          Tato řada je dostupná především ve velikosti
+          <strong>15,6 palce</strong>, s některými modely o velikosti 14 palců.
+          Displeje jsou typu TN nebo IPS podle verze, s rozlišením Full HD
+          (1920×1080). Konstrukce je kompletně plastová, jednoduchá, bez
+          výrazných barev — obvykle tmavě šedá nebo černá.
         </p>
         <p>
-          These machines are equipped with entry-level processors (Intel
-          Celeron, Pentium Silver or AMD Athlon / Ryzen 3) and limited storage
-          (64 GB eMMC on older HP Stream models, 256 GB SSD on recent HP 15
-          models). They are designed for light, home use, mostly plugged in at
-          home.
+          Tyto počítače jsou vybaveny základními procesory (Intel Celeron,
+          Pentium Silver nebo AMD Athlon / Ryzen 3) a omezeným úložištěm (64 GB
+          eMMC u starších modelů HP Stream, 256 GB SSD u novějších HP 15). Jsou
+          určeny pro nenáročné domácí použití, většinou připojené k napájení.
         </p>
       </section>
 
@@ -369,184 +391,184 @@
 
       <hr class="divider" />
 
-      <!-- USER PROFILE -->
+      <!-- PROFIL UŽIVATELE -->
       <section>
-        <h2>👤 Who is the HP Essential for?</h2>
+        <h2>👤 Pro koho je HP Essential určen?</h2>
         <p>
-          The HP Essential is designed for very simple uses. It suits certain
-          profiles well and others much less:
+          HP Essential je navržen pro velmi jednoduché použití. Některým
+          uživatelům vyhovuje dobře, jiným mnohem méně:
         </p>
 
         <div class="profile-grid">
           <div class="profile-row">
-            <div class="profile-cell profile-header">✅ Good fit if…</div>
-            <div class="profile-cell profile-header">❌ Not ideal if…</div>
-          </div>
-          <div class="profile-row">
-            <div class="profile-cell">
-              You are looking for the lowest possible price
+            <div class="profile-cell profile-header">
+              ✅ Vhodné pro vás, pokud…
             </div>
-            <div class="profile-cell">
-              You use demanding software (Photoshop, video editing…)
+            <div class="profile-cell profile-header">
+              ❌ Není ideální, pokud…
             </div>
           </div>
           <div class="profile-row">
-            <div class="profile-cell">Basic web browsing and email</div>
+            <div class="profile-cell">Hledáte co nejnižší cenu</div>
             <div class="profile-cell">
-              You need to open many tabs or applications at the same time
+              Používáte náročné programy (Photoshop, střih videa…)
             </div>
           </div>
           <div class="profile-row">
+            <div class="profile-cell">Základní prohlížení webu a e-mail</div>
             <div class="profile-cell">
-              Watching YouTube or Netflix videos in Full HD
-            </div>
-            <div class="profile-cell">
-              You play video games, even light ones
-            </div>
-          </div>
-          <div class="profile-row">
-            <div class="profile-cell">Occasional use at home</div>
-            <div class="profile-cell">
-              You need to store a lot of files locally
+              Potřebujete mít otevřeno mnoho karet nebo aplikací současně
             </div>
           </div>
           <div class="profile-row">
             <div class="profile-cell">
-              First computer for a senior or a child
+              Sledování YouTube nebo Netflixu ve Full HD
             </div>
+            <div class="profile-cell">Hrajete videohry, i nenáročné</div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">Příležitostné použití doma</div>
             <div class="profile-cell">
-              You regularly work with large Word or Excel files
+              Potřebujete ukládat velké množství souborů lokálně
+            </div>
+          </div>
+          <div class="profile-row">
+            <div class="profile-cell">První počítač pro seniora nebo dítě</div>
+            <div class="profile-cell">
+              Pravidelně pracujete s velkými soubory ve Wordu nebo Excelu
             </div>
           </div>
           <div class="profile-row">
             <div class="profile-cell">
-              Basic video conferencing (Teams, Zoom)
+              Základní videokonference (Teams, Zoom)
             </div>
             <div class="profile-cell">
-              You want a laptop that will last more than 4–5 years without
-              slowing down
+              Chcete notebook, který vydrží více než 4–5 let bez zpomalení
             </div>
           </div>
         </div>
 
         <div class="note">
-          💡 In summary: the HP Essential is made for
-          <strong>very basic</strong> use. If you think you might need more in
-          the future, it's better to invest directly in a Pavilion — it will
-          save you from finding it too slow in 2 years.
+          💡 Shrnutí: HP Essential je určen pro
+          <strong>velmi základní</strong> použití. Pokud si myslíte, že budete v
+          budoucnu potřebovat více výkonu, je lepší investovat rovnou do řady
+          Pavilion — vyhnete se tomu, že vám bude za 2 roky připadat příliš
+          pomalý.
         </div>
       </section>
 
       <hr class="divider" />
 
-      <!-- PROS & CONS -->
+      <!-- VÝHODY A NEVÝHODY -->
       <section>
-        <h2>👍 Pros &amp; Cons</h2>
+        <h2>👍 Výhody &amp; nevýhody</h2>
         <p>
-          The HP Essential is designed for <strong>light home use</strong> —
-          here are its strengths and limitations in this context.
+          HP Essential je navržen pro <strong>lehké domácí použití</strong> —
+          zde jsou jeho silné stránky a omezení v tomto kontextu.
         </p>
 
         <div class="pros-cons-row">
           <div class="pros-col">
-            <div class="pros-header">✔ Pros</div>
+            <div class="pros-header">✔ Výhody</div>
             <ul class="pros-list">
-              <li>Very low price — the cheapest HP laptop on the market</li>
-              <li>Ready to use out of the box with Windows 11</li>
-              <li>Lightweight for its size (around 1.7 kg)</li>
-              <li>Comfortable 15.6-inch Full HD display for watching videos</li>
-              <li>Decent battery life for home use (6 to 8 hours)</li>
-              <li>Quiet — discreet fan during light office tasks</li>
-              <li>Enough connectivity: USB-A, USB-C, HDMI, audio jack</li>
-              <li>Ideal as a secondary computer or backup machine</li>
+              <li>Velmi nízká cena — nejlevnější notebook HP na trhu</li>
+              <li>Připraven k použití ihned po vybalení s Windows 11</li>
+              <li>Lehký vzhledem ke své velikosti (cca 1,7 kg)</li>
+              <li>Pohodlný 15,6palcový Full HD displej pro sledování videí</li>
+              <li>Solidní výdrž baterie pro domácí použití (6 až 8 hodin)</li>
+              <li>
+                Tichý — ventilátor je při běžné kancelářské práci nenápadný
+              </li>
+              <li>Dostatečná konektivita: USB-A, USB-C, HDMI, audio jack</li>
+              <li>Ideální jako druhý počítač nebo záložní zařízení</li>
             </ul>
           </div>
 
           <div class="cons-col">
-            <div class="cons-header">✘ Cons</div>
+            <div class="cons-header">✘ Nevýhody</div>
             <ul class="cons-list">
+              <li>Základní procesor — pomalý při více spuštěných úlohách</li>
               <li>
-                Entry-level processor — slow as soon as multiple tasks pile up
+                Pouze 8 GB RAM — rychle nedostačující při práci v prohlížeči
               </li>
-              <li>Only 8 GB of RAM — quickly limiting with a browser open</li>
-              <li>Limited storage on older models (64 GB eMMC)</li>
+              <li>Omezené úložiště u starších modelů (64 GB eMMC)</li>
               <li>
-                All-plastic chassis — basic finish, not very shock-resistant
+                Plastové šasi — základní provedení, méně odolné proti nárazům
               </li>
-              <li>TN panel on some models — poor viewing angles</li>
-              <li>No dedicated graphics card — not suitable for gaming</li>
+              <li>TN panel u některých modelů — horší pozorovací úhly</li>
+              <li>Žádná dedikovaná grafická karta — nevhodné pro hraní her</li>
               <li>
-                720p webcam only — insufficient quality for professional video
-                calls
+                Pouze 720p webkamera — nedostatečná kvalita pro profesionální
+                videohovory
               </li>
-              <li>Risk of slowdowns over time without upgrade options</li>
+              <li>Riziko zpomalení v průběhu času bez možnosti upgradu</li>
             </ul>
           </div>
         </div>
 
         <div class="note">
-          💡 <strong>Home use:</strong> for browsing the internet, sending
-          emails, watching series, or making occasional video calls, the HP
-          Essential is sufficient. However, it quickly shows its limits when
-          more performance is required.
+          💡 <strong>Domácí použití:</strong> pro prohlížení internetu, posílání
+          e-mailů, sledování seriálů nebo občasné videohovory je HP Essential
+          dostačující. Jakmile však vyžadujete vyšší výkon, rychle narazí na své
+          limity.
         </div>
       </section>
 
       <hr class="divider" />
 
-      <!-- SUB-SERIES -->
+      <!-- PODŘADY -->
       <section>
-        <h2>📋 Main versions of the range</h2>
+        <h2>📋 Hlavní verze řady</h2>
 
         <div class="model-block">
-          <h3>HP Stream (older generation)</h3>
+          <h3>HP Stream (starší generace)</h3>
           <p>
-            The predecessor of the Essential range, launched in 2014 to compete
-            with Chromebooks. Very affordable but limited by its 32 or 64 GB
-            eMMC storage (slow flash memory) and 4 GB of RAM. It came with a
-            Microsoft 365 subscription to compensate for the limited local
-            storage. Now replaced by more recent HP 15 models.
+            Předchůdce řady Essential, uvedený na trh v roce 2014 jako
+            konkurence Chromebooků. Velmi cenově dostupný, ale omezený úložištěm
+            32 nebo 64 GB eMMC (pomalá flash paměť) a 4 GB RAM. Byl dodáván s
+            předplatným Microsoft 365, které mělo kompenzovat omezené lokální
+            úložiště. Dnes je nahrazen novějšími modely HP 15.
           </p>
         </div>
 
         <div class="model-block">
           <h3>HP 15 / HP Essential 15</h3>
           <p>
-            The current version of the range. It offers a real 256 GB SSD
-            (sometimes 512 GB), a recent AMD Ryzen 3 or Intel Core i3 processor,
-            and 8 GB of RAM. Much more usable than the old Stream, it remains
-            HP’s most affordable solution for basic Windows use at home.
+            Aktuální verze řady. Nabízí skutečný SSD disk o kapacitě 256 GB
+            (někdy 512 GB), moderní procesor AMD Ryzen 3 nebo Intel Core i3 a 8
+            GB RAM. Oproti starému modelu Stream je výrazně použitelnější a
+            zůstává nejdostupnějším řešením HP pro základní používání Windows v
+            domácnosti.
           </p>
         </div>
 
         <div class="model-block">
           <h3>HP Essential 14</h3>
           <p>
-            The 14-inch format, more compact and slightly lighter. It uses the
-            same components as the HP 15, but in a smaller chassis — ideal for
-            people looking for a space-saving computer to place on a small table
-            or compact desk.
+            Varianta s 14palcovým displejem, kompaktnější a o něco lehčí.
+            Využívá stejné komponenty jako HP 15, ale v menším šasi — ideální
+            pro uživatele, kteří hledají prostorově úsporný počítač na malý stůl
+            nebo kompaktní pracovní místo.
           </p>
         </div>
       </section>
 
       <hr class="divider" />
 
-      <!-- CONCLUSION -->
+      <!-- ZÁVĚR -->
       <section>
-        <h2>✅ Our opinion</h2>
+        <h2>✅ Náš názor</h2>
         <div class="conclusion">
           <p>
-            The HP Essential fulfills its purpose: offering a functional laptop
-            at the lowest possible price. It is perfectly suited as a first
-            computer for a child, a backup machine, or for very occasional home
-            use.
+            HP Essential plní svůj účel: nabídnout funkční notebook za co
+            nejnižší cenu. Je ideální jako první počítač pro dítě, záložní
+            zařízení nebo pro velmi občasné domácí použití.
           </p>
           <p style="margin-top: 10px">
-            However, if your budget allows it, we recommend going directly for
-            the <strong>HP Pavilion</strong>: for a often modest price
-            difference, you get a significantly faster processor, more RAM, and
-            a much better overall experience that will last longer.
+            Pokud vám to však rozpočet dovolí, doporučujeme rovnou zvolit
+            <strong>HP Pavilion</strong>: za často jen mírně vyšší cenu získáte
+            výrazně rychlejší procesor, více paměti RAM a celkově lepší
+            uživatelský zážitek, který vydrží mnohem déle.
           </p>
         </div>
       </section>
