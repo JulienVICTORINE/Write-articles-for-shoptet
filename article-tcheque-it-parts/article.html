@@ -1,0 +1,924 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --text: #222;
+        --white: #ffffff;
+        --border: #dde4f0;
+        --red: #d1214c;
+        --gris: #ececed;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      body {
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      /* ── IMAGE ── */
+      .img-container {
+        margin: 24px auto;
+        max-width: 860px;
+        padding: 0 20px;
+      }
+
+      .img-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Tous les paragraphes */
+      .paragraph-text {
+        text-align: justify;
+        text-justify: inter-word;
+        margin-bottom: 16px;
+      }
+
+      /* ── LAYOUT ── */
+      .container {
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* ── INTRO ── */
+      .intro {
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        padding: 48px 24px;
+      }
+      .intro .container p {
+        font-size: 16px;
+        color: var(--text);
+        max-width: 720px;
+      }
+      .intro .container p a {
+        color: var(--red);
+        font-weight: 600;
+        text-decoration: none;
+        border-bottom: 2px solid var(--gris);
+        transition: border-color 0.2s;
+      }
+      .intro .container p a:hover {
+        border-color: var(--red);
+      }
+
+      /* ── DEFINITION BOX ── */
+      .definition-box {
+        background: var(--gris);
+        border-left: 4px solid var(--red);
+        border-radius: 0 12px 12px 0;
+        padding: 24px 28px;
+        margin: 36px 0;
+      }
+      .definition-box h3 {
+        font-size: 18px;
+        color: var(--text);
+        margin-bottom: 10px;
+      }
+      .definition-box p {
+        color: var(--text);
+        font-size: 16px;
+      }
+
+      /* ── ARTICLE BODY ── */
+      .article-body {
+        padding: 56px 24px;
+      }
+
+      /* ── SECTION ── */
+      .section {
+        margin-bottom: 64px;
+      }
+      .section-header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+      .section-icon {
+        width: 48px;
+        height: 48px;
+        background: var(--red);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .section-icon .section-icon-glyph {
+        color: var(--white);
+        font-size: 24px;
+        line-height: 1;
+      }
+      .section h2 {
+        font-size: clamp(20px, 3vw, 28px);
+        font-weight: 700;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .section p {
+        color: var(--text);
+        margin-bottom: 16px;
+        font-size: 16px;
+      }
+      .section p:last-child {
+        margin-bottom: 0;
+      }
+
+      /* ── COMPARISON TABLE ── */
+      .compare-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(21, 101, 192, 0.08);
+        margin: 28px 0;
+        font-size: 16px;
+      }
+      .compare-table thead tr {
+        background: var(--red);
+        color: white;
+      }
+      .compare-table thead th {
+        padding: 14px 18px;
+        font-weight: 600;
+        text-align: left;
+        letter-spacing: 0.3px;
+      }
+      .compare-table thead th:nth-child(1),
+      .compare-table tbody td:nth-child(1) {
+        width: 30%;
+      }
+      .compare-table thead th:nth-child(2),
+      .compare-table tbody td:nth-child(2) {
+        width: 35%;
+      }
+      .compare-table thead th:nth-child(3),
+      .compare-table tbody td:nth-child(3) {
+        width: 35%;
+      }
+      .compare-table tbody tr:nth-child(odd) {
+        background: var(--white);
+      }
+      .compare-table tbody tr:nth-child(even) {
+        background: var(--gris);
+      }
+      .compare-table tbody td {
+        padding: 13px 18px;
+        color: var(--text);
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+        line-height: 1.5;
+      }
+      .compare-table tbody td:first-child {
+        font-weight: 600;
+        color: var(--text);
+      }
+      .badge {
+        display: inline-block;
+        padding: 2px 10px;
+        border-radius: 30px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+      .badge-green {
+        background: var(--green-light);
+        color: var(--green);
+      }
+      .badge-blue {
+        background: var(--gris);
+        color: var(--blue-dark);
+      }
+      .badge-gold {
+        background: #fff8e1;
+        color: #e65100;
+      }
+
+      /* ── STAT CARDS ── */
+      .stat-row {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+        gap: 16px;
+        margin: 28px 0;
+      }
+      .stat-card {
+        background: var(--white);
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        padding: 22px 18px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      .stat-card .stat-num {
+        font-size: 34px;
+        font-weight: 900;
+        color: var(--red);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+      .stat-card .stat-label {
+        font-size: 16px;
+        color: var(--text);
+        font-weight: 500;
+      }
+
+      /* ── HIGHLIGHT BOX ── */
+      .highlight-box {
+        background: var(--gris);
+        border-radius: 16px;
+        padding: 28px 32px;
+        color: #222;
+        margin: 28px 0;
+      }
+      .highlight-box h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .highlight-box p {
+        color: rgba(34, 34, 34, 0.88);
+        font-size: 16px;
+        margin-bottom: 0;
+      }
+
+      /* ── CHECKLIST ── */
+      .checklist {
+        list-style: none;
+        padding: 0;
+        margin: 20px 0;
+      }
+      .checklist li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+        color: var(--text);
+        font-size: 16px;
+      }
+      .checklist li:last-child {
+        border-bottom: none;
+      }
+      .checklist li::before {
+        content: "✔";
+        width: 22px;
+        height: 22px;
+        background: var(--gris);
+        color: var(--green);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: 700;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      /* ── ECO BOX ── */
+      .eco-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+        margin: 24px 0;
+      }
+      .eco-card {
+        background: var(--gris);
+        border-radius: 12px;
+        padding: 18px 16px;
+        border-left: 3px solid var(--red);
+      }
+      .eco-card .eco-val {
+        font-size: 22px;
+        color: var(--text);
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .eco-card .eco-desc {
+        font-size: 16px;
+        color: var(--text);
+      }
+
+      /* ── CTA ── */
+      .cta-section {
+        background: var(--gris);
+        padding: 32px 20px 48px;
+        text-align: center;
+        margin-bottom: 48px;
+      }
+
+      .cta-section .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cta-section h2 {
+        font-size: clamp(22px, 4vw, 34px);
+        color: var(--text);
+        margin-bottom: 12px;
+        text-align: center;
+      }
+      .cta-section p {
+        color: rgba(34, 34, 34, 0.8);
+        font-size: 16px;
+        max-width: 600px;
+        margin: 0 auto 24px;
+        text-align: center !important;
+      }
+      .cta-btn {
+        display: inline-block;
+        background: var(--red);
+        color: var(--white);
+        font-weight: 700;
+        font-size: 16px;
+        padding: 14px 34px;
+        border-radius: 50px;
+        text-decoration: none;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        letter-spacing: 0.3px;
+      }
+      .cta-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(249, 168, 37, 0.4);
+      }
+
+      .cta-text {
+        text-align: center !important;
+        color: rgba(34, 34, 34, 0.8) !important;
+      }
+
+      /* ── DIVIDER ── */
+      .divider {
+        border: none;
+        border-top: 2px solid var(--border);
+        margin: 48px 0;
+      }
+
+      /* ── VERDICT ── */
+      .verdict-card {
+        background: var(--white);
+        border: 2px solid var(--red);
+        border-radius: 16px;
+        padding: 32px;
+        margin-top: 28px;
+      }
+      .verdict-card h3 {
+        font-size: 22px;
+        color: var(--text);
+        margin-bottom: 14px;
+      }
+      .verdict-card p {
+        color: var(--text);
+        font-size: 15px;
+      }
+
+      /* ── RESPONSIVE ── */
+      @media (max-width: 600px) {
+        .compare-table {
+          font-size: 16px;
+        }
+        .compare-table thead th,
+        .compare-table tbody td {
+          padding: 10px 12px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- INTRO -->
+    <section class="intro">
+      <div class="container">
+        <p class="paragraph-text">
+          Ať už vybavujete domácí kancelář, rozšiřujete vybavení rostoucí firmy,
+          nebo prostě jen chcete vylepšit svůj osobní počítač, jedna otázka se
+          stále vrací:
+          <strong>máte si pořídit zcela nový notebook, nebo repasovaný?</strong>
+          Tento průvodce vám pomůže zorientovat se – zabývá se cenou, výkonem,
+          kvalitou, životností, dopadem na životní prostředí a dalšími aspekty
+          –, abyste mohli učinit jistě a informovaně. Hledáte prémiové
+          repasované počítače v České republice? Navštivte
+          <a
+            href="https://pocitace24.cz"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Počítače24.cz</a
+          >
+          — specialisty na vysoce kvalitní repasované notebooky a stolní
+          počítače.
+        </p>
+        <div class="img-container">
+          <img
+            src="https://cdn.myshoptet.com/usr/www.it-parts.cz/user/documents/upload/servis/refurb-laptop.jpg"
+            alt="refurb-laptop"
+          />
+        </div>
+        <div class="definition-box">
+          <h3>🔍 Co přesně je to repasovaný počítač?</h3>
+          <p class="paragraph-text">
+            Repasovaný počítač je zařízení z druhé ruky, které bylo odborně
+            zkontrolováno, v případě potřeby opraveno, vyčištěno, otestováno a
+            certifikováno tak, aby fungovalo jako nové. Nejedná se
+            <em>o</em> pouhý prodej z druhé ruky – renomovaní renovátoři
+            vyměňují opotřebované součásti, aktualizují firmware, bezpečně mažou
+            data a každý počítač před prodejem podrobuje přísným zátěžovým
+            testům. Výsledkem je počítač, který funguje spolehlivě a často je na
+            něj poskytována víceletá záruka.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="article-body">
+      <div class="container">
+        <!-- ── 1. COST ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">€</span>
+            </div>
+            <h2>Cena: Renovované produkty vítězí – s velkým náskokem</h2>
+          </div>
+          <p class="paragraph-text">
+            Cena je nejviditelnějším a nejlépe měřitelným rozdílem. Renovované
+            notebooky a stolní počítače stojí trvale o
+            <strong>30 % až 50 % méně</strong> než srovnatelné nové modely –
+            tuto úsporu potvrzuje výzkum společnosti International Data
+            Corporation (IDC) zaměřený na nákupy v oblasti IT. Pro firmy
+            spravující velké flotily zařízení se tento rozdíl přímo promítá do
+            uvolnění rozpočtu pro jiné priority.
+          </p>
+          <p class="paragraph-text">
+            Úspora je ještě větší, když zohledníte poměr výkonu k ceně.
+            Renovovaný počítač business třídy (například Dell Latitude, HP
+            EliteBook nebo Lenovo ThinkPad) s rychlým procesorem, SSD úložištěm
+            a 16 GB RAM lze pořídit za cenu nového levného spotřebitelského
+            notebooku – často plastového Aceru nebo základního modelu Asusu s
+            pomalejším úložištěm a kratší životností. Renovátoři dbající na
+            kvalitu nemají na skladě neopravitelné modely nižší třídy. Každé
+            zařízení na regálu stojí za koupi.
+          </p>
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-num">30–50 %</div>
+              <div class="stat-label">
+                Průměrná úspora nákladů na IT ve srovnání s novým zařízením
+                (IDC)
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">5 let</div>
+              <div class="stat-label">
+                Záruka poskytovaná prémiovými renovátory
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">0 €</div>
+              <div class="stat-label">
+                Rozdíl ve výkonu při každodenních úkolech
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ── 2. LAPTOPS vs DESKTOPS ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">💻</span>
+            </div>
+            <h2>Notebooky vs. stolní počítače: Který z nich si vybrat?</h2>
+          </div>
+          <p class="paragraph-text">
+            Než se pustíme hlouběji do debaty o tom, zda je lepší koupit nový
+            nebo repasovaný počítač, je dobré vyřešit otázku, zda zvolit
+            notebook, nebo stolní počítač, protože správná volba typu zařízení
+            ovlivňuje vše ostatní.
+          </p>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Faktor</th>
+                <th>💻 Notebook</th>
+                <th>🖥️ Stolní počítač</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Přenositelnost</td>
+                <td>
+                  <span class="badge badge-green">Vynikající</span> — funguje
+                  kdekoli
+                </td>
+                <td>Vázáno na jedno místo</td>
+              </tr>
+              <tr>
+                <td>Poměr cena/výkon</td>
+                <td>Dobrá</td>
+                <td>
+                  <span class="badge badge-green">Vynikající</span> — více
+                  výkonu za €
+                </td>
+              </tr>
+              <tr>
+                <td>Možnosti rozšíření</td>
+                <td>Omezené (RAM, SSD u některých modelů)</td>
+                <td>
+                  <span class="badge badge-green">Vysoké</span> — CPU, GPU, RAM,
+                  úložiště
+                </td>
+              </tr>
+              <tr>
+                <td>Velikost obrazovky</td>
+                <td>13–17" vestavěný</td>
+                <td>
+                  <span class="badge badge-green">Neomezená</span> — jakýkoli
+                  externí monitor
+                </td>
+              </tr>
+              <tr>
+                <td>Životnost baterie</td>
+                <td><span class="badge badge-green">Vestavěná</span></td>
+                <td>Vyžaduje napájení ze sítě</td>
+              </tr>
+              <tr>
+                <td>Čistý výkon</td>
+                <td>Dobrý — ideální pro kancelářskou a kreativní práci</td>
+                <td>
+                  <span class="badge badge-green">Vynikající</span> pro náročné
+                  úlohy
+                </td>
+              </tr>
+              <tr>
+                <td>Hodnota repasovaného zařízení</td>
+                <td><span class="badge badge-green">Vynikající</span></td>
+                <td><span class="badge badge-green">Vynikající</span></td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="paragraph-text">
+            <strong>Závěr:</strong> Pokud cestujete, pracujete z různých míst
+            nebo prostě oceníte flexibilitu, je notebook jasnou volbou. Pokud
+            váš počítač zůstává na stole a potřebujete maximální výkon nebo
+            plánujete spouštět softwarové aplikace náročné na zdroje, repasovaný
+            stolní počítač vám za stejnou investici nabídne mnohem větší výkon.
+            Na
+            <a
+              href="https://pocitace24.cz"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="color: var(--blue); font-weight: 600"
+              >Počítače24.cz</a
+            >
+            najdete kvalitní nabídku v obou kategoriích.
+          </p>
+        </section>
+        <hr class="divider" />
+        <!-- ── 3. QUALITY & PERFORMANCE ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">✅</span>
+            </div>
+            <h2>Kvalita a výkon: Blíže než si myslíte</h2>
+          </div>
+          <p class="paragraph-text">
+            Trvale přetrvává mýtus, že „renovovaný“ znamená „horší“. Skutečnost
+            je však složitější. Špičkový repasovaný firemní notebook — Dell
+            Latitude, HP EliteBook, Lenovo ThinkPad — byl původně navržen tak,
+            aby <strong>splňoval standardy odolnosti vojenské třídy</strong>, a
+            vyroben tak, aby vydržel 8–10 hodin při náročném firemním vytížení.
+            Mnoho spotřebitelských notebooků prodávaných dnes jako nových je
+            vyrobeno s nižšími specifikacemi a z levnějších plastů.
+          </p>
+          <p class="paragraph-text">
+            Klíčovou proměnnou není rozlišení mezi novým a repasovaným – je to
+            <strong>kvalita repasujícího podniku</strong> a
+            <strong>kvalita původního zařízení</strong>. Renomovaní repasující
+            podniky přijímají pouze modely business třídy od zavedených značek.
+            Nikdy nemají na skladě základní spotřebitelské stroje, které nelze
+            smysluplně obnovit. Každý počítač prochází kontrolou skříně,
+            klávesnice, obrazovky, portů, stavu baterie a vnitřních komponent.
+            Vadné díly jsou vyměněny. Hotový počítač je poté před odesláním
+            podroben zátěžovým testům.
+          </p>
+          <ul class="checklist">
+            <li>
+              Profesionální čištění – zevnitř i zvenku, včetně ventilátoru a
+              chladiče
+            </li>
+            <li>
+              Kompletní diagnostika hardwaru: procesor, RAM, úložiště, grafická
+              karta, porty, bezdrátové připojení, webová kamera
+            </li>
+            <li>
+              Upgrade nebo výměna SSD – výrazně rychlejší než staré pevné disky
+            </li>
+            <li>
+              Posouzení stavu baterie — výměna v případě, že je pod přijatelnou
+              hranicí
+            </li>
+            <li>
+              Nová instalace operačního systému — bezpečná, čistá, aktuální
+            </li>
+            <li>
+              Několikahodinový zátěžový test před schválením zařízení k prodeji
+            </li>
+            <li>
+              Hodnocení vzhledu — kupující přesně vědí, jaký stav mohou očekávat
+            </li>
+          </ul>
+          <div class="highlight-box">
+            <h4>
+              Proč neprodáváme základní modely značek Acer, Asus ani podobné
+              levné modely
+            </h4>
+            <p class="paragraph-text">
+              Levné notebooky pro běžné spotřebitele jsou navrženy s kratší
+              životností, mají proprietární konektory a materiály šasi, které se
+              rychle opotřebovávají. Mnohé z nich nelze smysluplně opravit, když
+              dojde k poruše. Na <strong>Počítače24.cz</strong> je kvalita
+              nekompromisní — náš katalog se zaměřuje výhradně na stroje
+              business třídy od společností Dell, HP a Lenovo, které jsou
+              vyrobeny tak, aby vydržely, snadno se opravovaly a poskytovaly
+              skutečnou hodnotu po dlouhá léta používání.
+            </p>
+          </div>
+        </section>
+        <hr class="divider" />
+        <!-- ── 4. WARRANTY ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">🛡️</span>
+            </div>
+            <h2>Záruka: až 5 let – naprostá jistota</h2>
+          </div>
+          <p class="paragraph-text">
+            Jednou z častých obav ohledně repasovaných počítačů je záruční
+            krytí. Tato obava je již překonaná. Trh s repasovanými počítači se
+            výrazně rozvinul: renomovaní prodejci nyní nabízejí záruky, které se
+            vyrovnají nebo dokonce převyšují záruky, které získáte při koupi
+            nového počítače přímo od výrobce.
+          </p>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Typ záruky</th>
+                <th>Běžný nový notebook</th>
+                <th>Kvalitně repasovaný</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Standardní záruka</td>
+                <td>1 rok</td>
+                <td><span class="badge badge-green">1–3 roky</span></td>
+              </tr>
+              <tr>
+                <td>Možnost prodloužení</td>
+                <td>Až 3 roky (za příplatek)</td>
+                <td><span class="badge badge-green">Až 5 let</span></td>
+              </tr>
+              <tr>
+                <td>Záruka na baterii</td>
+                <td>Obvykle 6–12 měsíců</td>
+                <td><span class="badge badge-green">V ceně</span></td>
+              </tr>
+              <tr>
+                <td>Proces vyřizování reklamací</td>
+                <td>U velkých výrobců OEM je často pomalý a složitý</td>
+                <td>
+                  <span class="badge badge-green"
+                    >Přímý, rychlý, jednoduchý</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p class="paragraph-text">
+            Výhodou nákupu u odborníka na repasování je, že žaloby ohledně
+            záruky jdou přímo k lidem, kteří nejlépe znají stroj. Žádné fronty v
+            call centru, žádné odeslání do zahraničního výrobce. Rychlé
+            nahrazení nebo oprava, minimální výpadek.
+          </p>
+        </section>
+        <hr class="divider" />
+        <!-- ── 5. DURABILITY ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">🛠️</span>
+            </div>
+            <h2>
+              Odolnost: Stroje třídy Business jsou navrženy tak, aby vydržely
+            </h2>
+          </div>
+          <p class="paragraph-text">
+            Právě v tomto ohledu mají repasované firemní notebooky skutečnou,
+            často podceňovanou výhodu. Lenovo ThinkPad, Dell Latitude nebo HP
+            EliteBook byly původně navrženy a testovány tak, aby vydržely roky
+            profesionálního používání. Mnohé z nich mají certifikaci MIL-SPEC
+            810 v vojenské kvalitě — což znamená, že byly testovány na odolnost
+            proti pádům, vibracím, vlhkosti, prachu a extrémním teplotám.
+          </p>
+          <p class="paragraph-text">
+            Naproti tomu levný nový notebook pro běžné spotřebitele – bez ohledu
+            na značku – je obvykle konstruován s primárním technickým omezením v
+            podobě snížení nákladů. Tenčí plastové šasi, nalepené baterie, RAM,
+            kterou nelze upgradovat. Po dvou nebo třech letech hodnota takového
+            levného nového stroje často klesne téměř na nulu.
+          </p>
+          <p class="paragraph-text">
+            Renovovaný firemní počítač – i ten, který je podle modelového roku
+            čtyři nebo pět let starý – si zachovává svou technickou kvalitu.
+            Procesor pracuje stejně rychle. Klávesnice má stále ten příjemný
+            zdvih, který firemní uživatelé milují. Šasi se neprohýbá. S
+            nainstalovaným SSD a novým softwarem působí jako nový.
+          </p>
+          <div class="stat-row">
+            <div class="stat-card">
+              <div class="stat-num">8–10</div>
+              <div class="stat-label">
+                Typická životnost notebooků business třídy v letech
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">MIL-STD</div>
+              <div class="stat-label">
+                Certifikace vojenské odolnosti u předních modelů
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">2–3×</div>
+              <div class="stat-label">
+                Delší životnost ve srovnání s notebooky základní třídy pro běžné
+                spotřebitele
+              </div>
+            </div>
+          </div>
+        </section>
+        <hr class="divider" />
+        <!-- ── 6. ENVIRONMENT ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">🌱</span>
+            </div>
+            <h2>
+              Dopad na životní prostředí: Renovované zařízení je udržitelnou
+              volbou
+            </h2>
+          </div>
+          <p class="paragraph-text">
+            Ekologické náklady spojené s výrobou nového notebooku jsou
+            ohromující — a pro kupujícího jsou málokdy viditelné. Rozhodnutí pro
+            repasovaný produkt je jedním z nejvýznamnějších individuálních či
+            firemních rozhodnutí, které můžete učinit, pokud jde o vaši
+            uhlíkovou stopu.
+          </p>
+          <div class="eco-grid">
+            <div class="eco-card">
+              <div class="eco-val">331 kg</div>
+              <div class="eco-desc">
+                Emise CO₂ při výrobě jednoho nového notebooku
+              </div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-val">190 000 l</div>
+              <div class="eco-desc">Spotřeba vody při výrobě notebooku</div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-val">1 200 kg</div>
+              <div class="eco-desc">
+                Suroviny vytěžené na výrobu jednoho notebooku
+              </div>
+            </div>
+            <div class="eco-card">
+              <div class="eco-val">62 milionů tun</div>
+              <div class="eco-desc">
+                Celosvětový objem elektronického odpadu vyprodukovaného v roce
+                2022 – rekordní maximum
+              </div>
+            </div>
+          </div>
+          <p class="paragraph-text">
+            Renovace notebooku eliminuje drtivou většinu této výrobní zátěže.
+            Zároveň přímo řeší problém elektronického odpadu: ačkoli by se
+            odhaduje, že 70 % notebooků by bylo možné renovovat a znovu použít,
+            v současnosti se tak děje u méně než 20 %. Rozhodnete-li se pro
+            renovovaný produkt, svým nákupem aktivně podporujete cirkulární
+            ekonomiku namísto ekonomiky založené na jednorázovém použití.
+          </p>
+        </section>
+        <hr class="divider" />
+        <!-- ── 7. VERDICT ── -->
+        <section class="section">
+          <div class="section-header">
+            <div class="section-icon">
+              <span class="section-icon-glyph" aria-hidden="true">🏁</span>
+            </div>
+            <h2>The Final Verdict</h2>
+          </div>
+          <p class="paragraph-text">
+            Neexistuje žádná univerzální správná odpověď – ale pro
+            <em>většinu</em> lidí je ve většině případů tou správnou volbou
+            kvalitní repasovaný notebook nebo stolní počítač od důvěryhodného
+            dodavatele.
+          </p>
+          <div class="verdict-card">
+            <h3>Zvolte repasované zařízení, pokud chcete…</h3>
+            <ul class="checklist">
+              <li>
+                Ušetřit 30–50 % bez ztráty kvality zpracování nebo spolehlivosti
+              </li>
+              <li>
+                Získat zařízení business třídy (Dell, HP, Lenovo), které by nové
+                stálo mnohem více
+              </li>
+              <li>
+                Využít záruku až na 5 let a rychlý, přímý proces vyřizování
+                reklamací
+              </li>
+              <li>Výrazně snížit svůj dopad na životní prostředí</li>
+              <li>
+                Vyhněte se levným spotřebitelským modelům, které brzy selžou a
+                nelze je opravit
+              </li>
+              <li>
+                Získejte dobře otestovaný, okamžitě nasaditelný počítač s SSD a
+                čerstvou instalací operačního systému
+              </li>
+            </ul>
+          </div>
+          <div
+            class="verdict-card"
+            style="margin-top: 18px; border-color: var(--border)"
+          >
+            <h3 style="color: var(--text)">
+              Zvažte koupi nového zařízení, pokud potřebujete…
+            </h3>
+            <ul class="checklist">
+              <li>
+                Procesor nebo grafickou kartu nejnovější generace (např. pro
+                úkoly s využitím umělé inteligence, špičkovou tvůrčí práci)
+              </li>
+              <li>
+                Požadavek na záruku konkrétní značky stanovený IT politikou vaší
+                organizace
+              </li>
+              <li>
+                Konkrétní specializovaný model, který zatím není k dispozici na
+                trhu s repasovanými produkty
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Jste připraveni udělat chytré rozhodnutí?</h2>
+        <p class="cta-text">
+          Prohlédněte si prémiové repasované notebooky a stolní počítače –
+          všechny jsou důkladně otestovány, mají záruku až 5 let a pocházejí
+          výhradně od předních značek v oblasti business třídy.
+        </p>
+        <a
+          href="https://pocitace24.cz"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="cta-btn"
+        >
+          Prohlédněte si počítače na Počítače24.cz →
+        </a>
+      </div>
+    </section>
+  </body>
+</html>
